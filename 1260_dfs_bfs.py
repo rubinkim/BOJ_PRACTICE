@@ -15,6 +15,10 @@
 3 4
 3 1
 
+
+1000 1 1000
+999 1000
+
 """
 
 """
@@ -101,8 +105,19 @@ def dfs_stack(graph, start):
         for nxt in reversed(graph[now]):
             if nxt not in path:
                 q.append(nxt)
+                
+# 3. DFS using recursion
+path = []
+def dfs_recursion(graph, start):
+    global path
+    path.append(start)
+    
+    for nxt in graph[start]:
+        if nxt not in path:
+            dfs_recursion(graph, nxt)
+    
 
-# 3. BFS using queue
+# 4. BFS using queue
 def bfs_queue(graph, start):
     q = deque([start])
     path = []
@@ -116,6 +131,10 @@ def bfs_queue(graph, start):
                 q.append(nxt)
     
 # 4. 해답 구하기
-dfs_stack(graph, v)
+#dfs_stack(graph, v)
+#print()
+dfs_recursion(graph, v)
+for x in path:
+    print(x, end=' ')
 print()
 bfs_queue(graph, v)
