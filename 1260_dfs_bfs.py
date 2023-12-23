@@ -7,6 +7,14 @@
 1 4
 2 4
 3 4
+
+5 5 3
+5 4
+5 2
+1 2
+3 4
+3 1
+
 """
 
 """
@@ -22,6 +30,9 @@ for i in range(m):
     graph[a].append(b)
     graph[b].append(a)
     
+for row in graph:
+    row.sort()
+
 for row in graph:
     print(row)
     
@@ -61,6 +72,7 @@ print()
 print(f"{v}를 출발노드로 할 때 BFSFH 탐색할 경로 : {bfs_queue(graph, v)}")
 """
 
+
 # 1. Get the data
 import sys
 input = sys.stdin.readline
@@ -71,6 +83,9 @@ for i in range(m):
     a, b = map(int, input().split())
     graph[a].append(b)
     graph[b].append(a)
+    
+for row in graph:
+    row.sort()
     
 from collections import deque   
 
@@ -104,4 +119,3 @@ def bfs_queue(graph, start):
 dfs_stack(graph, v)
 print()
 bfs_queue(graph, v)
-    
