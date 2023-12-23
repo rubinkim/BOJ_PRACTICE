@@ -37,5 +37,4 @@ def dfs_stack(graph, start):
                 q.append(nxt)
     return path
 
-#print(f"{v}를 출발노드로 할 때 DFS로 탐색한 경로 : {dfs_stack(graph, v)}")
-print(dfs_stack(graph, 1))
+print(f"{v}를 출발노드로 할 때 DFS로 탐색한 경로 : {dfs_stack(graph, v)}")
