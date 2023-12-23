@@ -14,26 +14,28 @@ input = sys.stdin.readline
 n, m, v = map(int, input().split())
 print(f"n : {n},  m : {m},  v : {v}")    # n : 노드수,  m : 간선수,  v : 출발노드
 
-graph = [[0] * (m+1) for _ in range(n+1)]
-for i in range(1, n+1):
+graph = [[] for _ in range(n+1)]
+for i in range(m):
     a, b = map(int, input().split())
-    graph[a][b] = graph[b][a] = 1
+    graph[a].append(b)
+    graph[b].append(a)
     
 for row in graph:
     print(row)
     
 from collections import deque   
 # DFS using stack
-def dfs_stack(graph, v):
-    q = deque([v])
+def dfs_stack(graph, start):
+    q = deque([start])
     path = []
     while q:
         now = q.pop()
         if now not in path:
             path.append(now)
-        for nxt in graph[now]:
+        for nxt in reversed(graph[now]):
             if nxt not in path:
                 q.append(nxt)
     return path
 
-print(f"{v}를 출발노드로 할 때 DFS로 탐색한 경로 : {dfs_stack(graph, v)}")
+#print(f"{v}를 출발노드로 할 때 DFS로 탐색한 경로 : {dfs_stack(graph, v)}")
+print(dfs_stack(graph, 1))
