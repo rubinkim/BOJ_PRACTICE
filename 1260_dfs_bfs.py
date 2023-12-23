@@ -21,3 +21,19 @@ for i in range(1, n+1):
     
 for row in graph:
     print(row)
+    
+from collections import deque   
+# DFS using stack
+def dfs_stack(graph, v):
+    q = deque([v])
+    path = []
+    while q:
+        now = q.pop()
+        if now not in path:
+            path.append(now)
+        for nxt in graph[now]:
+            if nxt not in path:
+                q.append(nxt)
+    return path
+
+print(f"{v}를 출발노드로 할 때 DFS로 탐색한 경로 : {dfs_stack(graph, v)}")
