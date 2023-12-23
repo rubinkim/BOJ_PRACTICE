@@ -9,6 +9,7 @@
 3 4
 """
 
+# 1. Get the data
 import sys
 input = sys.stdin.readline
 n, m, v = map(int, input().split())
@@ -24,7 +25,8 @@ for row in graph:
     print(row)
     
 from collections import deque   
-# DFS using stack
+
+# 2. DFS using stack
 def dfs_stack(graph, start):
     q = deque([start])
     path = []
@@ -37,4 +39,22 @@ def dfs_stack(graph, start):
                 q.append(nxt)
     return path
 
+# 3. BFS using queue
+def bfs_queue(graph, start):
+    q = deque([start])
+    path = []
+    while q:
+        now = q.popleft()
+        if now not in path:
+            path.append(now)
+        for nxt in graph[now]:
+            if nxt not in path:
+                q.append(nxt)
+    return path 
+    
+# 4. 해답 구하기
+print()
 print(f"{v}를 출발노드로 할 때 DFS로 탐색한 경로 : {dfs_stack(graph, v)}")
+
+print()
+print(f"{v}를 출발노드로 할 때 BFSFH 탐색할 경로 : {bfs_queue(graph, v)}")
