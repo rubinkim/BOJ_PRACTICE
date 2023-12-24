@@ -54,8 +54,18 @@ def dfs_stack(graph, start):
             if nxt not in path:
                 q.append(nxt)
     return path
+    
+# 3. DFS using recursion
+path = []
+def dfs_recursion(graph, start):
+    global path
+    path.append(start)
+    
+    for nxt in graph[start]:
+        if nxt not in path:
+            dfs_recursion(graph, nxt)
 
-# 3. BFS using queue
+# 4. BFS using queue
 def bfs_queue(graph, start):
     q = deque([start])
     path = []
@@ -71,6 +81,11 @@ def bfs_queue(graph, start):
 # 4. 해답 구하기
 print()
 print(f"{v}를 출발노드로 할 때 DFS로 탐색한 경로 : {dfs_stack(graph, v)}")
+
+print()
+dfs_recursion(graph, v)
+for x in path:
+    print(x, end=' ')
 
 print()
 print(f"{v}를 출발노드로 할 때 BFSFH 탐색할 경로 : {bfs_queue(graph, v)}")
