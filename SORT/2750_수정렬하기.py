@@ -16,11 +16,11 @@ N개의 수가 주어졌을 때 이를 오름차순으로 정렬하는 프로그
 1
 """
 
-n = map(int, input())    
+n = int(input())
 
 array = []
-for x in int(input()):
-    array.append(x)
+for x in input():
+    array.append(int(x))
 array.sort()
 
 for x in array:
