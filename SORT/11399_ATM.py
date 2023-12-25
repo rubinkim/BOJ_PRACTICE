@@ -18,3 +18,15 @@
 5
 3 1 4 3 2
 """
+
+n = int(input())
+array = list(map(int, input().split()))
+array.sort()
+
+total = []
+ans = 0
+for i in range(len(array)):
+    ans += array[i]
+    total.append(ans)
+
+print(sum(total))
