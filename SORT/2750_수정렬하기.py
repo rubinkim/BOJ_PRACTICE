@@ -17,4 +17,12 @@ N개의 수가 주어졌을 때 이를 오름차순으로 정렬하는 프로그
 """
 
 n = map(int, input())    
-f
+
+array = []
+for x in int(input()):
+    array.append(x)
+array.sort()
+
+for x in array:
+    print(x)
+    
