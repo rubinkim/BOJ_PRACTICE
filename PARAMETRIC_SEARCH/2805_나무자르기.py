@@ -20,6 +20,7 @@
 4 42 40 26 46       36
 """
 
+"""
 import sys
 input = sys.stdin.readline
 
@@ -40,18 +41,13 @@ def parametric_search(array, target, start, end):  # target : 상근이가 가�
         elif sum(leftover) < target:
             end = mid - 1                        
         else:            
-            result = array[mid]
-            start = mid + 1
-            if start == end and result > target:                
-                for x in range(array[start-1], array[end]):
-                    if sum(leftover) == target:
-                        return x
+            if start == end and sum(leftover) >= target:                
+                for h in range(array[start], array[end]):
+                    new_leftover = [0 if x<h else x-h for x in array]
+                    print(f"new_leftover : {sum(new_leftover)}")
+                    if sum(new_leftover) == target:
+                        return h
                     
-                    
-                
-            
-            
-            
 ans = parametric_search(array, m, 0, n-1)
 if ans == None:
     print("값이 없습니다.")
@@ -59,6 +55,31 @@ else:
     print(ans)      
     
 print(array)
+"""
+
+
+import sys
+input = sys.stdin.readline
+
+n, m = map(int, input().split())
+array = list(map(int, input().split()))
+
+start, end = 0, max(array)
+result = 0
+while (start <= end):
+    total = 0
+    mid = (start + end) // 2
+    for x in array:
+        if x > mid:
+            total += x - mid
+    
+    if total < m:
+        end = mid - 1
+    else:
+        result = mid
+        start = mid + 1
+        
+print(result)
                 
         
              
