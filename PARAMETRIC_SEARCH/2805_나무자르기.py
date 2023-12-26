@@ -25,21 +25,20 @@ input = sys.stdin.readline
 
 n, m = map(int, input().split())
 array = list(map(int, input().split()))
+array.sort()
 
 def parametric_search(array, target, start, end):  # target : 상근이가 가져갈 나무의 길이,  start, end : index   
-    if start < end:
-        return None
-    
+    result = 0    
     while start <= end:
-        result = 0
         mid = (start+end) // 2
         leftover = [0 if x < array[mid] else x - array[mid] for x in array]
+        print(f"mid : {mid},  leftover : {sum(leftover)},  target : {target}")
     
         if sum(leftover) == target:
             result = array[mid]
             return result
         elif sum(leftover) < target:
-            end = mid - 1
+            end = mid - 1                        
         else:
             result = array[mid]
             start = mid + 1
