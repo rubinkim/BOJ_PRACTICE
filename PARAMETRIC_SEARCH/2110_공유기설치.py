@@ -29,5 +29,5 @@ print(f"houses : {houses}")
           
 house_dist = []
 for i in range(1, len(houses)):
-    house_dist.append(house[i] - house[i-1])
+    house_dist.append(houses[i] - houses[i-1])
 print(f"house_dist : {house_dist}")
