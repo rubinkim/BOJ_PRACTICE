@@ -25,13 +25,13 @@ input = sys.stdin.readline
 n, c = map(int, input().split())
 houses = [int(input()) for _ in range(n)]
 houses.sort()
-print(f"n : {n},  c : {c}")
-print(f"houses : {houses}")
+#print(f"n : {n},  c : {c}")
+#print(f"houses : {houses}")
           
 house_dist = []
 for i in range(1, len(houses)):
     house_dist.append(houses[i] - houses[i-1])
-print(f"house_dist : {house_dist}")
+#print(f"house_dist : {house_dist}")
 
 while len(house_dist) >= c-1:
     min_idx = house_dist.index(min(house_dist))
@@ -53,7 +53,7 @@ while len(house_dist) >= c-1:
             house_dist = house_dist[:min_idx] + [min_idx_val] + house_dist[min_idx+2:]    
         
     c += 1
-    print(f"c : {c},  house_dist : {house_dist}" )
+    #print(f"c : {c},  house_dist : {house_dist}" )
 
 max_nearest_dist = min(house_dist)
 print(max_nearest_dist)
