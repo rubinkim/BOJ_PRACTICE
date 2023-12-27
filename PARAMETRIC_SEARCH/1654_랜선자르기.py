@@ -3,7 +3,7 @@
 """
 
 시간 제한	메모리 제한	   제출	   정답	   맞힌 사람	   정답 비율
-2 珥�	    128 MB	    201277	47339	  32041	        21.224%
+  2초	    128 MB	    201277	47339	  32041	        21.224%
 
 집에서 시간을 보내던 오영식은 박성원의 부름을 받고 급히 달려왔다. 박성원이 캠프 때 쓸 N개의 랜선을 만들어야 하는데 너무 바빠서 영식이에게 도움을 청했다.
 이미 오영식은 자체적으로 K개의 랜선을 가지고 있다. 그러나 K개의 랜선은 길이가 제각각이다. 박성원은 랜선을 모두 N개의 같은 길이의 랜선으로 만들고 싶었기 때문에 K개의 랜선을 잘라서 
@@ -19,39 +19,10 @@
 743
 457
 539                 200
-
-
-import sys
-input = sys.stdin.readline
-
-k, n = map(int, input().split())
-print(f"k : {k},  n : {n}")
-
-array = [int(input()) for _ in range(k)]
-print(f"array : {array}")
-
-num_lan = 0
-cutting_height = 0
-
-while True:
-    if num_lan >= n:        
-        break
-
-    start = 0
-    end = max(array)
-    mid = (start+end) // 2
-    for x in array:
-        num_lan += x // mid
-                
-    if num_lan < n:
-        end = mid -1
-    else:
-        cutting_height = mid
-        start = mid + 1
-
-print(cutting_height)
 """
 
+
+
 import sys
 input = sys.stdin.readline
 
@@ -61,26 +32,6 @@ print(f"k : {k},  n : {n}")
 array = [int(input()) for _ in range(k)]
 print(f"array : {array}")
 
-start = 0
-end = max(array)
 num_lan = 0
 cutting_height = 0
-
-while True:
-    mid = (start+end) // 2
-    print(f"mid : {mid}")
-    for x in array:
-        num_lan += x // mid
-    print(f"num_lan : {num_lan}")
-    
-    if num_lan >= n:
-        cutting_height = mid
-        break            
-    elif num_lan < n:
-        end = mid -1
-    elif num_lan > n:
-        cutting_height = mid
-        start = mid + 1
-
-print(cutting_height)
 
