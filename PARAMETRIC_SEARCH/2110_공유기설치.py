@@ -22,7 +22,12 @@ import sys
 input = sys.stdin.readline
 
 n, c = map(int, input().split())
-houses = [int(input() for _ in range(n))]
+houses = [int(input()) for _ in range(n)]
+houses.sort()
 print(f"n : {n},  c : {c}")
 print(f"houses : {houses}")
           
+house_dist = []
+for i in range(1, len(houses)):
+    house_dist.append(house[i] - house[i-1])
+print(f"house_dist : {house_dist}")
