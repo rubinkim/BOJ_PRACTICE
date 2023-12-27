@@ -82,5 +82,5 @@ while True:
         cutting_height = mid
         start = mid + 1
 
-print(cutting_height)
+//print(cutting_height)
 
