@@ -32,6 +32,18 @@ print(f"k : {k},  n : {n}")
 array = [int(input()) for _ in range(k)]
 print(f"array : {array}")
 
-num_lan = 0
-cutting_height = 0
+start = 0
+end = max(array)
+
+while start <= end:
+    mid = (start + end) // 2
+    num_lan = 0
+    for x in array:
+        num_lan += (x // mid)
+    if num_lan < n:
+        end = mid - 1
+    else:
+        start = mid + 1
+        
+print(end)
 
