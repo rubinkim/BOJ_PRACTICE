@@ -18,7 +18,7 @@
 802
 743
 457
-539                 400
+539                 200
 """
 
 import sys
@@ -34,14 +34,16 @@ num_lan = 0
 cutting_height = 0
 
 while True:
-    if num_lan >= n:
+    if num_lan == n:
+        cutting_height = mid
         break
+
     start = 0
     end = max(array)
     mid = (start+end) // 2
     for x in array:
         num_lan += x // mid
-        
+                
     if num_lan < n:
         end = mid -1
     else:
