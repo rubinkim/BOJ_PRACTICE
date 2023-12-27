@@ -35,5 +35,9 @@ print(f"house_dist : {house_dist}")
 
 while len(house_dist) >= c-1:
     min_idx = house_dist.index(min(house_dist))
-    print(f"min_idx : {min_idx}")
-    c += 1
+    #print(f"min_idx : {min_idx}")
+    if min_idx == 0:
+        min_idx_val = house_dist[0] + house_dist[1]
+        house_dist = [min_idx_val] + house_dist[2:]
+        c += 1
+        print(f"c : {c},  house_dist : {house_dist}" )
