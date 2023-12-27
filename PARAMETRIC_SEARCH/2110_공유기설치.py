@@ -44,5 +44,16 @@ while len(house_dist) >= c-1:
         min_idx_val = house_dist[-2] + house_dist[-1]
         house_dist = house_dist[:-2] + [min_idx_val]
         
+    else:
+        if house_dist[min_idx-1] < house_dist[min_idx+1]:
+            min_idx_val = house_dist[min_idx-1] +house_dist[min_idx]
+            house_dist = house_dist[:min_idx-1] + [min_idx_val] + house_dist[min_idx+1:]
+        else:
+            min_idx_val = house_dist[min_idx] + house_dist[min_idx+1]
+            house_dist = house_dist[:min_idx] + [min_idx_val] + house_dist[min_idx+2:]    
+        
     c += 1
     print(f"c : {c},  house_dist : {house_dist}" )
+
+max_nearest_dist = min(house_dist)
+print(max_nearest_dist)
