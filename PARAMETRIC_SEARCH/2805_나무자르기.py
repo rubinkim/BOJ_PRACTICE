@@ -19,7 +19,7 @@
 5 20
 4 42 40 26 46       36
 
-30 2   
+30 50   
 4 9 7 2 1 8 3 7 4 3 8 9 2 1 7 2 9 1 5 5 9 3 2 8 4 3 2 1 5 2
 
 10 110
@@ -28,7 +28,7 @@
 10 101
 10 19 20 46 2 16 4 21 30 28
 """
-
+"""
 import sys
 input = sys.stdin.readline
 
@@ -51,7 +51,74 @@ while (start <= end):
         start = mid + 1
         
 print(result)
-                
+
+
+
+
+
+
+
+
+
+num_trees, target = map(int, input().split())
+trees = list(map(int, input().split()))
+
+def get_the_maximum_tree_while(array, target):
+    start = 0
+    end = max(array)
+    cutting_height = 0
+    
+    while (start <= end):
+        mid = (start + end) // 2
         
+        total = 0
+        for x in array:
+            if x > mid:
+                total += (x - mid)
+        
+        if total < target:
+            end = mid - 1
+        else:
+            cutting_height = mid
+            start = mid + 1
+            
+    return cutting_height
+
+print(get_the_maximum_tree_while(trees, target))
+"""
+
+import sys
+sys.setrecursionlimit(10_000)
+
+num_trees, target = map(int, input().split())
+trees = list(map(int, input().split()))
+cutting_height = 0
+
+def get_the_maximum_tree_recursion(cnt, array, target, start, end):
+    global cutting_height
+     
+    mid = (start + end) // 2
+    total = 0    
+      
+    for x in array:
+        if x > mid:
+            total += (x - mid)
+    print(f"cnt : {cnt},  total : {total}, cutting_height : {cutting_height}")  
+    
+    if total == target:
+        return cutting_height
+            
+    elif total < target:
+        cnt += 1
+        end = mid - 1
+        get_the_maximum_tree_recursion(cnt, array, target, start, mid-1)
+    else:
+        cnt += 1
+        cutting_height = mid
+        get_the_maximum_tree_recursion(cnt, array, target, mid+1, end)
+        
+
+ans = get_the_maximum_tree_recursion(0, trees, target, 0, max(trees))  
+print(ans)      
              
              
