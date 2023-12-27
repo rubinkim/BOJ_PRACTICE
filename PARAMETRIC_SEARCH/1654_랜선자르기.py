@@ -19,7 +19,7 @@
 743
 457
 539                 200
-"""
+
 
 import sys
 input = sys.stdin.readline
@@ -34,8 +34,7 @@ num_lan = 0
 cutting_height = 0
 
 while True:
-    if num_lan == n:
-        cutting_height = mid
+    if num_lan >= n:        
         break
 
     start = 0
@@ -51,5 +50,37 @@ while True:
         start = mid + 1
 
 print(cutting_height)
-        
+"""
+
+import sys
+input = sys.stdin.readline
+
+k, n = map(int, input().split())
+print(f"k : {k},  n : {n}")
+
+array = [int(input()) for _ in range(k)]
+print(f"array : {array}")
+
+start = 0
+end = max(array)
+num_lan = 0
+cutting_height = 0
+
+while True:
+    mid = (start+end) // 2
+    print(f"mid : {mid}")
+    for x in array:
+        num_lan += x // mid
+    print(f"num_lan : {num_lan}")
     
+    if num_lan >= n:
+        cutting_height = mid
+        break            
+    elif num_lan < n:
+        end = mid -1
+    elif num_lan > n:
+        cutting_height = mid
+        start = mid + 1
+
+print(cutting_height)
+
