@@ -21,29 +21,25 @@
 539                 200
 """
 
-
-
 import sys
 input = sys.stdin.readline
 
 k, n = map(int, input().split())
-print(f"k : {k},  n : {n}")
-
 array = [int(input()) for _ in range(k)]
-print(f"array : {array}")
-
-start = 0
+start = 1       # 0으로 하면 runtimeerror이 발생한다.
 end = max(array)
 
 while start <= end:
     mid = (start + end) // 2
     num_lan = 0
+    cutting_height = 0
     for x in array:
         num_lan += (x // mid)
     if num_lan < n:
         end = mid - 1
     else:
         start = mid + 1
+        cuttting_height = end
         
 print(end)
 
