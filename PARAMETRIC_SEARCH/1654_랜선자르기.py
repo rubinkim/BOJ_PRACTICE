@@ -21,6 +21,7 @@
 539                 200
 """
 
+# start = 0으로 하면 runtimeerror발생,  밑에 else에서 cutting_edge=end, print(cutting_edge)로 하면 틀린다. 이대로 해라!!!!!
 import sys
 input = sys.stdin.readline
 
