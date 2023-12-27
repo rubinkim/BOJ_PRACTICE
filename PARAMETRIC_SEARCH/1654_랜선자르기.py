@@ -32,14 +32,12 @@ end = max(array)
 while start <= end:
     mid = (start + end) // 2
     num_lan = 0
-    cutting_height = 0
     for x in array:
         num_lan += (x // mid)
     if num_lan < n:
         end = mid - 1
     else:
         start = mid + 1
-        cuttting_height = end
-        
+       
 print(end)
 
