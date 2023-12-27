@@ -17,3 +17,12 @@ C개의 공유기를 N개의 집에 적당히 설치해서, 가장 인접한 두
 457
 539             3
 """
+
+import sys
+input = sys.stdin.readline
+
+n, c = map(int, input().split())
+houses = [int(input() for _ in range(n))]
+print(f"n : {n},  c : {c}")
+print(f"houses : {houses}")
+          
