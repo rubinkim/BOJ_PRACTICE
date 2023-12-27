@@ -39,5 +39,10 @@ while len(house_dist) >= c-1:
     if min_idx == 0:
         min_idx_val = house_dist[0] + house_dist[1]
         house_dist = [min_idx_val] + house_dist[2:]
-        c += 1
-        print(f"c : {c},  house_dist : {house_dist}" )
+
+    elif min_idx == len(house_dist) - 1:
+        min_idx_val = house_dist[-2] + house_dist[-1]
+        house_dist = house_dist[:-2] + [min_idx_val]
+        
+    c += 1
+    print(f"c : {c},  house_dist : {house_dist}" )
