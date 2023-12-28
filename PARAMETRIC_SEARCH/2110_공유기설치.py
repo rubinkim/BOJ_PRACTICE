@@ -49,5 +49,6 @@ def calculate_max_nearest_dist(array):
         else:
             end = mid - 1
             
-
+calculate_max_nearest_dist(houses)
+print(max_nearest_dist)
           
