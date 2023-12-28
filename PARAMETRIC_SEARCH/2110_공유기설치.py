@@ -50,7 +50,8 @@ while len(house_dist) >= c-1:
             house_dist = house_dist[:min_idx-1] + [min_idx_val] + house_dist[min_idx+1:]
         else:
             min_idx_val = house_dist[min_idx] + house_dist[min_idx+1]
-            house_dist = house_dist[:min_idx] + [min_idx_val] + house_dist[min_idx+2:]    
+            house_dist = house_dist[:min_idx] + [min_idx_val] + house_dist[min_idx+2:] 
+    print(f"house_dist : {house_dist}")   
         
     c += 1
     #print(f"c : {c},  house_dist : {house_dist}" )
