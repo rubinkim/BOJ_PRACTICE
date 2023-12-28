@@ -77,6 +77,8 @@ Line 1: One integer: the largest minimum distance
 9
 """          
 
+import sys
+input = sys.stdin.readline
 n, c = map(int, input().split())
 barn = [int(input()) for _ in range(n)]
 barn.sort()
