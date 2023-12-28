@@ -68,4 +68,39 @@ Lines 2..N+1: Line i+1 contains an integer stall location, xi
 
 Output
 Line 1: One integer: the largest minimum distance
+
+5 3
+1
+2
+8
+4
+9
 """          
+
+n, c = map(int, input().split())
+barn = [int(input()) for _ in range(n)]
+print(f"n : {n},  c : {c}")
+print(f"barn : {barn}")
+
+largest_minimum_distance = 0
+
+def calculate_largest_minimum_distance(array):
+    global largest_minimum_distance
+    start, end = 1, array[0]
+    
+    while start <= end:
+        mid = (start + end) // 2
+        current = array[0]
+        count = 1
+        for i in range(1, len(array)):
+            if array[i] >= current + mid:
+                count += 1
+        if count >= c:
+            largest_minimum_distance = mid
+            start = mid + 1
+        else:
+            end = mid - 1
+            
+    
+        
+    
