@@ -96,6 +96,7 @@ def calculate_largest_minimum_distance(array):
         for i in range(1, len(array)):
             if array[i] >= current + mid:
                 count += 1
+                current = array[i]
         if count >= c:
             largest_minimum_distance = mid
             start = mid + 1
