@@ -79,6 +79,7 @@ Line 1: One integer: the largest minimum distance
 
 n, c = map(int, input().split())
 barn = [int(input()) for _ in range(n)]
+barn.sort()
 print(f"n : {n},  c : {c}")
 print(f"barn : {barn}")
 
@@ -86,7 +87,7 @@ largest_minimum_distance = 0
 
 def calculate_largest_minimum_distance(array):
     global largest_minimum_distance
-    start, end = 1, array[0]
+    start, end = 1, array[-1]-array[0]
     
     while start <= end:
         mid = (start + end) // 2
