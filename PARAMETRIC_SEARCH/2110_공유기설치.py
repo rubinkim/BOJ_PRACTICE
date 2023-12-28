@@ -34,13 +34,13 @@ def calculate_max_nearest_dist(array):
     global max_nearest_dist
     start = 1                            # 공유기를 설치할 집들간의 최소거리를 1로 초기화한다.
     end = array[-1] - array[0]           # 공유기를 설치할 집들간의 최대거리를 끝집과 첫번째집간의 거리차로 초기화한다.
-    mid = (start + end) // 2
-    
+        
     while start <= end:
-        count = 0
+        mid = (start + end) // 2
+        count = 1
         current = array[0]
         for i in range(1, len(array)):
-            if array[i] <= current + mid:
+            if array[i] >= current + mid:
                 count += 1
                 current = array[i]
         if count >= c:
