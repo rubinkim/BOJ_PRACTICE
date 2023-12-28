@@ -19,6 +19,7 @@ C개의 공유기를 N개의 집에 적당히 설치해서, 가장 인접한 두
 9          3
 """
 
+"""
 import sys
 input = sys.stdin.readline
 
@@ -51,4 +52,13 @@ def calculate_max_nearest_dist(array):
             
 calculate_max_nearest_dist(houses)
 print(max_nearest_dist)
-          
+"""
+
+# Agressive Cows
+"""
+Farmer John has built a new long barn, with N (2 <= N <= 200,000) stalls. The stalls are located along a straight line 
+at positions x1,...,xN (0 <= xi <= 1,000,000,000).
+His C (2 <= C <= N) cows don't like this barn layout and become aggressive towards each other once put into a stall. 
+To prevent the cows from hurting each other, FJ want to assign the cows to the stalls, such that the minimum distance between any two of them is as large as possible. 
+What is the largest minimum distance?
+"""          
