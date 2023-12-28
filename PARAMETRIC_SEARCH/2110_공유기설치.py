@@ -101,6 +101,7 @@ def calculate_largest_minimum_distance(array):
         else:
             end = mid - 1
             
-    
+calculate_largest_minimum_distance(barn)
+print(largest_minimum_distance)    
         
     
