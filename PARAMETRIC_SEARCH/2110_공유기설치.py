@@ -31,11 +31,11 @@ houses.sort()
 house_dist = []
 for i in range(1, len(houses)):
     house_dist.append(houses[i] - houses[i-1])
-#print(f"house_dist : {house_dist}")
+print(f"house_dist : {house_dist}")
 
 while len(house_dist) >= c-1:
     min_idx = house_dist.index(min(house_dist))
-    #print(f"min_idx : {min_idx}")
+    print(f"min_idx : {min_idx}")
     if min_idx == 0:
         min_idx_val = house_dist[0] + house_dist[1]
         house_dist = [min_idx_val] + house_dist[2:]
