@@ -31,5 +31,8 @@ print(f"houses : {houses}")
 max_nearest_dist = 0
 
 def calculate_max_nearest_dist(array):
+    global max_nearest_dist
+    start = 1                            # 공유기를 설치할 집들간의 최소거리를 1로 초기화한다.
+    end = array[-1] - array[0]           # 공유기를 설치할 집들간의 최대거리를 끝집과 첫번째집간의 거리차로 초기화한다.
     
           
