@@ -82,7 +82,7 @@ while start <= end:
             end = mid - 1
         else:
             start = mid + 1
-        print(f"start : {start}")
+        print(f"start : {start}, mid : {mid}")
 
 print()        
 print(start)
