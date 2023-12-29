@@ -82,6 +82,8 @@ while start <= end:
         end = mid - 1
     else:
         start = mid + 1
-        
+    print(f"start : {start})
+
+print()        
 print(start)
 print(sum(spending_schedule))
