@@ -22,3 +22,37 @@
 101
 400     500
 """
+
+import sys
+input = sys.stdin.readline
+
+n, m = map(int, input().split())
+spending_schedule = [int(input()) for _ in range(n)]
+
+#print(n, m)
+#print(spending_schedule)
+
+start, end = 1, sum(spending_schedule)
+
+while start <= end:
+    mid = (start + end) // 2
+    current = spending_schedule[0]
+    leftover = 0
+    cnt = 0
+    
+    for i in range(len(spending_schedule)):
+        if current < leftover + mid:
+            cnt += 1
+            leftover = leftover + mid - current
+            current = spending_schedule[i + 1]
+        elif current >= leftover + mid:
+            cnt += ((current - leftover) // mid)
+            leftover = leftover + mid * cnt - current
+            current = spending_schedule[i + (current - leftover) // mid]
+    
+    if cnt > m:
+        end = mid - 1
+    else:
+        start = mid + 1
+        
+print(start)
