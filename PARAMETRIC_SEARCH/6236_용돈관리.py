@@ -75,7 +75,7 @@ while start <= end:
             cnt += 1
             current = current - leftover - mid
         
-        print(f"i : {i}")
+        print(f"i : {i},  cnt : {cnt}")
         i += 1
         
     
