@@ -40,15 +40,15 @@ while start <= end:
     leftover = 0
     cnt = 0
     
-    for i in range(len(spending_schedule)):
+    for i in range(1, len(spending_schedule)+1):
         if current < leftover + mid:
             cnt += 1
             leftover = leftover + mid - current
-            current = spending_schedule[i + 1]
+            current = spending_schedule[i - 1 + 1]
         elif current >= leftover + mid:
             cnt += ((current - leftover) // mid)
             leftover = leftover + mid * cnt - current
-            current = spending_schedule[i + (current - leftover) // mid]
+            current = spending_schedule[i - 1 + (current - leftover) // mid]
     
     if cnt > m:
         end = mid - 1
