@@ -76,20 +76,7 @@ while start <= end:
             current = current - leftover - mid
         
         print(f"i : {i},  cnt : {cnt}")
-        i += 1
-        
-    
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+        i += 1         
     
     if cnt > m:
         end = mid - 1
