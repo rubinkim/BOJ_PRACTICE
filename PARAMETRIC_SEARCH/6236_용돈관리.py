@@ -74,6 +74,8 @@ while start <= end:
         elif current > leftover + mid:
             cnt += 1
             current = current - leftover - mid
+        
+        print(f"i : {i}")
         i += 1
         
     
