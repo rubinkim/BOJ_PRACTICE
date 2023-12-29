@@ -63,13 +63,13 @@ while start <= end:
     cnt = 0
     i = 0       
     while True:
-        if i >= len(spending_schedule) - 1:
+        if i >= len(spending_schedule):
             break
         current = spending_schedule[0]
         if current <= leftover + mid:
             cnt += 1
             leftover += mid - current
-            current = spending_schedule[i + 1]
+            current = spending_schedule[i + 1] if (i+1) < len(spending_schedule) else spending_schedule[-1]
         
         elif current > leftover + mid:
             cnt += 1
