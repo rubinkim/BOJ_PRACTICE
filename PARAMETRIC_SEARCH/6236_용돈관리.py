@@ -34,12 +34,16 @@ spending_schedule = [int(input()) for _ in range(n)]
 
 start, end = 1, sum(spending_schedule)
 
+
 while start <= end:
+    
+    """
     mid = (start + end) // 2
     current = spending_schedule[0]
     leftover = 0
     cnt = 0
-    
+
+  
     for i in range(len(spending_schedule)):
         if current < leftover + mid:
             cnt += 1
@@ -49,8 +53,41 @@ while start <= end:
         elif current >= leftover + mid:
             cnt += ((current - leftover) // mid)
             leftover = leftover + mid * cnt - current
-            if i < len(spending_schedule) - (current - leftover) // mid:
-                current = spending_schedule[i + (current - leftover) // mid]
+            if i + (current - leftover) // mid > len(spending_schedule) - 1:
+                break
+            current = spending_schedule[i + (current - leftover) // mid]
+    """
+            
+    mid = (start + end) // 2
+    leftover = 0
+    cnt = 0
+    i = 0       
+    while True:
+        if i >= len(spending_schedule) - 1:
+            break
+        current = spending_schedule[0]
+        if current <= leftover + mid:
+            cnt += 1
+            leftover += mid - current
+            current = spending_schedule[i + 1]
+        
+        elif current > leftover + mid:
+            cnt += 1
+            current = current - leftover - mid
+        i += 1
+        
+    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
     
     if cnt > m:
         end = mid - 1
