@@ -84,4 +84,4 @@ while start <= end:
         start = mid + 1
         
 print(start)
-print(spending_schedule)
+print(sum(spending_schedule))
