@@ -78,11 +78,11 @@ while start <= end:
         print(f"i : {i},  cnt : {cnt}")
         i += 1         
     
-    if cnt > m:
-        end = mid - 1
-    else:
-        start = mid + 1
-    print(f"start : {start}")
+        if cnt > m:
+            end = mid - 1
+        else:
+            start = mid + 1
+        print(f"start : {start}")
 
 print()        
 print(start)
