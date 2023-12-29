@@ -37,7 +37,41 @@ start, end = 1, sum(spending_schedule)
 
 while start <= end:
     
-    """
+    mid = (start + end) // 2
+    leftover = 0
+    cnt = 0
+    i = 0       
+
+
+    if i >= len(spending_schedule):
+        break
+    current = spending_schedule[0]
+    if current <= leftover + mid:
+        cnt += 1
+        leftover += mid - current
+        current = spending_schedule[i + 1] if (i+1) < len(spending_schedule) else spending_schedule[-1]
+    
+    elif current > leftover + mid:
+        cnt += 1
+        current = current - leftover - mid
+    
+    print(f"i : {i},  cnt : {cnt}")
+    i += 1         
+
+    if cnt > m:
+        end = mid - 1
+    else:
+        start = mid + 1
+    print(f"start : {start}, mid : {mid}")
+
+print()        
+print(start)
+print(sum(spending_schedule))
+    
+    
+    
+    
+"""
     mid = (start + end) // 2
     current = spending_schedule[0]
     leftover = 0
@@ -56,7 +90,7 @@ while start <= end:
             if i + (current - leftover) // mid > len(spending_schedule) - 1:
                 break
             current = spending_schedule[i + (current - leftover) // mid]
-    """
+
             
     mid = (start + end) // 2
     leftover = 0
@@ -87,3 +121,4 @@ while start <= end:
 print()        
 print(start)
 print(sum(spending_schedule))
+"""
