@@ -23,13 +23,14 @@
 400     500
 """
 
+"""
 import sys
 input = sys.stdin.readline
 
 n, m = map(int, input().split())
 spending_schedule = [int(input()) for _ in range(n)]
 
-start, end = min(spending_schedule), max(spending_schedule)
+start, end = min(spending_schedule), sum(spending_schedule)
 
 while start <= end:
     mid = (start + end) // 2
@@ -53,8 +54,36 @@ while start <= end:
         break
     elif total_cnt > m:
         start = mid + 1
-    else:
+    elif total_cnt < m or min < max(spending_schedule):
         end = mid - 1   
 
 #print()
+print(ans)
+"""
+
+import sys
+input = sys.stdin.readline
+
+n, m = map(int, input().split())
+spending_schedule = [int(input()) for _ in range(n)]
+
+start, end = min(spending_schedule), sum(spending_schedule)
+
+while start <= end:
+    mid = (start + end) // 2
+    withdrawl = mid
+    cnt = 1
+
+    for i in range(len(spending_schedule)):
+        if withdrawl < spending_schedule[i]:
+            withdrawl = mid
+            cnt += 1
+        withdrawl -= spending_schedule[i]
+
+    if cnt > m or mid < max(spending_schedule):
+        start = mid + 1
+    else:
+        end = mid - 1
+        ans = mid
+
 print(ans)
