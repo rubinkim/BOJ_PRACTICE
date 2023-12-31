@@ -49,7 +49,7 @@ while start <= end:
     #print(f"m : {m}, total_cnt : {total_cnt}, start : {start}, mid : {mid}, end : {end}")
     
     if total_cnt == m:
-        ans  = mid        
+        ans  = start       
         break
     elif total_cnt > m:
         start = mid + 1
