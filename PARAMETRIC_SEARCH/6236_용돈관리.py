@@ -46,9 +46,9 @@ while start <= end:
             leftover = mid * cnt - spending_schedule[i]
         total_cnt += cnt
         
-    if total_cnt >= m:
+    if total_cnt > m:
         start = mid + 1
     else:
         end = mid - 1
 
-print(end)
+print(start)
