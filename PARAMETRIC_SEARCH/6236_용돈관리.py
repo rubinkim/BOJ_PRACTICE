@@ -29,7 +29,7 @@ input = sys.stdin.readline
 n, m = map(int, input().split())
 spending_schedule = [int(input()) for _ in range(n)]
 
-start, end = 1, sum(spending_schedule)
+start, end = min(spending_schedule), max(spending_schedule)
 
 while start <= end:
     mid = (start + end) // 2
