@@ -29,9 +29,6 @@ input = sys.stdin.readline
 n, m = map(int, input().split())
 spending_schedule = [int(input()) for _ in range(n)]
 
-#print(n, m)
-#print(spending_schedule)
-
 start, end = 1, sum(spending_schedule)
 
 
