@@ -35,6 +35,7 @@ while start <= end:
     mid = (start + end) // 2
     leftover = 0
     total_cnt = 0
+    ans = 0
     
     for i in range(len(spending_schedule)):
         cnt = 0
@@ -45,10 +46,16 @@ while start <= end:
             cnt = (spending_schedule[i] // mid) + 1
             leftover = mid * cnt - spending_schedule[i]
         total_cnt += cnt
-        
-    if total_cnt > m:
+    
+    #print(f"m : {m}, total_cnt : {total_cnt}, start : {start}, mid : {mid}, end : {end}")
+    
+    if total_cnt == m:
+        ans = mid   
+        break 
+    elif total_cnt > m:
         start = mid + 1
     else:
-        end = mid - 1
+        end = mid - 1   
 
-print(start)
+#print()
+print(ans)
