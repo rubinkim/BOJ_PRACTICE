@@ -38,7 +38,7 @@
 n, m = map(int, input().split())            # n : 입국심사대숫자,    m : 패신져숫자
 print(f"n : {n},   m : {m}")
 
-array = [int(input() for _ in range(n))]    # n개의 입국심사대 각각의 입국심사시간
+array = [int(input()) for _ in range(n)]    # n개의 입국심사대 각각의 입국심사시간
 print(f"array : {array}")
 
 waiting_times = [0] * n
