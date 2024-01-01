@@ -34,6 +34,7 @@
 2
 4       8
 """
+"""
 ### 시간초과!!!!!!!
 n, m = map(int, input().split())            # n : 입국심사대숫자,    m : 패신져숫자
 #print(f"n : {n},   m : {m}")
@@ -58,3 +59,28 @@ ans = max(waiting_times)
 #print()    
 #print(f"waiting_times : {waiting_times}")
 print(ans)
+"""
+
+import sys
+input = sys.stdin.readline
+
+n, m = map(int, input().split()) 
+array = [int(input()) for _ in range(n)] 
+
+waiting_times = [0] * n
+min_idx = array.index(min(array))
+waiting_times[min_idx] = array[min_idx]
+i = 1
+
+while i < m: 
+       
+    for j in range(len(array)):
+        waiting_times[j] += array[j]
+    min_idx = waiting_times.index(min(waiting_times))
+        #print(f"i : {i},   min_idx : {min_idx},   waiting_times : {waiting_times}")
+    for j in range(len(array)):
+        if j != min_idx:
+            waiting_times[j] -= array[j]  
+    i += 1   
+
+print(max(waiting_times))
