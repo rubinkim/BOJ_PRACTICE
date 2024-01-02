@@ -34,53 +34,27 @@
 2
 4       8
 """
-"""
-### 시간초과!!!!!!!
-n, m = map(int, input().split())            # n : 입국심사대숫자,    m : 패신져숫자
-#print(f"n : {n},   m : {m}")
-
-array = [int(input()) for _ in range(n)]    # n개의 입국심사대 각각의 입국심사시간
-#print(f"array : {array}")
-
-waiting_times = [0] * n
-min_idx = array.index(min(array))
-waiting_times[min_idx] += array[min_idx]
-#print(f"waiting_times : {waiting_times}")
-
-for i in range(1, m):
-    inner_waiting_times = [0] * n
-    for j in range(len(array)):
-        inner_waiting_times[j] = waiting_times[j] +  array[j]
-    min_idx = inner_waiting_times.index(min(inner_waiting_times))
-    waiting_times[min_idx] += array[min_idx] 
-    #print(f"{i}th waiting_times : {waiting_times}")
-
-ans = max(waiting_times)
-#print()    
-#print(f"waiting_times : {waiting_times}")
-print(ans)
-"""
-
-import sys
+import sys                                  
 input = sys.stdin.readline
 
 n, m = map(int, input().split()) 
 array = [int(input()) for _ in range(n)] 
+array.sort()
 
-waiting_times = [0] * n
-min_idx = array.index(min(array))
-waiting_times[min_idx] = array[min_idx]
-i = 1
+start, end = min(array), max(array) * m
 
-while i < m: 
-       
-    for j in range(len(array)):
-        waiting_times[j] += array[j]
-    min_idx = waiting_times.index(min(waiting_times))
-        #print(f"i : {i},   min_idx : {min_idx},   waiting_times : {waiting_times}")
-    for j in range(len(array)):
-        if j != min_idx:
-            waiting_times[j] -= array[j]  
-    i += 1   
+while start <= end:
+    mid = (start + end) // 2
+    cnt = 0
+    
+    for i in range(len(array)):    
+        cnt += mid // array[i]
+    print(f"cnt : {cnt},  start : {start},  mid : {mid},  end : {end}")
+                    
+    if cnt >= m:
+        end = mid - 1
+    else:
+        start = mid + 1
 
-print(max(waiting_times))
+print()       
+print(start) 
