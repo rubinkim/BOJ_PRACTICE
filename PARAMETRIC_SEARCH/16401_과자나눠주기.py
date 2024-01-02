@@ -31,7 +31,7 @@ start, end = 1, max(array)
 while start <= end:
     mid = (start + end) // 2
     cnt = 0
-    ans = 0
+    
     for i in range(len(array)):
         if array[i] >= mid:
             cnt += array[i] // mid    
