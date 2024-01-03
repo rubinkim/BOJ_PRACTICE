@@ -82,8 +82,8 @@ while start <= end:
 
     if cnt > m or mid < max(spending_schedule):
         start = mid + 1
-    else:
-        end = mid - 1
+    else:        
         ans = mid
+        end = mid - 1
 
 print(ans)
