@@ -23,3 +23,21 @@
 5 6
 4 7         4
 """
+
+import sys
+input = sys.stdin.readline
+
+v = int(input())
+e = int(input())
+
+graph = {}
+for _ in range(e):
+      a, b = map(int, input().split())
+      if a not in graph.keys():
+            graph[a] = [b]
+      else:
+            graph[a].append(b)
+      if b not in graph.keys():
+            graph[b] = [a]
+      else:
+            graph[b].append(a)
