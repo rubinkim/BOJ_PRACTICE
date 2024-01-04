@@ -57,7 +57,7 @@ def dfs_deque(graph, start):
 
 dfs_deque(graph, 1)
 """
-
+"""
 from collections import deque
 import sys
 input = sys.stdin.readline
@@ -83,5 +83,6 @@ def dfs_deque(graph, start):
     print(len(path))
 
 dfs_deque(graph, 1)
+"""
       
       
