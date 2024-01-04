@@ -41,3 +41,19 @@ for _ in range(e):
             graph[b] = [a]
       else:
             graph[b].append(a)
+            
+from collections import deque
+
+def dfs_deque(graph, start):
+    q = deque([start])
+    path = []
+    while q:
+        now = q.pop()
+        if now not in path and now != start:
+            path.append(now)
+        for nxt in graph[now]:
+            if nxt not in path:
+                q.append(nxt)
+    return len(path)
+
+dfs_deque(graph, 1)
