@@ -33,7 +33,7 @@ e = int(input())
 
 graph = {}
 for _ in range(e):
-      a, b = map(int, input().split().rstrip())
+      a, b = map(int, input().split())
       if a not in graph.keys():
             graph[a] = [b]
       else:
