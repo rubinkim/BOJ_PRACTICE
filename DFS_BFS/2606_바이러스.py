@@ -24,3 +24,35 @@
 4 7         4
 """
 
+from collections import deque
+import sys
+input = sys.stdin.readline
+
+v = int(input())
+e = int(input())
+
+graph = {}
+for _ in range(e):
+      a, b = map(int, input().split().rstrip())
+      if a not in graph.keys():
+            graph[a] = [b]
+      else:
+            graph[a].append(b)
+      if b not in graph.keys():
+            graph[b] = [a]
+      else:
+            graph[b].append(a)
+            
+def dfs_deque(graph, start):
+    q = deque([start])
+    path = []
+    while q:
+        now = q.pop()
+        if now not in path and now != start:
+            path.append(now)
+        for nxt in graph[now]:
+            if nxt not in path:
+                q.append(nxt)
+    print(len(path))
+
+dfs_deque(graph, 1)
