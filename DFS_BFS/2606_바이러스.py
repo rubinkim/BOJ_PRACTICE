@@ -23,7 +23,7 @@
 5 6
 4 7         4
 """
-
+"""
 from collections import deque
 import sys
 input = sys.stdin.readline
@@ -56,3 +56,32 @@ def dfs_deque(graph, start):
     print(len(path))
 
 dfs_deque(graph, 1)
+"""
+
+from collections import deque
+import sys
+input = sys.stdin.readline
+
+v = int(input())
+e = int(input())
+graph = [[] for _ in range(v+1)]
+for _ in range(e):
+      a, b = map(int, input().split())
+      graph[a].append(b)
+      graph[b].append(a)
+      
+def dfs_deque(graph, start):
+    q = deque([start])
+    path = []
+    while q:
+        now = q.pop()
+        if now not in path and now != start:
+            path.append(now)
+        for nxt in reversed(graph[now]):
+            if nxt not in path:
+                q.append(nxt)
+    print(len(path))
+
+dfs_deque(graph, 1)
+      
+      
