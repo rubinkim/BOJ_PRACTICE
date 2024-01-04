@@ -84,5 +84,31 @@ def dfs_deque(graph, start):
 
 dfs_deque(graph, 1)
 """
+
+from collections import deque
+import sys
+input = sys.stdin.readline
+
+v = int(input())
+e = int(input())
+graph = [[] for _ in range(v+1)]
+for _ in range(e):
+      a, b = map(int, input().split())
+      graph[a].append(b)
+      graph[b].append(a)
+      
+def bfs_deque(graph, start):
+    q = deque([start])
+    path = []
+    while q:
+        now = q.popleft()
+        if now not in path and now != start:
+            path.append(now)
+        for nxt in graph[now]:
+            if nxt not in path:
+                q.append(nxt)
+    print(len(path))
+
+bfs_deque(graph, 1)
       
       
