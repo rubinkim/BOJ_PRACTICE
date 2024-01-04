@@ -56,3 +56,4 @@ def dfs_deque(graph, start):
     print(len(path))
 
 dfs_deque(graph, 1)
+print(graph)
