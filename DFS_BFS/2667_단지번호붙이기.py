@@ -21,7 +21,7 @@
 0111000
                    
 """
-
+from collections import deque
 import sys
 input = sys.stdin.readline
 
@@ -33,3 +33,53 @@ for i in range(n):
     for j in range(len(row)):
         if row[j] == '1':
             graph[i][j] = 1
+
+path = []
+
+def connected_component_mutant(graph, start_x, start_y, cnt):
+    global path
+    dx = [0, 0, 1, -1]
+    dy = [1, -1, 0, 0]
+        
+    if start_x <= -1 or start_x >= n or start_y <= -1 or start_y >= n:
+        return False
+    
+    if graph[start_x][start_y] == 1 and (start_x, start_y) not in path:
+        path.append((start_x, start_y))
+        graph[start_x][start_y] = cnt
+        q = deque([(start_x, start_y)])
+        
+        while q:
+            x, y = q.pop()
+            for i in range(4):
+                nx = x + dx[i]
+                ny = y + dy[i]
+                if nx <= -1 or nx >= n or ny <= -1 or ny >= n:
+                    continue
+                if graph[nx][ny] == 1 and (nx, ny) not in path:
+                    graph[nx][ny] = cnt
+                    path.append((nx, ny))
+                    q.append((nx, ny))            
+        return True
+    return False
+  
+result = 1
+for i in range(n):
+    for j in range(n):
+        if connected_component_mutant(graph, i, j, result) == True:       
+            print(f"{i} : {i},  j : {j},  result : {result}")            
+            result += 1     
+            
+cnt_dict = {}
+for i in range(n):
+    for j in range(n):
+        if graph[i][j] not in cnt_dict.keys():
+            cnt_dict[graph[i][j]] = 1
+        else:
+            cnt_dict[graph[i][j]] += 1
+            
+print(result - 1)
+
+for k, v in cnt_dict.items():
+    if k > 0:
+        print(v)
