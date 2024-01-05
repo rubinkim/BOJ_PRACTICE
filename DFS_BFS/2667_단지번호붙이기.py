@@ -20,3 +20,17 @@
 0111110             8
 0111000             9        
 """
+
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+    
+graph = [[0] * n for _ in range(n)]
+for i in range(n):
+    row = list(map(int, input().split()))
+    for j in range(len(row)):
+        if row[j] == 1:
+            graph[i][j] = 1
+            
+print(graph[2])
