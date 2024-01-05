@@ -66,8 +66,7 @@ def connected_component_mutant(graph, start_x, start_y, cnt):
 result = 1
 for i in range(n):
     for j in range(n):
-        if connected_component_mutant(graph, i, j, result) == True:       
-            print(f"{i} : {i},  j : {j},  result : {result}")            
+        if connected_component_mutant(graph, i, j, result) == True:               
             result += 1     
             
 cnt_dict = {}
