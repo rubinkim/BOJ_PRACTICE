@@ -148,6 +148,12 @@ def connected_component_mutant(graph, start_x, start_y, num):
         return True
     return False
 
+cnt = 1
+for i in range(n):
+    for j in range(n):
+        if connected_component_mutant(graph, i, j, cnt) == True:
+            cnt += 1  
+
 print(cnt - 1)
 for x in list(num_dict.values()):
     print(x)
