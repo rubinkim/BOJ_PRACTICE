@@ -21,6 +21,8 @@
 0111000
                    
 """
+
+"""
 from collections import deque
 import sys
 input = sys.stdin.readline
@@ -82,3 +84,19 @@ print(result - 1)
 for k, v in cnt_dict.items():
     if k > 0:
         print(v)
+"""        
+        
+from collections import deque
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+    
+graph = [[0] * n for _ in range(n)]
+for i in range(n):
+    row = input()    
+    for j in range(len(row)):
+        if row[j] == '1':
+            graph[i][j] = 1
+
+path = []
