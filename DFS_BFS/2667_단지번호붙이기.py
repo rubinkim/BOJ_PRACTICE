@@ -99,7 +99,6 @@ for i in range(n):
         if row[j] == '1':
             graph[i][j] = 1
 
-from collections import deque
 path = []
 num_dict = {}
 
