@@ -130,5 +130,7 @@ for i in range(n):
         if graph[i][j] == 1:
             count_list.append(bfs(graph, i, j))
             
-print(count_list)
+print(len(count_list))
+for i in range(len(count_list)):
+    print(count_list[i])
         
