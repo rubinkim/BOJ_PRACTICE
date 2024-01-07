@@ -112,4 +112,11 @@ def bfs(graph, start_x, start_y):
     dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
     while q:
         x, y = q.popleft()
+        for i in range(4):
+            nx = x + dx[i]
+            ny = y + dy[i]
+            if nx <= -1 or nx >= n or ny <= -1 or ny >= n:
+                continue
+            if graph[nx][ny] == 1:
+                
         
