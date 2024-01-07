@@ -125,7 +125,7 @@ def bfs(graph, start_x, start_y):
     return count
 
 count_list = []
-for i in range(n):
+for i in range():
     for j in range(n):
         if graph[i][j] == 1:
             count_list.append(bfs(graph, i, j))
