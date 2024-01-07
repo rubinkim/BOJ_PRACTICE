@@ -104,6 +104,3 @@ graph = []
 for _ in range(n):
     graph.append(list(map(int, input().rstrip())))
     
-print(n)
-for row in graph:
-    print(row)
