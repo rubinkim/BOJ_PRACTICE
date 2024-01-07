@@ -74,6 +74,7 @@ for _ in range(n):
 path = []
 num_dict = {}
 
+# dfs 방식
 def connected_component_mutant(graph, start_x, start_y, num):
     global path, num_dict
     dx = [-1, 1, 0, 0]
@@ -96,7 +97,7 @@ def connected_component_mutant(graph, start_x, start_y, num):
             num_dict[num] = 1
         
         while q:
-            x, y = q.pop()
+            x, y = q.pop()                     # x, y = q.popleft()로 하면 bfs이다.
             cnt = 0
             
             for i in range(4):
