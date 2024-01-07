@@ -104,7 +104,12 @@ graph = []
 for _ in range(n):
     graph.append(list(map(int, input().rstrip())))
     
-def dfs(graph, start_x, start_y):
+def bfs(graph, start_x, start_y):
     global n
     q = deque([(start_x, start_y)])
     count = 1
+    
+    dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
+    while q:
+        x, y = q.popleft()
+        
