@@ -69,7 +69,7 @@ n = int(input())
     
 graph = []
 for _ in range(n):
-    graph.append(list(map(int, input().rstip())))
+    graph.append(list(map(int, input().rstrip())))
     
 path = []
 num_dict = {}
@@ -126,6 +126,7 @@ for i in range(n):
             cnt += 1  
 
 print(cnt - 1)
+
 num_list = list(num_dict.values())
 num_list.sort()
 for x in num_list:
