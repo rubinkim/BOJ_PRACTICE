@@ -105,8 +105,9 @@ for _ in range(n):
     graph.append(list(map(int, input().rstrip())))
     
 def bfs(graph, start_x, start_y):
-    n = len(graph)
-    q = deque([(start_x, start_y)])
+    global n
+    q = deque()
+    q.append((start_x, start_y))
     graph[start_x][start_y] = 0
     count = 1
     
