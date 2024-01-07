@@ -95,3 +95,15 @@ for x in list(num_dict.values()):
     print(x)
 """
 
+from collections import deque
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+graph = []
+for _ in range(n):
+    graph.append(list(map(int, input())))
+    
+print(n)
+for row in graph:
+    print(row)
