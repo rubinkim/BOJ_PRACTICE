@@ -20,79 +20,6 @@
 0111000
                    
 """
-
-"""       
-from collections import deque
-import sys
-input = sys.stdin.readline
-
-n = int(input())
-    
-graph = [[0] * n for _ in range(n)]
-for i in range(n):
-    row = input()    
-    for j in range(len(row)):
-        if row[j] == '1':
-            graph[i][j] = 1
-
-path = []
-num_dict = {}
-
-def connected_component_mutant(graph, start_x, start_y, num):
-    global path, num_dict
-    dx = [-1, 1, 0, 0]
-    dy = [0, 0, -1, 1]
-    
-    q = deque()
-    
-    if start_x <= -1 or start_x >= n or start_y <= -1 or start_y >= n:
-        return False
-    if graph[start_x][start_y] == 0:
-        return False
-    if graph[start_x][start_y] == 1 and (start_x, start_y) in path:
-        return False
-    
-    if graph[start_x][start_y] == 1 and (start_x, start_y) not in path:
-        q.append((start_x, start_y))
-        path.append((start_x, start_y))
-        graph[start_x][start_y] = num
-        if num not in num_dict.keys():
-            num_dict[num] = 1
-        
-        while q:
-            x, y = q.pop()
-            cnt = 0
-            
-            for i in range(4):
-                nx = x + dx[i]
-                ny = y + dy[i]
-                
-                if nx <= -1 or nx >= n or ny <= -1 or ny >= n:
-                    continue
-                if graph[nx][ny] == 0:
-                    continue
-                if graph[nx][ny] == 1 and (nx, ny) in path:
-                    continue
-                if graph[nx][ny] == 1 and (nx, ny) not in path:
-                    q.append((nx, ny))
-                    path.append((nx, ny))
-                    graph[nx][ny] = num
-                    cnt += 1
-                    num_dict[num] += 1
-        
-        return True
-    return False
-
-cnt = 1
-for i in range(n):
-    for j in range(n):
-        if connected_component_mutant(graph, i, j, cnt) == True:
-            cnt += 1  
-
-print(cnt - 1)
-for x in list(num_dict.values()):
-    print(x)
-"""
 """
 from collections import deque
 import sys
@@ -140,12 +67,10 @@ input = sys.stdin.readline
 
 n = int(input())
     
-graph = [[0] * n for _ in range(n)]
-for i in range(n):
-    row = input()    
-    for j in range(len(row)):
-        if row[j] == '1':
-            graph[i][j] = 1
+graph = []
+for _ in range(n):
+    graph.append(list(map(int, input())))
+    
 path = []
 num_dict = {}
 
