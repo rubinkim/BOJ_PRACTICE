@@ -107,6 +107,7 @@ for _ in range(n):
 def bfs(graph, start_x, start_y):
     global n
     q = deque([(start_x, start_y)])
+    graph[start_x][start_y] = 0
     count = 1
     
     dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
@@ -118,5 +119,6 @@ def bfs(graph, start_x, start_y):
             if nx <= -1 or nx >= n or ny <= -1 or ny >= n:
                 continue
             if graph[nx][ny] == 1:
-                
+                q.append((nx, ny))
+                g
         
