@@ -104,3 +104,7 @@ graph = []
 for _ in range(n):
     graph.append(list(map(int, input().rstrip())))
     
+def dfs(graph, start_x, start_y):
+    global n
+    q = deque([(start_x, start_y)])
+    count = 1
