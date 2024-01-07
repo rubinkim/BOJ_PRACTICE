@@ -69,7 +69,7 @@ n = int(input())
     
 graph = []
 for _ in range(n):
-    graph.append(list(map(int, input())))
+    graph.append(list(map(int, input().rstip())))
     
 path = []
 num_dict = {}
