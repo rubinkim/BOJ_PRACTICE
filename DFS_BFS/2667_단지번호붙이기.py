@@ -120,5 +120,9 @@ def bfs(graph, start_x, start_y):
                 continue
             if graph[nx][ny] == 1:
                 q.append((nx, ny))
-                g
+                graph[nx][ny] = 0
+                count += 1
+    return count
+
+
         
