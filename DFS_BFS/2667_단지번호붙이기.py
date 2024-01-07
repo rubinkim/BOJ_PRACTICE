@@ -105,7 +105,7 @@ for _ in range(n):
     graph.append(list(map(int, input().rstrip())))
     
 def bfs(graph, start_x, start_y):
-    global n
+    n = len(graph)
     q = deque([(start_x, start_y)])
     graph[start_x][start_y] = 0
     count = 1
@@ -125,7 +125,7 @@ def bfs(graph, start_x, start_y):
     return count
 
 count_list = []
-for i in range():
+for i in range(n):
     for j in range(n):
         if graph[i][j] == 1:
             count_list.append(bfs(graph, i, j))
