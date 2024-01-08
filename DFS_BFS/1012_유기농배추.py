@@ -98,51 +98,28 @@ def connected_component_mutant(graph, start_y, start_x, num):
         
         return True
     return False
-  
+
 input = sys.stdin.readline
 num_usecases = int(input())
+#print(f"number of usecases : {num_usecases}")
+#print()
 
 for i in range(num_usecases):
-  m, n, k = map(int, input().split())  
-  print(f"i : {i},  m : {m},  n : {n},  k : {k}")
-  
-  graph = [[0] * m for _ in range(n)]
-  for _ in range(k):
-      x, y = map(int, input().split())
-      graph[y][x] = 1
-    
-  for row in graph:
-      print(row)
-      
-  ans = 1
-  for i in range(n):
-      for j in range(m):
-            if connected_component_mutant(graph, i, j, ans):
-                  ans += 1
-                  
-  print(num_dict)
-  print(ans - 1)
-            
-                  
-""" 
-print(connected_component_mutant(graph, 0, 4, 9))
-print(connected_component_mutant(graph, 2, 0, 7))
-for row in graph:
-  print(row)
-print(num_dict)
+    #print(f"usecase {i}")
+    m, n, k = map(int, input().split())
+    #print(f"m : {m},  n : {n},  k : {k}")
+    graph = [[0] * m for _ in range(n)]
+    for _ in range(k):
+        x, y = map(int, input().split())
+        graph[y][x] = 1
+        
+    #for row in graph:
+        #print(row)        
+        
+    ans = 1
+    for i in range(n):
+        for j in range(m):
+            if connected_component_mutant(graph, i, j, ans) == True:
+                ans += 1  
 
-
-ans = 4
-chk = [[False] * m for _ in range(n)]
-for j in range(m):
-  for i in range(n):
-    if connected_component_mutant(graph, i, j, ans) == True:
-      chk[i][j] = True
-      ans += 1
-      
-print(ans - 1)
-print(num_dict)
-
-for row in chk:
-  print(row)
-"""
+    print(ans - 1)      
