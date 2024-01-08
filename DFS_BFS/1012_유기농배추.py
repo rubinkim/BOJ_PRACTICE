@@ -115,5 +115,7 @@ for i in range(num_usecases):
       print(row)
   
 print(connected_component_mutant(graph, 0, 4, 9))
+print(connected_component_mutant(graph, 2, 0, 7))
 for row in graph:
   print(row)
+print(num_dict)
