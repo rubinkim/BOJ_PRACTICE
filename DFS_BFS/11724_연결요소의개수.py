@@ -56,5 +56,7 @@ for _ in range(m):
     #print(row)    
 result = []
 for i in range(1, n+1):
-    result.append(dfs(graph, i))
+    x = dfs(graph, i)
+    if x not in result:
+        result.append(x)
 print(result)
