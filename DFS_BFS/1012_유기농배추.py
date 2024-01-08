@@ -44,13 +44,11 @@
 2 2
 3 2
 4 2
-4 0                        2        
-                   
+4 0
 """
 
 # dfs 방식
 from collections import deque
-import sys
 path = []
 num_dict = {}
 
@@ -72,18 +70,20 @@ def connected_component_mutant(graph, start_y, start_x, num):
         q.append((start_y, start_x))
         path.append((start_y, start_x))
         graph[start_y][start_x] = num
-        if num not in num_dict.keys():
+        if num not in num_dict:
             num_dict[num] = 1
+        else:
+            num_dict[num] += 1
         
         while q:
             y, x = q.pop()                     # x, y = q.popleft()로 하면 bfs이다.
             cnt = 0
             
-            for i in range(4):
-                nx = x + dx[i]
+            for i in range(4):                
                 ny = y + dy[i]
+                nx = x + dx[i]
                 
-                if nx <= -1 or nx >= m or ny <= -1 or ny >= n:
+                if ny <= -1 or ny >= n or nx <= -1 or nx >= m:
                     continue
                 if graph[ny][nx] == 0:
                     continue
