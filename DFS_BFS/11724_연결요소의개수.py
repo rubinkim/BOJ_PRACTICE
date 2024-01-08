@@ -52,9 +52,8 @@ for _ in range(m):
     graph[u].append(v)
     graph[v].append(u)       
 
-for row in graph:
-    print(row)
-    
-ans = 0
+#for row in graph:
+    #print(row)    
+
 for i in range(1, n+1):
-    dfs(graph, i)
+    print(dfs(graph, i))
