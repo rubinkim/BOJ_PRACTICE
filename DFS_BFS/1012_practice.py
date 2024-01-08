@@ -34,16 +34,23 @@
     
 """
 
-def dfs(x,y):
+from collections import deque
+
+def bfs(x,y):
+    q = deque()
+    q.append((x,y))
     visited[x][y] = True
-    directions = [ (-1, 0), (1, 0), (0, -1), (0, 1)]
-    # 상하 좌우로 움직일 수 있는 방향을 지정해주고 여기서 for문을 돌린다.
-    for dx, dy in directions:
-        nx, ny = dx + x, dy+y
-        if nx < 0 or nx >=n or ny<0 or ny>=m:
-            continue
-        if array[nx][ny] and not visited[nx][ny]:
-            dfs(nx,ny)
+    directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+    while q:
+        x, y = q.popleft()
+        for dx, dy in directions:
+            nx, ny = x+dx, y+dy
+            if nx < 0 or nx >= n or ny < 0 or ny >= m:
+                continue
+            if array[nx][ny] and not visited[nx][ny]:
+                q.append((nx,ny))
+                visited[nx][ny]=True
+
 
 for _ in range(int(input())):
     m, n, k = map(int,input().split())
@@ -56,6 +63,6 @@ for _ in range(int(input())):
     for i in range(n):
         for j in range(m):
             if array[i][j] and not visited[i][j]:
-                dfs(i,j)
+                bfs(i,j)
                 result += 1
     print(result)
