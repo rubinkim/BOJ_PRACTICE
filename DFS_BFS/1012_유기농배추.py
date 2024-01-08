@@ -49,23 +49,18 @@
 
 # dfs 방식
 from collections import deque
-path = []
-num_dict = {}
+import sys
 
 def connected_component_mutant(graph, start_y, start_x, num):
     global path, num_dict
-    dy = [0, 0, -1, 1]
-    dx = [-1, 1, 0, 0]    
-    
-    q = deque()
-    
-    if start_y <= -1 or start_y >= n or start_x <= -1 or start_x >= m:
+    dy, dx = [0, 0, -1, 1], [-1, 1, 0, 0]    
+    q = deque()    
+    if start_x <= -1 or start_x >= m or start_y <= -1 or start_y >= n:
         return False
     if graph[start_y][start_x] == 0:
         return False
     if graph[start_y][start_x] == 1 and (start_y, start_x) in path:
-        return False
-    
+        return False    
     if graph[start_y][start_x] == 1 and (start_y, start_x) not in path:
         q.append((start_y, start_x))
         path.append((start_y, start_x))
@@ -81,8 +76,7 @@ def connected_component_mutant(graph, start_y, start_x, num):
             
             for i in range(4):                
                 ny = y + dy[i]
-                nx = x + dx[i]
-                
+                nx = x + dx[i]                
                 if ny <= -1 or ny >= n or nx <= -1 or nx >= m:
                     continue
                 if graph[ny][nx] == 0:
@@ -94,33 +88,24 @@ def connected_component_mutant(graph, start_y, start_x, num):
                     path.append((ny, nx))
                     graph[ny][nx] = num
                     cnt += 1
-                    num_dict[num] += 1
-        
+                    num_dict[num] += 1        
         return True
     return False
 
-#input = sys.stdin.readline
+input = sys.stdin.readline
 num_usecases = int(input())
-#print(f"number of usecases : {num_usecases}")
-#print()
 
-for i in range(num_usecases):
-    #print(f"usecase {i}")
-    m, n, k = map(int, input().split())
-    #print(f"m : {m},  n : {n},  k : {k}")
+for i in range(num_usecases):    
+    m, n, k = map(int, input().split())    
     graph = [[0] * m for _ in range(n)]
+    path = []
+    num_dict = {}
     for _ in range(k):
-        x, y = map(int, input().split())
-        #print(f"x : {x},  y : {y}")
-        graph[y][x] = 1
-        
-    #for row in graph:
-        #print(row)        
-        
+        x, y = map(int, input().split())        
+        graph[y][x] = 1        
     ans = 1
     for i in range(n):
         for j in range(m):
             if connected_component_mutant(graph, i, j, ans) == True:
                 ans += 1  
-
-    print(ans - 1)      
+    print(ans - 1)
