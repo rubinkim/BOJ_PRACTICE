@@ -105,8 +105,7 @@ def connected_component_mutant(graph, start_y, start_x, num):
                     path.append((ny, nx))
                     graph[ny][nx] = num
                     cnt += 1
-                    num_dict[num] += 1
-        
+                    num_dict[num] += 1        
         return True
     return False
 
