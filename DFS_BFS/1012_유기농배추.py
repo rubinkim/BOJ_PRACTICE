@@ -34,8 +34,8 @@
 7 6
 8 6
 9 6
-10 10                      5
-5 5                        1
+10 10 1
+5 5
 
 1
 5 3 6
@@ -99,7 +99,7 @@ def connected_component_mutant(graph, start_y, start_x, num):
         return True
     return False
 
-input = sys.stdin.readline
+#input = sys.stdin.readline
 num_usecases = int(input())
 #print(f"number of usecases : {num_usecases}")
 #print()
@@ -111,6 +111,7 @@ for i in range(num_usecases):
     graph = [[0] * m for _ in range(n)]
     for _ in range(k):
         x, y = map(int, input().split())
+        #print(f"x : {x},  y : {y}")
         graph[y][x] = 1
         
     #for row in graph:
