@@ -113,19 +113,30 @@ for i in range(num_usecases):
     
   for row in graph:
       print(row)
+      
+  ans = 1
+  for i in range(n):
+      for j in range(m):
+            if connected_component_mutant(graph, i, j, ans):
+                  ans += 1
+                  
+  print(num_dict)
+  print(ans - 1)
+            
+                  
 """ 
 print(connected_component_mutant(graph, 0, 4, 9))
 print(connected_component_mutant(graph, 2, 0, 7))
 for row in graph:
   print(row)
 print(num_dict)
-"""
+
 
 ans = 4
 chk = [[False] * m for _ in range(n)]
 for j in range(m):
   for i in range(n):
-    if connected_component_mutant(graph, j, i, ans) == True:
+    if connected_component_mutant(graph, i, j, ans) == True:
       chk[i][j] = True
       ans += 1
       
@@ -134,3 +145,4 @@ print(num_dict)
 
 for row in chk:
   print(row)
+"""
