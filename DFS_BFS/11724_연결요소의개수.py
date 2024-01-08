@@ -57,6 +57,7 @@ for _ in range(m):
 result = []
 for i in range(1, n+1):
     x = dfs(graph, i)
+    x.sort()
     if x not in result:
         result.append(x)
-print(result)
+print(len(result))
