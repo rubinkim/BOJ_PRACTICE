@@ -76,17 +76,14 @@ def connected_component_mutant(graph, start_y, start_x, num):
 input = sys.stdin.readline
     
 n, m = map(int, input().split())    
-graph = [[0] * (n+1) for _ in range(n+1)]
+graph = [[] for _ in range(n+1)]
 path = []
 num_dict = {}
 for _ in range(m):
     u, v = map(int, input().split())        
-    graph[u][v] = 1  
-    graph[v][u] = 1
+    graph[u].append(v)
+    graph[v].append(u) 
       
-ans = 1
-for i in range(1, n+1):
-    for j in range(1, n+1):
-        if connected_component_mutant(graph, i, j, ans) == True:
-            ans += 1  
-print(ans - 1)
+
+for row in graph:
+    print(row)
