@@ -103,12 +103,13 @@ input = sys.stdin.readline
 num_usecases = int(input())
 
 for i in range(num_usecases):
-  m, n, k = map(int, input().split())
-  
+  m, n, k = map(int, input().split())  
   print(f"i : {i},  m : {m},  n : {n},  k : {k}")
+  
+  graph = [[0] * m for _ in range(n)]
   for _ in range(k):
-        x, y = map(int, input.readline().split())
-    graph[y][x] = 1
+      x, y = map(int, input.readline().split())
+      graph[y][x] = 1
     
   for row in graph:
       print(row)
