@@ -116,7 +116,7 @@ for i in range(num_usecases):
     ans = 1
     for i in range(n):
         for j in range(m):
-            if graph[i][j] == 1 and (i, j) not in path:
+            if graph[i][j] == 1:
                 connected_component_mutant(graph, i, j, ans)
                 ans += 1
     print(ans - 1)
