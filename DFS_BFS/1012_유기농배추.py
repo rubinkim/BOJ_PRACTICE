@@ -47,3 +47,63 @@
 4 0                        2        
                    
 """
+
+# dfs 방식
+from collections import deque
+import sys
+path = []
+num_dict = {}
+
+def connected_component_mutant(graph, start_y, start_x, num):
+    global path, num_dict
+    dy = [0, 0, -1, 1]
+    dx = [-1, 1, 0, 0]    
+    
+    q = deque()
+    
+    if start_x <= -1 or start_x >= m or start_y <= -1 or start_y >= n:
+        return False
+    if graph[start_y][start_x] == 0:
+        return False
+    if graph[start_y][start_x] == 1 and (start_y, start_x) in path:
+        return False
+    
+    if graph[start_y][start_x] == 1 and (start_y, start_x) not in path:
+        q.append((start_y, start_x))
+        path.append((start_y, start_x))
+        graph[start_y][start_x] = num
+        if num not in num_dict.keys():
+            num_dict[num] = 1
+        
+        while q:
+            y, x = q.pop()                     # x, y = q.popleft()로 하면 bfs이다.
+            cnt = 0
+            
+            for i in range(4):
+                nx = x + dx[i]
+                ny = y + dy[i]
+                
+                if nx <= -1 or nx >= m or ny <= -1 or ny >= n:
+                    continue
+                if graph[ny][nx] == 0:
+                    continue
+                if graph[ny][nx] == 1 and (ny, nx) in path:
+                    continue
+                if graph[ny][nx] == 1 and (ny, nx) not in path:
+                    q.append((ny, nx))
+                    path.append((ny, nx))
+                    graph[ny][nx] = num
+                    cnt += 1
+                    num_dict[num] += 1
+        
+        return True
+    return False
+  
+input = sys.stdin.readline
+num_usecases = int(input())
+
+for i in range(num_usecases):
+  m, n, k = map(int, input().split())
+  
+  print(f"i : {i},  m : {m},  n : {n},  k : {k}")
+  
