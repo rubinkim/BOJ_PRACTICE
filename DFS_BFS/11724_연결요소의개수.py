@@ -54,6 +54,7 @@ for _ in range(m):
 
 #for row in graph:
     #print(row)    
-
+result = []
 for i in range(1, n+1):
-    print(dfs(graph, i))
+    result.append(dfs(graph, i))
+print(result)
