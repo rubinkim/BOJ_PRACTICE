@@ -108,9 +108,10 @@ for i in range(num_usecases):
   
   graph = [[0] * m for _ in range(n)]
   for _ in range(k):
-      x, y = map(int, input.readline().split())
+      x, y = map(int, input().split())
       graph[y][x] = 1
     
   for row in graph:
       print(row)
   
+print(connected_component_mutant(graph, 0, 4, 9))
