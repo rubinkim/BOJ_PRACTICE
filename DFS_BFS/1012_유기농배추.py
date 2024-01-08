@@ -122,13 +122,15 @@ print(num_dict)
 """
 
 ans = 4
+chk = [[False] * m for _ in range(n)]
 for j in range(m):
   for i in range(n):
-    if connected_component_mutant(graph, j, i, ans):
+    if connected_component_mutant(graph, j, i, ans) == True:
+      chk[i][j] = True
       ans += 1
       
 print(ans - 1)
 print(num_dict)
 
-for row in graph:
+for row in chk:
   print(row)
