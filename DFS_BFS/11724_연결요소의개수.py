@@ -73,9 +73,7 @@ def connected_component_mutant(graph, start_y, start_x, num):
         return True
     return False
 
-input = sys.stdin.readline
-num_usecases = int(input())
-    
+input = sys.stdin.readline    
 n, m = map(int, input().split())    
 graph = [[] for _ in range(n+1)]
 path = []
