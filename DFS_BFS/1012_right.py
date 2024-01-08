@@ -35,7 +35,6 @@
 
 # dfs 방식  : path 대신에 visited로 바꿨더니 동작한다.
 from collections import deque
-num_dict = {}
 
 def connected_component_mutant(graph, start_y, start_x, num):
     global num_dict
@@ -55,6 +54,7 @@ def connected_component_mutant(graph, start_y, start_x, num):
         q.append((start_y, start_x))
         visited[start_y][start_x] = True
         graph[start_y][start_x] = num
+        num_dict = {}
         if num not in num_dict:
             num_dict[num] = 1
         else:
