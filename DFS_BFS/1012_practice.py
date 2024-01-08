@@ -125,3 +125,7 @@ for i in range(num_usecases):
                 ans += 1  
 
     print(ans - 1)
+    print()
+    
+    for row in graph:
+        print(row)
