@@ -59,7 +59,7 @@ def connected_component_mutant(graph, start_y, start_x, num):
     
     q = deque()
     
-    if start_x <= -1 or start_x >= m or start_y <= -1 or start_y >= n:
+    if start_y <= -1 or start_y >= n or start_x <= -1 or start_x >= m:
         return False
     if graph[start_y][start_x] == 0:
         return False
