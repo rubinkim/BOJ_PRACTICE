@@ -116,7 +116,6 @@ for i in range(num_usecases):
     ans = 1
     for i in range(n):
         for j in range(m):
-            if graph[i][j] == 1:
-                connected_component_mutant(graph, i, j, ans)
+            if connected_component_mutant(graph, i, j, ans) == True:                
                 ans += 1
     print(ans - 1)
