@@ -80,12 +80,7 @@ def connected_component_mutant(graph, start_y, start_x, num):
     q = deque()
     
     if start_y <= -1 or start_y >= n or start_x <= -1 or start_x >= m:
-        return False
-    if graph[start_y][start_x] == 0:
-        return False
-    if graph[start_y][start_x] == 1 and (start_y, start_x) in path:
-        return False
-    
+        return False    
     if graph[start_y][start_x] == 1 and (start_y, start_x) not in path:
         q.append((start_y, start_x))
         path.append((start_y, start_x))
@@ -104,10 +99,6 @@ def connected_component_mutant(graph, start_y, start_x, num):
                 nx = x + dx[i]
                 
                 if ny <= -1 or ny >= n or nx <= -1 or nx >= m:
-                    continue
-                if graph[ny][nx] == 0:
-                    continue
-                if graph[ny][nx] == 1 and (ny, nx) in path:
                     continue
                 if graph[ny][nx] == 1 and (ny, nx) not in path:
                     q.append((ny, nx))
