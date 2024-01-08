@@ -32,58 +32,29 @@
 from collections import deque
 import sys
 
-def connected_component_mutant(graph, start_y, start_x, num):
-    global path, num_dict
-    dy, dx = [0, 0, -1, 1], [-1, 1, 0, 0]    
-    q = deque()    
-    if start_x <= -1 or start_x >= m or start_y <= -1 or start_y >= n:
-        return False
-    if graph[start_y][start_x] == 0:
-        return False
-    if graph[start_y][start_x] == 1 and (start_y, start_x) in path:
-        return False    
-    if graph[start_y][start_x] == 1 and (start_y, start_x) not in path:
-        q.append((start_y, start_x))
-        path.append((start_y, start_x))
-        graph[start_y][start_x] = num
-        if num not in num_dict:
-            num_dict[num] = 1
-        else:
-            num_dict[num] += 1
-        
-        while q:
-            y, x = q.pop()                     # x, y = q.popleft()로 하면 bfs이다.
-            cnt = 0
-            
-            for i in range(4):                
-                ny = y + dy[i]
-                nx = x + dx[i]                
-                if ny <= -1 or ny >= n or nx <= -1 or nx >= m:
-                    continue
-                if graph[ny][nx] == 0:
-                    continue
-                if graph[ny][nx] == 1 and (ny, nx) in path:
-                    continue
-                if graph[ny][nx] == 1 and (ny, nx) not in path:
-                    q.append((ny, nx))
-                    path.append((ny, nx))
-                    graph[ny][nx] = num
-                    cnt += 1
-                    num_dict[num] += 1        
-        return True
-    return False
-
-input = sys.stdin.readline
-    
+def dfs(graph, start):   
+    q = deque([start])  
+    path = [] 
+    while q:
+        now = q.pop()
+        if now not in path:
+            path.append(now)
+        for nxt in reversed(graph[now]):
+            if nxt not in path:
+                q.append(nxt)
+    return path
+                
+input = sys.stdin.readline    
 n, m = map(int, input().split())    
 graph = [[] for _ in range(n+1)]
-path = []
-num_dict = {}
 for _ in range(m):
     u, v = map(int, input().split())        
     graph[u].append(v)
-    graph[v].append(u) 
-      
+    graph[v].append(u)       
 
 for row in graph:
     print(row)
+    
+ans = 0
+for i in range(1, n+1):
+    dfs(graph, i)
