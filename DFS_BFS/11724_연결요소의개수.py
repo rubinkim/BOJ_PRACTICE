@@ -75,18 +75,18 @@ def connected_component_mutant(graph, start_y, start_x, num):
 
 input = sys.stdin.readline
 num_usecases = int(input())
-
-for i in range(num_usecases):    
-    m, n, k = map(int, input().split())    
-    graph = [[0] * m for _ in range(n)]
-    path = []
-    num_dict = {}
-    for _ in range(k):
-        x, y = map(int, input().split())        
-        graph[y][x] = 1        
-    ans = 1
-    for i in range(n):
-        for j in range(m):
-            if connected_component_mutant(graph, i, j, ans) == True:
-                ans += 1  
-    print(ans - 1)
+    
+n, m = map(int, input().split())    
+graph = [[] for _ in range(n+1)]
+path = []
+num_dict = {}
+for _ in range(m):
+    u, v = map(int, input().split())        
+    graph[u].append(v)
+    graph[v].append(u)       
+ans = 1
+for i in range(n):
+    for j in range(m):
+        if connected_component_mutant(graph, i, j, ans) == True:
+            ans += 1  
+print(ans - 1)
