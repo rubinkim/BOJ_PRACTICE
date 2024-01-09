@@ -50,10 +50,13 @@ graph = [[] for _ in range(n+1)]
 for _ in range(m):
     u, v = map(int, input().split())        
     graph[u].append(v)
-    graph[v].append(u)       
+    graph[v].append(u) 
+    
+print(f"graph : {graph}")      
 
 #for row in graph:
-    #print(row)    
+    #print(row) 
+"""   
 result = []
 for i in range(1, n+1):
     x = dfs(graph, i)
@@ -61,3 +64,12 @@ for i in range(1, n+1):
     if x not in result:
         result.append(x)
 print(len(result))
+"""
+
+result = []
+i = 1
+ans = 0
+while True:
+    x = dfs(graph, i)
+    
+    
