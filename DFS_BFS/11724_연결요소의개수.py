@@ -107,5 +107,29 @@ while graph:
     cnt += 1
 print(cnt)
 """
-             
+
+from collections import deque
+import sys
+
+def dfs(graph, start, cnt):
+    q = deque([start])
+    path = []
+    while q:
+        now = q.pop()
+        if now not in path:
+            path.append(now)
+        for nxt in reversed(graph[now]):
+            if nxt not in path:
+                q.append(nxt)
+                
+input = sys.stdin.readline    
+n, m = map(int, input().split())    
+graph = [[] for _ in range(n+1)]
+for _ in range(m):
+    u, v = map(int, input().split())        
+    graph[u].append(v)
+    graph[v].append(u) 
+    
+print(f"graph : {graph}"
+                 
     
