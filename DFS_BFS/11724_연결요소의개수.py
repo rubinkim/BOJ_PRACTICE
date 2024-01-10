@@ -105,16 +105,14 @@ from collections import deque
 input = sys.stdin.readline
 
 def bfs(graph, start):
-    global path
     q = deque([start])
-    sub_path = []
     while q:
         now = q.popleft()
-        if now not in sub_path:
-            sub_path.append(now)
+        if now not in path:
+            path.append(now)
         for nxt in graph[now]:
             if nxt not in path:
-                sub_path.append(nxt)
+                path.append(nxt)
                 q.append(nxt)
     path.append(sub_path)
 
