@@ -83,6 +83,10 @@ for _ in range(m):
     a, b = map(int, input().split())
     graph[a].append(b)
     graph[b].append(a)
+    
+for row in graph:
+    print(row)
+print()
 
 # 방문처리
 path = []
