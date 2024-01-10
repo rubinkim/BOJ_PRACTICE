@@ -147,8 +147,8 @@ def bfs(graph, start):
     q = deque([start])
     while q:
         now = q.popleft()
-        if not visited[start]:
-            visited[start] = True
+        if not visited[now]:
+            visited[now] = True
         for nxt in graph[now]:
             if not visited[nxt]:
                 visited[nxt] = True
