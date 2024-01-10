@@ -105,6 +105,7 @@ from collections import deque
 input = sys.stdin.readline
 
 def bfs(graph, start):
+    global path
     q = deque([start])
     sub_path = []
     while q:
@@ -143,5 +144,5 @@ for i in range(1, n + 1):
             cnt += 1  # 연결요소 를 +1개 해준다.
 
 print()
-print(path)
+#print(path)
 print(cnt)      
