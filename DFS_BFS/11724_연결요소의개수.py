@@ -145,10 +145,10 @@ input = sys.stdin.readline
 
 def bfs(start):
     queue = deque([start])
-    if not visited[start]:
-        visited[start] = True
     while queue:
         node = queue.popleft()
+        if not visited[start]:
+            visited[start] = True
         for i in graph[node]:
             if not visited[i]:
                 visited[i] = True
