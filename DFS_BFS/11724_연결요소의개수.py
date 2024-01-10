@@ -113,8 +113,7 @@ def bfs(graph, start):
         for nxt in graph[now]:
             if nxt not in path:
                 path.append(nxt)
-                q.append(nxt)
-    path.append(sub_path)
+                q.append(nxt)        
 
 n, m = map(int, input().split())
 graph = [[] for _ in range(n + 1)]
