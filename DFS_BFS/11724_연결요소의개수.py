@@ -111,9 +111,10 @@ print(cnt)
 from collections import deque
 import sys
 
+path = []
 def dfs(graph, start, cnt):
-    q = deque([start])
-    path = []
+    global path
+    q = deque([start])    
     while q:
         now = q.pop()
         if now not in path:
@@ -130,6 +131,14 @@ for _ in range(m):
     graph[u].append(v)
     graph[v].append(u) 
     
-print(f"graph : {graph}"
+print(f"graph : {graph}")
+
+result = 0
+for i in range(1, n+1):
+    x = dfs(graph, i)
+    x.sort()
+    if x not in result:
+        result.append(x)
+print(len(result))
                  
     
