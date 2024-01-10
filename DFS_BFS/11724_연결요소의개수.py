@@ -159,6 +159,12 @@ import sys
 from collections import deque
 sys.setrecursionlimit(5000)
 
+def dfs_recursion(graph, start, depth):
+    path.append(start)
+    for nxt in reversed(graph[start]):
+        if nxt not in path:
+            dfs_recursion(graph, nxt, depth+1)
+            
 input = sys.stdin.readline
 n, m = map(int, input().split())
 path = []
@@ -168,12 +174,15 @@ for _ in range(m):
     a, b = map(int, input().split())
     graph[a].append(b)
     graph[b].append(a)
-
-
-def dfs_recursion(graph, start, depth):
-    path.append(start)
-    for nxt in reversed(graph[start]):
-        if nxt not in path:
-            dfs_recursion(graph, nxt, depth+1)
     
+for i in range(1, n+1):
+    if i not in path:
+        if not graph[i]:
+            path.append(i)
+            cnt += 1
+        else:
+            dfs_recursion(graph, i, 0)
+            cnt += 1
+            
+print(cnt)   
     
