@@ -143,16 +143,16 @@ import sys
 from collections import deque
 input = sys.stdin.readline
 
-def bfs(start):
-    queue = deque([start])
-    while queue:
-        node = queue.popleft()
+def bfs(graph, start):
+    q = deque([start])
+    while q:
+        now = q.popleft()
         if not visited[start]:
             visited[start] = True
-        for i in graph[node]:
-            if not visited[i]:
-                visited[i] = True
-                queue.append(i)
+        for nxt in graph[now]:
+            if not visited[nxt]:
+                visited[nxt] = True
+                q.append(nxt)
 
 N, M = map(int, input().split())
 graph = [[] for _ in range(N + 1)]
