@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+﻿#-*- coding: utf-8 -*-
 
 """
 6 5
@@ -43,19 +43,19 @@ for _ in range(m):
     graph[a].append(b)
     graph[b].append(a)
 
-# 방문처리
+# 諛⑸Ц泥섎━
 visited = [False] * (1 + n)
-cnt = 0  # 컴포넌트 그래프 개수 저장
+cnt = 0  # 而댄룷�꼳�듃 洹몃옒�봽 媛쒖닔 ����옣
 
-# 1~N번 노드를 각각돌면서
+# 1~N踰� �끂�뱶瑜� 媛곴컖�룎硫댁꽌
 for i in range(1, n + 1):
-    if not visited[i]:  # 만약 방문하지 않았다면
-        if not graph[i]:           # 만약 그래프가 비어있다면
-            cnt += 1             # 개수 한개 추가
-            visited[i] = True      # 방문처리
+    if not visited[i]:  # 留뚯빟 諛⑸Ц�븯吏� �븡�븯�떎硫�
+        if not graph[i]:           # 留뚯빟 洹몃옒�봽媛� 鍮꾩뼱�엳�떎硫�
+            cnt += 1             # 媛쒖닔 �븳媛� 異붽��
+            visited[i] = True      # 諛⑸Ц泥섎━
         else:
-            bfs(graph, i)  # 해당 i를 시작노드로 bfs를 돈다.
-            cnt += 1  # 연결요소 를 +1개 해준다.
+            bfs(graph, i)  # �빐�떦 i瑜� �떆�옉�끂�뱶濡� bfs瑜� �룉�떎.
+            cnt += 1  # �뿰寃곗슂�냼 瑜� +1媛� �빐以��떎.
 
 print(cnt)
 """
@@ -88,19 +88,20 @@ for row in graph:
     print(row)
 print()
 
-# 방문처리
+# 諛⑸Ц泥섎━
 path = []
-cnt = 0  # 컴포넌트 그래프 개수 저장
+cnt = 0  # 而댄룷�꼳�듃 洹몃옒�봽 媛쒖닔 ����옣
 
-# 1~N번 노드를 각각돌면서
+# 1~N踰� �끂�뱶瑜� 媛곴컖�룎硫댁꽌
 for i in range(1, n + 1):
-    if i not in path:  # 만약 방문하지 않았다면
-        if not graph[i]:           # 만약 그래프가 비어있다면
-            cnt += 1               # 개수 한개 추가
-            path.append(i)         # 방문처리
+    if i not in path:  # 留뚯빟 諛⑸Ц�븯吏� �븡�븯�떎硫�
+        if not graph[i]:           # 留뚯빟 洹몃옒�봽媛� 鍮꾩뼱�엳�떎硫�
+            cnt += 1               # 媛쒖닔 �븳媛� 異붽��
+            path.append(i)         # 諛⑸Ц泥섎━
+            print(path)
         else:
-            dfs(graph, i)  # 해당 i를 시작노드로 bfs를 돈다.
-            cnt += 1  # 연결요소 를 +1개 해준다.
+            dfs(graph, i)  # �빐�떦 i瑜� �떆�옉�끂�뱶濡� bfs瑜� �룉�떎.
+            cnt += 1  # �뿰寃곗슂�냼 瑜� +1媛� �빐以��떎.
             print(path)
 
 print(cnt)               
@@ -135,19 +136,19 @@ for row in graph:
     print(row)
 print()
 
-# 방문처리
+# 諛⑸Ц泥섎━
 path = []
-cnt = 0  # 컴포넌트 그래프 개수 저장
+cnt = 0  # 而댄룷�꼳�듃 洹몃옒�봽 媛쒖닔 ����옣
 
-# 1~N번 노드를 각각돌면서
+# 1~N踰� �끂�뱶瑜� 媛곴컖�룎硫댁꽌
 for i in range(1, n + 1):
-    if i not in path:  # 만약 방문하지 않았다면
-        if not graph[i]:           # 만약 그래프가 비어있다면
-            cnt += 1               # 개수 한개 추가
-            path.append(i)         # 방문처리
+    if i not in path:  # 留뚯빟 諛⑸Ц�븯吏� �븡�븯�떎硫�
+        if not graph[i]:           # 留뚯빟 洹몃옒�봽媛� 鍮꾩뼱�엳�떎硫�
+            cnt += 1               # 媛쒖닔 �븳媛� 異붽��
+            path.append(i)         # 諛⑸Ц泥섎━
         else:
-            bfs(graph, i)  # 해당 i를 시작노드로 bfs를 돈다.
-            cnt += 1  # 연결요소 를 +1개 해준다.
+            bfs(graph, i)  # �빐�떦 i瑜� �떆�옉�끂�뱶濡� bfs瑜� �룉�떎.
+            cnt += 1  # �뿰寃곗슂�냼 瑜� +1媛� �빐以��떎.
             print(path)
 
 print()
