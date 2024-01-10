@@ -154,3 +154,11 @@ for i in range(1, n + 1):
 print()
 print(cnt) 
 """     
+
+import sys
+from collections import deque
+sys.setrecursionlimit(5000)
+
+input = sys.stdin.readline
+
+
