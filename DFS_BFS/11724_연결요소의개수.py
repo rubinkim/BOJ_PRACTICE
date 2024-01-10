@@ -102,7 +102,6 @@ print(cnt)
 from collections import deque
 import sys
 
-path = []
 def dfs(graph, start):
     global path
     q = deque([start])    
@@ -117,6 +116,8 @@ def dfs(graph, start):
 input = sys.stdin.readline    
 n, m = map(int, input().split())    
 graph = [[] for _ in range(n+1)]
+path = []
+
 for _ in range(m):
     u, v = map(int, input().split())        
     graph[u].append(v)
@@ -127,9 +128,13 @@ print(f"graph : {graph}")
 result = 0
 for i in range(1, n+1):
     if i not in path:
-        dfs(graph, i)
-        result += 1
-        print(path)
+        if not graph:
+            result += 1
+            path.append(i)
+        else:
+            dfs(graph, i)
+            result += 1
+            print(path)
         
 print(result)
 
