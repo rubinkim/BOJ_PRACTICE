@@ -154,25 +154,29 @@ def bfs(graph, start):
                 visited[nxt] = True
                 q.append(nxt)
 
-N, M = map(int, input().split())
-graph = [[] for _ in range(N + 1)]
+n, m = map(int, input().split())
+graph = [[] for _ in range(n + 1)]
 
-for _ in range(M):
+for _ in range(m):
     a, b = map(int, input().split())
     graph[a].append(b)
     graph[b].append(a)
 
 # 방문처리
-visited = [False] * (1 + N)
-count = 0  # 컴포넌트 그래프 개수 저장
+visited = [False] * (1 + n)
+cnt = 0  # 컴포넌트 그래프 개수 저장
 
 # 1~N번 노드를 각각돌면서
-for i in range(1, N + 1):
+for i in range(1, n + 1):
     if not visited[i]:  # 만약 방문하지 않았다면
-        bfs(i)  # 해당 i를 시작노드로 bfs를 돈다.
-        count += 1  # 연결요소 를 +1개 해준다.
+        if not graph[i]:           # 만약 그래프가 비어있다면
+            cnt += 1             # 개수 한개 추가
+            visited[i] = True      # 방문처리
+        else:
+            bfs(graph, i)  # 해당 i를 시작노드로 bfs를 돈다.
+            cnt += 1  # 연결요소 를 +1개 해준다.
 
-print(count)
+print(cnt)
 
                  
     
