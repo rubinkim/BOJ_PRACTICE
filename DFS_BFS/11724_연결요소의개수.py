@@ -172,5 +172,8 @@ for _ in range(m):
 
 def dfs_recursion(graph, start, depth):
     path.append(start)
+    for nxt in reversed(graph[start]):
+        if nxt not in path:
+            dfs_recursion(graph, nxt, depth+1)
     
     
