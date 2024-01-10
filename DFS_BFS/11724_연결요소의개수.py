@@ -139,7 +139,7 @@ for i in range(1, n + 1):
             cnt += 1               # 개수 한개 추가
             path.append(i)         # 방문처리
         else:
-            dfs(graph, i)  # 해당 i를 시작노드로 bfs를 돈다.
+            bfs(graph, i)  # 해당 i를 시작노드로 bfs를 돈다.
             cnt += 1  # 연결요소 를 +1개 해준다.
 
 print()
