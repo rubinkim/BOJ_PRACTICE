@@ -145,12 +145,8 @@ for _ in range(n):
     graph.append(list(map(int, input().rstrip())))
     
 for row in graph:
-    print(row)
-    
-dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
-path = []
-cnt = 0
-    
+    print(row)    
+  
 def dfs_deque(graph, start_x, start_y):
     q = deque([(start_x, start_y)])
     
@@ -170,6 +166,10 @@ def dfs_deque(graph, start_x, start_y):
                 q.append((nx, ny))
                 sub_cnt += 1
     return sub_cnt
+
+dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
+path = []
+cnt = 0
 
 for i in range(n):
     for j in range(n):
