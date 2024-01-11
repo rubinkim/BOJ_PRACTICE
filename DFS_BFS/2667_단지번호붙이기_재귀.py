@@ -58,7 +58,7 @@ def dfs_recursion(graph, start_x, start_y, num, depth):
 ans = 0
 for i in range(n):
     for j in range(n):
-        if graph[i][j] == 1 and (i, j) not in path:
+        if dfs_recursion(graph, i, j, ans+1, 0):
             ans += 1
-            dfs_recursion(graph, i, j, ans+1, 0)
+
 print(ans)
