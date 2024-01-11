@@ -153,13 +153,34 @@ cnt = 0
     
 def dfs_deque(graph, start_x, start_y):
     q = deque([(start_x, start_y)])
+    
     while q:
         x, y = q.pop()
+        sub_cnt = 0
         if (x, y) not in path:
             path.append((x, y)) 
+            sub_cnt += 1
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
+            if nx <= -1 or nx >= n or ny >= -1 or ny >= n:
+                continue
+            if (nx, ny) not in path:
+                path.append((nx, ny))
+                q.append((nx, ny))
+                sub_cnt += 1
+    return sub_cnt
+
+for i in range(n):
+    for j in range(n):
+        if (i, j) not in path:
+            if graph[i][j] == 1:
+                print(dfs_deque(graph, i, j))
+                cnt += 1
+print(cnt)
+                
+
+            
     
 
 
