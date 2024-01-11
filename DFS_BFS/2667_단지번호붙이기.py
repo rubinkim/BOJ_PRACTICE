@@ -147,7 +147,7 @@ for _ in range(n):
 for row in graph:
     print(row)
     
-nx, ny = [-1, 1, 0, 0], [0, 0, -1, 1]
+dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
 path = []
 cnt = 0
     
@@ -157,7 +157,9 @@ def dfs_deque(graph, start_x, start_y):
         x, y = q.pop()
         if (x, y) not in path:
             path.append((x, y)) 
-       
+        for i in range(4):
+            nx = x + dx[i]
+            ny = y + dy[i]
     
 
 
