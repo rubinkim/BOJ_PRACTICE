@@ -52,7 +52,7 @@ print(len(count_list))
 for i in range(len(count_list)):
     print(count_list[i])
 """
-"""
+
 from collections import deque
 import sys
 input = sys.stdin.readline
@@ -124,7 +124,10 @@ num_list = list(num_dict.values())
 num_list.sort()
 for x in num_list:
     print(x)
-"""
+    
+for row in graph:
+    print(row)
+
 
 
                 
