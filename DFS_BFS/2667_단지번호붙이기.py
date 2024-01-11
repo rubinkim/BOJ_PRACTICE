@@ -65,7 +65,7 @@ for _ in range(n):
     
 path = []
 num_dict = {}
-#cell_dict = {}
+cell_dict = {}
 
 # dfs 방식
 def connected_component_mutant(graph, start_x, start_y, num):
@@ -88,7 +88,8 @@ def connected_component_mutant(graph, start_x, start_y, num):
         graph[start_x][start_y] = num
         if num not in num_dict.keys():
             num_dict[num] = 1
-        
+        if num not in cell_dict.keys():
+            cell_dict[num] = [(start_x, start_y)]
         
         while q:
             x, y = q.pop()                     # x, y = q.popleft()�?? ?���?? bfs?��?��.
@@ -110,6 +111,7 @@ def connected_component_mutant(graph, start_x, start_y, num):
                     graph[nx][ny] = num
                     cnt += 1
                     num_dict[num] += 1
+                    cell_dict[num].append((nx, ny))
         
         return True
     return False
@@ -132,6 +134,8 @@ for row in graph:
 
 print()    
 print(num_dict)
+print()
+print(cell_dict)
 
 
 
