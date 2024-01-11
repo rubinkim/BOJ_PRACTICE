@@ -11,3 +11,12 @@
 0111000
                    
 """
+
+import sys
+input = sys.stdin.readline
+
+n = int(input())
+graph = []
+path = []
+num_dict, cell_dict = {}, {}
+
