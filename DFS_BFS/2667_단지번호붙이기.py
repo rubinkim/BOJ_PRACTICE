@@ -114,13 +114,13 @@ def connected_component_mutant(graph, start_x, start_y, num):
         return True
     return False
 
-cnt = 1
+cnt = 0
 for i in range(n):
     for j in range(n):
-        if connected_component_mutant(graph, i, j, cnt) == True:
+        if connected_component_mutant(graph, i, j, cnt+1) == True:
             cnt += 1  
 
-print(cnt - 1)
+print(cnt)
 
 num_list = list(num_dict.values())
 num_list.sort()
