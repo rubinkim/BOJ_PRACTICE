@@ -142,7 +142,7 @@ input = sys.stdin.readline
 n = int(input())
 graph = []
 for _ in range(n):
-    graph.append(list(map(int, input())))
+    graph.append(list(map(int, input().rstrip())))
     
 for row in graph:
     print(row)
