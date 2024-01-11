@@ -139,3 +139,13 @@ import sys
 from collections import deque
 input = sys.stdin.readline
 
+n = int(input())
+graph = []
+for _ in range(n):
+    graph.append(list(map(int, input())))
+    
+for row in graph:
+    print(row)
+    
+
+
