@@ -134,3 +134,8 @@ num_list.sort()
 for x in num_list:
     print(x)
 """
+
+import sys
+from collections import deque
+input = sys.stdin.readline
+
