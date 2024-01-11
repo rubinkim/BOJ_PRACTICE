@@ -175,7 +175,7 @@ for i in range(n):
     for j in range(n):
         if (i, j) not in path:
             if graph[i][j] == 1:
-                print(dfs_deque(graph, i, j))
+                print(dfs_deque(graph, i, j), end=', ')
                 cnt += 1
 print(cnt)
                 
