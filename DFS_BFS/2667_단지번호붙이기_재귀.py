@@ -37,3 +37,8 @@ def dfs_recursion(graph, start_x, start_y, num, depth):
             num_dict[num] = 1
         if num not in cell_dict.keys():
             cell_dict[num] = [(start_x, start_y)]
+        
+        cnt = 0
+        for i in range(4):
+            nx, ny = start_x + dx[i], start_y + dy[i]
+            
