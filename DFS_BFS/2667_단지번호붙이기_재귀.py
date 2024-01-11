@@ -41,4 +41,10 @@ def dfs_recursion(graph, start_x, start_y, num, depth):
         cnt = 0
         for i in range(4):
             nx, ny = start_x + dx[i], start_y + dy[i]
+            if nx <= -1 or nx >= n or ny <= -1 or ny >= n:
+                continue
+            if graph[nx][ny] == 0:
+                continue
+            if graph[nx][ny] == 1 and (nx, ny) in path:
+                continue
             
