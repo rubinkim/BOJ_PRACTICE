@@ -91,7 +91,7 @@ def dfs(graph, start_x, start_y, num):
             cell_dict[num] = [(start_x, start_y)]
         
         while q:
-            x, y = q.pop()                     # x, y = q.popleft()ï¿½?? ?ï¿½ï¿½ï¿½?? bfs?ï¿½ï¿½?ï¿½ï¿½.
+            x, y = q.pop()                     # x, y = q.popleft()ï¿??? ?ï¿½ï¿½ï¿??? bfs?ï¿½ï¿½?ï¿½ï¿½.
             cnt = 0
             
             for i in range(4):
@@ -115,13 +115,13 @@ def dfs(graph, start_x, start_y, num):
         return True
     return False
 
-cnt = 0
+ans = 0
 for i in range(n):
     for j in range(n):
-        if dfs(graph, i, j, cnt+1) == True:
-            cnt += 1  
+        if dfs(graph, i, j, ans+1) == True:
+            ans += 1  
 
-print(cnt)
+print(ans)
 
 num_list = list(num_dict.values())
 num_list.sort()
