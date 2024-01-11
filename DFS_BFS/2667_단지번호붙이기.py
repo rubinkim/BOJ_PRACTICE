@@ -69,7 +69,6 @@ cell_dict = {}
 
 # dfs 방식
 def dfs(graph, start_x, start_y, num):
-    global path, num_dict
     dx = [-1, 1, 0, 0]
     dy = [0, 0, -1, 1]
     
