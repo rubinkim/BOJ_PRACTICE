@@ -129,7 +129,8 @@ for x in num_list:
     
 for row in graph:
     print(row)
-    
+
+print()    
 print(num_dict)
 
 
