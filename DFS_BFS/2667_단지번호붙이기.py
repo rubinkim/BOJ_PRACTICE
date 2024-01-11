@@ -147,5 +147,17 @@ for _ in range(n):
 for row in graph:
     print(row)
     
+nx, ny = [-1, 1, 0, 0], [0, 0, -1, 1]
+path = []
+cnt = 0
+    
+def dfs_deque(graph, start_x, start_y):
+    q = deque([(start_x, start_y)])
+    while q:
+        x, y = q.pop()
+        if (x, y) not in path:
+            path.append((x, y)) 
+       
+    
 
 
