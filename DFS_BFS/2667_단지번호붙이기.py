@@ -68,7 +68,7 @@ num_dict = {}
 cell_dict = {}
 
 # dfs 방식
-def connected_component_mutant(graph, start_x, start_y, num):
+def dfs(graph, start_x, start_y, num):
     global path, num_dict
     dx = [-1, 1, 0, 0]
     dy = [0, 0, -1, 1]
@@ -119,7 +119,7 @@ def connected_component_mutant(graph, start_x, start_y, num):
 cnt = 0
 for i in range(n):
     for j in range(n):
-        if connected_component_mutant(graph, i, j, cnt+1) == True:
+        if dfs(graph, i, j, cnt+1) == True:
             cnt += 1  
 
 print(cnt)
