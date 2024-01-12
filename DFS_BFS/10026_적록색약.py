@@ -35,13 +35,8 @@ for row in graph_cow:
     print(row)
 print()
 
-path = []
-cc_num_list_human = []
-cc_num_list_cow = []
-cnt = 0
-
 def dfs(graph, start_x, start_y, num):
-    global path, color_dict, cnt
+    global path, cnt
     dx = [-1, 1, 0, 0]
     dy = [0, 0, -1, 1]
     
@@ -70,7 +65,10 @@ def dfs(graph, start_x, start_y, num):
         return True
     return False
 
+path = []
+cc_num_list_human = []
 ans_human = 0
+cnt = 0
 for i in range(n):
     for j in range(n):
         if  dfs(graph_human, i, j, ans_human):
@@ -80,7 +78,10 @@ for i in range(n):
 print(ans_human)   
 print(cc_num_list_human)
 
+path = []
+cc_num_list_cow = []
 ans_cow = 0
+cnt = 0
 for i in range(n):
     for j in range(n):
         if dfs(graph_cow, i, j, ans_cow):
