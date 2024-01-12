@@ -24,10 +24,9 @@ for row in graph_human:
 print()
     
 graph_cow = [[0] * n for j in range(n)]
-for i in range(n):
-    row = input().rstrip()
+for i in range(n):    
     for j in range(len(row)):
-        if row[j] == "G":
+        if graph_human[i][j] == "G":
             graph_cow[i][j] = "R"
         else:
             graph_cow[i][j] = row[j]
@@ -36,11 +35,11 @@ for row in graph_cow:
     print(row)
 print()
 
-path = []
-cc_num_list = []
+path_human = []
+cc_num_list_human = []
 cnt = 0
 
-def dfs(graph, start_x, start_y, num):
+def dfs_human(graph, start_x, start_y, num):
     global path, color_dict, cnt
     dx = [-1, 1, 0, 0]
     dy = [0, 0, -1, 1]
@@ -70,15 +69,15 @@ def dfs(graph, start_x, start_y, num):
         return True
     return False
 
-ans = 0
+ans_human = 0
 for i in range(n):
     for j in range(n):
-        if  dfs(graph, i, j, ans):
-            cc_num_list.append(cnt)
-            ans +=1
+        if  dfs_human(graph_human, i, j, ans_human):
+            cc_num_list_human.append(cnt)
+            ans_human +=1
             cnt = 0
-print(ans)   
-print(cc_num_list)
+print(ans_human)   
+print(cc_num_list_human)
 
     
     
