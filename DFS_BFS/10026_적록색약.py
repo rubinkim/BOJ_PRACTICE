@@ -83,7 +83,11 @@ print(cc_num_list_human)
 ans_cow = 0
 for i in range(n):
     for j in range(n):
-        if dfs_
+        if dfs(graph_cow, i, j, ans_cow):
+            cc_num_list_cow.append(cnt)
+            ans_cow += 1
+            cnt = 0
+
 
     
     
