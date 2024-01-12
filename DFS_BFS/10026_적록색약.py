@@ -51,12 +51,11 @@ def dfs(graph, start_x, start_y):
     return False
 
 ans = 0
-
-
-for c in rgb:
-    for i in range(n):
-        for j in range(n):
-            if     
+for i in range(n):
+    for j in range(n):
+        if  dfs(graph, i, j):
+            ans +=1
+print(ans)   
         
     
     
