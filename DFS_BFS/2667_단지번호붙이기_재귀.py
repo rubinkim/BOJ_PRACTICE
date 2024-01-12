@@ -46,8 +46,6 @@ def dfs_recursion(graph, start_x, start_y, num, depth):
             if graph[nx][ny] == 1 and (nx, ny) not in path:
                 dfs_recursion(graph, nx, ny, num, depth+1)
                 cnt += 1
-                num_dict[num] += 1
-                cell_dict[num].append((nx, ny))
         return True
     return False
 
