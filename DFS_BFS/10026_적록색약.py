@@ -13,7 +13,7 @@ import sys
 input = sys.stdin.readline
 
 n = int(input())
-graph = []
+graph = [[0] * n for j in range(n)]
 for i in range(n):
     row = input().rstrip()
     for j in range(len(row)):
