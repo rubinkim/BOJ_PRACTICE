@@ -48,7 +48,7 @@ def dfs(graph, start_x, start_y, num):
     if start_x <= -1 or start_x >= n or start_y <= -1 or start_y >= n:
         return False
     RGB = ["R", "G", "B"]
-    if (start_x, start_y) not in path:        
+    if (start_x, start_y) not in path:
         for color in RGB:
             if graph[start_x][start_y] == color:
                 q = deque([(start_x, start_y)])
