@@ -20,22 +20,22 @@ for i in range(n):
 path = []
 color_dict = {}
 
-def dfs(graph, start_x, start_y, color, num):
+def dfs(graph, start_x, start_y):
     global path, color_dict, cnt
     dx = [-1, 1, 0, 0]
     dy = [0, 0, -1, 1]
     
     if start_x <= -1 or start_x >= n or start_y <= -1 or start_y >= n:
         return False
-    if graph[start_x][start_y] == color and (start_x, start_y) not in path:
-        q = deque([(start_x, start_y)])
-        path.append((start_x, start_y))
-        graph[start_x][start_y] = num
-        if color not in color_dict.keys():
-            color_dict[color] = 1
-        else:
-            color_dict[color] += 1
-        
+    RGB = ["R", "G", "B"]
+    for color in RGB:
+        if graph[start_x][start_y] == color and (start_x, start_y) not in path:
+            q = deque([(start_x, start_y)])
+            path.append((start_x, start_y))
+            if color not in color_dict.keys():
+                color_dict[color] = 1
+            else:
+                color_dict[color] += 1        
         while q:
             x, y = q.pop()   
             for i in range(4):
@@ -51,7 +51,13 @@ def dfs(graph, start_x, start_y, color, num):
         return True
     return False
 
-    
+ans = 0
+rgb = ["R", "G", "B"]
+
+for c in rgb:
+    for i in range(n):
+        for j in range(n):
+            if     
         
     
     
