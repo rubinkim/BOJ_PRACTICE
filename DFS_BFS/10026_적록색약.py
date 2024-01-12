@@ -46,7 +46,6 @@ def dfs(graph, start_x, start_y):
                 if graph[nx][ny] == color and (nx, ny) not in path:
                     q.append((nx, ny))
                     path.append((nx, ny))
-                    graph[nx][ny] = num
                     color_dict[color] += 1
         return True
     return False
