@@ -54,7 +54,7 @@ def dfs(graph, start_x, start_y, num):
 ans = 0
 for i in range(n):
     for j in range(n):
-        if  dfs(graph, i, j):
+        if  dfs(graph, i, j, ans):
             cc_num_list.append(cnt)
             ans +=1
             cnt = 0
