@@ -59,6 +59,10 @@ for i in range(n):
             cc_num_list.append(cnt)
             ans += 1
             cnt = 0
+            
+for row in graph:
+    print(row)
+print()
 
 cc_num_list.sort()
 print(ans)
