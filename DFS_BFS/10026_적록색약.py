@@ -15,6 +15,6 @@ input = sys.stdin.readline
 n = int(input())
 graph = []
 for i in range(n):
-    graph.append(input())
+    graph.append(input().rstrip())
 for row in graph:
     print(row)
