@@ -36,17 +36,17 @@ def dfs(graph, start_x, start_y):
                 color_dict[color] = 1
             else:
                 color_dict[color] += 1        
-        while q:
-            x, y = q.pop()   
-            for i in range(4):
-                nx = x + dx[i]
-                ny = y + dy[i]
-                if nx <= -1 or nx >= n or ny <= -1 or ny >= n:
-                    continue
-                if graph[nx][ny] == color and (nx, ny) not in path:
-                    q.append((nx, ny))
-                    path.append((nx, ny))
-                    color_dict[color] += 1
+            while q:
+                x, y = q.pop()   
+                for i in range(4):
+                    nx = x + dx[i]
+                    ny = y + dy[i]
+                    if nx <= -1 or nx >= n or ny <= -1 or ny >= n:
+                        continue
+                    if graph[nx][ny] == color and (nx, ny) not in path:
+                        q.append((nx, ny))
+                        path.append((nx, ny))
+                        color_dict[color] += 1
         return True
     return False
 
