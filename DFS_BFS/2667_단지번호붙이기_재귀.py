@@ -40,7 +40,8 @@ def dfs_recursion(graph, start_x, start_y, num):
         cnt += 1
 
         for i in range(4):
-            nx, ny = start_x + dx[i], start_y + dy[i]
+            nx = start_x + dx[i]
+            ny = start_y + dy[i]
             if nx <= -1 or nx >= n or ny <= -1 or ny >= n:
                 continue
             if graph[nx][ny] == 0:
