@@ -37,6 +37,7 @@ print()
 
 path = []
 cc_num_list_human = []
+cc_num_list_cow = []
 cnt = 0
 
 def dfs_human(graph, start_x, start_y, num):
@@ -78,6 +79,8 @@ for i in range(n):
             cnt = 0
 print(ans_human)   
 print(cc_num_list_human)
+
+
 
     
     
