@@ -25,7 +25,7 @@ print()
     
 graph_cow = [[0] * n for j in range(n)]
 for i in range(n):    
-    for j in range(len(row)):
+    for j in range(n):
         if graph_human[i][j] == "G":
             graph_cow[i][j] = "R"
         else:
