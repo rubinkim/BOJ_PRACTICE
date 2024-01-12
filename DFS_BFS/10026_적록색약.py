@@ -50,7 +50,7 @@ def dfs(graph, start_x, start_y, num):
                             cnt += 1
         return True
     return False
-
+"""
 ans = 0
 for i in range(n):
     for j in range(n):
@@ -60,6 +60,7 @@ for i in range(n):
             cnt = 0
 print(ans)   
 print(cc_num_list)
-        
+"""
+print(" ".join("abbdc"))
     
     
