@@ -51,7 +51,7 @@ def dfs(graph, start_x, start_y):
     return False
 
 ans = 0
-rgb = ["R", "G", "B"]
+
 
 for c in rgb:
     for i in range(n):
