@@ -15,7 +15,12 @@ input = sys.stdin.readline
 n = int(input())
 graph = []
 for i in range(n):
-    graph.append(input().rstrip())
+    row = input().rstrip()
+    for j in row:
+        graph[i][j] = row[j]
+        
+for row in graph:
+    print(row)
 
 path = []
 cc_num_list = []
