@@ -35,7 +35,7 @@ for row in graph_cow:
     print(row)
 print()
 
-path_human = []
+path = []
 cc_num_list_human = []
 cnt = 0
 
