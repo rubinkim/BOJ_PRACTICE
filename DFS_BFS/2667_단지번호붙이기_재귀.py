@@ -52,7 +52,7 @@ def dfs_recursion(graph, start_x, start_y, num):
 ans = 0
 for i in range(n):
     for j in range(n):
-        if dfs_recursion(graph, i, j, ans+1, 0):
+        if dfs_recursion(graph, i, j, ans+1):
             path.append(cnt)
             ans += 1
             cnt = 0
