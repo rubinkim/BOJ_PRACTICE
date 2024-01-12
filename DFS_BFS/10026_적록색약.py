@@ -87,7 +87,8 @@ for i in range(n):
             cc_num_list_cow.append(cnt)
             ans_cow += 1
             cnt = 0
-
+print(ans_cow)
+print(cc_num_list_cow)
 
     
     
