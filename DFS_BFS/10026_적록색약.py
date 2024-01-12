@@ -29,7 +29,7 @@ for i in range(n):
         if graph_human[i][j] == "G":
             graph_cow[i][j] = "R"
         else:
-            graph_cow[i][j] = row[j]
+            graph_cow[i][j] = graph_human[i][j]
         
 for row in graph_cow:
     print(row)
