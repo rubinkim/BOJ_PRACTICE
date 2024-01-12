@@ -40,7 +40,7 @@ cc_num_list_human = []
 cc_num_list_cow = []
 cnt = 0
 
-def dfs_human(graph, start_x, start_y, num):
+def dfs(graph, start_x, start_y, num):
     global path, color_dict, cnt
     dx = [-1, 1, 0, 0]
     dy = [0, 0, -1, 1]
@@ -73,14 +73,17 @@ def dfs_human(graph, start_x, start_y, num):
 ans_human = 0
 for i in range(n):
     for j in range(n):
-        if  dfs_human(graph_human, i, j, ans_human):
+        if  dfs(graph_human, i, j, ans_human):
             cc_num_list_human.append(cnt)
             ans_human +=1
             cnt = 0
 print(ans_human)   
 print(cc_num_list_human)
 
-
+ans_cow = 0
+for i in range(n):
+    for j in range(n):
+        if dfs_
 
     
     
