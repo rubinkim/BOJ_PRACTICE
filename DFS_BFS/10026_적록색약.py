@@ -16,7 +16,7 @@ n = int(input())
 graph = []
 for i in range(n):
     row = input().rstrip()
-    for j in row:
+    for j in range(len(row)):
         graph[i][j] = row[j]
         
 for row in graph:
