@@ -13,14 +13,28 @@ import sys
 input = sys.stdin.readline
 
 n = int(input())
-graph = [[0] * n for j in range(n)]
+graph_human = [[0] * n for j in range(n)]
 for i in range(n):
     row = input().rstrip()
     for j in range(len(row)):
-        graph[i][j] = row[j]
+        graph_human[i][j] = row[j]
         
-for row in graph:
+for row in graph_human:
     print(row)
+print()
+    
+graph_cow = [[0] * n for j in range(n)]
+for i in range(n):
+    row = input().rstrip()
+    for j in range(len(row)):
+        if row[j] == "G":
+            graph_cow[i][j] = "R"
+        else:
+            graph_cow[i][j] = row[j]
+        
+for row in graph_cow:
+    print(row)
+print()
 
 path = []
 cc_num_list = []
