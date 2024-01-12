@@ -16,5 +16,5 @@ n = int(input())
 graph = []
 for i in range(n):
     graph.append(input().rstrip())
-for row in graph:
-    print(row)
+
+
