@@ -60,7 +60,8 @@ for i in range(n):
             cc_num_list.append(cnt)
             ans += 1
             cnt = 0
-            
+
+print()           
 for row in graph:
     print(row)
 print()
