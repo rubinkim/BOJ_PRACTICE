@@ -15,8 +15,8 @@
 import sys
 input = sys.stdin.readline
 
-n = int(input())
-graph = []
+n = int(input())       # n : 정사각형의 가로 세로 크기
+graph = []             # 가로세로크기가 n인 정사각형의 지도
 path = []
 cc_num_list = []
 cnt = 0
