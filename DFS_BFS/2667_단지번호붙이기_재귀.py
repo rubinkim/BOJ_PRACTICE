@@ -18,7 +18,10 @@ input = sys.stdin.readline
 n = int(input())
 graph = []
 path = []
+cc_num_list = []
 cnt = 0
+for _ in range(n):
+    graph.append(list(map(int, input().rstrip())))
 
 def dfs_recursion(graph, start_x, start_y, num):
     global cnt
@@ -53,13 +56,12 @@ def dfs_recursion(graph, start_x, start_y, num):
 ans = 0
 for i in range(n):
     for j in range(n):
-        print(f"i : {i},  j : {j}")
         if dfs_recursion(graph, i, j, ans+1):
-            path.append(cnt)
+            cc_num_list.append(cnt)
             ans += 1
             cnt = 0
 
-path.sort()
+cc_num_list.sort()
 print(ans)
-for i in range(len(path)):
-    print(path[i])
+for i in range(len(cc_num_list)):
+    print(cc_num_list[i])
