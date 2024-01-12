@@ -46,7 +46,8 @@ def dfs(graph, start_x, start_y, num):
                         if graph[nx][ny] == color and (nx, ny) not in path:
                             q.append((nx, ny))
                             path.append((nx, ny))
-                            color_dict[color] += 1
+                            graph[nx][ny] = num
+                            cnt += 1
         return True
     return False
 
@@ -54,9 +55,11 @@ ans = 0
 for i in range(n):
     for j in range(n):
         if  dfs(graph, i, j):
+            cc_num_list.append(cnt)
             ans +=1
+            cnt = 0
 print(ans)   
-print(color_dict)
+print(cc_num_list)
         
     
     
