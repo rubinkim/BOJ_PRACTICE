@@ -28,7 +28,7 @@ def dfs_recursion(graph, start_x, start_y, num):
     if start_x <= -1 or start_x >= n or start_y <= -1 or start_y >= n:
         return False
     if graph[start_x][start_y] == 0:
-        print(f"start_x : {start_x}, start_y : {start_y}")
+        #print(f"start_x : {start_x}, start_y : {start_y}")
         return False
     if graph[start_x][start_y] == 1 and (start_x, start_y) in path:
         return False
@@ -53,6 +53,7 @@ def dfs_recursion(graph, start_x, start_y, num):
 ans = 0
 for i in range(n):
     for j in range(n):
+        print(f"i : {i},  j : {j}")
         if dfs_recursion(graph, i, j, ans+1):
             path.append(cnt)
             ans += 1
