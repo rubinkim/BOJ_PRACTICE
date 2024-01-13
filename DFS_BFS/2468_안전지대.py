@@ -80,17 +80,6 @@ print(ans_list)
 print(max(ans_list))
 
 
-"""
-ans_list = []
-for h in height_list:
-    ans = 0
-    for i in range(n):
-        for j in range(n):
-            if dfs(graph, i, j, h):
-                ans += 1
-                cnt = 0
-    print(f"h : {h},  ans : {ans}")
-"""
     
 
                     
