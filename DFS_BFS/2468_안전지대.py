@@ -69,12 +69,11 @@ for h in [5, 6]:
     ans = 0
     for i in range(n):
         for j in range(n):
-            if dfs(graph, i, j, 6):
+            if dfs(graph, i, j, h):
                 ans += 1
                 cnt = 0
     ans_list.append(ans)
 print(ans_list)
-
 
 
 """
