@@ -30,8 +30,9 @@ for _ in range(n):
 
 height_list = []   
 for i in range(len(graph)):
-    height_list.append(set(graph[i]))
+    height_list.extend(list(set(graph[i])))
 height_list = list(set(height_list))
+
 print(f"height_list : {height_list}")
 
 path = []
@@ -72,9 +73,8 @@ for h in height_list:
             if dfs(graph, i, j, h):
                 ans += 1
                 cnt = 0
-    ans_list.append(ans)
-    
-print(ans_list)
+    print(f"h : {h},  ans : {ans}")
+
     
 
                     
