@@ -32,3 +32,14 @@ print(f"n : {n}")
 print()
 for row in graph:
     print(row)
+    
+path = []
+cc_num_list = []
+cnt = 0
+    
+def dfs(graph, start_x, start_y, height):
+    nx, ny = [-1, 1, 0, 0], [0, 0, -1, 1]
+    
+    if start_x <= -1 or start_x >= n or start_y <= -1 or start_y >= n:
+        return False
+    if graph[start_x][start_y] > height and 
