@@ -28,11 +28,9 @@ graph = []
 for _ in range(n):
     graph.append(list(map(int, input().split())))
     
-print(f"n : {n}")
-print()
-for row in graph:
-    print(row)
-    
+min_graph = [[graph[j] for j in range(len(graph[i]))] for i in range(len(graph))]
+print(f"min_graph : {min_graph}")
+
 path = []
 cc_num_list = []
 cnt = 0
