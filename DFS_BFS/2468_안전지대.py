@@ -71,4 +71,7 @@ for height in range(min_graph, max_graph+1):
                 ans += 1
                 cnt = 0
     ans_list.append(ans)
+    
+print(ans_list)
+print(max(ans_list))
                     
