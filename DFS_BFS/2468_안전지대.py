@@ -39,7 +39,13 @@ cnt = 0
     
 def dfs(graph, start_x, start_y, height):
     nx, ny = [-1, 1, 0, 0], [0, 0, -1, 1]
+    q = deque()
     
     if start_x <= -1 or start_x >= n or start_y <= -1 or start_y >= n:
         return False
-    if graph[start_x][start_y] > height and 
+    if graph[start_x][start_y] > height and (start_x, start_y) not in path:
+        q.append((start_x, start_y))
+        path.append((start_x, start_y))
+        cnt += 1
+        
+        
