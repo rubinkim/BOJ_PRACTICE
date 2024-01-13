@@ -31,6 +31,7 @@ for _ in range(n):
 height_list = []   
 for i in range(len(graph)):
     height_list.append(set(graph[i]))
+height_list = list(set(height_list))
 print(f"height_list : {height_list}")
 
 path = []
