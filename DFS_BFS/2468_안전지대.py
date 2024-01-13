@@ -33,7 +33,7 @@ for i in range(len(graph)):
     height_list.extend(list(set(graph[i])))
 height_list = list(set(height_list))
 
-print(f"height_list : {height_list}")
+#print(f"height_list : {height_list}")
 
 path = []
 cc_num_list = []
@@ -65,7 +65,7 @@ def dfs(graph, start_x, start_y, height):
         return True
     return False
 
-ans_list = []
+final_ans = 0
 for h in height_list:
     ans = 0
     path = []
@@ -74,10 +74,9 @@ for h in height_list:
             if dfs(graph, i, j, h):
                 ans += 1
                 cnt = 0
-    ans_list.append(ans)
+    final_ans = max(final_ans, ans)
     
-print(ans_list)
-print(max(ans_list))
+print(final_ans)
 
     
 
