@@ -28,7 +28,7 @@ graph = []
 for _ in range(n):
     graph.append(list(map(int, input().split())))
     
-min_graph = [[graph[j] for j in range(len(graph[i]))] for i in range(len(graph))]
+min_graph = [min(graph[i]) for i in range(len(graph))]
 print(f"min_graph : {min_graph}")
 
 path = []
