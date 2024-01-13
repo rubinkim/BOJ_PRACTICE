@@ -25,15 +25,21 @@ input = sys.stdin.readline
 
 n = int(input())
 graph = []
+height_list = []
 for _ in range(n):
-    graph.append(list(map(int, input().split())))
-
+    row = map(int, input().split())
+    graph.append(list(row))
+    height_list.extend(list(set(row)))
+height_list = list(set(height_list))
+    
+"""
 height_list = []   
 for i in range(len(graph)):
     height_list.extend(list(set(graph[i])))
 height_list = list(set(height_list))
+"""
 
-#print(f"height_list : {height_list}")
+print(f"height_list : {height_list}")
 
 path = []
 cc_num_list = []
