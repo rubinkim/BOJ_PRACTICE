@@ -61,4 +61,14 @@ def dfs(graph, start_x, start_y, height):
                     cnt += 1
         return True
     return False
+
+ans_list = []
+ans = 0
+for height in range(min_graph, max_graph+1):
+    for i in range(n):
+        for j in range(n):
+            if dfs(graph, i, j, height):
+                ans += 1
+                cnt = 0
+    ans_list.append(ans)
                     
