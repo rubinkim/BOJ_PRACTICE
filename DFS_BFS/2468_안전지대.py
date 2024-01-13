@@ -28,8 +28,9 @@ graph = []
 for _ in range(n):
     graph.append(list(map(int, input().split())))
     
-min_graph = [min(graph[i]) for i in range(len(graph))]
-print(f"min_graph : {min_graph}")
+min_graph = min([min(graph[i]) for i in range(len(graph))])
+max_graph = max([max(graph[i]) for i in ragne(len(graph))])
+print(f"min_graph : {min_graph},  max_graph : {max_graph}")
 
 path = []
 cc_num_list = []
