@@ -38,6 +38,7 @@ cc_num_list = []
 cnt = 0
     
 def dfs(graph, start_x, start_y, height):
+    global path, cnt
     dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
     q = deque()
     
@@ -53,4 +54,12 @@ def dfs(graph, start_x, start_y, height):
             for i in range(4):
                 nx = x + dx[i]
                 ny = y + dy[i]
-                
+                if nx <= -1 or nx >= n or ny <= -1 or ny >= n:
+                    continue
+                if graph[nx][ny] > height and (nx, ny) not in path:
+                    q.append((nx, ny))
+                    path.append((nx, ny))
+                    cnt += 1
+        return True
+    return False
+                    
