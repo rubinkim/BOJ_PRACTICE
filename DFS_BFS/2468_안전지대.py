@@ -65,6 +65,17 @@ def dfs(graph, start_x, start_y, height):
         return True
     return False
 
+ans = 0
+for i in range(n):
+    for j in range(n):
+        if dfs(graph, i, j, 5):
+            ans += 1
+            cnt = 0
+print(ans)
+
+
+
+"""
 ans_list = []
 for h in height_list:
     ans = 0
@@ -74,7 +85,7 @@ for h in height_list:
                 ans += 1
                 cnt = 0
     print(f"h : {h},  ans : {ans}")
-
+"""
     
 
                     
