@@ -64,16 +64,20 @@ def dfs(graph, start_x, start_y, height):
                     cnt += 1
         return True
     return False
+
 ans_list = []
-for h in [5, 6]:
+for h in height_list:
     ans = 0
+    path = []
     for i in range(n):
         for j in range(n):
             if dfs(graph, i, j, h):
                 ans += 1
                 cnt = 0
     ans_list.append(ans)
+    
 print(ans_list)
+print(max(ans_list))
 
 
 """
