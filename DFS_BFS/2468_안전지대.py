@@ -64,14 +64,16 @@ def dfs(graph, start_x, start_y, height):
                     cnt += 1
         return True
     return False
-
-ans = 0
-for i in range(n):
-    for j in range(n):
-        if dfs(graph, i, j, 5):
-            ans += 1
-            cnt = 0
-print(ans)
+ans_list = []
+for h in [5, 6]:
+    ans = 0
+    for i in range(n):
+        for j in range(n):
+            if dfs(graph, i, j, 6):
+                ans += 1
+                cnt = 0
+    ans_list.append(ans)
+print(ans_list)
 
 
 
