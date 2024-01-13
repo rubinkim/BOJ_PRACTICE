@@ -27,10 +27,11 @@ n = int(input())
 graph = []
 for _ in range(n):
     graph.append(list(map(int, input().split())))
-    
-min_graph = min([min(graph[i]) for i in range(len(graph))])
-max_graph = max([max(graph[i]) for i in range(len(graph))])
-print(f"min_graph : {min_graph},  max_graph : {max_graph}")
+
+height_list = []   
+for i in range(len(graph)):
+    height_list.append(set(graph[i]))
+print(f"height_list : {height_list}")
 
 path = []
 cc_num_list = []
@@ -63,15 +64,16 @@ def dfs(graph, start_x, start_y, height):
     return False
 
 ans_list = []
-ans = 0
-for height in range(min_graph, max_graph+1):
+for h in height_list:
+    ans = 0
     for i in range(n):
         for j in range(n):
-            if dfs(graph, i, j, height):
+            if dfs(graph, i, j, h):
                 ans += 1
                 cnt = 0
     ans_list.append(ans)
     
 print(ans_list)
-print(max(ans_list))
+    
+
                     
