@@ -33,7 +33,7 @@ for i in range(len(graph)):
     height_list.extend(list(set(graph[i])))
 height_list = list(set(height_list))
 
-#print(f"height_list : {height_list}")
+print(f"height_list : {height_list}")
 
 path = []
 cc_num_list = []
@@ -76,7 +76,7 @@ for h in height_list:
                 cnt = 0
     ans_list.append(ans)
     
-#print(ans_list)
+print(ans_list)
 print(max(ans_list))
 
     
