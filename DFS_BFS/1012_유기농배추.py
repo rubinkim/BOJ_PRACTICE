@@ -124,6 +124,10 @@ def dfs(graph, start_y, start_x, num):
             nx = x + dx[i]                
             if ny <= -1 or ny >= n or nx <= -1 or nx >= m:
                 continue
+            if graph[ny][nx] == 0:
+                continue
+            if graph[ny][nx] == 1 and visited[ny][nx]:
+                continue
             if graph[ny][nx] == 1 and not visited[ny][nx]:
                 dfs(graph, ny, nx, num)   
         return True
