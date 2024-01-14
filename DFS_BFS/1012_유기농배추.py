@@ -107,7 +107,7 @@ for i in range(num_usecases):
 
 import sys
 def dfs(graph, start_y, start_x, num):
-    global visited, cnt
+    #global visited, cnt
     dy, dx = [0, 0, -1, 1], [-1, 1, 0, 0]       
     if start_x <= -1 or start_x >= m or start_y <= -1 or start_y >= n:
         return False 
