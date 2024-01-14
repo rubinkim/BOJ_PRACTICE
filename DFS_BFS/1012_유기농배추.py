@@ -152,22 +152,24 @@ for _ in range(num_usecases):
     print(cc_num_list)
 """
 import sys
-def dfs(graph, start_y, start_x, num):
+
+def dfs_recursion(graph, start_y, start_x, num):
     global visited, cnt
-    dy, dx = [0, 0, -1, 1], [-1, 1, 0, 0]       
+    dy, dx = [0, 0, -1, 1], [-1, 1, 0, 0]  
     if start_x <= -1 or start_x >= m or start_y <= -1 or start_y >= n:
         return False  
     if graph[start_y][start_x] == 1 and not visited[start_y][start_x]:
         visited[start_y][start_x] = True
-        graph[start_y][start_x] = num  
+        graph[start_y][start_x] = num
         cnt += 1
+        
         for i in range(4):                
             ny = start_y + dy[i]
             nx = start_x + dx[i]                
             if ny <= -1 or ny >= n or nx <= -1 or nx >= m:
                 continue
             if graph[ny][nx] == 1 and not visited[ny][nx]:
-                dfs(graph, ny, nx, num)   
+                dfs_recursion(graph, ny, nx, num)       
         return True
     return False
 
@@ -180,12 +182,12 @@ for _ in range(num_usecases):
     visited = [[False] * m for _ in range(n)]
     for _ in range(k):
         x, y = map(int, input().split())        
-        graph[y][x] = 1
-    cnt = 0
+        graph[y][x] = 1        
     ans = 0
+    cnt = 0
     for i in range(n):
         for j in range(m):
-            if dfs(graph, i, j, ans+1):
-                ans += 1  
+            if dfs_recursion(graph, i, j, ans+1):
+                ans += 1
                 cnt = 0
     print(ans)
