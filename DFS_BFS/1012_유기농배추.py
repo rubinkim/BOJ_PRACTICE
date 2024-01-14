@@ -110,7 +110,11 @@ def dfs(graph, start_y, start_x, num):
     global visited, cnt
     dy, dx = [0, 0, -1, 1], [-1, 1, 0, 0]       
     if start_x <= -1 or start_x >= m or start_y <= -1 or start_y >= n:
-        return False  
+        return False 
+    if graph[start_y][start_x] == 0:
+        return False
+    if graph[start_y][start_x] == 1 and visited[start_y][start_x]:
+        return False 
     if graph[start_y][start_x] == 1 and not visited[start_y][start_x]:
         visited[start_y][start_x] = True
         graph[start_y][start_x] = num  
