@@ -128,7 +128,7 @@ def dfs(graph, start_y, start_x, num):
 input = sys.stdin.readline
 num_usecases = int(input())
 
-for i in range(num_usecases):    
+for _ in range(num_usecases):    
     m, n, k = map(int, input().split())    
     graph = [[0] * m for _ in range(n)]
     visited = [[False] * m for _ in range(n)]
@@ -140,9 +140,9 @@ for i in range(num_usecases):
     cnt = 0
     ans = 0
     cc_num_list = []
-    for a in range(n):
-        for b in range(m):
-            if dfs(graph, a, b, ans+1):
+    for i in range(n):
+        for j in range(m):
+            if dfs(graph, i, j, ans+1):
                 cc_num_list.append(cnt)
                 ans += 1  
                 cnt = 0
