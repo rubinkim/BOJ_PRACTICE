@@ -110,3 +110,4 @@ for i in range(num_usecases):
             if bfs(graph, i, j, ans+1):
                 ans += 1  
     print(ans)
+    print(num_dict)
