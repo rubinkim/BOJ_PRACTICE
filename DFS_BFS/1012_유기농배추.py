@@ -52,18 +52,18 @@ from collections import deque
 import sys
 
 def connected_component_mutant(graph, start_y, start_x, num):
-    global path, num_dict
+    global visited, num_dict
     dy, dx = [0, 0, -1, 1], [-1, 1, 0, 0]    
     q = deque()    
     if start_x <= -1 or start_x >= m or start_y <= -1 or start_y >= n:
         return False
     if graph[start_y][start_x] == 0:
         return False
-    if graph[start_y][start_x] == 1 and (start_y, start_x) in path:
+    if graph[start_y][start_x] == 1 and visited[start_y][start_x]:
         return False    
-    if graph[start_y][start_x] == 1 and (start_y, start_x) not in path:
+    if graph[start_y][start_x] == 1 and not visited[start_y][start_x]:
         q.append((start_y, start_x))
-        path.append((start_y, start_x))
+        visited[start_y][start_x] = True
         graph[start_y][start_x] = num
         if num not in num_dict:
             num_dict[num] = 1
@@ -71,7 +71,7 @@ def connected_component_mutant(graph, start_y, start_x, num):
             num_dict[num] += 1
         
         while q:
-            y, x = q.pop()                     # x, y = q.popleft()로 하면 bfs이다.
+            y, x = q.popleft()                     # x, y = q.popleft()로 하면 bfs이다.
             cnt = 0
             
             for i in range(4):                
@@ -81,11 +81,11 @@ def connected_component_mutant(graph, start_y, start_x, num):
                     continue
                 if graph[ny][nx] == 0:
                     continue
-                if graph[ny][nx] == 1 and (ny, nx) in path:
+                if graph[ny][nx] == 1 and visited[ny][nx]:
                     continue
-                if graph[ny][nx] == 1 and (ny, nx) not in path:
+                if graph[ny][nx] == 1 and not visited[ny][nx]:
                     q.append((ny, nx))
-                    path.append((ny, nx))
+                    visited[ny][nx] = True
                     graph[ny][nx] = num
                     cnt += 1
                     num_dict[num] += 1        
@@ -98,14 +98,15 @@ num_usecases = int(input())
 for i in range(num_usecases):    
     m, n, k = map(int, input().split())    
     graph = [[0] * m for _ in range(n)]
-    path = []
+    #path = []
+    visited = [[False] * m for _ in range(n)]
     num_dict = {}
     for _ in range(k):
         x, y = map(int, input().split())        
         graph[y][x] = 1        
-    ans = 1
+    ans = 0
     for i in range(n):
         for j in range(m):
-            if connected_component_mutant(graph, i, j, ans) == True:
+            if connected_component_mutant(graph, i, j, ans+1) == True:
                 ans += 1  
-    print(ans - 1)
+    print(ans)
