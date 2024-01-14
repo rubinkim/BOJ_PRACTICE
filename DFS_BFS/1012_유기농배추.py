@@ -47,7 +47,7 @@
 4 0
 """
 """
-# bfs 방식
+# BFS Using Deque
 from collections import deque
 import sys
 
@@ -87,7 +87,7 @@ def bfs(graph, start_y, start_x, num):
 input = sys.stdin.readline
 num_usecases = int(input())
 
-for i in range(num_usecases):    
+for _ in range(num_usecases):    
     m, n, k = map(int, input().split())    
     graph = [[0] * m for _ in range(n)]
     #path = []
@@ -105,6 +105,7 @@ for i in range(num_usecases):
     print(num_dict)
 """
 """
+# DFS Using Deque
 import sys
 def dfs(graph, start_y, start_x, num):
     global cnt, visited
@@ -151,7 +152,7 @@ for _ in range(num_usecases):
     print(ans)
     print(cc_num_list)
 """
-import sys
+
 
 # DFS Using Recursion 
 import sys
