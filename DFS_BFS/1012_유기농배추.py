@@ -142,7 +142,7 @@ for _ in range(num_usecases):
     cc_num_list = []
     for i in range(n):
         for j in range(m):
-            if dfs(graph, i, j, ans+1):
+            if dfs(graph, i, j, ans+1) == True:
                 cc_num_list.append(cnt)
                 ans += 1  
                 cnt = 0
