@@ -107,7 +107,7 @@ for i in range(num_usecases):
 
 import sys
 def dfs(graph, start_y, start_x, num):
-    global cnt
+    global cnt, visited
     dy, dx = [0, 0, -1, 1], [-1, 1, 0, 0]       
     if start_x <= -1 or start_x >= m or start_y <= -1 or start_y >= n:
         return False 
@@ -140,9 +140,9 @@ for i in range(num_usecases):
     cnt = 0
     ans = 0
     cc_num_list = []
-    for i in range(n):
-        for j in range(m):
-            if dfs(graph, i, j, ans+1):
+    for a in range(n):
+        for b in range(m):
+            if dfs(graph, a, b, ans+1):
                 cc_num_list.append(cnt)
                 ans += 1  
                 cnt = 0
