@@ -116,8 +116,8 @@ def dfs(graph, start_y, start_x, num):
         graph[start_y][start_x] = num  
         cnt += 1
         for i in range(4):                
-            ny = y + dy[i]
-            nx = x + dx[i]                
+            ny = start_y + dy[i]
+            nx = start_x + dx[i]                
             if ny <= -1 or ny >= n or nx <= -1 or nx >= m:
                 continue
             if graph[ny][nx] == 1 and not visited[ny][nx]:
