@@ -47,7 +47,7 @@
 4 0
 """
 
-# dfs 방식
+# bfs 방식
 from collections import deque
 import sys
 
