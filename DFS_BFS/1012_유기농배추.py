@@ -141,6 +141,10 @@ for _ in range(num_usecases):
     for i in range(n):
         for j in range(m):
             if dfs(graph, i, j, ans+1) == True:
+                print(f"i : {i}, j : {j}")
+                for row in visited:
+                    print(row)
+                print()
                 cc_num_list.append(cnt)
                 ans += 1  
                 cnt = 0
