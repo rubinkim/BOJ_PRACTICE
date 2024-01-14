@@ -135,18 +135,12 @@ for _ in range(num_usecases):
     for _ in range(k):
         x, y = map(int, input().split())        
         graph[y][x] = 1
-    for row in graph:
-        print(row)
     cnt = 0
     ans = 0
     cc_num_list = []
     for i in range(n):
         for j in range(m):
             if dfs(graph, i, j, ans+1) == True:
-                for row in visited:
-                    print(f"i : {i}, j : {j}")
-                    print(row)
-                print()
                 cc_num_list.append(cnt)
                 ans += 1  
                 cnt = 0
