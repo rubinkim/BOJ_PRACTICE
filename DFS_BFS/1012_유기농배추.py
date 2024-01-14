@@ -104,7 +104,7 @@ for i in range(num_usecases):
     print(ans)
     print(num_dict)
 """
-
+"""
 import sys
 def dfs(graph, start_y, start_x, num):
     global cnt, visited
@@ -150,3 +150,4 @@ for _ in range(num_usecases):
                 cnt = 0
     print(ans)
     print(cc_num_list)
+"""
