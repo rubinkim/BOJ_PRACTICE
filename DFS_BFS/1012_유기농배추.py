@@ -46,7 +46,7 @@
 4 2
 4 0
 """
-
+"""
 # bfs 방식
 from collections import deque
 import sys
@@ -103,3 +103,5 @@ for i in range(num_usecases):
                 ans += 1  
     print(ans)
     print(num_dict)
+"""
+
