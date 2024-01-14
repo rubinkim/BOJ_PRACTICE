@@ -56,11 +56,7 @@ def bfs(graph, start_y, start_x, num):
     dy, dx = [0, 0, -1, 1], [-1, 1, 0, 0]    
     q = deque()    
     if start_x <= -1 or start_x >= m or start_y <= -1 or start_y >= n:
-        return False
-    if graph[start_y][start_x] == 0:
-        return False
-    if graph[start_y][start_x] == 1 and visited[start_y][start_x]:
-        return False    
+        return False 
     if graph[start_y][start_x] == 1 and not visited[start_y][start_x]:
         q.append((start_y, start_x))
         visited[start_y][start_x] = True
@@ -78,10 +74,6 @@ def bfs(graph, start_y, start_x, num):
                 ny = y + dy[i]
                 nx = x + dx[i]                
                 if ny <= -1 or ny >= n or nx <= -1 or nx >= m:
-                    continue
-                if graph[ny][nx] == 0:
-                    continue
-                if graph[ny][nx] == 1 and visited[ny][nx]:
                     continue
                 if graph[ny][nx] == 1 and not visited[ny][nx]:
                     q.append((ny, nx))
