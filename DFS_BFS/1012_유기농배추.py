@@ -77,7 +77,6 @@ def bfs(graph, start_y, start_x, num):
                     q.append((ny, nx))
                     visited[ny][nx] = True
                     graph[ny][nx] = num
-                    cnt += 1
                     num_dict[num] += 1        
         return True
     return False
