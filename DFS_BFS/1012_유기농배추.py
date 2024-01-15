@@ -67,9 +67,7 @@ def bfs(graph, start_y, start_x, num):
             num_dict[num] += 1
         
         while q:
-            y, x = q.popleft()                     # x, y = q.popleft()로 하면 bfs이다.
-            cnt = 0
-            
+            y, x = q.popleft()                     # x, y = q.popleft()로 하면 bfs이다.            
             for i in range(4):                
                 ny = y + dy[i]
                 nx = x + dx[i]                
