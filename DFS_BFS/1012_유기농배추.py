@@ -102,6 +102,58 @@ for _ in range(num_usecases):
     print(num_dict)
 """
 """
+# BFS Using Deque with cnt
+from collections import deque
+import sys
+
+def bfs(graph, start_y, start_x, num):
+    global visited, cnt
+    dy, dx = [0, 0, -1, 1], [-1, 1, 0, 0]    
+    q = deque()    
+    if start_x <= -1 or start_x >= m or start_y <= -1 or start_y >= n:
+        return False  
+    if graph[start_y][start_x] == 1 and not visited[start_y][start_x]:
+        q.append((start_y, start_x))
+        visited[start_y][start_x] = True
+        graph[start_y][start_x] = num
+        cnt += 1        
+        while q:
+            y, x = q.popleft()                     # x, y = q.popleft()로 하면 bfs이다.            
+            for i in range(4):                
+                ny = y + dy[i]
+                nx = x + dx[i]                
+                if ny <= -1 or ny >= n or nx <= -1 or nx >= m:
+                    continue
+                if graph[ny][nx] == 1 and not visited[ny][nx]:
+                    q.append((ny, nx))
+                    visited[ny][nx] = True
+                    graph[ny][nx] = num
+                    cnt += 1       
+        return True
+    return False
+
+input = sys.stdin.readline
+num_usecases = int(input())
+
+for i in range(num_usecases):    
+    m, n, k = map(int, input().split())    
+    graph = [[0] * m for _ in range(n)]
+    visited = [[False] * m for _ in range(n)]
+    cc_num_list = []
+    for _ in range(k):
+        x, y = map(int, input().split())        
+        graph[y][x] = 1        
+    ans = 0
+    cnt = 0
+    for i in range(n):
+        for j in range(m):
+            if bfs(graph, i, j, ans+1):
+                cc_num_list.append(cnt)
+                ans += 1
+                cnt = 0
+    print(ans)
+"""
+"""
 # DFS Using Deque
 import sys
 def dfs(graph, start_y, start_x, num):
