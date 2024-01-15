@@ -99,8 +99,9 @@ for _ in range(num_usecases):
             if bfs(graph, i, j, ans+1):
                 ans += 1  
     print(ans)
-    print(num_dict)
+    print(num_dict)    
 """
+
 """
 # BFS Using Deque with cnt
 from collections import deque
