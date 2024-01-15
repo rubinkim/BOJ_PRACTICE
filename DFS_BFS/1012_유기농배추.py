@@ -47,7 +47,7 @@
 4 0
 """
 """
-# BFS Using Deque
+# BFS Using Deque with num_dict
 from collections import deque
 import sys
 
