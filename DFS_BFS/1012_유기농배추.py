@@ -136,7 +136,7 @@ def bfs(graph, start_y, start_x, num):
 input = sys.stdin.readline
 num_usecases = int(input())
 
-for i in range(num_usecases):    
+for _ in range(num_usecases):    
     m, n, k = map(int, input().split())    
     graph = [[0] * m for _ in range(n)]
     visited = [[False] * m for _ in range(n)]
