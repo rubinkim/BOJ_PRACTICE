@@ -33,10 +33,11 @@ for i in range(r):
 
 for row in graph:
     print(row)
+print()
     
 visited = [[False] * c for _ in range(r)]
 path = []
-cnt = 1
+cnt = 0
 
 def logest_path(graph, start_x, start_y):
     global visited, path, cnt
