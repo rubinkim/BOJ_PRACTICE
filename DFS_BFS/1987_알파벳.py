@@ -36,9 +36,9 @@ visited = [[False] * c for _ in range(r)]
 path = []
 cnt = 0
 
-def logest_path(graph, start_x, start_y):
+def logest_path(graph, start_x, start_y, num):
     global visited, path, cnt
-    dx, dy = [0, 0, -1, 1], [-1, 1, 0, 0]
+    dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
     
     if start_x <= -1 or start_x >= r or start_y <= -1 or start_y >= c:
         return False
@@ -47,21 +47,20 @@ def logest_path(graph, start_x, start_y):
         path.append(graph[start_x][start_y])
         visited[start_x][start_y] = True
         cnt += 1
-
-
+        
         for i in range(4):
             nx = start_x + dx[i]
             ny = start_y + dy[i]
             if nx <= -1 or nx >= r or ny <= -1 or ny >= c:
                 continue
             if graph[nx][ny] not in path and not visited[nx][ny]:
-                logest_path(graph, nx, ny)
+                logest_path(graph, nx, ny, num+1)
 
 
         return True
     return False
 
-logest_path(graph, 0, 0)
+logest_path(graph, 0, 0, 0)
 print(path)
 print(cnt)
           
