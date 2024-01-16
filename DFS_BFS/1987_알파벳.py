@@ -38,7 +38,7 @@ cnt = 0
 
 def logest_path(graph, start_x, start_y):
     global visited, path, cnt
-    dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
+    dx, dy = [0, 0, -1, 1], [-1, 1, 0, 0]
     
     if start_x <= -1 or start_x >= r or start_y <= -1 or start_y >= c:
         return False
