@@ -52,14 +52,21 @@ def logest_path(graph, start_x, start_y):
         visited[start_x][start_y] = True
         cnt += 1
 
-        for i in range(4):
-            sub_path = []
-            nx = start_x + dx[i]
-            ny = start_y + dy[i]
-            if nx <= -1 or nx >= r or ny <= -1 or ny >= c:
-                continue
-            if graph[nx][ny] not in path and not visited[nx][ny]:
-                logest_path(graph, nx, ny)
+        while q:
+            x, y = q.pop()
+            for i in range(4):
+                sub_path = []
+                nx = x + dx[i]
+                ny = y + dy[i]
+                if nx <= -1 or nx >= r or ny <= -1 or ny >= c:
+                    continue
+                if graph[nx][ny] not in path and not visited[nx][ny]:
+                    sub_path.append((nx, ny))
+                    path.append(sub_path)
+                    q.append((nx, ny))
+                    visited[nx][ny]
+                    cnt += 1
+            path = max(path)
         return True
     return False
 
