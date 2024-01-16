@@ -32,6 +32,7 @@ r, c = map(int, input().split())
 graph = [[0] * c for _ in range(r)]
 for i in range(r):
     row = input()
+    print(f"row : {row}")
     for j, x in enumerate(row):
         graph[i][j] = x
 
