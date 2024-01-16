@@ -1,10 +1,7 @@
 #-*- coding: utf-8 -*-
 
 """
- ?‹œê°? ? œ?•œ	    ë©”ëª¨ë¦? ? œ?•œ	    ? œì¶?	 ? •?‹µ	  ë§žížŒ ?‚¬?žŒ	      ? •?‹µ ë¹„ìœ¨
-  2ì´?	       256 MB	    112859	 33642	   20494	      28.281%
-
-?‹µ?•ˆ : 3  6  10
+3  6  10
  
 2 4
 CAAB
@@ -46,14 +43,14 @@ def logest_path(graph, start_x, start_y):
     if start_x <= -1 or start_x >= r or start_y <= -1 or start_y >= c:
         return False
     if graph[start_x][start_y] not in path and not visited[start_x][start_y]:
-        q = deque()
+        q = []
         q.append((start_x, start_y))
         path.append(graph[start_x][start_y])
         visited[start_x][start_y] = True
         cnt += 1
 
         while q:
-            x, y = q.popleft()
+            x, y = q.pop()
             for i in range(4):
                 nx = x + dx[i]
                 ny = y + dy[i]
