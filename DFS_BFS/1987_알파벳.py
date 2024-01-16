@@ -36,42 +36,39 @@ for row in graph:
 print()
     
 visited = [[False] * c for _ in range(r)]
-max_path = []
+path = []
 cnt = 0
 
 def logest_path(graph, start_x, start_y):
-    global visited, max_path, cnt
+    global visited, path, cnt
     dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
     
     if start_x <= -1 or start_x >= r or start_y <= -1 or start_y >= c:
         return False
-    if graph[start_x][start_y] not in max_path and not visited[start_x][start_y]:
+    if graph[start_x][start_y] not in path and not visited[start_x][start_y]:
         q = deque()
-        path = []
         q.append((start_x, start_y))
-        max_path.append([graph[start_x][start_y]])
+        path.append([graph[start_x][start_y]])
         visited[start_x][start_y] = True
         cnt += 1
 
         while q:
             x, y = q.pop()
             for i in range(4):
-                sub_path = []
                 nx = x + dx[i]
                 ny = y + dy[i]
                 if nx <= -1 or nx >= r or ny <= -1 or ny >= c:
                     continue
                 if graph[nx][ny] not in path and not visited[nx][ny]:
-                    sub_path.append((nx, ny))
-                    path.append(sub_path)
+                    path.append((nx, ny))
                     q.append((nx, ny))
                     visited[nx][ny]
                     cnt += 1
-            max_path.append(max(path))
+
         return True
     return False
 
 logest_path(graph, 0, 0)
-print(max_path)
+print(path)
 print(cnt)
           
