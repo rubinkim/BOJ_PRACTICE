@@ -23,18 +23,20 @@ HFGCF
 HMCHH
 """
 
+from collections import deque
+import sys
+
+input = sys.stdin.readline 
 
 r, c = map(int, input().split())
 graph = [[0] * c for _ in range(r)]
 for i in range(r):
-    for j, x in enumerate(input()):
+    row = input()
+    for j, x in enumerate(row):
         graph[i][j] = x
 
 for row in graph:
     print(row)
     
 
-from collections import deque
-import sys
-
-input = sys.stdin.readline           
+          
