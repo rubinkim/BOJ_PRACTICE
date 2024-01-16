@@ -35,4 +35,8 @@ for i in range(r):
 for row in graph:
     print(row)
     
+visited = [[False] * c for _ in range(r)]
+path = []
+cnt = 0
+
 
