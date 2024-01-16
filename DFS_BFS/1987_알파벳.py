@@ -53,4 +53,13 @@ def logest_path(graph, start_x, start_y):
         
         while q:
             x, y = q.pop()
+            for i in range(4):
+                nx = x + dx[i]
+                ny = y + dy[i]
+                if graph[nx][ny] not in path and not visited[nx][ny]:
+                    q.append((nx, ny))
+                    visited[nx][ny] = True
+                    cnt += 1
+        return True
+    return False
             
