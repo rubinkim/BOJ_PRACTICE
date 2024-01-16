@@ -46,11 +46,14 @@ def logest_path(graph, start_x, start_y):
     if start_x <= -1 or start_x >= r or start_y <= -1 or start_y >= c:
         return False
     if graph[start_x][start_y] not in path and not visited[start_x][start_y]:
+        q = deque()
+        q.append((start_x, start_y))
         path.append(graph[start_x][start_y])
         visited[start_x][start_y] = True
         cnt += 1
 
         for i in range(4):
+            sub_path = []
             nx = start_x + dx[i]
             ny = start_y + dy[i]
             if nx <= -1 or nx >= r or ny <= -1 or ny >= c:
