@@ -8,6 +8,11 @@
 CAAB
 ADCB
 
+3 6
+HFDFFB
+AJHGDH
+DGAGEH
+
 
 """
 
