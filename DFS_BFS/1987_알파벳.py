@@ -48,7 +48,7 @@ def logest_path(graph, start_x, start_y):
     if graph[start_x][start_y] not in path and not visited[start_x][start_y]:
         q = deque()
         q.append((start_x, start_y))
-        path.append([graph[start_x][start_y]])
+        path.append(graph[start_x][start_y])
         visited[start_x][start_y] = True
         cnt += 1
 
@@ -62,7 +62,7 @@ def logest_path(graph, start_x, start_y):
                 if graph[nx][ny] not in path and not visited[nx][ny]:
                     path.append(graph[nx][ny])
                     q.append((nx, ny))
-                    visited[nx][ny]
+                    visited[nx][ny] = True
                     cnt += 1
 
         return True
