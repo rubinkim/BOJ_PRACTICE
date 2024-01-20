@@ -20,4 +20,9 @@ def n_and_m(depth, n, m):
     if depth == m:
         print(" ".join(map(str, ans)))
         
-    
+    for i in range(1, n+1):
+        visited[i] = True
+        ans.append(i)
+        n_and_m(depth+1, n, m)
+        visited[i] = False
+        ans.pop()
