@@ -11,7 +11,7 @@
 출력 : 한 줄에 하나씩 문제의 조건을 만족하는 수열을 출력한다. 중복되는 수열을 여러 번 출력하면 안되며, 각 수열은 공백으로 구분해서 출력해야 한다.
       수열은 사전 순으로 증가하는 순서로 출력해야 한다.
       
-3 1
+3 2
 4 2
 4 3
 4 4
@@ -28,11 +28,11 @@ def n_and_m(depth, n, m):
         if not visited[i]:
             visited[i] = True
             ans.append(i)
-            print(f"before : depth : {depth},  i : {i},  visited : {visited},  ans : {ans}")
+            print(f"before => depth+1 : {depth+1},  i : {i},  visited : {visited},  ans : {ans}")
             
             n_and_m(depth+1, n, m)
             visited[i] = False
             ans.pop()
-            print(f"after  : depth : {depth},  i : {i},  visited : {visited},  ans : {ans}")
+            print(f"after  => depth+1 : {depth+1},  i : {i},  visited : {visited},  ans : {ans}")
         
 n_and_m(0, n, m)
