@@ -15,3 +15,9 @@
 n, m = map(int, input().split())
 visited = [False] * (n+1)
 ans = []
+
+def n_and_m(depth, n, m):
+    if depth == m:
+        print(" ".join(map(str, ans)))
+        
+    
