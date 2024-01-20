@@ -36,4 +36,4 @@ def n_and_m(depth, n, m):
             ans.pop()
             print(f"after  : depth : {depth},  i : {i},  visited : {visited},  ans : {ans}")
         
-n_and_m(1, n, m)
+n_and_m(0, n, m)
