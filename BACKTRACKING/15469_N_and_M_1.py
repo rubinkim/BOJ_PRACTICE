@@ -22,14 +22,16 @@ ans = []
 
 def n_and_m(depth, n, m):
     if depth == m:
-        print(" ".join(map(str, ans)))
+        #print(" ".join(map(str, ans)))
+        print("rubin")
+        print()
         
     for i in range(1, n+1):
         if not visited[i]:
             visited[i] = True
             ans.append(i)
             print(f"depth : {depth}, visited : {visited},  ans : {ans}")
-            print()
+            
             n_and_m(depth+1, n, m)
             visited[i] = False
             ans.pop()
