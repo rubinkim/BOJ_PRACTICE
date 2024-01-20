@@ -23,7 +23,6 @@ ans = []
 def n_and_m(depth, n, m):
     if depth == m:
         print(" ".join(map(str, ans)))
-        print()
         
     for i in range(1, n+1):
         if not visited[i]:
