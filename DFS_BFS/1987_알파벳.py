@@ -28,33 +28,24 @@ graph = [[0] * c for _ in range(r)]
 for i in range(r):    
     for j, x in enumerate(input().rstrip()):
         graph[i][j] = x
-
-visited = [[False] * c for _ in range(r)]
-
 path = []
 max_length = 0
 
-def dfs_recursion(graph, start_x, start_y, depth):
+def dfs_recursion(start_x, start_y, depth):
     global max_length
     dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
-    
-    if graph[start_x][start_y] not in path and not visited[start_x][start_y]:
-        path.append(graph[start_x][start_y])
-        visited[start_x][start_y] = True
-        max_length = max(max_length, len(path))
+    max_length = max(max_length, len(path))
     
     for i in range(4):
         nx, ny = start_x + dx[i], start_y + dy[i]
         if nx <= -1 or nx >= r or ny <= -1 or ny >= c:
             continue
-        if graph[nx][ny] in path or visited[nx][ny]:
-            continue
-        if graph[nx][ny] not in path and not visited[nx][ny]:
-            dfs_recursion(graph, nx, ny, depth+1)
-            visited[nx][ny] = False
+        if graph[nx][ny] not in path:
+            path.append((nx, ny))
+            dfs_recursion(nx, ny, depth+1)
             path.pop()
             
-dfs_recursion(graph, 0, 0, 0)
+dfs_recursion(0, 0, 0)
 print(max_length)            
 
 
