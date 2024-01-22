@@ -48,7 +48,7 @@ def dfs_recursion(graph, start_x, start_y, depth):
         visited[start_x][start_y] = True
         #print(f"path : {path}")
         max_length = max(max_length, len(path))
-        print(max_length)
+        #print(max_length)
     
     for i in range(4):
         nx, ny = start_x + dx[i], start_y + dy[i]
@@ -61,7 +61,8 @@ def dfs_recursion(graph, start_x, start_y, depth):
             visited[nx][ny] = False
             path.pop()
             
-dfs_recursion(graph, 0, 0, 0)            
+dfs_recursion(graph, 0, 0, 0)
+print(max_length)            
 
 
 
