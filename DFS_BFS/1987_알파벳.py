@@ -36,6 +36,7 @@ def dfs_recursion(start_x, start_y, depth):
     dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]    
        
     max_length = max(max_length, len(path))
+    print(path)
     
     for i in range(4):
         nx, ny = start_x + dx[i], start_y + dy[i]
