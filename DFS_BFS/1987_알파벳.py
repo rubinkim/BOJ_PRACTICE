@@ -32,6 +32,45 @@ for row in graph:
     print(row)
 print()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 total_path = []    
 cnt = 0
 
@@ -75,4 +114,4 @@ def logest_path(graph, start_x, start_y):
 logest_path(graph, 0, 0)
 print(f"path : {total_path}")
 print(f"cnt : {cnt}")
-          
+"""          
