@@ -21,19 +21,20 @@ HMCHH
 """
 
 import sys
-sys.setrecursionlimit(5000)
 input = sys.stdin.readline
 
 r, c = map(int, input().rstrip().split())
 graph = []
-for i in range(r):    
-    graph.append(list(input().rstrip()))
+for _ in range(r):    
+    graph.append(list(input()))
 path = []
 max_length = 0
 
 def dfs_recursion(start_x, start_y, depth):
     global max_length
     dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
+    
+    path.append(graph[start_x][start_y])        
     max_length = max(max_length, len(path))
     
     for i in range(4):
@@ -41,13 +42,11 @@ def dfs_recursion(start_x, start_y, depth):
         if nx <= -1 or nx >= r or ny <= -1 or ny >= c:
             continue
         if graph[nx][ny] not in path:
-            path.append((nx, ny))
-            dfs_recursion(nx, ny, depth+1)
+            dfs_recursion(nx, ny, depth+1)            
             path.pop()
             
 dfs_recursion(0, 0, 0)
-print(max_length)            
-
+print(max_length)   
 
 
 
