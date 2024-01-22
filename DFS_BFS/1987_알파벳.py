@@ -34,7 +34,7 @@ max_length = 0
 def dfs_recursion(start_x, start_y, depth):
     global max_length
     dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]    
-       
+    
     max_length = max(max_length, len(path))
     print(path)
     
@@ -43,9 +43,9 @@ def dfs_recursion(start_x, start_y, depth):
         if nx <= -1 or nx >= r or ny <= -1 or ny >= c:
             continue
         if graph[nx][ny] not in path:
-            path.add((nx, ny))
+            path.add(graph[nx][ny])
             dfs_recursion(nx, ny, depth+1)            
-            path.remove((nx, ny))
+            path.remove(graph[nx][ny])
             
 dfs_recursion(0, 0, 1)
 print(max_length)   
