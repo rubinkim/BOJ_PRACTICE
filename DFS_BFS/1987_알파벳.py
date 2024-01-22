@@ -27,14 +27,13 @@ r, c = map(int, input().rstrip().split())
 graph = []
 for _ in range(r):    
     graph.append(list(input()))
-path = []
-max_length = 0
+path = set()
+max_length = 1
 
 def dfs_recursion(start_x, start_y, depth):
     global max_length
-    dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
-    
-    path.append(graph[start_x][start_y])        
+    dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]    
+       
     max_length = max(max_length, len(path))
     
     for i in range(4):
@@ -42,8 +41,9 @@ def dfs_recursion(start_x, start_y, depth):
         if nx <= -1 or nx >= r or ny <= -1 or ny >= c:
             continue
         if graph[nx][ny] not in path:
+            path.add((nx, ny))
             dfs_recursion(nx, ny, depth+1)            
-            path.pop()
+            path.remove((nx, ny))
             
 dfs_recursion(0, 0, 0)
 print(max_length)   
