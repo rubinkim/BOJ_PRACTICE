@@ -35,6 +35,7 @@ def dfs_recursion(start_x, start_y, depth):
     global max_length
     dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]    
     
+    path.add(graph[start_x][start_y])
     max_length = max(max_length, len(path))
     #print(path)
     
