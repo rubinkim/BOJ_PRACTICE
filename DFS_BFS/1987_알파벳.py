@@ -20,21 +20,13 @@ HFGCF
 HMCHH
 """
 
-from collections import deque
-
 r, c = map(int, input().split())
 graph = [[0] * c for _ in range(r)]
 for i in range(r):    
     for j, x in enumerate(input()):
         graph[i][j] = x
 
-for row in graph:
-    print(row)
-print()
-
 visited = [[False] * c for _ in range(r)]
-for row in visited:
-    print(row)
 
 path = []
 max_length = 0
@@ -46,9 +38,7 @@ def dfs_recursion(graph, start_x, start_y, depth):
     if graph[start_x][start_y] not in path and not visited[start_x][start_y]:
         path.append(graph[start_x][start_y])
         visited[start_x][start_y] = True
-        #print(f"path : {path}")
         max_length = max(max_length, len(path))
-        #print(max_length)
     
     for i in range(4):
         nx, ny = start_x + dx[i], start_y + dy[i]
