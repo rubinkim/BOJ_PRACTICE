@@ -29,7 +29,7 @@ graph = []
 for _ in range(r):    
     graph.append(list(input()))
 path = set()
-max_length = 1
+max_length = 0
 
 def dfs_recursion(start_x, start_y, depth):
     global max_length
@@ -42,8 +42,7 @@ def dfs_recursion(start_x, start_y, depth):
         nx, ny = start_x + dx[i], start_y + dy[i]
         if nx <= -1 or nx >= r or ny <= -1 or ny >= c:
             continue
-        if graph[nx][ny] not in path:
-            path.add(graph[nx][ny])
+        if graph[nx][ny] not in path:            
             dfs_recursion(nx, ny, depth+1)            
             path.remove(graph[nx][ny])
             
