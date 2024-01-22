@@ -28,7 +28,7 @@ graph = []
 for _ in range(r):    
     graph.append(list(input()))
 path = set()
-max_length = 1
+max_length = 0
 
 def dfs_recursion(start_x, start_y, depth):
     global max_length
@@ -45,7 +45,7 @@ def dfs_recursion(start_x, start_y, depth):
             dfs_recursion(nx, ny, depth+1)            
             path.remove((nx, ny))
             
-dfs_recursion(0, 0, 0)
+dfs_recursion(0, 0, 1)
 print(max_length)   
 
 
