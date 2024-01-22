@@ -21,6 +21,7 @@ HMCHH
 """
 
 import sys
+sys.setrecursionlimit(10000)
 input = sys.stdin.readline
 
 r, c = map(int, input().rstrip().split())
