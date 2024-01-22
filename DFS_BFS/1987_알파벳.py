@@ -38,7 +38,12 @@ for row in visited:
 
 path = []
 
-
+def dfs_recursion(graph, start_x, start_y, depth):
+    dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
+    
+    if graph[start_x][start_y] not in path and not visited[start_x][start_y]:
+        path.append(graph[start_x][start_y])
+        
 
 
 
