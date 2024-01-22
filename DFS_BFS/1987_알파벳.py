@@ -36,6 +36,8 @@ visited = [[False] * c for _ in range(r)]
 for row in visited:
     print(row)
 
+path = []
+
 
 
 
