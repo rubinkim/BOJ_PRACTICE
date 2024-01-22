@@ -23,10 +23,10 @@ HMCHH
 import sys
 input = sys.stdin.readline
 
-r, c = map(int, input().split())
+r, c = map(int, input().rstrip().split())
 graph = [[0] * c for _ in range(r)]
 for i in range(r):    
-    for j, x in enumerate(input()):
+    for j, x in enumerate(input().rstrip()):
         graph[i][j] = x
 
 visited = [[False] * c for _ in range(r)]
