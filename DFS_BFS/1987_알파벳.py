@@ -44,6 +44,7 @@ def dfs_recursion(graph, start_x, start_y, depth):
     if graph[start_x][start_y] not in path and not visited[start_x][start_y]:
         path.append(graph[start_x][start_y])
         visited[start_x][start_y] = True
+        print(f"path : {path}")
     
     for i in range(4):
         nx, ny = start_x + dx[i], start_y + dy[i]
@@ -53,7 +54,8 @@ def dfs_recursion(graph, start_x, start_y, depth):
             continue
         if graph[nx][ny] not in path and not visited[nx][ny]:
             dfs_recursion(graph, nx, ny, depth+1)
-                        
+            visited[nx][ny] = False
+            path.pop()            
 
 
 
