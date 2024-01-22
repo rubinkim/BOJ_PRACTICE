@@ -37,14 +37,18 @@ for row in visited:
     print(row)
 
 path = []
+max_length = 0
 
 def dfs_recursion(graph, start_x, start_y, depth):
+    global max_lenght
     dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
     
     if graph[start_x][start_y] not in path and not visited[start_x][start_y]:
         path.append(graph[start_x][start_y])
         visited[start_x][start_y] = True
-        print(f"path : {path}")
+        #print(f"path : {path}")
+        max_length = max(max_length, len(path))
+        print(max_length)
     
     for i in range(4):
         nx, ny = start_x + dx[i], start_y + dy[i]
