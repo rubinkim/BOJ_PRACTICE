@@ -55,7 +55,9 @@ def dfs_recursion(graph, start_x, start_y, depth):
         if graph[nx][ny] not in path and not visited[nx][ny]:
             dfs_recursion(graph, nx, ny, depth+1)
             visited[nx][ny] = False
-            path.pop()            
+            path.pop()
+            
+dfs_recursion(graph, 0, 0, 0)            
 
 
 
