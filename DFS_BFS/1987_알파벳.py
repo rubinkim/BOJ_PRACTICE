@@ -48,8 +48,7 @@ def dfs_recursion(start_x, start_y, depth):
             path.remove(graph[nx][ny])
             
 dfs_recursion(0, 0, 1)
-print(max_length)   
-
+print(max_length)
 
 
 
