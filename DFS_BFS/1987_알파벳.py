@@ -25,10 +25,9 @@ sys.setrecursionlimit(5000)
 input = sys.stdin.readline
 
 r, c = map(int, input().rstrip().split())
-graph = [[0] * c for _ in range(r)]
+graph = []
 for i in range(r):    
-    for j, x in enumerate(input().rstrip()):
-        graph[i][j] = x
+    graph.append(list(input().rstrip()))
 path = []
 max_length = 0
 
