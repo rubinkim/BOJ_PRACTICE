@@ -40,7 +40,7 @@ path = []
 max_length = 0
 
 def dfs_recursion(graph, start_x, start_y, depth):
-    global max_lenght
+    global max_length
     dx, dy = [-1, 1, 0, 0], [0, 0, -1, 1]
     
     if graph[start_x][start_y] not in path and not visited[start_x][start_y]:
