@@ -11,3 +11,9 @@ N이 주어졌을 때, 퀸을 놓는 방법의 수를 구하는 프로그램을 
 
 8     92
 """
+
+n = int(input())
+
+board = [[0] * n for _ in range(n)]
+for row in board:
+    print(row)
