@@ -13,7 +13,6 @@ def back():
         if i not in ans and all(i - x > 0 for x in ans):
             ans.append(i)
             back()
-            ans.pop()
+            ans.pop()            
             
-            
-back(1)
+back()
