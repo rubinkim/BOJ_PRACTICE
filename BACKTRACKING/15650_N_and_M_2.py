@@ -6,13 +6,13 @@
 n, m = map(int, input().split())
 ans = []
 
-def back(start):
+def back():
     if len(ans) == m:
         print(" ".join(map(str, ans)))
-    for i in range(start, n+1):
-        if i not in ans:
+    for i in range(1, n+1):
+        if i not in ans and all(i - x > 0 for x in ans):
             ans.append(i)
-            back(start+1)
+            back()
             ans.pop()
             
             
