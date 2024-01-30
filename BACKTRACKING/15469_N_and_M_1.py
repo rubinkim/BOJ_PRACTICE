@@ -41,3 +41,16 @@ n_and_m(0, n, m)
 n, m = map(int, input().split())
 ans = []
 visited = [False] * (n+1)
+
+def n_and_m(depth, n, m):
+    if len(ans) == m:
+        print(" ".join(map(str, ans)))
+    for i in range(1, n+1):
+        if not visited[i]:
+            visited[i] = True
+            ans.append(i)
+            n_and_m(depth+1, n, m)
+            ans.pop()
+            
+n_and_m(0, n, m)
+        
