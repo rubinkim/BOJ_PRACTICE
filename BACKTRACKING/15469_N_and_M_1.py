@@ -51,12 +51,12 @@ def n_and_m(depth, n, m):
         if not visited[i]:
             visited[i] = True
             ans.append(i)
-            print(f"append : i : {i},  {ans}")
+            print(f"append : depth : {depth},  i : {i},  {ans}")
             
             n_and_m(depth+1, n, m)
             visited[i] = False
             ans.pop()
-            print(f"pop    : i : {i},  {ans}")
+            print(f"pop    : depth : {depth},  i : {i},  {ans}")
             
 n_and_m(0, n, m)
         
