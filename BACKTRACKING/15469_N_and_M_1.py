@@ -45,6 +45,8 @@ visited = [False] * (n+1)
 def n_and_m(depth, n, m):
     if len(ans) == m:
         print(" ".join(map(str, ans)))
+        print()
+        
     for i in range(1, n+1):
         if not visited[i]:
             visited[i] = True
