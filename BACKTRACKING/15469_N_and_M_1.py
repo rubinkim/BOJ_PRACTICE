@@ -38,3 +38,6 @@ def n_and_m(depth, n, m):
         
 n_and_m(0, n, m)
 """
+n, m = map(int, input().split())
+ans = []
+visited = [False] * (n+1)
