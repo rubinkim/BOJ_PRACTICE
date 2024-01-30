@@ -50,6 +50,7 @@ def n_and_m(depth, n, m):
             visited[i] = True
             ans.append(i)
             n_and_m(depth+1, n, m)
+            visited[i] = False
             ans.pop()
             
 n_and_m(0, n, m)
