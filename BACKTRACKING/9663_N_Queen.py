@@ -11,7 +11,8 @@ N이 주어졌을 때, 퀸을 놓는 방법의 수를 구하는 프로그램을 
 
 8     92
 """
-
+import sys
+input = sys.stdin.readline
 N = int(input())
 ans = 0
 v1 = [0] * N
