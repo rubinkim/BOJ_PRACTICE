@@ -1,62 +1,39 @@
 #-*- coding: utf-8 -*-
 
 """
-시간 제한	메모리 제한	   제출	    정답	맞힌 사람	정답 비율
- 1 초	   512 MB	    102276	  65176	   41867	  62.787%
+?���? ?��?��	메모�? ?��?��	   ?���?	    ?��?��	맞힌 ?��?��	?��?�� 비율
+ 1 �?	   512 MB	    102276	  65176	   41867	  62.787%
  
-자연수 N과 M이 주어졌을 때, 아래 조건을 만족하는 길이가 M인 수열을 모두 구하는 프로그램을 작성하시오.
-1부터 N까지 자연수 중에서 중복 없이 M개를 고른 수열
+?��?��?�� N�? M?�� 주어졌을 ?��, ?��?�� 조건?�� 만족?��?�� 길이�? M?�� ?��?��?�� 모두 구하?�� ?��로그?��?�� ?��?��?��?��?��.
+1�??�� N까�?? ?��?��?�� 중에?�� 중복 ?��?�� M개�?? 고른 ?��?��
 
-입력 : 첫째 줄에 자연수 N과 M이 주어진다. (1 ≤ M ≤ N ≤ 8)
-출력 : 한 줄에 하나씩 문제의 조건을 만족하는 수열을 출력한다. 중복되는 수열을 여러 번 출력하면 안되며, 각 수열은 공백으로 구분해서 출력해야 한다.
-      수열은 사전 순으로 증가하는 순서로 출력해야 한다.
+?��?�� : 첫째 줄에 ?��?��?�� N�? M?�� 주어진다. (1 ?�� M ?�� N ?�� 8)
+출력 : ?�� 줄에 ?��?��?�� 문제?�� 조건?�� 만족?��?�� ?��?��?�� 출력?��?��. 중복?��?�� ?��?��?�� ?��?�� �? 출력?���? ?��?���?, �? ?��?��??? 공백?���? 구분?��?�� 출력?��?�� ?��?��.
+      ?��?��??? ?��?�� ?��?���? 증�???��?�� ?��?���? 출력?��?�� ?��?��.
       
 3 2
 4 2
 4 3
 4 4
 """
-"""
-n, m = map(int, input().split())
-visited = [False] * (n+1)
-ans = []
 
-def n_and_m(depth, n, m):
-    if depth == m:
-        print(" ".join(map(str, ans)))
-        
-    for i in range(1, n+1):
-        if not visited[i]:
-            visited[i] = True
-            ans.append(i)
-            print(f"before => depth+1 : {depth+1},  i : {i},  visited : {visited},  ans : {ans}")
-            
-            n_and_m(depth+1, n, m)
-            visited[i] = False
-            ans.pop()
-            print(f"after  => depth+1 : {depth+1},  i : {i},  visited : {visited},  ans : {ans}")
-        
-n_and_m(0, n, m)
-"""
-n, m = map(int, input().split())
+N, M = map(int, input().split())
 ans = []
-visited = [False] * (n+1)
+v = [0] * (N+1)
 
-def n_and_m(depth, n, m):
-    if len(ans) == m:
-        print(" ".join(map(str, ans)))
-        print()
-        
-    for i in range(1, n+1):
-        if not visited[i]:
-            visited[i] = True
-            ans.append(i)
-            print(f"append : depth : {depth},  i : {i},  {ans}")
-            
-            n_and_m(depth+1, n, m)
-            visited[i] = False
-            ans.pop()
-            print(f"pop    : depth : {depth},  i : {i},  {ans}")
-            
-n_and_m(0, n, m)
+def dfs(n, lst):
+    if n == M:
+        ans.append(lst)
+        return
+    for j in (1, N+1):
+        if v[j] == 0:
+            v[j] = 1
+            dfs(n+1, lst+[j])
+            v[j] = 0
+
+dfs(0, [])
+for lst in ans:
+    print(*lst)
+
+
         
