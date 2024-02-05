@@ -12,3 +12,27 @@ N이 주어졌을 때, 퀸을 놓는 방법의 수를 구하는 프로그램을 
 8     92
 """
 
+N = int(input())
+ans = 0
+v1 = [0] * N
+v2 = [0] * (2 * N)
+v3 = [0] * (2 * N)
+
+def dfs(n):
+  global ans
+  if n == N:
+        ans += 1
+        return
+  for j in range(N):
+    if v1[j] == v2[n+j] == v3[n-j] == 0:
+          v1[j] = v2[n+j] = v3[n-j] = 1
+          dfs(n+1)
+          v1[j] = v2[n+j] = v3[n-j] = 0
+          
+dfs(0)
+print(ans)
+      
+
+
+  
+  
