@@ -25,7 +25,8 @@ def dfs(n, lst):
     if n == M:
         ans.append(lst)
         return
-    for j in (1, N+1):
+    
+    for j in range(1, N+1):
         if v[j] == 0:
             v[j] = 1
             dfs(n+1, lst+[j])
