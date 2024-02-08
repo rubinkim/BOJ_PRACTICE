@@ -110,5 +110,20 @@ for i in range(len(op)):
 maximum = -1e9
 minimum = 1e9
         
-for case in op_num:
-    
+def solve():
+    global maximum, minimum
+    for case in permutations(op_num, N-1):
+        total = num[0]
+        for i in range(1, N):
+            if case[i-1] == '+':
+                total += num[i]
+            elif case[i-1] == '-':
+                total -= num[i]
+            elif case[i-1] == '*':
+                total *= num[i]
+            elif case[i-1] = '/':
+                total = int(total / num[i])
+        if total > maximum:
+            maximum = total
+        if total < minimum:
+            minimum = total
