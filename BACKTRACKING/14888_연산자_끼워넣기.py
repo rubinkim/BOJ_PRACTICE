@@ -61,3 +61,13 @@ for i in range(len(op_list)):
 print(max(ans_list))
 print(min(ans_list))
     """
+
+# DFS
+import sys
+input = sys.stdin.readline
+N = int(input())
+num = list(map(int, input().split()))
+op = list(map(int, input().split()))
+maximum = -1e9
+minimum = 1e9
+
