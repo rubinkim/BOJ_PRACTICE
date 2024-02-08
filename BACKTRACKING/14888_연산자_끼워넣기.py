@@ -121,7 +121,7 @@ def solve():
                 total -= num[i]
             elif case[i-1] == '*':
                 total *= num[i]
-            elif case[i-1] = '/':
+            elif case[i-1] == '/':
                 total = int(total / num[i])
         if total > maximum:
             maximum = total
