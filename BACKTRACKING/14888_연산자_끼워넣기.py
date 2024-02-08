@@ -71,3 +71,10 @@ op = list(map(int, input().split()))
 maximum = -1e9
 minimum = 1e9
 
+def dfs(n, total, plus, minus, multiply, divide):
+    global maximum, minimum
+    if n == N:
+        maximum = max(total, maximum)
+        minimum = min(total, minimum)
+        
+    
