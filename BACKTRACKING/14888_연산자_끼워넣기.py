@@ -76,5 +76,12 @@ def dfs(n, total, plus, minus, multiply, divide):
     if n == N:
         maximum = max(total, maximum)
         minimum = min(total, minimum)
-        
     
+    if plus > 0:
+        dfs(n+1, total+num[n], plus-1, minus, multiply, divide)
+    elif minus > 0:
+        dfs(n+1, total+num[n], plus, minus-1, multiply, divide)
+    elif multiply > 0:
+        dfs(n+1, total+num[n], plus, minus, multiply-1, divide)
+    elif divide > 0:
+        
