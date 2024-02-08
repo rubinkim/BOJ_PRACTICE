@@ -85,7 +85,7 @@ def dfs(n, total, plus, minus, multiply, divide):
     if multiply:
         dfs(n+1, total*num[n], plus, minus, multiply-1, divide)
     if divide:
-        dfs(n+1, int(total//num[n]), plus, minus, multiply, divide-1)
+        dfs(n+1, int(total/num[n]), plus, minus, multiply, divide-1)
         
 dfs(1, num[0], op[0], op[1], op[2], op[3])
 print(maximum)
