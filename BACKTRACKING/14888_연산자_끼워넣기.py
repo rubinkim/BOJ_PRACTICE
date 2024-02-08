@@ -84,4 +84,6 @@ def dfs(n, total, plus, minus, multiply, divide):
     elif multiply > 0:
         dfs(n+1, total+num[n], plus, minus, multiply-1, divide)
     elif divide > 0:
+        dfs(n+1, total+num[n], plus, minus, multiply, divide-1)
         
+    
