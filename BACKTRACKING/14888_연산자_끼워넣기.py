@@ -62,7 +62,7 @@ print(max(ans_list))
 print(min(ans_list))
 """
 """
-# DFS
+# DFS  : plus, minus, multiply, divide를 divide, multiply, minus, plus로 바꿔도 정답이다!!!
 import sys
 input = sys.stdin.readline
 N = int(input())
