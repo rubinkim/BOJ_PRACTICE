@@ -60,8 +60,8 @@ for i in range(len(op_list)):
 
 print(max(ans_list))
 print(min(ans_list))
-    """
-
+"""
+"""
 # DFS
 import sys
 input = sys.stdin.readline
@@ -90,3 +90,13 @@ def dfs(n, total, plus, minus, multiply, divide):
 dfs(1, num[0], op[0], op[1], op[2], op[3])
 print(maximum)
 print(minimum)
+"""
+
+# Permutations
+from itertools import permutations
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+num = list(map(int, input().split()))
+op = list(map(int, input().split()))
