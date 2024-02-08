@@ -106,5 +106,9 @@ op_num = []
 for i in range(len(op)):
     for j in range(op[i]):
         op_num.append(op_list[i])
-        
 
+maximum = -1e9
+minimum = 1e9
+        
+for case in op_num:
+    
