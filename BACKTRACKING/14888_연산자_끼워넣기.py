@@ -100,3 +100,11 @@ input = sys.stdin.readline
 N = int(input())
 num = list(map(int, input().split()))
 op = list(map(int, input().split()))
+op_list = ['+', '-', '*', '/']
+op_num = []
+
+for i in range(len(op)):
+    for j in range(op[i]):
+        op_num.append(op_list[i])
+        
+
