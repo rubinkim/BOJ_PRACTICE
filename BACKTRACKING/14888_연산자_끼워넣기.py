@@ -127,3 +127,7 @@ def solve():
             maximum = total
         if total < minimum:
             minimum = total
+            
+solve()
+print(maximum)
+print(minimum)
