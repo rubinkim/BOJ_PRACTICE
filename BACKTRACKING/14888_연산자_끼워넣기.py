@@ -14,7 +14,7 @@
 1 0 1 0
 
 """
-
+"""
 N = int(input())                              # 숫자의 개수
 nums = list(map(int, input().split()))        # 크기가 N인 숫자배열
 ops = ['+', '-', '*', '//']                    # 연산자의 종류
@@ -60,3 +60,4 @@ for i in range(len(op_list)):
 
 print(max(ans_list))
 print(min(ans_list))
+    """
