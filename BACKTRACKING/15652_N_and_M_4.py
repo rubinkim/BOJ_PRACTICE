@@ -6,3 +6,17 @@
 길이가 K인 수열 A가 A1 ≤ A2 ≤ ... ≤ AK-1 ≤ AK를 만족하면, 비내림차순이라고 한다.
 수열은 사전 순으로 증가하는 순서로 출력해야 한다.
 """
+
+import sys
+input = sys.stdin.readline
+N, M = map(int, input().split())
+ans = []
+
+def dfs(n, lst):
+    if n == M:
+        ans.append(lst)
+        return
+    for j in range(1, N+1):
+        if all([j <= x for x in lst]):
+            dfs(n+1, lst+[j])
+            
