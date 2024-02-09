@@ -11,8 +11,8 @@
 1 2 3 4 5
 """
 
-#import sys
-#input = sys.stdin.readline
+import sys
+input = sys.stdin.readline
 N, S = map(int, input().split())
 lst = list(map(int, input().split()))
 ans = 0
