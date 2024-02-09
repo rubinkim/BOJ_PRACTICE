@@ -17,7 +17,7 @@ def dfs(n, lst):
         ans.append(lst)
         return
     for j in range(1, N+1):
-        if all([j <= x for x in lst]):
+        if all([j >= x for x in lst]):
             dfs(n+1, lst+[j])
 
 dfs(0, [])
