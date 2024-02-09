@@ -16,10 +16,16 @@ def dfs(n, lst):
         ans.append(lst)
         return
     for j in range(1, N+1):
-        if v[j] == 0 and all([nums[j] >= x for x in lst]):
-            v[j] = 1
-            dfs(n+1, lst+[nums[j]])
-            v[j] = 0
+        if j == 1:
+            if v[j] == 0:
+                v[j] = 1
+                dfs(n+1, lst+[nums[j]])
+                v[j] = 0
+        else:
+            if v[j] == 0 and all([nums[j] >= x for x in lst]):
+                v[j] = 1
+                dfs(n+1, lst+[nums[j]])
+                v[j] = 0
 
 dfs(0, [])
 for lst in ans:
