@@ -25,5 +25,5 @@ def dfs(n, lst):
             v[j] = 0
 
 dfs(0, [])
-for lst in ans:
+for lst in sorted(ans):
     print(*lst)
