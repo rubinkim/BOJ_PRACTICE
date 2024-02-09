@@ -3,7 +3,6 @@
 4 2
 """
 """
-# ³ªÀÇ Àú±ŞÇÑ ¹æ¹ı
 n, m = map(int, input().split())
 ans = []
 
@@ -26,7 +25,7 @@ ans = []
 
 def dfs(n, lst):
     global ans    
-    # Á¾·áÁ¶°Ç
+    # ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     if n > N:
         if len(lst) == M:
             ans.append(lst)
