@@ -5,3 +5,6 @@
 2. 같은 수를 여러 번 골라도 된다.
 수열은 사전 순으로 증가하는 순서로 출력해야 한다.
 """
+import sys
+input = sys.stdin.readline
+N, M = map(int, input().split())
