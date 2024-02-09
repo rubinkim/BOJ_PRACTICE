@@ -17,7 +17,7 @@ def back():
             
 back()
 """
-
+"""
 import sys
 input = sys.stdin.readline
 N, M = map(int, input().split())
@@ -36,3 +36,11 @@ def dfs(n, lst):
 dfs(1, [])
 for lst in ans:
     print(*lst)
+"""
+
+import sys
+input = sys.stdin.readline
+N, M = map(int, input().split())
+ans = []
+v = [0] * (N+1)
+    
