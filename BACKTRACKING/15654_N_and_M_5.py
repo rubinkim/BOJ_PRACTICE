@@ -12,6 +12,7 @@ import sys
 input = sys.stdin.readline
 N, M = map(int, input().split())
 nums = list(map(int, input().split()))
+v = [0] * (N+1)
 ans = []
 
 def dfs(n, lst):
@@ -19,7 +20,10 @@ def dfs(n, lst):
         ans.append(lst)
         return
     for j in range(N):
-        dfs(n+1, lst+[nums[j]])
+        if v[j] == 0:
+            v[j] = 1
+            dfs(n+1, lst+[nums[j]])
+            v[j] = 0
         
 dfs(0, [])
 for lst in sorted(ans):
