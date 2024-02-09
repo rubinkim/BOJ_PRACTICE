@@ -8,3 +8,20 @@ N개의 자연수 중에서 M개를 고른 수열
 4 2
 9 8 7 1
 """
+
+import sys
+input = sys.stdin.readline
+N, M = map(int, input().split())
+nums = list(map(int, input().split()))
+ans = []
+
+def dfs(n, lst):
+    if n == M:
+        ans.append(lst)
+        return
+    for j in range(N):
+        dfs(n+1, lst+[nums[j]])
+        
+dfs(0, [])
+for lst in sorted(ans):
+    print(*lst)
