@@ -37,7 +37,7 @@ dfs(1, [])
 for lst in ans:
     print(*lst)
 """
-
+"""
 import sys
 input = sys.stdin.readline
 N, M = map(int, input().split())
@@ -57,4 +57,20 @@ def dfs(n, lst):
 dfs(0, [])
 for lst in ans:
     print(*lst)
-    
+"""   
+
+import sys
+input = sys.stdin.readline
+N, M = map(int, input().split())
+ans = []
+
+def dfs(n, s, lst):
+    if n == M:
+        ans.append(lst)
+        return
+    for j in range(s, N+1):
+        dfs(n+1, j+1, lst+[j])
+        
+dfs(0, 1, [])
+for lst in ans:
+    print(*lst)
