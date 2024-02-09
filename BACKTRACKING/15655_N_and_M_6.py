@@ -17,9 +17,9 @@ def dfs(n, lst):
     if n == M:
         ans.append(lst)
         return
-    for j in range(1, N+1):
-        if v[j] == 0 and all([nums[j] >= x for x in lst]): 
-            #if (len(lst) == 0) or (len(lst) > 0 and all([nums[j] >= x for x in lst])):
+    for j in range(N):
+            
+        if v[j] == 0 and all([nums[j] > x for x in lst]): 
             v[j] = 1
             dfs(n+1, lst + [nums[j]])
             v[j] = 0
