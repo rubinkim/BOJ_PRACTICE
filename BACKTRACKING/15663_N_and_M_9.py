@@ -17,11 +17,10 @@ ans = []
 
 def dfs(n, lst):
     if n == M:
-        if lst not in ans:
-            ans.append(lst)
-            return
+        ans.append(lst)
+        return
     for j in range(N):
-        if v[j] == 0:
+        if v[j] == 0 and lst + [nums[j]] not in ans:
             v[j] = 1
             dfs(n+1, lst+[nums[j]])
             v[j] = 0
