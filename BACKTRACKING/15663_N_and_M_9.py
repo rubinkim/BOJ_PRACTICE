@@ -17,8 +17,9 @@ ans = []
 
 def dfs(n, lst):
     if n == M:
-        ans.append(lst)
-        return
+        if lst not in ans:
+            ans.append(lst)
+            return
     for j in range(N):
         if v[j] == 0:
             v[j] = 1
