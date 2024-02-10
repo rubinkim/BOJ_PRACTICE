@@ -6,25 +6,31 @@ N개의 자연수 중에서 M개를 고른 수열
 
 4 2
 9 7 9 1
+
+8 7
+9 7 1 6 5 9 9 8
 """
 
 import sys
 input = sys.stdin.readline
 N, M = map(int, input().split())
 nums = list(map(int, input().split()))
+
 v = [0] * (N+1)
-ans = []
+ans = set()
 
 def dfs(n, lst):
+    global ans
     if n == M:
-        ans.append(lst)
+        lst = tuple(lst)
+        ans.add(lst)
         return
     for j in range(N):
-        if v[j] == 0 and lst + [nums[j]] not in ans:
+        if v[j] == 0:
             v[j] = 1
-            dfs(n+1, lst+[nums[j]])
+            dfs(n+1, list(lst)+[nums[j]])
             v[j] = 0
             
-dfs(0, [])
+dfs(0, ())
 for lst in sorted(ans):
     print(*lst)
