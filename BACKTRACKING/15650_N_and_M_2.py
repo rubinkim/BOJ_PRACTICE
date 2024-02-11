@@ -47,7 +47,8 @@ for lst in ans:
     print(*lst)
 """   
 
-# 방법 3 : n = 선택할 숫자의 값으로 정의하고, 이진트리를 이용해서  
+# 방법 3 : n = 선택할 숫자의 값으로 정의하고, 이진트리를 이용해서 이숫자를 선택할것인가 아니면 선택하지 않을것인가로 n이 N+1까지 도달하면 
+# len(lst) == M을 통과해야 lst를 append할 수 있다. 
 import sys
 input = sys.stdin.readline
 N, M = map(int, input().split())
