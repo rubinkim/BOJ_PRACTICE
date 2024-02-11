@@ -22,15 +22,15 @@ dfs(1, [])
 for lst in ans:
     print(*lst)
 """
-"""
+
 import sys
 input = sys.stdin.readline
 N, M = map(int, input().split())
 ans = []
+v = [0] * (N+1)
 
 def dfs(n, lst):
     global ans
-    v = [0] * (N+1)
     if n == M:
         ans.append(lst)
         return
@@ -38,10 +38,11 @@ def dfs(n, lst):
         if v[j] == 0 and all([j > x for x in lst]):
             v[j] = 1
             dfs(n+1, lst+[j])
+            v[j] = 0
 dfs(0, [])
 for lst in ans:
     print(*lst)
-"""
+
    
 """
 import sys
