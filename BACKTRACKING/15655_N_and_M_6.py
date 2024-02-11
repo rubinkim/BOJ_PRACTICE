@@ -29,6 +29,9 @@ for lst in ans:
     print(*lst)
     
     
+    
+    
+    
 import sys
 input = sys.stdin.readline
 N, M = map(int, input().split())
