@@ -25,20 +25,23 @@ for lst in ans:
     print(*lst)
 """
    
-
 import sys
 input = sys.stdin.readline
 N, M = map(int, input().split())
 ans = []
+v = [0] * (N+1)
 
 def dfs(n, s, lst):
+    global ans
     if n == M:
         ans.append(lst)
         return
     for j in range(s, N+1):
-        dfs(n+1, j+1, lst+[j])
-        
+        if v[j] == 0:
+            v[j] = 1
+            dfs(n+1, j+1, lst+[j])
+            v[j] = 0
+
 dfs(0, 1, [])
 for lst in ans:
     print(*lst)
-"""
