@@ -39,6 +39,7 @@ def dfs(n, lst):
     global ans
     if n == M:
         ans.append(lst)
+        return
     for j in range(N):
         if all([nums[j] >= x for x in lst]):
             dfs(n+1, lst+[nums[j]])
