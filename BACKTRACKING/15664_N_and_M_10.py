@@ -30,7 +30,7 @@ def dfs(n, lst):
         ans.add(lst)
         return
     for j in range(N):
-        if v[j] == 0:
+        if v[j] == 0 and all([nums[j]>=x for x in lst]):
             v[j] = 1
             dfs(n+1, list(lst)+[nums[j]])
             v[j] = 0
