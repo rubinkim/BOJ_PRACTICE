@@ -17,8 +17,7 @@ def dfs(n, lst):
     if n == M:
         ans.append(lst)
         return
-    for j in range(N):
-            
+    for j in range(N):            
         if v[j] == 0 and all([nums[j] > x for x in lst]): 
             v[j] = 1
             dfs(n+1, lst + [nums[j]])
