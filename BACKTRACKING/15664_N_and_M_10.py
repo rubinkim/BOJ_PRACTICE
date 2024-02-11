@@ -20,7 +20,6 @@ N, M = map(int, input().split())
 nums = list(map(int, input().split()))
 
 start_time = time.time()
-v = [0] * (N+1)
 ans = set()
 
 def dfs(n, lst):
@@ -30,10 +29,8 @@ def dfs(n, lst):
         ans.add(lst)
         return
     for j in range(N):
-        if v[j] == 0 and all([nums[j]>=x for x in lst]):
-            v[j] = 1
-            dfs(n+1, list(lst)+[nums[j]])
-            v[j] = 0
+        dfs(n+1, list(lst)+[nums[j]])
+
             
 dfs(0, ())
 intermediate_time = time.time()
