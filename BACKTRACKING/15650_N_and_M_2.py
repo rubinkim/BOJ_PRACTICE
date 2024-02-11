@@ -29,7 +29,6 @@ import sys
 input = sys.stdin.readline
 N, M = map(int, input().split())
 ans = []
-v = [0] * (N+1)
 
 def dfs(n, s, lst):
     global ans
@@ -37,15 +36,11 @@ def dfs(n, s, lst):
         ans.append(lst)
         return
     for j in range(s, N+1):
-        if v[j] == 0:
-            v[j] = 1
-            dfs(n+1, j+1, lst+[j])
-            v[j] = 0
+        dfs(n+1, j+1, lst+[j])
 
 dfs(0, 1, [])
 for lst in ans:
     print(*lst)
-
 
 # 방법 3 : n = 선택할 숫자의 값으로 정의하고, 이진트리를 이용해서 이숫자를 선택할것인가 아니면 선택하지 않을것인가로 n이 N+1까지 도달하면 
 # len(lst) == M을 통과해야 lst를 append할 수 있다. 
