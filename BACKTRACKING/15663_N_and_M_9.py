@@ -15,7 +15,6 @@ import sys
 input = sys.stdin.readline
 N, M = map(int, input().split())
 nums = list(map(int, input().split()))
-nums.sort()
 v = [0] * (N+1)
 ans = set()
 
@@ -32,5 +31,5 @@ def dfs(n, lst):
             v[j] = 0
             
 dfs(0, ())
-for lst in ans:
+for lst in sorted(ans):
     print(*lst)
