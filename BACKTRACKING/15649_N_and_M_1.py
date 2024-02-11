@@ -17,6 +17,7 @@
 4 4
 """
 import sys
+input = sys.stdin.readline
 N, M = map(int, input().split())
 ans = []
 v = [0] * (N+1)
