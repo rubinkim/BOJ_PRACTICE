@@ -3,25 +3,6 @@
 4 2
 """
 """
-import sys
-input = sys.stdin.readline
-N, M = map(int, input().split())
-ans = []
-
-def dfs(n, lst):
-    global ans    
-
-    if n > N:
-        if len(lst) == M:
-            ans.append(lst)
-        return
-    dfs(n+1, lst+[n])
-    dfs(n+1, lst)
-
-dfs(1, [])
-for lst in ans:
-    print(*lst)
-"""
 # 방법 1 : n = 선택한 숫자의 개수이고, j가 1부터 N까지 반복하는데 j가 lst에 이미 있는 다른 값들보다 커야 한다는 조건을 추가한다.
 import sys
 input = sys.stdin.readline
@@ -42,9 +23,9 @@ def dfs(n, lst):
 dfs(0, [])
 for lst in ans:
     print(*lst)
-
-   
 """
+   
+
 import sys
 input = sys.stdin.readline
 N, M = map(int, input().split())
