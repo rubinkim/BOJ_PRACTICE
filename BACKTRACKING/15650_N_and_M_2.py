@@ -23,8 +23,8 @@ def dfs(n, lst):
 dfs(0, [])
 for lst in ans:
     print(*lst)
-"""
-   
+
+# 방법 2 : n = 선택한 숫자의 개숫이고 j가 바로 전 단계에서 선택한 숫자보다 하나 큰 숫자부터 N까지 반복하도록 s라는 변수를 이용했다.
 import sys
 input = sys.stdin.readline
 N, M = map(int, input().split())
@@ -43,5 +43,24 @@ def dfs(n, s, lst):
             v[j] = 0
 
 dfs(0, 1, [])
+for lst in ans:
+    print(*lst)
+"""   
+    
+import sys
+input = sys.stdin.readline
+N, M = map(int, input().split())
+ans = []
+
+def dfs(n, lst):
+    global ans
+    if n > N:
+        if len(lst) == M:
+            ans.append(lst)
+        return
+    dfs(n+1, lst+[n])
+    dfs(n+1, lst)
+
+dfs(1, [])
 for lst in ans:
     print(*lst)
