@@ -12,3 +12,24 @@ N개의 자연수 중에서 M개를 고른 수열
 """
 
 # nums를 정의하고 그다음줄에 nums.sort()를 하고 나서 밑의 loop에서 그냥 ans로 하면 틀리게 된다!!!!!
+import sys
+input = sys.stdin.readline
+N, M = map(int, input().split())
+nums = list(map(int, input().split()))
+ans = set()
+v = [0] * N
+
+def dfs(n, lst):
+    global ans
+    if n == M:
+        ans.add(tuple(lst))
+        return
+    for j in range(N):
+        if v[j] == 0:
+            v[j] = 1
+            dfs(n+1, lst+[nums[j]])
+            v[j] = 0
+
+dfs(0, [])
+for lst in sorted(ans):
+    print(*lst)
