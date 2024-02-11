@@ -9,9 +9,6 @@ N개의 자연수 중에서 M개를 고른 수열
 4 2
 9 8 7 1
 
-
-
-
 import sys
 input = sys.stdin.readline
 N, M = map(int, input().split())
