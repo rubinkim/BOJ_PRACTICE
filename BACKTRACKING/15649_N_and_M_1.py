@@ -23,6 +23,7 @@ ans = []
 v = [0] * (N+1)
 
 def dfs(n, lst):
+    global ans
     if n == M:
         ans.append(lst)
         return
