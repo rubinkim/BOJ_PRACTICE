@@ -9,18 +9,28 @@ N개의 자연수 중에서 M개를 고른 수열
 """
 
 import sys
+import time
 input = sys.stdin.readline
 N, M = map(int, input().split())
 nums = list(map(int, input().split()))
-ans = []
+
+start_time = time.time()
+ans = set()
 
 def dfs(n, lst):
+    global ans
     if n == M:
-        ans.append(lst)
+        lst = tuple(lst)
+        ans.add(lst)
         return
     for j in range(N):
-        dfs(n+1, lst+[nums[j]])
-            
-dfs(0, [])
+        dfs(n+1, list(lst)+[nums[j]])
+
+dfs(0, ())
+intermediate_time = time.time()
+print(f"#1_time_elapsed : {intermediate_time - start_time}")
+
 for lst in sorted(ans):
     print(*lst)
+end_time = time.time()
+print(f"#2_time elapsed : {end_time - start_time}")
