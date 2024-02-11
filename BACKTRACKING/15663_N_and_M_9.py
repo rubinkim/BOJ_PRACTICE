@@ -11,6 +11,7 @@ N개의 자연수 중에서 M개를 고른 수열
 9 7 1 6 5 9 9 8
 """
 
+# nums를 정의하고 그다음줄에 nums.sort()를 하고 나서 밑의 loop에서 그냥 ans로 하면 틀리게 된다!!!!!
 import sys
 input = sys.stdin.readline
 N, M = map(int, input().split())
