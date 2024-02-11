@@ -46,7 +46,8 @@ dfs(0, 1, [])
 for lst in ans:
     print(*lst)
 """   
-    
+
+# 방법 3 : n = 선택할 숫자의 값으로 정의하고, 이진트리를 이용해서  
 import sys
 input = sys.stdin.readline
 N, M = map(int, input().split())
