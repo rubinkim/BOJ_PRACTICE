@@ -64,3 +64,5 @@ def dfs(n, lst):
 dfs(0, [])
 for lst in sorted(ans):
     print(*lst)
+    
+# 방법 2 : n은 선택한 숫자의 개수이고 j가 s+1부터 N-1까지 순회한다.
