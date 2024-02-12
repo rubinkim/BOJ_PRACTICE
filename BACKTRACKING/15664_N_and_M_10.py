@@ -42,22 +42,3 @@ end_time = time.time()
 print(f"#2_time elapsed : {end_time - start_time}")
 """
 
-import sys
-input = sys.stdin.readline
-N, M = map(int, input().split())
-nums = list(map(int, input().split()))
-nums.sort()
-ans = set()
-
-def dfs(n, num_lst, lst):
-    global ans
-    if n > N-1:
-        if len(lst) == M:
-            ans.add(tuple(lst))
-        return
-    dfs(n+1, num_lst, lst+[nums[n]])
-    dfs(n+1, num_lst, lst)
-
-dfs(0, nums, [])
-for lst in sorted(ans):
-    print(*lst)
