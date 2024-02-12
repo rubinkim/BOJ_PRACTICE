@@ -54,7 +54,7 @@ def dfs(n, num_lst, lst):
     if n > N-1:
         if len(lst) == M:
             ans.add(tuple(lst))
-            return
+        return
         dfs(n+1, num_lst, lst+[nums[j]])
         dfs(n+1, num_lst, lst)
 
