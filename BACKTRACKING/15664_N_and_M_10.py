@@ -84,3 +84,24 @@ def dfs(n, s, lst):
 dfs(0, 0, [])
 for lst in sorted(ans):
     print(*lst)
+    
+# 방법 3 : n은 선택할 숫자의 인덱스이고 n이 0부터 N-1까지 순회한다.
+import sys
+input = sys.stdin.readline
+N, M = map(int, input().split())
+nums = list(map(int, input().split()))
+nums.sort()
+ans = set()
+
+def dfs(n, num_lst, lst):
+    global ans
+    if n > N-1:
+        if len(lst) == M:
+            ans.add(tuple(lst))
+        return
+    dfs(n+1, num_lst, lst+[nums[n]])
+    dfs(n+1, num_lst, lst)
+
+dfs(0, nums, [])
+for lst in sorted(ans):
+    print(*lst)
