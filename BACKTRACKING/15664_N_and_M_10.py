@@ -59,5 +59,5 @@ def dfs(n, num_lst, lst):
     dfs(n+1, num_lst, lst)
 
 dfs(0, nums, [])
-for lst in ans:
+for lst in sorted(ans):
     print(*lst)
