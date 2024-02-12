@@ -66,3 +66,21 @@ for lst in sorted(ans):
     print(*lst)
     
 # 방법 2 : n은 선택한 숫자의 개수이고 j가 s+1부터 N-1까지 순회한다.
+import sys
+input = sys.stdin.readline
+N, M = map(int, input().split())
+nums = list(map(int, input().split()))
+nums.sort()
+ans = set()
+
+def dfs(n, s, lst):
+    global ans
+    if n == M:
+        ans.add(tuple(lst))
+        return
+    for j in range(s, N):
+        dfs(n+1, j+1, lst+[nums[j]])
+
+dfs(0, 0, [])
+for lst in sorted(ans):
+    print(*lst)
