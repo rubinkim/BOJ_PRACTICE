@@ -46,7 +46,6 @@ import sys
 input = sys.stdin.readline
 N, M = map(int, input().split())
 nums = list(map(int, input().split()))
-nums.sort()
 ans = set()
 
 def dfs(n, num_lst, lst):
@@ -59,5 +58,5 @@ def dfs(n, num_lst, lst):
     dfs(n+1, num_lst, lst)
 
 dfs(0, nums, [])
-for lst in ans:
+for lst in sorted(ans):
     print(*lst)
