@@ -40,7 +40,7 @@ for lst in sorted(ans):
     print(*lst)
 end_time = time.time()
 print(f"#2_time elapsed : {end_time - start_time}")
-"""
+
 
 # 방법 1 : n은 선택할 숫자의 개수이고 j가 0부터 N-1까지 순회한다.
 import sys
@@ -84,6 +84,7 @@ def dfs(n, s, lst):
 dfs(0, 0, [])
 for lst in sorted(ans):
     print(*lst)
+"""
     
 # 방법 3 : n은 선택할 숫자의 인덱스이고 n이 0부터 N-1까지 순회한다.
 # 이 방법에서는 nums.sort()와 sorted(ans) 둘다 사용해야 한다.
@@ -100,8 +101,8 @@ def dfs(n, num_lst, lst):
         if len(lst) == M:
             ans.add(tuple(lst))
         return
-    dfs(n+1, num_lst, lst+[nums[n]])
     dfs(n+1, num_lst, lst)
+    dfs(n+1, num_lst, lst+[nums[n]])
 
 dfs(0, nums, [])
 for lst in sorted(ans):
