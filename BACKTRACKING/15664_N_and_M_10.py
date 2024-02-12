@@ -86,6 +86,7 @@ for lst in sorted(ans):
     print(*lst)
     
 # 방법 3 : n은 선택할 숫자의 인덱스이고 n이 0부터 N-1까지 순회한다.
+# 이 방법에서는 nums.sort()와 sorted(ans) 둘다 사용해야 한다.
 import sys
 input = sys.stdin.readline
 N, M = map(int, input().split())
