@@ -39,5 +39,5 @@ print(f"N : {N}")
 print(f"T : {T}")
 print(f"P : {P}")
 
-def dfs(n):     # n : T배열의 인덱스
+def dfs(n, pay):     # n : T배열의 인덱스
     
