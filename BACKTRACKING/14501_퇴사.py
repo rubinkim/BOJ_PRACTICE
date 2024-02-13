@@ -27,6 +27,7 @@ input = sys.stdin.readline
 N = int(input())
 T = [0] * N
 P = [0] * N
+pay_list = []
 
 for i in range(N):
     t, p = tuple(map(int, input().split()))
@@ -37,3 +38,6 @@ for i in range(N):
 print(f"N : {N}")
 print(f"T : {T}")
 print(f"P : {P}")
+
+def dfs(n):     # n : T배열의 인덱스
+    
