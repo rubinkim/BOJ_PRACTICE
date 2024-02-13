@@ -49,7 +49,7 @@ def dfs(n, pay):     # n : T배열의 인덱스
         #dfs(n+T[n], pay+P[n])
         #dfs(n+T[n], pay)  
         print(f"n : {n}, T[n] : {T[n]},  P[n] : {P[n]}")
-        n += 1
+        n = n + T[n]
         
 dfs(0, 0)
 print(pay_lst)      
