@@ -63,8 +63,8 @@ def dfs(n, pay):     # n : T or P 배열의 인덱스
     if n + T[n] > N-1:
         pay_lst.append(pay)
         return
-    if n + T[n] == N-1:
-        pay_lst.append(P[N-1])
+    if n + T[n] == N-1 and T[N-1] == 1:
+        pay_lst.append(pay + P[N-1])
         return
     dfs(n+T[n], pay+P[n])     
     dfs(n+T[n], pay)  
