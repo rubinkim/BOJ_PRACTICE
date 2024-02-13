@@ -28,8 +28,11 @@ N = int(input())
 T = [0] * N
 P = [0] * N
 
-for _ in range(N):
+for i in range(N):
     t, p = tuple(map(int, input().split()))
+    T[i] = t
+    P[i] = p
+    
     
 print(f"N : {N}")
 print(f"T : {T}")
