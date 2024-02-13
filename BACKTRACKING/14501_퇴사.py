@@ -54,5 +54,6 @@ def dfs(n, pay):     # n : T배열의 인덱스
 
         
 dfs(0, 0)
-print(pay_lst)      
+print(pay_lst) 
+print(max(pay_lst))
     
