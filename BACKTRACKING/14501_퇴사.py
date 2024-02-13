@@ -46,5 +46,8 @@ def dfs(n, pay):     # n : T배열의 인덱스
         return
     if n + N[n] < len(T):
         dfs(n+T[n], pay+P[n])
-        dfs(n+T[n], pay)        
+        dfs(n+T[n], pay)  
+        
+dfs(0, 0)
+print(pay_lst)      
     
