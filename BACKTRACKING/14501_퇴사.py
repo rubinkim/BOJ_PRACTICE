@@ -42,7 +42,8 @@ print(f"P : {P}")
 def dfs(n, pay):     # n : T배열의 인덱스
     global pay_lst
     if n >= N-1:
-        #print(f"n : {n},  pay : {pay}")
+        print(f"n : {n},  pay : {pay}")
+        print()
         pay_lst.append(pay)
         return
     #if n + T[n] <= len(T):
