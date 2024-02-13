@@ -29,4 +29,7 @@ T = [0] * N
 P = [0] * N
 
 for _ in range(N):
-    t, 
+    t, p = tuple(map(int, input().split()))
+    
+print(f"N : {N}")
+print()
