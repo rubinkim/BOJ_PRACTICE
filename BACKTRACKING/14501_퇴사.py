@@ -60,14 +60,14 @@ for i in range(N):
     
 def dfs(n, pay):     # n : T or P 배열의 인덱스
     global pay_lst
-    if n >= N-1:
+    if n + T[n] > N-1:
         pay_lst.append(pay)
         return
-
+    if n + T[n] == N-1:
+        pay_lst.append(P[N-1])
+        return
     dfs(n+T[n], pay+P[n])     
     dfs(n+T[n], pay)  
-    
-
         
 dfs(0, 0)
 print(pay_lst) 
