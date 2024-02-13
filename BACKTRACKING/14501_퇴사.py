@@ -21,3 +21,12 @@
 1 9
 1 10
 """
+
+import sys
+input = sys.stdin.readline
+N = int(input())
+T = [0] * N
+P = [0] * N
+
+for _ in range(N):
+    t, 
