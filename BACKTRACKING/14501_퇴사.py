@@ -32,6 +32,18 @@
 5 8
 5 7
 5 6
+
+10
+5 50
+4 40
+3 30
+2 20
+1 10
+1 10
+2 20
+3 30
+4 40
+5 50
 """
 
 import sys
@@ -46,11 +58,6 @@ for i in range(N):
     T[i] = t
     P[i] = p
     
-    
-print(f"N : {N}")
-print(f"T : {T}")
-print(f"P : {P}")
-
 def dfs(n, pay):     # n : T배열의 인덱스
     global pay_lst
     if n >= N-1:
