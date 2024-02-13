@@ -58,7 +58,7 @@ for i in range(N):
     T[i] = t
     P[i] = p
     
-def dfs(n, pay):     # n : T배열의 인덱스
+def dfs(n, pay):     # n : T or P 배열의 인덱스
     global pay_lst
     if n >= N-1:
         pay_lst.append(pay)
