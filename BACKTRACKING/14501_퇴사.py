@@ -32,4 +32,5 @@ for _ in range(N):
     t, p = tuple(map(int, input().split()))
     
 print(f"N : {N}")
-print()
+print(f"T : {T}")
+print(f"P : {P}")
