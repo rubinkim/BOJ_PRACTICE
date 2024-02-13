@@ -27,7 +27,7 @@ input = sys.stdin.readline
 N = int(input())
 T = [0] * N
 P = [0] * N
-pay_list = []
+pay_lst = []
 
 for i in range(N):
     t, p = tuple(map(int, input().split()))
@@ -40,4 +40,5 @@ print(f"T : {T}")
 print(f"P : {P}")
 
 def dfs(n, pay):     # n : T배열의 인덱스
+    global pay_lst
     
