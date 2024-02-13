@@ -61,25 +61,18 @@ for i in range(N):
 def dfs(n, pay):     # n : T배열의 인덱스
     global pay_lst
     if n >= N-1:
-        #print(f"n : {n},  pay : {pay}")
-        #print()
         pay_lst.append(pay)
         return
-    #if n + T[n] <= len(T):
-    dfs(n+T[n], pay+P[n])  
-    #print(f"n : {n}, T[n] : {T[n]},  P[n] : {P[n]}")      
+
+    dfs(n+T[n], pay+P[n])     
     dfs(n+T[n], pay)  
     
 
         
-#dfs(0, 0)
-#print(pay_lst) 
+dfs(0, 0)
+print(pay_lst) 
 #print(max(pay_lst))
 
-total_pay_lst = []
-for i in range(N):
-    dfs(i, 0)
-    print(f"i : {i},  max_pay : {max(pay_lst)}")
-    
+
 
     
