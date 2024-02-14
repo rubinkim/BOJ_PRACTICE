@@ -84,6 +84,8 @@ print(max(pay_lst))
 
 total_pay_lst = []
 for i in range(N):
+    pay_lst = []
+    last_pay = 0
     dfs(i, 0)
     total_pay_lst.append(max(pay_lst))
     
