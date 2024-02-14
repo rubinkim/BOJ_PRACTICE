@@ -45,6 +45,7 @@
 4 40
 5 50
 """
+
 import sys
 input = sys.stdin.readline
 N = int(input())
