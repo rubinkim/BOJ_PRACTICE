@@ -55,6 +55,7 @@ for i in range(N):
 ans = 0 
 
 def dfs(n, sm):
+    global ans
     if n >= N:
         ans = max(ans, sm)
     
