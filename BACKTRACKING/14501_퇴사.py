@@ -64,10 +64,10 @@ print(P)
     
 def dfs(n, pay):     # n : T or P 배열의 인덱스
     global pay_lst, last_pay
-    if n == N-1:
+    if n == N:
         pay_lst.append(pay)
         return
-    if n > N-1:
+    if n > N:
         pay_lst.append(pay - last_pay)
         return
 
