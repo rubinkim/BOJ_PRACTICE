@@ -55,7 +55,11 @@ for i in range(N):
 ans = 0 
 
 def dfs(n, sm):
-    pass
+    if n >= N:
+        ans = max(ans, sm)
+    
+    if n + T[n] <= N:
+        dfs()
 
 dfs(0, 0)
 print(ans)
