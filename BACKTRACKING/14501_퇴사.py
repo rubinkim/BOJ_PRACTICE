@@ -58,6 +58,7 @@ def dfs(n, sm):
     global ans
     if n >= N:
         ans = max(ans, sm)
+        return
     
     if n + T[n] <= N:
         dfs(n+T[n], sm+P[n])
