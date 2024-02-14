@@ -75,10 +75,19 @@ def dfs(n, pay):     # n : T or P 배열의 인덱스
     print(f"n : {n},  last_pay : {last_pay}")
     dfs(n+T[n], pay+P[n])     
     dfs(n+T[n], pay)  
-        
+
+"""       
 dfs(0, 0)
 print(pay_lst) 
 print(max(pay_lst))
+"""
+
+total_pay_lst = []
+for i in range(N):
+    dfs(i, 0)
+    total_pay_lst.append(max(pay_lst))
+    
+print(total_pay_lst)
 
 
 
