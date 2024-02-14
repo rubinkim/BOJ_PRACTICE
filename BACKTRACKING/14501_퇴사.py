@@ -72,7 +72,7 @@ def dfs(n, pay):     # n : T or P 배열의 인덱스
         return
 
     last_pay = P[n]
-    print(f"n : {n},  last_pay : {last_pay}")
+    #print(f"n : {n},  last_pay : {last_pay}")
     dfs(n+T[n], pay+P[n])     
     dfs(n+T[n], pay)  
 
