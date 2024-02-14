@@ -46,50 +46,7 @@
 5 50
 """
 
-import sys
-input = sys.stdin.readline
-N = int(input())
-T = [0] * N
-P = [0] * N
-#pay_lst = []
-#last_pay = 0
 
-for i in range(N):
-    t, p = tuple(map(int, input().split()))
-    T[i] = t
-    P[i] = p
-
-print(T)
-print(P)
-    
-def dfs(n, pay):     # n : T or P 배열의 인덱스
-    global pay_lst, last_pay
-    if n == N:
-        pay_lst.append(pay)
-        return
-    if n > N:
-        pay_lst.append(pay - last_pay)
-        return
-
-    last_pay = P[n]
-    #print(f"n : {n},  last_pay : {last_pay}")
-    dfs(n+T[n], pay+P[n])     
-    dfs(n+T[n], pay)  
-
-"""       
-dfs(0, 0)
-print(pay_lst) 
-print(max(pay_lst))
-"""
-
-total_pay_lst = []
-for i in range(N):
-    pay_lst = []
-    last_pay = 0
-    dfs(i, 0)
-    total_pay_lst.append(max(pay_lst))
-    
-print(total_pay_lst)
 
 
 
