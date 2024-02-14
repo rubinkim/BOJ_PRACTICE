@@ -49,7 +49,16 @@ import sys
 input = sys.stdin.readline
 N = int(input())
 T, P = [0] * N,  [0] * N
+for i in range(N):
+    T[i], P[i] = map(int, input().split())
+    
+ans = 0 
 
+def dfs(n, sm):
+    pass
+
+dfs(0, 0)
+print(ans)
 
 
 
