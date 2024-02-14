@@ -59,7 +59,8 @@ def dfs(n, sm):
         ans = max(ans, sm)
     
     if n + T[n] <= N:
-        dfs()
+        dfs(n+T[n], sm+P[n])
+    dfs(n+1, sm)
 
 dfs(0, 0)
 print(ans)
