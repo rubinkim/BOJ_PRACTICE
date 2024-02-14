@@ -52,20 +52,27 @@ N = int(input())
 T = [0] * N
 P = [0] * N
 pay_lst = []
+last_pay = 0
 
 for i in range(N):
     t, p = tuple(map(int, input().split()))
     T[i] = t
     P[i] = p
+
+print(T)
+print(P)
     
 def dfs(n, pay):     # n : T or P 배열의 인덱스
-    global pay_lst
-    if n + T[n] > N-1:
+    global pay_lst, last_pay
+    if n == N-1:
         pay_lst.append(pay)
         return
-    if n + T[n] == N-1 and T[N-1] == 1:
-        pay_lst.append(pay + P[N-1])
+    if n > N-1:
+        pay_lst.append(pay - last_pay)
         return
+    
+    #print(f"{n} -->", end='')
+    last_pay = p[n]
     dfs(n+T[n], pay+P[n])     
     dfs(n+T[n], pay)  
         
