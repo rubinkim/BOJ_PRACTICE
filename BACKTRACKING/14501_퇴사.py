@@ -45,7 +45,10 @@
 4 40
 5 50
 """
-
+import sys
+input = sys.stdin.readline
+N = int(input())
+T, P = [0] * N,  [0] * N
 
 
 
