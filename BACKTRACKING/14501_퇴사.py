@@ -51,8 +51,8 @@ input = sys.stdin.readline
 N = int(input())
 T = [0] * N
 P = [0] * N
-pay_lst = []
-last_pay = 0
+#pay_lst = []
+#last_pay = 0
 
 for i in range(N):
     t, p = tuple(map(int, input().split()))
