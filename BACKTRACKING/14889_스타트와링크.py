@@ -57,7 +57,7 @@ def dfs(n, start_score, link_score, start_lst, link_lst):  # n : start_lst¿¡ Æ÷Ç
     
     for i in range(1, N+1):
         for j in range(i+1, N+1):
-            if i not in start_lst and j not in start_lst:
+            if i not in start_lst or j not in start_lst:
                 v1[i] = 1
                 v2[j] = 1
                 start_lst.append(i)
