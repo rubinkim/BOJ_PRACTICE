@@ -37,3 +37,8 @@ for i in range(N):
 for row in S:
     print(row)
     
+sm_dict = {}
+for i in range(N):
+    for j in range(i+1, N):
+        sm_dict[(i,j)] = S[i][j] + S[j][i]
+print(sm_dict)    
