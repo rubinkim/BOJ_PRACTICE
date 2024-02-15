@@ -55,7 +55,8 @@ def dfs(n, start_lst, link_lst):  # n : start_lst에 포함될 사람의 숫자.
                 v1[i] = 1
                 v2[j] = 1
                 dfs(n+1, start_lst + [S[i][j]] + [S[j][i]],  link_lst)
-                    
+                v1[i][j] = 0
+                v2[j][i] = 0
     
 dfs(1, [], [])
 print(diff)
