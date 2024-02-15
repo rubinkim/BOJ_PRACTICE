@@ -54,7 +54,9 @@ def dfs(n, start_lst, link_lst):  # n : start_lst에 포함될 사람의 숫자.
             if S[i][j] not in start_lst:
                 v1[i] = 1
                 v2[j] = 1
-                dfs(n+1, start_lst + [S[i][j]] + [S[j][i]],  link_lst)
+                start_lst.append(i)
+                start_lst.append(j)
+                dfs(n+1, start_lst,  link_lst)
                 v1[i][j] = 0
                 v2[j][i] = 0
     
