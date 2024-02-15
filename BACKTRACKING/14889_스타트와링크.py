@@ -25,6 +25,7 @@
 6 5 4 3 2 1 9 0
 """
 
+from itertools import permutations
 import sys
 input = sys.stdin.readline
 N = int(input())
@@ -40,12 +41,14 @@ for row in S:
 diff = 1e20
 v1, v2 = [0] * (N+1),  [0] * (N+1)
 
-def dfs(n, start_lst, link_lst):  # n : start_lst에 포함될 사람의 숫자.
+def dfs(n, start_score, link_score, start_lst, link_lst):  # n : start_lst에 포함될 사람의 숫자.
     global diff
     if n > int(N / 2):
         for j in range(1, N+1):
             if j not in start_lst:
                 link_lst.append(j)
+ 
+                
         diff = min(diff, abs(sum(start_lst) - sum(link_lst)))
         return
     
@@ -60,7 +63,7 @@ def dfs(n, start_lst, link_lst):  # n : start_lst에 포함될 사람의 숫자.
                 v1[i][j] = 0
                 v2[j][i] = 0
     
-dfs(1, [], [])
+dfs(1, 0, 0, [], [])
 print(diff)
     
         
