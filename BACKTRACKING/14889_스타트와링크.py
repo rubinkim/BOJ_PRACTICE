@@ -39,32 +39,32 @@ for row in S:
     print(row)
     
 diff = 1e20
-v1, v2 = [0] * (N+1),  [0] * (N+1)
+v1, v2 = [0] * N,  [0] * N
 
 def dfs(n, start_score, link_score, start_lst, link_lst):  # n : start_lst에 포함될 사람의 숫자.
     global diff
     if n > int(N / 2):
-        for j in range(1, N+1):
+        for j in range(N):
             if j not in start_lst:
                 link_lst.append(j) 
         print(f"n : {n},  start_lst : {start_lst},  link_lst : {link_lst}")
     
         for i, j in permutations(link_lst, 2):
-            link_score += S[i-1][j-1] 
+            link_score += S[i][j] 
                 
         diff = min(diff, abs(sum(start_lst) - sum(link_lst)))
         return
     
-    for i in range(1, N+1):
-        for j in range(i+1, N+1):
-            if i not in start_lst or j not in start_lst:
+    for i in range(N):
+        for j in range(N):
+            if S[i][j] not in start_score:
                 v1[i] = 1
-                v2[j] = 1
+                v1[j] = 1
                 start_lst.append(i)
                 start_lst.append(j)
-                dfs(n+1, start_score+S[i-1][j-1]+S[j-1][i-1], link_score, start_lst,  link_lst)
+                dfs(n+1, start_score.append(S[i][j]), link_score, start_lst,  link_lst)
                 v1[i] = 0
-                v2[j] = 0
+                v1[j] = 0
     
 dfs(1, 0, 0, [], [])
 print(diff)
