@@ -37,7 +37,13 @@ for i in range(N):
 for row in S:
     print(row)
     
+diff = 0
 
+def dfs(n, start_score, link_score, start_lst, link_lst):
+    pass
+
+dfs(1, 0, 0, [], [])
+print(diff)
     
         
         
