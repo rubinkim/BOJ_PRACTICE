@@ -37,13 +37,16 @@ for i in range(N):
 for row in S:
     print(row)
     
-diff = 0
+diff = 1e20
+v1, v2 = [0] * (N+1),  [0] * (N+1)
 
-def dfs(n, start_score, link_score, start_lst, link_lst):  # n : start_lst에 포함될 사람의 숫자.
+def dfs(n, start_lst, link_lst):  # n : start_lst에 포함될 사람의 숫자.
     global diff
-    if 
-
-dfs(1, 0, 0, [], [])
+    if n > int(N / 2):
+        diff = min(diff, abs(sum(start_lst) - sum(link_lst)))
+        return
+    
+dfs(1, [], [])
 print(diff)
     
         
