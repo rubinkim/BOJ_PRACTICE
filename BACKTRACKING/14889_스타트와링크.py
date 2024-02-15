@@ -47,7 +47,7 @@ start, link = [], []
 for i in range(1, N+1):
     for j in range(i+1, N+1):
         if sm_dict[(i,j)] not in link:
-            start.append(sm_dict(i,j))
+            start.append(sm_dict[(i,j)])
         if sm_dict[(i,j)] not in start:
             link.append(sm_dict[(i,j)])
             
