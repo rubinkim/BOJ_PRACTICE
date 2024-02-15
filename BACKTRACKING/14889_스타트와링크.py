@@ -42,14 +42,10 @@ for i in range(1, N+1):
     for j in range(i+1, N+1):
         sm_dict[(i,j)] = S[i-1][j-1] + S[j-1][i-1]
 print(sm_dict)    
+print(len(sm_dict))
 
 start, link = [], []
-for i in range(1, N+1):
-    for j in range(i+1, N+1):
-        if sm_dict[(i,j)] not in link:
-            start.append(sm_dict[(i,j)])
-        if sm_dict[(i,j)] not in start:
-            link.append(sm_dict[(i,j)])
-            
-print(start)
-print(link)
+while True:
+    if k >= len(sm_dict):
+        exit
+    
