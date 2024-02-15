@@ -50,9 +50,9 @@ def dfs(n, start_score, link_score, start_lst, link_lst):  # n : start_lst¿¡ Æ÷Ç
         print(f"n : {n},  start_lst : {start_lst},  link_lst : {link_lst}")
     
         for i, j in permutations(link_lst, 2):
-            link_score += S[i][j] 
+            link_score.append(S[i][j]) 
                 
-        diff = min(diff, abs(sum(start_lst) - sum(link_lst)))
+        diff = min(diff, abs(sum(start_score) - sum(link_score)))
         return
     
     for i in range(N):
@@ -66,7 +66,7 @@ def dfs(n, start_score, link_score, start_lst, link_lst):  # n : start_lst¿¡ Æ÷Ç
                 v1[i] = 0
                 v1[j] = 0
     
-dfs(1, 0, 0, [], [])
+dfs(1, [], [], [], [])
 print(diff)
     
         
