@@ -49,19 +49,19 @@ def dfs(n, start_score, link_score, start_lst, link_lst):  # n : start_lst¿¡ Æ÷Ç
     
     for i in range(1, N+1):
         for j in range(1, N+1):
-            link_score += S[i][j]
+            link_score += S[i-1][j-1]
                 
         diff = min(diff, abs(sum(start_lst) - sum(link_lst)))
         return
     
     for i in range(1, N+1):
         for j in range(i+1, N+1):
-            if S[i][j] not in start_lst:
+            if i not in start_lst and j not in start_lst:
                 v1[i] = 1
                 v2[j] = 1
                 start_lst.append(i)
                 start_lst.append(j)
-                dfs(n+1, start_score+S[i][j]+S[j][i], link_score, start_lst,  link_lst)
+                dfs(n+1, start_score+S[i-1][j-1]+S[j-1][i-1], link_score, start_lst,  link_lst)
                 v1[i][j] = 0
                 v2[j][i] = 0
     
