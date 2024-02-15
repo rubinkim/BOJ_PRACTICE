@@ -62,8 +62,8 @@ def dfs(n, start_score, link_score, start_lst, link_lst):  # n : start_lst¿¡ Æ÷Ç
                 start_lst.append(i)
                 start_lst.append(j)
                 dfs(n+1, start_score+S[i-1][j-1]+S[j-1][i-1], link_score, start_lst,  link_lst)
-                v1[i][j] = 0
-                v2[j][i] = 0
+                v1[i] = 0
+                v2[j] = 0
     
 dfs(1, 0, 0, [], [])
 print(diff)
