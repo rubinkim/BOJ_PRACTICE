@@ -24,3 +24,7 @@
 9 1 9 1 9 1 0 9
 6 5 4 3 2 1 9 0
 """
+
+import sys
+input = sys.stdin.readline
+N = int(input())
