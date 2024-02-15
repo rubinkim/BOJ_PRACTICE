@@ -25,6 +25,7 @@
 6 5 4 3 2 1 9 0
 """
 
+from itertools import permutations
 import sys
 input = sys.stdin.readline
 N = int(input())
@@ -47,7 +48,7 @@ def dfs(n, start_score, link_score, start_lst, link_lst):  # n : start_lst¿¡ Æ÷Ç
             if j not in start_lst:
                 link_lst.append(j) 
     
-    for i in range(1, N+1):
+    for i in link_lst:
         for j in range(1, N+1):
             link_score += S[i-1][j-1]
                 
