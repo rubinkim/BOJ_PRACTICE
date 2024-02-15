@@ -47,7 +47,7 @@ def dfs(n, start_score, link_score, start_lst, link_lst):  # n : start_lst¿¡ Æ÷Ç
         for j in range(1, N+1):
             if j not in start_lst:
                 link_lst.append(j) 
-        print(f"start_lst : {start_lst},  link_lst : {link_lst}")
+        print(f"n : {n},  start_lst : {start_lst},  link_lst : {link_lst}")
     
         for i, j in permutations(link_lst, 2):
             link_score += S[i-1][j-1] 
