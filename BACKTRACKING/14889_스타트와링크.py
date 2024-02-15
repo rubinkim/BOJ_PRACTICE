@@ -43,8 +43,13 @@ v1, v2 = [0] * (N+1),  [0] * (N+1)
 def dfs(n, start_lst, link_lst):  # n : start_lst에 포함될 사람의 숫자.
     global diff
     if n > int(N / 2):
+        for j in range(1, N+1):
+            if j not in start_lst:
+                link_lst.append(j)
         diff = min(diff, abs(sum(start_lst) - sum(link_lst)))
         return
+    
+    
     
 dfs(1, [], [])
 print(diff)
