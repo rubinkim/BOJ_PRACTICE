@@ -52,3 +52,4 @@ for i in range(1, N+1):
             link.append(sm_dict[(i,j)])
             
 print(start)
+print(link)
