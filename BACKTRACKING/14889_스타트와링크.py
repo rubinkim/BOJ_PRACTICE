@@ -29,7 +29,7 @@ import sys
 input = sys.stdin.readline
 N = int(input())
 S = [[0] * N for _ in range(N)]
-for i in range(1, N):
+for i in range(N):
     row = list(map(int, input().split()))
     for j in range(N):
         S[i][j] = row[j]
@@ -38,7 +38,7 @@ for row in S:
     print(row)
     
 sm_dict = {}
-for i in range(N):
-    for j in range(i+1, N):
+for i in range(1, N+1):
+    for j in range(i+1, N+1):
         sm_dict[(i,j)] = S[i][j] + S[j][i]
 print(sm_dict)    
