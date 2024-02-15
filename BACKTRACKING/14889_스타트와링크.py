@@ -45,4 +45,8 @@ print(sm_dict)
 
 start, link = [], []
 
+for (i,j) in sm_dict.keys():
+    if sm_dict[(i,j)] not in start:
+        start.append(sm_dict[(i,j)])
+        
 
