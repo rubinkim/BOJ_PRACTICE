@@ -49,7 +49,13 @@ def dfs(n, start_lst, link_lst):  # n : start_lst에 포함될 사람의 숫자.
         diff = min(diff, abs(sum(start_lst) - sum(link_lst)))
         return
     
-    
+    for i in range(1, N+1):
+        for j in range(i+1, N+1):
+            if S[i][j] not in start_lst:
+                v1[i] = 1
+                v2[j] = 1
+                dfs(n+1, start_lst + [S[i][j]] + [S[j][i]],  link_lst)
+                    
     
 dfs(1, [], [])
 print(diff)
