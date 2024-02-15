@@ -25,7 +25,6 @@
 6 5 4 3 2 1 9 0
 """
 
-from itertools import permutations
 import sys
 input = sys.stdin.readline
 N = int(input())
@@ -47,6 +46,10 @@ def dfs(n, start_score, link_score, start_lst, link_lst):  # n : start_lst¿¡ Æ÷Ç
         for j in range(1, N+1):
             if j not in start_lst:
                 link_lst.append(j) 
+    
+    for i in range(1, N+1):
+        for j in range(1, N+1):
+            link_score += S[i][j]
                 
         diff = min(diff, abs(sum(start_lst) - sum(link_lst)))
         return
