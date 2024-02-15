@@ -44,5 +44,5 @@ for i in range(1, N+1):
 print(sm_dict)    
 
 from collections import OrderedDict
-x = OrderedDict(ms_dict)
+x = OrderedDict(sm_dict)
 print(x)
