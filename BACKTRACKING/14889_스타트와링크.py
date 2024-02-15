@@ -39,8 +39,9 @@ for row in S:
     
 diff = 0
 
-def dfs(n, start_score, link_score, start_lst, link_lst):
-    pass
+def dfs(n, start_score, link_score, start_lst, link_lst):  # n : start_lst에 포함될 사람의 숫자.
+    global diff
+    if 
 
 dfs(1, 0, 0, [], [])
 print(diff)
