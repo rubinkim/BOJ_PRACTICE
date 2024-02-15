@@ -43,6 +43,3 @@ for i in range(1, N+1):
         sm_dict[(i,j)] = S[i-1][j-1] + S[j-1][i-1]
 print(sm_dict)    
 
-from collections import OrderedDict
-x = OrderedDict(sm_dict)
-print(x)
