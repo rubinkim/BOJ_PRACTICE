@@ -48,9 +48,8 @@ def dfs(n, start_score, link_score, start_lst, link_lst):  # n : start_lst¿¡ Æ÷Ç
             if j not in start_lst:
                 link_lst.append(j) 
     
-    for i in link_lst:
-        for j in range(1, N+1):
-            link_score += S[i-1][j-1]
+        for i, j in permutations(link_lst, 2):
+            link_score += S[i-1][j-1] 
                 
         diff = min(diff, abs(sum(start_lst) - sum(link_lst)))
         return
