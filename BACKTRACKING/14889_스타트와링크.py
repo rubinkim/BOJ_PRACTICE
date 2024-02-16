@@ -28,6 +28,10 @@
 N = int(input())
 arr = [list(map(int, input().split())) for _  in range(N)]
 M = N // 2
+ans = 100 * M * M
+
+def dfs(n, alst, blst):      # n : 사람번호,  alst(blst) : a(b)팀을 선택한 사람들을 저장할 리스트
+    
     
         
         
