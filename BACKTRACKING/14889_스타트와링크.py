@@ -30,7 +30,7 @@ arr = [list(map(int, input().split())) for _  in range(N)]
 M = N // 2
 ans = 100 * M * M
 
-def dfs(n, alst, blst):      # n : »ç¶÷¹øÈ£,  alst(blst) : a(b)ÆÀÀ» ¼±ÅÃÇÑ »ç¶÷µéÀ» ÀúÀåÇÒ ¸®½ºÆ®
+def dfs(n, alst, blst):      # n : ì‚¬ëŒë²ˆí˜¸
     global ans
     if n == N:
         ans = min(ans, cal(alst, blst))
