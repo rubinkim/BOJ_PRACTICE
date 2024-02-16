@@ -35,7 +35,14 @@ def dfs(n, alst, blst):      # n : 사람번호,  alst(blst) : a(b)팀을 선택한 사람�
 
 def cal(alst, blst):
     asm = bsm = 0
-    
+    for i in range(M):
+        for j in range(M):
+            asm += arr[alst[i]][alst[j]]
+            bsm += arr[blst[i]][blst[j]]
+    return abs(asm - bsm)
+
+dfs(0, [], [])
+print(ans)
 
     
     
