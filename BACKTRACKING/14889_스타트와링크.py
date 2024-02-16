@@ -36,7 +36,7 @@ def dfs(n, alst, blst):      # n : 사람번호,  alst(blst) : a(b)팀을 선택한 사람�
         ans = min(ans, cal(alst, blst))
         return
     
-    
+    dfs(n+1, alst+[n], blst)
 
 def cal(alst, blst):
     asm = bsm = 0
