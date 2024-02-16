@@ -33,7 +33,8 @@ ans = 100 * M * M
 def dfs(n, alst, blst):      # n : 사람번호
     global ans
     if n == N:
-        ans = min(ans, cal(alst, blst))
+        if len(alst) == len(blst):
+            ans = min(ans, cal(alst, blst))
         return
     
     dfs(n+1, alst+[n], blst)
