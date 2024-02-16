@@ -34,6 +34,9 @@ def dfs(n, alst, blst):      # n : 사람번호,  alst(blst) : a(b)팀을 선택한 사람�
     global ans
     if n == N:
         ans = min(ans, cal(alst, blst))
+        return
+    
+    
 
 def cal(alst, blst):
     asm = bsm = 0
