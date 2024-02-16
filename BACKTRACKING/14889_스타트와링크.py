@@ -49,7 +49,7 @@ def cal(alst, blst):
     return abs(asm - bsm)
 
 dfs(0, [], [])
-#print(ans)
+print(ans)
 
     
     
