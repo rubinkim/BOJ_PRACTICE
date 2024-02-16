@@ -30,7 +30,7 @@ arr = [list(map(int, input().split())) for _  in range(N)]
 M = N // 2
 ans = 100 * M * M
 
-def dfs(n, alst, blst):      # n : ì‚¬ëŒë²ˆí˜¸
+def dfs(n, alst, blst):      # n : ?‚¬?Œë²ˆí˜¸
     global ans
     if n == N:
         if len(alst) == len(blst):
@@ -49,7 +49,7 @@ def cal(alst, blst):
     return abs(asm - bsm)
 
 dfs(0, [], [])
-print(ans)
+#print(ans)
 
     
     
