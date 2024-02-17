@@ -55,3 +55,4 @@ for n in lst:
         ans += (n - B + C - 1) // C
 
 print(ans)
+
