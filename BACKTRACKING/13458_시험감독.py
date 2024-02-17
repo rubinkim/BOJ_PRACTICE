@@ -27,3 +27,20 @@
 
 import sys
 input = sys.stdin.readline
+N = int(input())                                    # 5
+classes = list(map(int, input().split()))           # 1000000 1000000 1000000 1000000 1000000
+B, C = map(int, input().split())                    # 5 7
+ans = 0
+
+for cls in classes:
+    ans += 1
+    if cls <= B:
+        continue
+    else:
+        cls -= B
+        if cls % C == 0:
+            ans += (cls // C)
+        else:
+            ans += (cls // C)
+            ans += 1
+print(ans)
