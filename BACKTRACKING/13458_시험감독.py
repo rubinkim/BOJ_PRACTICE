@@ -23,7 +23,6 @@
 
 1 7 714290 10 13
 
-
 import sys
 input = sys.stdin.readline
 N = int(input()) 
