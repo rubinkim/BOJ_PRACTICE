@@ -53,3 +53,4 @@ ans = N
 for n in lst:
     if n - B > 0:
         ans += (n - B + C - 1) // C
+        
