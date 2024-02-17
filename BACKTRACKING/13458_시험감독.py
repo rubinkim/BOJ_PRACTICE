@@ -30,7 +30,6 @@ N = int(input())
 classes = list(map(int, input().split())) 
 B, C = map(int, input().split())
 ans = 0
-
 for cls in classes:
     ans += 1
     if cls <= B:
