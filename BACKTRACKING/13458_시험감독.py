@@ -48,3 +48,4 @@ print(ans)
 N = int(input())
 lst = list(map(int, input().split()))
 B, C = map(int, input().split())
+ans = N
