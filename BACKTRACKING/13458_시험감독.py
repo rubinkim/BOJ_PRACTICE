@@ -22,7 +22,7 @@
 7 2
 
 1 7 714290 10 13
-"""
+
 
 import sys
 input = sys.stdin.readline
@@ -43,3 +43,5 @@ for cls in classes:
             ans += (cls // C)
             ans += 1
 print(ans)
+"""
+
