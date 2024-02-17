@@ -21,15 +21,14 @@
 10 9 10 9 10
 7 2
 
-
 1 7 714290 10 13
 """
 
 import sys
 input = sys.stdin.readline
-N = int(input())                                    # 5
-classes = list(map(int, input().split()))           # 1000000 1000000 1000000 1000000 1000000
-B, C = map(int, input().split())                    # 5 7
+N = int(input()) 
+classes = list(map(int, input().split())) 
+B, C = map(int, input().split())
 ans = 0
 
 for cls in classes:
