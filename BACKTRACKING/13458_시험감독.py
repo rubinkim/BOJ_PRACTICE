@@ -45,3 +45,4 @@ for cls in classes:
 print(ans)
 """
 
+N = int(input())
