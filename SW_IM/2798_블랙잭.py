@@ -9,3 +9,5 @@
 
 21 497
 """
+
+N, M = map(int, input().split())
