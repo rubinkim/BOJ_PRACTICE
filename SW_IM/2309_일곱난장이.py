@@ -16,7 +16,7 @@ import sys
 
 input = sys.stdin.readline
 lst = []
-for x in int(input()):
-    lst.append(x)
+for _ in range(9):
+    lst.append(int(input()))
     
 print(lst)
