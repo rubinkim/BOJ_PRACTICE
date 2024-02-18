@@ -23,5 +23,13 @@ print(lst)
 
 for area0, area1 in combinations(lst, 2):
     if abs(area0[0] - area1[0]) < 10 and  abs(area0[1] - area1[1]) < 10:
+        if area0[0] <= area1[0] and area0[1] <= area1[1]:
+            overlapped += abs(area0[0]+10 - area1[0]) * abs(area0[1]+10 - area1[1])
+        elif area0[0] > area1[0] and area0[1] <= area1[1]:
+            overlapped += abs(area1[0]+10 - area0[0]) * abs(area0[1]+10 - area1[1])
+        elif area0[0] <= area1[0] and area0[1] > area1[1]:
+            overlapped += abs(area0[0]+10 - area1[0]) * abs(area1[1]+10 - area0[1])
+        elif area0[0] > area1[0] and area0[1] > area1[1]:
+            overlapped += abs(area1[0]+10 - area0[0]) * abs(area1[1]+10 - area0[1])
 
 print(overlapped)
