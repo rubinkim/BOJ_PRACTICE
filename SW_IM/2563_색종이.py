@@ -23,4 +23,5 @@ print(lst)
 
 for area0, area1 in combinations(lst, 2):
     if abs(area0[0] - area1[0]) < 10 and  abs(area0[1] - area1[1]) < 10:
-        
+
+print(overlapped)
