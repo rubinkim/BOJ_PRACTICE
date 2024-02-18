@@ -19,7 +19,7 @@ lst = []
 for _ in range(9):
     lst.append(int(input()))
     
-print(lst)
+#print(lst)
 
 for x in combinations(lst, 7):
     if sum(x) == 100:
