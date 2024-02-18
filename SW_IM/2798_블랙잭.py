@@ -15,5 +15,5 @@ N, M = map(int, input().split())
 lst = list(map(int, input().split()))
 ans = 0
 
-for x in lst:
+for x in combinations(lst, 3):
     print(f"x : {x},  sum of x : {sum(x)}")
