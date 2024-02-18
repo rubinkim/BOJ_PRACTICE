@@ -16,4 +16,7 @@ import sys
 
 input = sys.stdin.readline
 lst = []
-for x in int(input())
+for x in int(input()):
+    lst.append(x)
+    
+print(lst)
