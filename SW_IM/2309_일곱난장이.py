@@ -23,6 +23,7 @@ print(lst)
 
 for x in combinations(lst, 7):
     if sum(x) == 100:
+        x = list(x)
         x.sort()
         print(x)
         break
