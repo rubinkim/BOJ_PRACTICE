@@ -14,3 +14,6 @@
 from itertools import combinations
 import sys
 
+input = sys.stdin.readline
+lst = []
+for x in int(input())
