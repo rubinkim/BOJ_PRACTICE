@@ -17,3 +17,8 @@ for _ in range(N):
     for i in range(si, si+10):
         for j in range(sj, sj+10):
             arr[i][j] = 1
+
+def count(arr):
+    pass
+
+arr_t = list(zip(*arr))
