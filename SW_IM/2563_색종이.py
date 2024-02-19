@@ -21,7 +21,7 @@ for _ in range(N):
     
 print(lst)
 
-for area0, area1 in combinations(lst, 2):
-    print(area0, area1)
+for (x1, y1), (x2, y2) in combinations(lst, 2):
+    if (x1 >= x2) and ()
 
 print(3 * 100 - overlapped)
