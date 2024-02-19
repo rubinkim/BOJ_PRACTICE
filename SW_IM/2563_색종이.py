@@ -10,7 +10,7 @@
 """
 
 N = int(input())
-arr = [[0] * 102 for _ in range(30)]
+arr = [[0] * 102 for _ in range(102)]
 ans = 0
 
 for _ in range(N):
