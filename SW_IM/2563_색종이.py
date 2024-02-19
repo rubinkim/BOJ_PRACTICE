@@ -19,5 +19,7 @@ for _ in range(N):
         for j in range(sj, sj+10):
             arr[i][j] = 1
             
-for row in arr:
-    print(row)
+for lst in arr:
+    ans += sum(lst)
+    
+    
