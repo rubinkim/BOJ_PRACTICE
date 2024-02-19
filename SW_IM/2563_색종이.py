@@ -22,6 +22,6 @@ for _ in range(N):
 print(lst)
 
 for area0, area1 in combinations(lst, 2):
-
+    print(area0, area1)
 
 print(3 * 100 - overlapped)
