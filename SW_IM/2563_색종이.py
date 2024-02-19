@@ -15,3 +15,9 @@ ans = 0
 
 for _ in range(N):
     sj, si = map(int, input().split())      # sj : column,  si : row
+    for i in range(si, si+10):
+        for j in range(sj, sj+10):
+            arr[i][j] = 1
+            
+for row in arr:
+    print(row)
