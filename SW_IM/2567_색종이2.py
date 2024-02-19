@@ -9,3 +9,8 @@
 
 96
 """
+
+N = int(input())
+arr = [[0] * 102 for _ in range(102)]
+for _ in range(N):
+    sj, si = map(int, input().split())
