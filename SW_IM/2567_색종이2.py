@@ -22,3 +22,5 @@ def count(arr):
     pass
 
 arr_t = list(zip(*arr))
+ans = count(arr) + count(arr_t)
+print(ans)
