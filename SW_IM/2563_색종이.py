@@ -22,4 +22,4 @@ for _ in range(N):
 for lst in arr:
     ans += sum(lst)
     
-    
+print(ans)
