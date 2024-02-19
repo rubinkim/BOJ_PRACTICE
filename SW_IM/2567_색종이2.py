@@ -19,7 +19,12 @@ for _ in range(N):
             arr[i][j] = 1
 
 def count(arr):
-    pass
+    cnt = 0
+    for lst in arr:
+        for i in range(1, len(lst)):
+            if lst[i-1] != lst[i]:
+                cnt += 1
+    return cnt
 
 arr_t = list(zip(*arr))
 ans = count(arr) + count(arr_t)
