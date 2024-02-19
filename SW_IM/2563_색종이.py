@@ -19,7 +19,7 @@ overlapped = 0
 for _ in range(N):
     lst.append(list(map(int, input().split())))
     
-print(lst)
+#print(lst)
 
 for (x1, y1), (x2, y2) in combinations(lst, 2):
     if abs(x1 - x2) <= 10 and abs(y1 - y2) <= 10:
