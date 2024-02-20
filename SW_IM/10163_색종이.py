@@ -23,7 +23,7 @@
 6 0 12 10
 
 62 24 0 120
-"""
+
 # method 1 : looping arr for every color paper : takes a very long time!
 N = int(input())
 arr = [[0] * 1001 for _ in range(1001)]
@@ -38,7 +38,8 @@ for n in range(1, N+1):
     for lst in arr:
         cnt += lst.count(n)
     print(cnt)
-            
+"""
+
 # method 2 : Using frequenct list and then loop the arr just once! : can save a lot of time!!!            
 N = int(input())
 arr = [[0] * 1001 for _ in range(1001)]
