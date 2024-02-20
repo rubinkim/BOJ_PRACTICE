@@ -37,3 +37,15 @@ for num in range(1, N+1):
 for row in arr:
     print(row)
     
+nums_lst = []
+
+for x in range(1, N+1):
+    cnt = 0
+    for i in range(20):
+        for j in range(20):
+            if arr[i][j] == x:
+                cnt += 1
+    nums_lst.append(cnt)
+    
+print(nums_lst)
+    
