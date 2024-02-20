@@ -24,3 +24,9 @@
 
 62 24 0 120
 """
+
+N = int(input())
+for _ in range(N):
+    sj, si, w, h = map(int, input().split())
+    for i in range(si, si+h):
+        
