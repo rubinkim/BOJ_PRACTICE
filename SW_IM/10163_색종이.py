@@ -24,6 +24,8 @@
 
 62 24 0 120
 """
-
-
+# method 1 : looping arr for every color paper : takes a very long time!
+N = int(input())
+arr = [[0] * 1001 for _ in range(1001)]
+f
     
