@@ -33,4 +33,7 @@ for num in range(1, N+1):
     for i in range(si, si+h):
         for j in range(sj, sj+w):
             arr[i][j] = num
+            
+for row in arr:
+    print(row)
     
