@@ -26,7 +26,7 @@
 """
 
 N = int(input())
-arr = [[0] * 1002 for _ in range(1002)]
+arr = [[0] * 20 for _ in range(20)]
 
 for num in range(1, N+1):
     sj, si, w, h = map(int, input().split())
