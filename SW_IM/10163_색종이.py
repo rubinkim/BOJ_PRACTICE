@@ -71,5 +71,8 @@ for i in range(1001):
 print(*cnts[1:], sep='\n')
             
 
-# method 4 : Using frequent list and populate the arr more efficient way!!!    
+# method 4 : Using frequent list and populate the arr more efficient way!!!
+N = int(input())
+arr = [[0] * 1001 for _ in range(1001)]
+for n in range(1, N+1):    
     
