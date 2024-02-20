@@ -55,7 +55,7 @@ for lst in arr:
 print(*cnts[1:], sep='\n')
 """
 
-# method 2 : Using frequenct list and then loop the arr just once by every row of the arr! : can save a lot of time!!!            
+# method 3 : Using frequenct list and then loop the arr just once by every cell of the arr : can save a lot of time!!!            
 N = int(input())
 arr = [[0] * 1001 for _ in range(1001)]
 for n in range(1, N+1):
@@ -65,9 +65,9 @@ for n in range(1, N+1):
             arr[i][j] = n
             
 cnts = [0] * (N+1)
-for lst in arr:
-    for n in lst:
-        cnts[n] += 1
+for i in range(1001):
+    for j in range(1001):
+        cnts[arr[i][j]] += 1
 print(*cnts[1:], sep='\n')
             
     
