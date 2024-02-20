@@ -40,7 +40,7 @@ for n in range(1, N+1):
     print(cnt)
 """
 
-# method 2 : Using frequenct list and then loop the arr just once! : can save a lot of time!!!            
+# method 2 : Using frequenct list and then loop the arr just once by every row of the arr! : can save a lot of time!!!            
 N = int(input())
 arr = [[0] * 1001 for _ in range(1001)]
 for n in range(1, N+1):
