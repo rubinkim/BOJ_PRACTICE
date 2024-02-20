@@ -33,7 +33,11 @@ for n in range(N):
         for j in range(sj, sj+w):
             arr[i][j] = n
 
-
+for n in range(1, N+1):
+    cnt = 0
+    for lst in arr:
+        cnt += lst.count(n)
+    print(cnt)
             
     
     
