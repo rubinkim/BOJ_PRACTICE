@@ -53,7 +53,7 @@ for lst in arr:
     for n in lst:
         cnts[n] += 1
 print(*cnts[1:], sep='\n')
-"""
+
 
 # method 3 : Using frequenct list and then loop the arr just once by every cell of the arr : can save a lot of time!!!            
 N = int(input())
@@ -69,7 +69,7 @@ for i in range(1001):
     for j in range(1001):
         cnts[arr[i][j]] += 1
 print(*cnts[1:], sep='\n')
-            
+"""            
 
 # method 4 : Using frequent list and populate the arr more efficient way!!!
 N = int(input())
