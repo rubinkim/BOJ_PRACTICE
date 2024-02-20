@@ -47,5 +47,6 @@ for x in range(1, N+1):
                 cnt += 1
     nums_lst.append(cnt)
     
-print(nums_lst)
+for x in nums_lst:
+    print(x)
     
