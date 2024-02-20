@@ -27,5 +27,10 @@
 # method 1 : looping arr for every color paper : takes a very long time!
 N = int(input())
 arr = [[0] * 1001 for _ in range(1001)]
-f
+for _ in range(N):
+    sj, si, w, h = map(int, input().split())
+    for i in range(si, si+h):
+        for j in range(sj, sj+w):
+            arr[]
+    
     
