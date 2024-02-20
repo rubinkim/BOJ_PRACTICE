@@ -70,5 +70,6 @@ for i in range(1001):
         cnts[arr[i][j]] += 1
 print(*cnts[1:], sep='\n')
             
-    
+
+# method 4 : Using frequent list and populate the arr more efficient way!!!    
     
