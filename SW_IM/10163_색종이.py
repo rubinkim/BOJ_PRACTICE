@@ -84,4 +84,4 @@ for lst in arr:
     for n in lst:
         cnts[n] += 1
         
-print(*cnts, sep='\n')
+print(*cnts[1:], sep='\n')
