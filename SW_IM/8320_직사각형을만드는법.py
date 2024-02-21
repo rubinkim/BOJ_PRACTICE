@@ -15,5 +15,9 @@ for n in range(1, N+1):
             
 print(cnt)
 """
+# 2. 몫연산을 통해서 처리한다. --> 단순 for 문을 이용한다.
+N = int(input())
+cnt = N
+
 
 
