@@ -9,7 +9,7 @@
 N = int(input())
 cnt = 0
 for n in range(1, N+1):
-    for i in range(n, N//n + 1):
+    for i in range(n, int(N/n) + 1):
         if n % i == 0:
             cnt += 1
             
