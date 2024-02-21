@@ -17,5 +17,11 @@ WWWWWWWWWWWWWW
 """
 
 TC = int(input())
+
 N1, M1 = map(int, input().split())
 arr1 = [[""] * M1 for _ in range(N1)]
+for i in range(N1):
+    for j, x in enumerate(input()):
+        arr1[i][j] = x
+        
+N2, M2 = map(int, input().split())
