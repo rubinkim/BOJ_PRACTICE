@@ -15,3 +15,7 @@ WWBWBWWWBWRRRR
 WBWBBWWWBBWRRW
 WWWWWWWWWWWWWW
 """
+
+TC = int(input())
+N1, M1 = map(int, input().split())
+arr1 = [[""] * M1 for _ in range(N1)]
