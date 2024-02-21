@@ -25,3 +25,15 @@ for i in range(N1):
         arr1[i][j] = x
         
 N2, M2 = map(int, input().split())
+arr2 = [[""] * M2 for _ in range(N2)]
+for i in range(N2):
+    for j, x in enumerate(input()):
+        arr2[i][j] = x
+        
+print(TC)
+print(N1, M1)
+for row in arr1:
+    print(row)
+print(N2, M2)
+for row in arr2:
+    print(row)
