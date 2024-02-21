@@ -19,5 +19,8 @@ print(cnt)
 N = int(input())
 cnt = N
 
-
+for i in range(2, N):
+    n = N // i - (i - 1)
+    
+print(cnt)
 
