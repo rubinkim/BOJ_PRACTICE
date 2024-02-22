@@ -38,8 +38,12 @@ print(N2, M2)
 for row in arr2:
     print(row)
     
+cnt = 0    
 for w in range(N1-3):
+    for wj in range(M1):
+        if arr1[w][wj] != 'W':
+            cnt += 1
     for b in range(w+1, N1-2):
         for r in range(b+1, N1):
             for j in range(M1):
-                
+                if arr1[w][]
