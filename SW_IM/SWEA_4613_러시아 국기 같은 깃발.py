@@ -41,7 +41,7 @@ for row in arr2:
 x = sum([sum([arr1[i][j] != 'W' for j in range(M1)]) for i in range(2)])
 print(x)
 
-def count_color(w, b, n, m):
+def count_color(w, b, arr, n, m):
     cnt = 0
     cnt += sum([sum([arr1[i][j] != 'W' for j in range(m)]) for i in range(w+1)])
     cnt += sum([sum([arr1[i][j] != 'B' for j in range(m)]) for i in range(w+1, b+1)])
@@ -54,4 +54,4 @@ cnt_lst = []
 for x in range(1, N1-2):
     for y in range(x+1, N1-1):
         #print(f"i : {i},  j : {j},  cnt : {count_color(i, j, N1, M1)}")
-        print(count_color(x, y, N1, M1))
+        print(f"x : {x},  y : {y},  cnt : {count_color(x, y, N1, M1)}")
