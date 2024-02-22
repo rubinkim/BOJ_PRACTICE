@@ -43,9 +43,9 @@ print(x)
 
 def count_color(w, b, arr, n, m):
     cnt = 0
-    cnt += sum([sum([arr1[i][j] != 'W' for j in range(m)]) for i in range(w+1)])
-    cnt += sum([sum([arr1[i][j] != 'B' for j in range(m)]) for i in range(w+1, b+1)])
-    cnt += sum([sum([arr1[i][j] != 'R' for j in range(m)]) for i in range(b+1, n)])
+    cnt += sum([sum([arr[i][j] != 'W' for j in range(m)]) for i in range(w+1)])
+    cnt += sum([sum([arr[i][j] != 'B' for j in range(m)]) for i in range(w+1, b+1)])
+    cnt += sum([sum([arr[i][j] != 'R' for j in range(m)]) for i in range(b+1, n)])
     return cnt
 
 print(count_color(1, 2, N1, M1))
