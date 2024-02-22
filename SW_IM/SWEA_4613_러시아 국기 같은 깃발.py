@@ -23,25 +23,17 @@ def count_color(w, b, arr, n, m):
     return cnt
 
 TC = int(input())
-for _ in range(TC):
+for no in range(TC):
 
     N, M = map(int, input().split())
     arr = [[""] * M for _ in range(N)]
     for i in range(N):
         for j, x in enumerate(input()):
-            arr[i][j] = x
-        
+            arr[i][j] = x        
 
-cnt_lst = []
-for x in range(N1-2):
-    for y in range(x+1, N1-1):
-        #print(f"x : {x},  y : {y},  cnt : {count_color(x, y, arr1, N1, M1)}")
-        cnt_lst.append(count_color(x, y, arr1, N1, M1))
-print(f"#1 {min(cnt_lst)}")        
+    cnt_lst = []
+    for x in range(N-2):
+        for y in range(x+1, N-1):
+            cnt_lst.append(count_color(x, y, arr, N, M))
+    print(f"#{no} {min(cnt_lst)}")        
 
-cnt_lst = []
-for x in range(N2-2):
-    for y in range(x+1, N2-1):
-        #print(f"x : {x},  y : {y},  cnt : {count_color(x, y, arr2, N2, M2)}")
-        cnt_lst.append(count_color(x, y, arr2, N2, M2))
-print(f"#1 {min(cnt_lst)}")  
