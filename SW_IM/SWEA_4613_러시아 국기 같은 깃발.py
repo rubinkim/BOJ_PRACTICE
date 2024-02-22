@@ -53,5 +53,4 @@ print(count_color(1, 2, N1, M1))
 cnt_lst = []
 for i in range(1, N1-2):
     for j in range(1, N1-3):
-        cnt_lst.append(count_color(i, j, N1, M1))
-print(cnt_lst)
+        print(f"i : {i},  j : {j},  cnt : {count_color(i, j, N1, M1)}")
