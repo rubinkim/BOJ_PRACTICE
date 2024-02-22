@@ -54,4 +54,4 @@ cnt_lst = []
 for x in range(1, N1-2):
     for y in range(x+1, N1-1):
         #print(f"i : {i},  j : {j},  cnt : {count_color(i, j, N1, M1)}")
-        print(f"x : {x},  y : {y},  cnt : {count_color(x, y, N1, M1)}")
+        print(f"x : {x},  y : {y},  cnt : {count_color(x, y, N2, M2)}")
