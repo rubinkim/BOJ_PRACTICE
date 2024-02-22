@@ -51,7 +51,7 @@ def count_color(w, b, n, m):
 print(count_color(1, 2, N1, M1))
 
 cnt_lst = []
-for x in range(3):
-    for y in range(2):
+for x in range(1, N1-2):
+    for y in range(x+1, N1-1):
         #print(f"i : {i},  j : {j},  cnt : {count_color(i, j, N1, M1)}")
         print(count_color(x, y, N1, M1))
