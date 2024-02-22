@@ -52,3 +52,6 @@ for w in range(N1-3):
             for rj in range(M1):
                 if arr1[r][rj] != 'R':
                     cnt += 1
+    cnt_lst.append(cnt)
+    
+print(cnt_lst)
