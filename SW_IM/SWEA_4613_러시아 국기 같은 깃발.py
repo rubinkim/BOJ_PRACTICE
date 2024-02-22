@@ -30,9 +30,9 @@ for no in range(TC):
         for j, x in enumerate(input()):
             arr[i][j] = x        
 
-    cnt_lst = []
+    cnt = 1e3
     for x in range(N-2):
         for y in range(x+1, N-1):
-            cnt_lst.append(count_color(x, y, arr, N, M))
-    print(f"#{no+1} {min(cnt_lst)}")        
+            cnt = min(cnt, count_color(x, y, arr, N, M))
+    print(f"#{no+1} {cnt}")        
 
