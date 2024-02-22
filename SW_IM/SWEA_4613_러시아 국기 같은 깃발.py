@@ -15,6 +15,12 @@ WWBWBWWWBWRRRR
 WBWBBWWWBBWRRW
 WWWWWWWWWWWWWW
 """
+def count_color(w, b, arr, n, m):
+    cnt = 0
+    cnt += sum([sum([arr[i][j] != 'W' for j in range(m)]) for i in range(w+1)])
+    cnt += sum([sum([arr[i][j] != 'B' for j in range(m)]) for i in range(w+1, b+1)])
+    cnt += sum([sum([arr[i][j] != 'R' for j in range(m)]) for i in range(b+1, n)])
+    return cnt
 
 TC = int(input())
 for _ in range(TC):
@@ -25,16 +31,6 @@ for _ in range(TC):
         for j, x in enumerate(input()):
             arr[i][j] = x
         
-
-
-def count_color(w, b, arr, n, m):
-    cnt = 0
-    cnt += sum([sum([arr[i][j] != 'W' for j in range(m)]) for i in range(w+1)])
-    cnt += sum([sum([arr[i][j] != 'B' for j in range(m)]) for i in range(w+1, b+1)])
-    cnt += sum([sum([arr[i][j] != 'R' for j in range(m)]) for i in range(b+1, n)])
-    return cnt
-
-#print(count_color(0, 1, arr2, N2, M2))
 
 cnt_lst = []
 for x in range(N1-2):
