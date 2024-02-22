@@ -49,5 +49,6 @@ for w in range(N1-3):
             if arr1[b][bj] != 'B':
                 cnt += 1
         for r in range(b+1, N1):
-            for j in range(M1):
-                if arr1[w][]
+            for rj in range(M1):
+                if arr1[r][rj] != 'R':
+                    cnt += 1
