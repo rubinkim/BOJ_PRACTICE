@@ -38,4 +38,5 @@ print(N2, M2)
 for row in arr2:
     print(row)
     
-#def count_color(w, r):
+x = sum([arr1[:2][l] != 'W' for l in range(M1)])
+print(x)
