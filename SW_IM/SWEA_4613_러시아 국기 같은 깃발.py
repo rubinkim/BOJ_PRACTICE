@@ -53,12 +53,13 @@ print(count_color(0, 1, arr2, N2, M2))
 cnt_lst = []
 for x in range(N1-2):
     for y in range(x+1, N1-1):
-        #print(f"i : {i},  j : {j},  cnt : {count_color(i, j, N1, M1)}")
-        print(f"x : {x},  y : {y},  cnt : {count_color(x, y, arr1, N1, M1)}")
-        
-print()        
+        #print(f"x : {x},  y : {y},  cnt : {count_color(x, y, arr1, N1, M1)}")
+        cnt_lst.append(count_color(x, y, arr1, N1, M1))
+print(f"#1 {min(cnt_lst)}")        
 
+cnt_lst = []
 for x in range(N2-2):
     for y in range(x+1, N2-1):
-        #print(f"i : {i},  j : {j},  cnt : {count_color(i, j, N1, M1)}")
-        print(f"x : {x},  y : {y},  cnt : {count_color(x, y, arr2, N2, M2)}")
+        #print(f"x : {x},  y : {y},  cnt : {count_color(x, y, arr2, N2, M2)}")
+        cnt_lst.append(count_color(x, y, arr2, N2, M2))
+print(f"#1 {min(cnt_lst)}")  
