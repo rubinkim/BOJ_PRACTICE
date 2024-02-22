@@ -38,5 +38,5 @@ print(N2, M2)
 for row in arr2:
     print(row)
     
-x = sum([arr1[2][l] != 'W' for l in range(M1)])
+x = sum([sum([arr1[i][j] != 'W' for j in range(M1)]) for i in range(2)])
 print(x)
