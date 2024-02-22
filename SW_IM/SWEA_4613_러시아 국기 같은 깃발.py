@@ -24,7 +24,6 @@ def count_color(w, b, arr, n, m):
 
 TC = int(input())
 for no in range(TC):
-
     N, M = map(int, input().split())
     arr = [[""] * M for _ in range(N)]
     for i in range(N):
