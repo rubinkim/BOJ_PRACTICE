@@ -30,8 +30,9 @@ for i in range(N2):
     for j, x in enumerate(input()):
         arr2[i][j] = x
         
-print(TC)
-print(N1, M1)
+#print(TC)
+#print(N1, M1)
+"""
 for row in arr1:
     print(row)
 print(N2, M2)
@@ -40,6 +41,7 @@ for row in arr2:
     
 x = sum([sum([arr1[i][j] != 'W' for j in range(M1)]) for i in range(2)])
 print(x)
+"""
 
 def count_color(w, b, arr, n, m):
     cnt = 0
