@@ -48,7 +48,7 @@ def count_color(w, b, arr, n, m):
     cnt += sum([sum([arr[i][j] != 'R' for j in range(m)]) for i in range(b+1, n)])
     return cnt
 
-print(count_color(1, 2, N1, M1))
+print(count_color(1, 2, arr2, N2, M2))
 
 cnt_lst = []
 for x in range(1, N1-2):
