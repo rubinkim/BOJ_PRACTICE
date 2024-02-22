@@ -37,3 +37,9 @@ for row in arr1:
 print(N2, M2)
 for row in arr2:
     print(row)
+    
+for w in range(N1-3):
+    for b in range(w+1, N1-2):
+        for r in range(b+1, N1):
+            for j in range(M1):
+                
