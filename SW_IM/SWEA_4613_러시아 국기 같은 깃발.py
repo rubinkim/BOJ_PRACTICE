@@ -35,5 +35,5 @@ for no in range(TC):
     for x in range(N-2):
         for y in range(x+1, N-1):
             cnt_lst.append(count_color(x, y, arr, N, M))
-    print(f"#{no} {min(cnt_lst)}")        
+    print(f"#{no+1} {min(cnt_lst)}")        
 
