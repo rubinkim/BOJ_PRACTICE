@@ -44,14 +44,14 @@ for w in range(N1-3):
     for wj in range(M1):
         if arr1[w][wj] != 'W':
             cnt += 1
-    for b in range(w+1, N1-2):
-        for bj in range(M1):
-            if arr1[b][bj] != 'B':
-                cnt += 1
-        for r in range(b+1, N1):
-            for rj in range(M1):
-                if arr1[r][rj] != 'R':
+        for b in range(w+1, N1-2):
+            for bj in range(M1):
+                if arr1[b][bj] != 'B':
                     cnt += 1
-    cnt_lst.append(cnt)
+            for r in range(b+1, N1):
+                for rj in range(M1):
+                    if arr1[r][rj] != 'R':
+                        cnt += 1
+                        cnt_lst.append(cnt)
     
 print(cnt_lst)
