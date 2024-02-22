@@ -38,3 +38,4 @@ print(N2, M2)
 for row in arr2:
     print(row)
     
+def count_color(w, r):
