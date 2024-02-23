@@ -14,13 +14,13 @@ h, v = map(int, input().split())          # h : 가로축의 길이(j의 최대�
 n = int(input())                          # n : 잘라야 하는 점선의 개수
 h_axis, v_axis = [0, h], [0, v]           # v_axis : i들을 저장하는 리스트(세로축), h_axis : j들을 저장하는 리스트(가로축)
 for _ in range(n):
-    x, y = map(int, input().split())
-    if x == 0:
-        h_axis.append(y)
+    axis, x = map(int, input().split())
+    if axis == 0:
+        v_axis.append(x)
     else:
-        v_axis.append(y)
+        h_axis.append(x)
 
-horizontals.sort()
+h_axis.sort()
 verticals.sort()
 
 print(horizontals)
