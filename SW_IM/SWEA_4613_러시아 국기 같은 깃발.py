@@ -52,5 +52,6 @@ for tc in range(1, T+1):
             for s in range(j+1, N):
                 cnt += arr[s].count('R')
             mx = max(mx, cnt)
+    print(f"#{tc} {N*M - mx}")
             
 
