@@ -22,4 +22,5 @@ for _ in range(n):
 horizontals.sort()
 verticals.sort()
 
-for 
+print(horizontals)
+print(verticals)
