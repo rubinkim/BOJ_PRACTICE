@@ -12,7 +12,7 @@
 
 h, v = map(int, input().split())       # h : 가로,  v : 세로
 n = int(input())                       # n : 잘라야 하는 점선의 개수
-horizontals, verticals = [], []        # horizontals : 가로로 자르는 i들을 저장하는 리스트, verticals : 세로로 자르는 j들을 저장하는 리스트
+horizontals, verticals = [0], [0]        # horizontals : 가로로 자르는 i들을 저장하는 리스트, verticals : 세로로 자르는 j들을 저장하는 리스트
 for _ in range(n):
     x, y = map(int, input().split())
     if x == 0:
@@ -21,3 +21,5 @@ for _ in range(n):
         verticals.append(y)
 horizontals.sort()
 verticals.sort()
+
+for 
