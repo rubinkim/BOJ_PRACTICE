@@ -10,9 +10,9 @@
 30
 """
 
-h, v = map(int, input().split())       # h : 가로,  v : 세로
+h, v = map(int, input().split())       # h : 가로축의 길이(j의 최대값),  v : 세로축의 길이(i의 최대값)
 n = int(input())                       # n : 잘라야 하는 점선의 개수
-horizontals, verticals = [0, v], [0, h]        # horizontals : 가로로 자르는 i들을 저장하는 리스트, verticals : 세로로 자르는 j들을 저장하는 리스트
+h_axis, verticals = [0, v], [0, h]        # v_axis : i들을 저장하는 리스트(세로축), h_axis : j들을 저장하는 리스트(가로축)
 for _ in range(n):
     x, y = map(int, input().split())
     if x == 0:
