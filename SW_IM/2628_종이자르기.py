@@ -10,4 +10,4 @@
 30
 """
 
-h, v = map(int, input().split())
+h, v = map(int, input().split())       # h : 가로,  v : 세로
