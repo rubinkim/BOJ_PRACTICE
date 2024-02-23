@@ -36,5 +36,7 @@ for no in range(TC):
             cnt = min(cnt, count_color(x, y, arr, N, M))
     print(f"#{no+1} {cnt}")   
 """    
-         
+T = int(input())
+for tc in range(1, T+1):
+    N, M = map(int, input().split())    
 
