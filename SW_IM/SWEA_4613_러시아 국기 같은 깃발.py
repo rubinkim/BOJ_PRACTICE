@@ -41,5 +41,12 @@ for tc in range(1, T+1):
     N, M = map(int, input().split())
     arr = [input() for _ in range(N)]
     
-        
+    mx = 0
+    for i in range(N-2):
+        for j in range(i+1, N-1):
+            cnt = 0
+            for s in range(i+1):
+                arr[s].count('W')
+            for s in range(i+1, j+1):
+                arr[s].count('B')    
 
