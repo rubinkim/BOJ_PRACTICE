@@ -51,5 +51,6 @@ for tc in range(1, T+1):
                 cnt += arr[s].count('B')    
             for s in range(j+1, N):
                 cnt += arr[s].count('R')
+            mx = max(mx, cnt)
             
 
