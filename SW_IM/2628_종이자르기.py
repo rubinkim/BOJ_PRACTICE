@@ -28,5 +28,5 @@ print(verticals)
 mx_area = 0
 for i in range(1, len(horizontals)):
     for j in range(1, len(verticals)):
-        mx_area = max(mx_area, (horizontals[i] - horizontals[i-1]) * (verticals[i] - verticals[i-1]))
+        mx_area = max(mx_area, (horizontals[i] - horizontals[i-1]) * (verticals[j] - verticals[j-1]))
 print(mx_area)
