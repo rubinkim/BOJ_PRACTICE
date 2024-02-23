@@ -49,4 +49,7 @@ for tc in range(1, T+1):
                 arr[s].count('W')
             for s in range(i+1, j+1):
                 arr[s].count('B')    
+            for s in range(j+1, N):
+                arr[s].count('R')
+            
 
