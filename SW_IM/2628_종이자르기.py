@@ -24,3 +24,8 @@ verticals.sort()
 
 print(horizontals)
 print(verticals)
+
+mx_area = 0
+for i in range(1, len(horizontals)):
+    for j in range(1, len(verticals)):
+        mx_area = max(mx_area, )
