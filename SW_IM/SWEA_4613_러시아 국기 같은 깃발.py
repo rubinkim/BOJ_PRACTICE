@@ -14,7 +14,7 @@ WRRRWWWBWWWWRB
 WWBWBWWWBWRRRR
 WBWBBWWWBBWRRW
 WWWWWWWWWWWWWW
-"""
+
 def count_color(w, b, arr, n, m):
     cnt = 0
     cnt += sum([sum([arr[i][j] != 'W' for j in range(m)]) for i in range(w+1)])
@@ -34,5 +34,7 @@ for no in range(TC):
     for x in range(N-2):
         for y in range(x+1, N-1):
             cnt = min(cnt, count_color(x, y, arr, N, M))
-    print(f"#{no+1} {cnt}")        
+    print(f"#{no+1} {cnt}")   
+"""    
+         
 
