@@ -16,9 +16,9 @@ h_axis, v_axis = [0, h], [0, v]           # v_axis : i들을 저장하는 리스
 for _ in range(n):
     x, y = map(int, input().split())
     if x == 0:
-        horizontals.append(y)
+        h_axis.append(y)
     else:
-        verticals.append(y)
+        v_axis.append(y)
 
 horizontals.sort()
 verticals.sort()
