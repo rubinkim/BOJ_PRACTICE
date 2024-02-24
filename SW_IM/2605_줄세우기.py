@@ -50,4 +50,5 @@ class Node():
                 node.link = current
                 pre.link = node
                 return
+            node = Node()            # 마지막 위치에 데이터삽입
             
