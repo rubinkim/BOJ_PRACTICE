@@ -32,4 +32,11 @@ class Node():
         
     # 노드삽입(findData앞에 insertData를 삽입한다.)
     def insertData(findData, insertData):
+        global memory, head, current, pre
+        if head.data == findData:   # 첫번째 위치에 데이터삽입
+            node = Node()
+            node.data = insertData
+            node.link = head
+            head = node
+            return
         
