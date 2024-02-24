@@ -40,3 +40,14 @@ class Node():
             head = node
             return
         
+        current = head
+        while current.link != None: # 중간 위치에 데이터삽입
+            pre = current
+            current = current.link
+            if current.data == findData:
+                node = Node()
+                node.data = insertData
+                node.link = current
+                pre.link = node
+                return
+            
