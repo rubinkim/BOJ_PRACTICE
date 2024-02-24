@@ -63,17 +63,17 @@ class Node():
                 pre.link = current.link
                 del(current)
                 return
+            
+import sys
+input = sys.stdin.readline
+
+N = int(input())
+dataArray = [x for x in range(1, N+1)]
+memory = []
+head, current, pre = None, None, None
 
 if __name__ == '__main__':                
-    import sys
-    input = sys.stdin.readline
 
-    N = int(input())
-    dataArray = [x for x in range(1, N+1)]
-    memory = []
-    head, current, pre = None, None, None
     
-    picked = list(map(int, input().split()))
 
-    for i, p in enumerate(picked):
         
