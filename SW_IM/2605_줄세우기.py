@@ -57,4 +57,9 @@ class Node():
     # 노드삭제
     def deleteNode(deleteData):
         global memory, head, current, pre
+        if head.data == deleteData:  # 첫번째 위치에 데이터삭제
+            current = head
+            head = head.link
+            del(current)
+            return
         
