@@ -86,7 +86,8 @@ if __name__ == '__main__':
         pre.link = node
         memory.append(node)
         
-    print(memory)
+    for row in memory:
+        print(row)
     
 
         
