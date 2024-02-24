@@ -89,5 +89,9 @@ if __name__ == '__main__':
     for row in memory:
         print(row)
     
+    print()
+    printNodes(head)
+    print()
+    
 
         
