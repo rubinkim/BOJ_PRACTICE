@@ -21,5 +21,10 @@ class Node():
         self.link = None
         
     def printNodes(start):
-        
+        current = start
+        if current == None:
+            return
+        print(current.data, end=' ')
+        while current.link != None:
+            current = current.link
     
