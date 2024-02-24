@@ -6,14 +6,6 @@
 
 4 2 5 3 1
 """
-import sys
-input = sys.stdin.readline
-
-N = int(input())
-dataArray = [x for x in range(1, N+1)]
-memory = []
-head, current, pre = None, None, None
-
 # 클래스와 함수 선언 부분
 class Node():
     def __init__(self):
@@ -71,4 +63,17 @@ class Node():
                 pre.link = current.link
                 del(current)
                 return
-            
+
+if __name__ == '__main__':                
+    import sys
+    input = sys.stdin.readline
+
+    N = int(input())
+    dataArray = [x for x in range(1, N+1)]
+    memory = []
+    head, current, pre = None, None, None
+    
+    picked = list(map(int, input().split()))
+
+    for i, p in enumerate(picked):
+        
