@@ -27,4 +27,9 @@ class Node():
         print(current.data, end=' ')
         while current.link != None:
             current = current.link
-    
+            print(current.data, end=' ')
+        print()
+        
+    # 노드삽입(findData앞에 insertData를 삽입한다.)
+    def insertData(findData, insertData):
+        
