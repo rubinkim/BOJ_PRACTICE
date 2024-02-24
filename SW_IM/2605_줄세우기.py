@@ -55,4 +55,6 @@ class Node():
             current.link = node
             
     # 노드삭제
-    def deleteDa
+    def deleteNode(deleteData):
+        global memory, head, current, pre
+        
