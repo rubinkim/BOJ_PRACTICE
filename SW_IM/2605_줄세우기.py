@@ -23,25 +23,29 @@ def printNodes(start):
     print()
         
 # 노드삽입(findData앞에 insertData를 삽입한다.)
-def insertNode(findData, insertData):
+def insertNode(idx, insertData):
     global memory, head, current, pre
-    if head.data == findData:   # 첫번째 위치에 데이터삽입
+    if idx == 0:   # 첫번째 위치에 데이터삽입
         node = Node()
         node.data = insertData
         node.link = head
         head = node
         return
     
-    current = head
-    while current.link != None: # 중간 위치에 데이터삽입
-        pre = current
-        current = current.link
-        if current.data == findData:
-            node = Node()
-            node.data = insertData
-            node.link = current
-            pre.link = node
-            return
+    elif 0 < idx < len(dataArray)-2:
+        current = head
+        current_idx = 0
+        while True: # 중간 위치에 데이터삽입
+            pre = current
+            current = current.link
+            if current_idx == idx:
+                node = Node()
+                node.data = insertData
+                node.link = current
+                pre.link = node
+                return
+            
+    elif idx == len(dataArray) - 1:
         node = Node()            # 마지막 위치에 데이터삽입
         node.data = insertData
         current.link = node
@@ -93,5 +97,10 @@ if __name__ == '__main__':
     printNodes(head)
     print()
     
+    for i, p in enumerate(picked):
+        move = i - p
+        val = dataArray[i]
+        deleteNode(val)
+        insertNode(move, val)   
 
         
