@@ -63,3 +63,5 @@ class Node():
             del(current)
             return
         
+        current = head               # 첫번째외의 위치에 데이터삭제
+        
