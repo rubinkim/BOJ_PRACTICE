@@ -64,4 +64,11 @@ class Node():
             return
         
         current = head               # 첫번째외의 위치에 데이터삭제
-        
+        while current.link != None:
+            pre = current
+            current = current.link
+            if current.data == deleteData:
+                pre.link = current.link
+                del(current)
+                return
+            
