@@ -14,4 +14,7 @@ dataArray = [x for x in range(1, N+1)]
 memory = []
 head, current, pre = None, None, None
 
-
+# 클래스와 함수 선언 부분
+class Node():
+    
+    
