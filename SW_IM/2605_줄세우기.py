@@ -101,6 +101,6 @@ if __name__ == '__main__':
         move = i - p
         val = dataArray[i]
         deleteNode(val)
-        insertNode(move, val)   
+        #insertNode(move, val)   
 
         
