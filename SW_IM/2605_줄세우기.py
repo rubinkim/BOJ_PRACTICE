@@ -31,7 +31,7 @@ class Node():
         print()
         
     # 노드삽입(findData앞에 insertData를 삽입한다.)
-    def insertData(findData, insertData):
+    def insertNode(findData, insertData):
         global memory, head, current, pre
         if head.data == findData:   # 첫번째 위치에 데이터삽입
             node = Node()
@@ -54,4 +54,5 @@ class Node():
             node.data = insertData
             current.link = node
             
-    
+    # 노드삭제
+    def deleteDa
