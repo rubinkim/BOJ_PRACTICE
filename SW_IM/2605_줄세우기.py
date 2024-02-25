@@ -13,14 +13,18 @@ class Node():
         self.link = None
         
 def printNodes(start):
+    global dataArray
+    dataArray = []
     current = start
     if current == None:
         return
-    print(current.data, end=' ')
+    #print(current.data, end=' ')
+    dataArray.append(current.data)
     while current.link != None:
         current = current.link
-        print(current.data, end=' ')
-    print()
+        #print(current.data, end=' ')
+        dataArray.append(current.data)
+    return dataArray
         
 # 노드삽입(findData앞에 insertData를 삽입한다.)
 def insertNode(findData, insertData):
@@ -42,10 +46,10 @@ def insertNode(findData, insertData):
             node.link = current
             pre.link = node
             return
-        node = Node()            # 마지막 위치에 데이터삽입
-        node.data = insertData
-        current.link = node
-            
+    node = Node()            # 마지막 위치에 데이터삽입
+    node.data = insertData
+    current.link = node
+        
 # 노드삭제
 def deleteNode(deleteData):
     global memory, head, current, pre
@@ -62,46 +66,4 @@ def deleteNode(deleteData):
         if current.data == deleteData:
             pre.link = current.link
             del(current)
-            return
-            
-if __name__ == '__main__': 
-    
-    import sys
-    input = sys.stdin.readline
-
-    N = int(input())
-    picked = list(map(int, input().split()))
-    dataArray = [x for x in range(1, N+1)]
-    memory = []
-    head, current, pre = None, None, None    
-    
-    node = Node()
-    node.data = dataArray[0]
-    head = node
-    memory.append(node)
-    
-    for data in dataArray[1:]:
-        pre = node
-        node = Node()
-        node.data = data
-        pre.link = node
-        memory.append(node)
-        
-    printNodes(head)
-    
-    for i in range(len(picked)):
-        p = picked[i]
-        insert_data = dataArray[i]
-        find_data = dataArray[i - p]
-        #deleteNode(insert_data)
-        #print(f"i : {i},  p : {p},  insert_data : {insert_data},  find_data : {find_data}")
-        insertNode(find_data, insert_data)
-        printNodes(head)
-
-        
-
-            
-    
-    
-
-        
+            return      
