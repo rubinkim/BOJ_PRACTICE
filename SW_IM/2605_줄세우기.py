@@ -66,4 +66,27 @@ def deleteNode(deleteData):
         if current.data == deleteData:
             pre.link = current.link
             del(current)
-            return      
+            return 
+        
+        
+N = int(input())
+picked = list(map(int, input().split()))
+dataArray = [x for x in range(1, N+1)]
+
+
+memory = []
+head, current, pre = None, None, None 
+
+node = Node()
+node.data = dataArray[0]
+head = node
+memory.append(node)
+
+for data in dataArray[1:]:
+    pre = node
+    node = Node()
+    node.data = data
+    pre.link = node
+    memory.append(node)
+    
+printNodes(head)
