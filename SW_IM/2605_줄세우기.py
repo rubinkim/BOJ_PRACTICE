@@ -99,7 +99,7 @@ if __name__ == '__main__':
         if i != move:
             deleteNode(insert_data)
             insertNode(finding_data, insert_data)
-        #print(f"head_data : {head.data},  i : {i},  p : {p},  move : {move},  finding_data : {finding_data},  insert_data : {insert_data}",  end=',    ')    
+        print(f"head_data : {head.data},  i : {i},  p : {p},  move : {move},  finding_data : {finding_data},  insert_data : {insert_data}",  end=',    ')    
         outputNodes(head)
         
     print(*outputNodes(head))
