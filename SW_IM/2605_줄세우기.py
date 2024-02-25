@@ -13,18 +13,17 @@ class Node():
         self.link = None
         
 def outputNodes(start):
-    global dataArray
-    dataArray = []
+    memory_data_lst = []
     current = start
     if current == None:
         return
     #print(current.data, end=' ')
-    dataArray.append(current.data)
+    memory_data_lst.append(current.data)
     while current.link != None:
         current = current.link
         #print(current.data, end=' ')
-        dataArray.append(current.data)
-    return dataArray
+        memory_data_lst.append(current.data)
+    return memory_data_lst
         
 # 노드삽입(findData앞에 insertData를 삽입한다.)
 def insertNode(findData, insertData):
@@ -72,7 +71,6 @@ if __name__ == '__main__':
     N = int(input())
     picked = list(map(int, input().split()))
     dataArray = [x for x in range(1, N+1)]
-
 
     memory = []
     head, current, pre = None, None, None 
