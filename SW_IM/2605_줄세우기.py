@@ -68,25 +68,37 @@ def deleteNode(deleteData):
             del(current)
             return 
         
-        
-N = int(input())
-picked = list(map(int, input().split()))
-dataArray = [x for x in range(1, N+1)]
+if __name__ == "__main()":       
+    N = int(input())
+    picked = list(map(int, input().split()))
+    dataArray = [x for x in range(1, N+1)]
 
 
-memory = []
-head, current, pre = None, None, None 
+    memory = []
+    head, current, pre = None, None, None 
 
-node = Node()
-node.data = dataArray[0]
-head = node
-memory.append(node)
-
-for data in dataArray[1:]:
-    pre = node
     node = Node()
-    node.data = data
-    pre.link = node
+    node.data = dataArray[0]
+    head = node
     memory.append(node)
-    
-printNodes(head)
+
+    for data in dataArray[1:]:
+        pre = node
+        node = Node()
+        node.data = data
+        pre.link = node
+        memory.append(node)
+
+    for i, p in enumerate(picked):  
+        
+        move = i - p
+        finding_data = dataArray[move]
+        insert_data = dataArray[i]
+        
+        if i != move:
+            deleteNode(insert_data)
+            insertNode(finding_data, insert_data)
+        #print(f"head_data : {head.data},  i : {i},  p : {p},  move : {move},  finding_data : {finding_data},  insert_data : {insert_data}",  end=',    ')    
+        printNodes(head)
+        
+    print(*printNodes(head))
