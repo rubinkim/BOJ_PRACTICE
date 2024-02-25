@@ -23,29 +23,25 @@ def printNodes(start):
     print()
         
 # 노드삽입(findData앞에 insertData를 삽입한다.)
-def insertNode(idx, insertData):
+def insertNode(findData, insertData):
     global memory, head, current, pre
-    if idx == 0:   # 첫번째 위치에 데이터삽입
+    if head.data == findData:   # 첫번째 위치에 데이터삽입
         node = Node()
         node.data = insertData
         node.link = head
         head = node
         return
     
-    elif 0 < idx < len(dataArray)-2:
-        current = head
-        current_idx = 0
-        while True: # 중간 위치에 데이터삽입
-            pre = current
-            current = current.link
-            if current_idx == idx:
-                node = Node()
-                node.data = insertData
-                node.link = current
-                pre.link = node
-                return
-            
-    elif idx == len(dataArray) - 1:
+    current = head
+    while current.link != None: # 중간 위치에 데이터삽입
+        pre = current
+        current = current.link
+        if current.data == findData:
+            node = Node()
+            node.data = insertData
+            node.link = current
+            pre.link = node
+            return
         node = Node()            # 마지막 위치에 데이터삽입
         node.data = insertData
         current.link = node
@@ -68,41 +64,44 @@ def deleteNode(deleteData):
             del(current)
             return
             
-import sys
-input = sys.stdin.readline
+if __name__ == '__main__': 
+    
+    import sys
+    input = sys.stdin.readline
 
-N = int(input())
-picked = list(map(int, input().split()))
-dataArray = [x for x in range(1, N+1)]
-memory = []
-head, current, pre = None, None, None
-
-if __name__ == '__main__':                
-    node = Node()                    # 첫번째 노드
+    N = int(input())
+    picked = list(map(int, input().split()))
+    dataArray = [x for x in range(1, N+1)]
+    memory = []
+    head, current, pre = None, None, None    
+    
+    node = Node()
     node.data = dataArray[0]
     head = node
     memory.append(node)
     
-    for data in dataArray[1:]:       # 두번째 이후 노드
+    for data in dataArray[1:]:
         pre = node
         node = Node()
         node.data = data
         pre.link = node
         memory.append(node)
         
-    for row in memory:
-        print(row)
-    
-    print()
     printNodes(head)
-    print()
     
-    for i, p in enumerate(picked):
-        move = i - p
-        val = dataArray[i]
-        deleteNode(val)
-        #insertNode(move, val)
+    for i in range(len(picked)):
+        p = picked[i]
+        insert_data = dataArray[i]
+        find_data = dataArray[i - p]
+        #deleteNode(insert_data)
+        #print(f"i : {i},  p : {p},  insert_data : {insert_data},  find_data : {find_data}")
+        insertNode(find_data, insert_data)
+        printNodes(head)
+
         
-    printNodes(head)   
+
+            
+    
+    
 
         
