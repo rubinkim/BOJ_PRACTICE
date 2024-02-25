@@ -68,7 +68,7 @@ def deleteNode(deleteData):
             del(current)
             return 
         
-if __name__ == "__main()":       
+if __name__ == '__main__':       
     N = int(input())
     picked = list(map(int, input().split()))
     dataArray = [x for x in range(1, N+1)]
