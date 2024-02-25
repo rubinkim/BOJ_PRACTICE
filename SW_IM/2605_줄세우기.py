@@ -99,7 +99,6 @@ if __name__ == '__main__':
         if i != move:
             deleteNode(insert_data)
             insertNode(finding_data, insert_data)
-        print(f"head_data : {head.data},  i : {i},  p : {p},  move : {move},  finding_data : {finding_data},  insert_data : {insert_data}",  end=',    ')    
-        outputNodes(head)
-        
+        print(f"head_data : {head.data},  i : {i},  p : {p},  move : {move},  finding_data : {finding_data},  insert_data : {insert_data},  dataArray : {outputNodes(head)}")    
+        #outputNodes(head)  # 만약 윗줄에서 outputNodes(head)를 하지 않았다면 이줄에서 이작업을 반드시 해야 합니다.
     print(*outputNodes(head))
