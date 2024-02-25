@@ -12,7 +12,7 @@ class Node():
         self.data = None
         self.link = None
         
-def printNodes(start):
+def outputNodes(start):
     global dataArray
     dataArray = []
     current = start
@@ -99,6 +99,6 @@ if __name__ == '__main__':
             deleteNode(insert_data)
             insertNode(finding_data, insert_data)
         #print(f"head_data : {head.data},  i : {i},  p : {p},  move : {move},  finding_data : {finding_data},  insert_data : {insert_data}",  end=',    ')    
-        printNodes(head)
+        outputNodes(head)
         
-    print(*printNodes(head))
+    print(*outputNodes(head))
