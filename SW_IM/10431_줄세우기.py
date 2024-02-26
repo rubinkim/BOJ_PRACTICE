@@ -51,23 +51,20 @@ for tc in range(1, P+1):
 P = int(input())       # 테스트 케이스의 수
 
 tc_dict = {}
-for i in range(P):
+for tc in range(1, P+1):
     lst = list(map(int, input().split()))
-    tc_dict[lst[0]] = lst[1:]
-   
-for x in range(1, P+1):
+    tc_dict[lst[0]] = lst[1:]  
+
     ans = 0
-    for i in range(1, len(tc_dict[x])):
+    for i in range(1, len(tc_dict[tc])):
         for j in range(i):
-            if tc_dict[x][j] > tc_dict[x][i]:
-                temp = tc_dict[x][i]
+            if tc_dict[tc][j] > tc_dict[tc][i]:
+                temp = tc_dict[tc][i]
                 for k in range(i-1, j-1, -1):
-                    tc_dict[x][k+1] = tc_dict[x][k]
+                    tc_dict[tc][k+1] = tc_dict[tc][k]
                     ans += 1
-                tc_dict[x][j] = temp
+                tc_dict[tc][j] = temp
                     
-    print(f"{x} {ans}")
-    for k, v in tc_dict.items():
-        print(k, v)
-    print()
+    print(f"{tc} {ans}")
+
 
