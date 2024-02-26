@@ -27,3 +27,5 @@
 """
 L = int(input())
 N = int(input())
+for p, k in map(int, input().split()):
+    print(p, k)
