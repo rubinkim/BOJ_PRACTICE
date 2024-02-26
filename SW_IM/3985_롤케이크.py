@@ -26,3 +26,4 @@
 1   1   5
 """
 L = int(input())
+N = int(input())
