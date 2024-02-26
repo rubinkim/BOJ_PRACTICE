@@ -82,5 +82,5 @@ for x in range(1, P+1):
                 tc_dict[x][j+1] = tc_dict[x][j]
                 ans += 1
                 tc_dict[x][j] = temp
-                #break
+                break
     print(f"{x} {ans}")
