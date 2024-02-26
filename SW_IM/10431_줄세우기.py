@@ -48,21 +48,27 @@ for tc in range(1, P+1):
     print(f"{tc} {cnt}")
 """
 
-P = int(input())
+P = int(input())       # 테스트 케이스의 수
 
-for tc in range(P):
-    lst = list(map(int, input().split()))[1:]
+tc_dict = {}
+for i in range(P):
+    lst = list(map(int, input().split()))
+    tc_dict[lst[0]] = lst[1:]
+   
+for k, v in tc_dict.items():
+    print(k, v)
+
     
 for x in range(1, P+1):
     ans = 0
-    for i in range(20):
+    for i in range(1, len(tc_dict[x])):
         for j in range(i):
             if tc_dict[x][j] > tc_dict[x][i]:
                 temp = tc_dict[x][i]
-                for k in range(j, i):
+                for k in range(i-1, j-1, -1):
                     tc_dict[x][k+1] = tc_dict[x][k]
                     ans += 1
                 tc_dict[x][j] = temp
-                break
-    print(x, ans)
+                    
+    print(f"{x} {ans}")
 
