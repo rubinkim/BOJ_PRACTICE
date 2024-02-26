@@ -14,3 +14,7 @@
 """
 
 P = int(input())       # 테스트 케이스의 수
+
+tc_dict = {}
+for i in range(P):
+    lst = list(map(int, input().split()))
