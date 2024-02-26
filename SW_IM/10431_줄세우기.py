@@ -53,4 +53,9 @@ for x in range(1, P+1):
         for j in range(i):
             if lst[j] > lst[i]:
                 temp = lst[i]
-                
+                for k in range(j, i):
+                    tc_dict[x][k+1] = tc_dict[x][k]
+                    ans += 1
+                tc_dict[x][j] = temp
+                break
+    print(ans)
