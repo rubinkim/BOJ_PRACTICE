@@ -67,6 +67,5 @@ for x in range(1, P+1):
                 tc_dict[x][j] = temp
                     
     print(f"{x} {ans}")
-    for k, v in tc_dict.items():
-        print(k, v)
+
 
