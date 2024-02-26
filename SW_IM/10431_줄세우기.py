@@ -11,7 +11,7 @@
 2 190
 3 19
 4 171
-"""
+
 
 P = int(input())       # 테스트 케이스의 수
 
@@ -19,10 +19,10 @@ tc_dict = {}
 for i in range(P):
     lst = list(map(int, input().split()))
     tc_dict[lst[0]] = lst[1:]
-"""    
+   
 for k, v in tc_dict.items():
     print(k, v)
-"""
+
     
 for x in range(1, P+1):
     ans = 0
@@ -36,7 +36,8 @@ for x in range(1, P+1):
             break
         
     print(x, ans)
-    
+"""    
+
 P = int(input())
 tc_dict = {}
 for i in range(P):
