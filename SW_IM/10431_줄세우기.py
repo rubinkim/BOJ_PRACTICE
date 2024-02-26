@@ -44,9 +44,6 @@ for i in range(P):
     lst = list(map(int, input().split()))
     tc_dict[lst[0]] = lst[1:]
     
-for k, v in tc_dict.items():
-    print(k, v)
-    
 for x in range(1, P+1):
     ans = 0
     for i in range(20):
