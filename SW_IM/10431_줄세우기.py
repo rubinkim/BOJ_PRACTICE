@@ -22,3 +22,14 @@ for i in range(P):
     
 for k, v in tc_dict.items():
     print(k, v)
+    
+for x in range(P):
+    ans = 0
+    for i in range(20):
+        for j in range(0, i):
+            if tc_dict[x][j] > tc_dict[x][i]:
+                tc_dict[x][j+1] = tc_dict[x][j]
+                ans += 1
+                tc_dict[x][j] = tc_dict[x][i]
+            break
+    print(ans)
