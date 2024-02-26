@@ -46,13 +46,12 @@ for tc in range(1, P+1):
             if lst[i] < lst[j]:
                 cnt += 1
     print(f"{tc} {cnt}")
-
+"""
 
 P = int(input())
-tc_dict = {}
-for i in range(P):
-    lst = list(map(int, input().split()))
-    tc_dict[lst[0]] = lst[1:]
+
+for tc in range(P):
+    lst = list(map(int, input().split()))[1:]
     
 for x in range(1, P+1):
     ans = 0
@@ -66,21 +65,4 @@ for x in range(1, P+1):
                 tc_dict[x][j] = temp
                 break
     print(x, ans)
-"""
-P = int(input())
-tc_dict = {}
-for i in range(P):
-    lst = list(map(int, input().split()))
-    tc_dict[lst[0]] = lst[1:]
-    
-for x in range(1, P+1):
-    ans = 0
-    for i in range(20):
-        for j in range(i):
-            if tc_dict[x][j] > tc_dict[x][i]:
-                temp = tc_dict[x][i]
-                tc_dict[x][j+1] = tc_dict[x][j]
-                ans += 1
-                tc_dict[x][j] = temp
 
-    print(f"{x} {ans}")
