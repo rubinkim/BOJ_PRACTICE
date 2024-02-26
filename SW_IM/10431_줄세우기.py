@@ -28,8 +28,9 @@ for x in range(1, P+1):
     for i in range(20):
         for j in range(0, i):
             if tc_dict[x][j] > tc_dict[x][i]:
-                tc_dict[x][j+1] = tc_dict[x][j]
-                ans += 1
-                tc_dict[x][j] = tc_dict[x][i]
+                for k in range(j+1, i):
+                    tc_dict[x][k+1] = tc_dict[x][k]
+                    ans += 1
+                    tc_dict[x][k] = tc_dict[x][i]
             break
     print(ans)
