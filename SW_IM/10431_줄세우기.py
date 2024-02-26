@@ -50,4 +50,7 @@ for k, v in tc_dict.items():
 for x in range(1, P+1):
     ans = 0
     for i in range(20):
-        
+        for j in range(i):
+            if lst[j] > lst[i]:
+                temp = lst[i]
+                
