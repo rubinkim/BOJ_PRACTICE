@@ -41,4 +41,6 @@ P = int(input())
 tc_dict = {}
 for i in range(P):
     lst = list(map(int, input().split()))
+    tc_dict[lst[0]] = lst[1:]
     
+for k, v in tc_dict.items():
