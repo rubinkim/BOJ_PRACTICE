@@ -40,4 +40,5 @@ for x in range(1, P+1):
 P = int(input())
 tc_dict = {}
 for i in range(P):
-    lst = list(map(int, ))
+    lst = list(map(int, input().split()))
+    
