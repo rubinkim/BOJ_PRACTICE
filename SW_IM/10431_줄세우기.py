@@ -65,4 +65,4 @@ for tc in range(1, P+1):
         for j in range(i):
             if lst[i] < lst[j]:
                 cnt += 1
-        print(f"{tc} {cnt}")
+    print(f"{tc} {cnt}")
