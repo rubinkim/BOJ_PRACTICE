@@ -69,4 +69,5 @@ for x in range(1, P+1):
     print(f"{x} {ans}")
     for k, v in tc_dict.items():
         print(k, v)
+    print()
 
