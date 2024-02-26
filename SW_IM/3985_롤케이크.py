@@ -28,4 +28,4 @@
 L = int(input())
 N = int(input())
 for _ in range(N):
-    p, k = (map(int, input().split()))
+    p, k = tuple(map(int, input().split()))
