@@ -33,4 +33,4 @@ for x in range(1, P+1):
                     ans += 1
                     tc_dict[x][k] = tc_dict[x][i]
             break
-    print(ans)
+    print(i, ans)
