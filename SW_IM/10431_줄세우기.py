@@ -58,4 +58,4 @@ for x in range(1, P+1):
                     ans += 1
                 tc_dict[x][j] = temp
                 break
-    print(ans)
+    print(x, ans)
