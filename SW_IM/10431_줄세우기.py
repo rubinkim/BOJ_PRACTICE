@@ -52,7 +52,7 @@ for x in range(1, P+1):
     for i in range(20):
         for j in range(i):
             if tc_dict[x][j] > tc_dict[x][i]:
-                temp = lst[i]
+                temp = tc_dict[x][i]
                 for k in range(j, i):
                     tc_dict[x][k+1] = tc_dict[x][k]
                     ans += 1
