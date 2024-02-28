@@ -38,6 +38,6 @@ for i in range(N):
         if cakes[j] == 0:
             cakes[j] = i+1
             
-print(audience_dict.items())
+print(audience_dict)
 print(cakes)
     
