@@ -24,8 +24,8 @@ for i in range(0, R):
     for j in range(0, C):
         board[i][j] = (j+1, R-i)
         
-#for row in board:
-    #print(row)
+for row in board:
+    print(row)
     
 print(board[0][:])
 print(len(board[0][:]))
