@@ -27,6 +27,6 @@
 """
 L = int(input())
 N = int(input())
-for _ in range(N):
+for i in range(N):
     p, k = tuple(map(int, input().split()))
-    print(p, k)
+    
