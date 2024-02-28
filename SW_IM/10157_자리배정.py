@@ -28,8 +28,8 @@ for row in board:
     print(row)
 
 print()   
-print(board[0][:])
-print(len(board[0][:]))
+print(board[0])
+print(len(board[0]))
 
 #board = board - board[0][:]
 #board = board - board[:][0]
@@ -39,4 +39,4 @@ print()
 print(board[:][0])
 print(len(board[:][0]))
 print()
-print(board[0][:] + board[:][0])
+print(board[0] + board[:][0])
