@@ -29,5 +29,9 @@ for row in board:
     
 print()
 
-
+lst = []
+for i in range(R, 0, -1):
+    lst.append((1, j))
+    
+print(lst)
 
