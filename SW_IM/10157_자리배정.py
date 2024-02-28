@@ -20,3 +20,9 @@ C, R = map(int, input().split())
 K = int(input())
 
 board = [[0] * C for _ in range(R)]
+for i in range(R, 0, -1):
+    for j in range(0, C+1):
+        board[i][j] = (i, j)
+        
+for row in board:
+    print(row)
