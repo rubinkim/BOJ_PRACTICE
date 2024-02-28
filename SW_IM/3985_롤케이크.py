@@ -29,6 +29,8 @@ L = int(input())
 N = int(input())
 
 cakes = [0] * (L+1)
+audience_dict = {}
+
 for i in range(N):
     p, k = tuple(map(int, input().split()))
     
