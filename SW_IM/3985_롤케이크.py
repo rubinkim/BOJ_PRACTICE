@@ -40,4 +40,7 @@ for i in range(N):
             
 print(audience_dict)
 print(cakes)
+
+expected_max_val = max(audience_dict.values())
+print(expected_max_val)
     
