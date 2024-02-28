@@ -15,3 +15,5 @@
 0
 9 64
 """
+
+C, R = map(int, input().split())
