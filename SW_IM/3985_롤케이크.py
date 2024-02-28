@@ -48,5 +48,8 @@ for k, v in audience_dict.items():
     if v == expected_max_val:
         print(k)
         
-
+cakes_dict = {}
+for x in cakes:
+    if x > 0 and x not in cakes_dict.keys:
+        cakes_dict[x] = 1
     
