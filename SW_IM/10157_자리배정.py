@@ -31,7 +31,7 @@ print()
 
 lst = []
 for i in range(R, 0, -1):
-    lst.append(board[0][i])
+    lst.append(board[i][0])
     
 print(lst)
 
