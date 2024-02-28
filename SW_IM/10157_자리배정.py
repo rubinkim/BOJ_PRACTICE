@@ -24,15 +24,20 @@ for i in range(0, R):
     for j in range(0, C):
         board[i][j] = (j+1, R-i)
         
-for row in board:
-    print(row)
-    
-print()
-
 lst = []
-for i in range(R-1, -1, -1):
-    x = board[i][0]
-    lst.append(x)
-    
-print(lst)
+i = 1
+while len(board) > 0:
+    board = [list(col) for col in reversed(list(zip(*board)))]
 
+    x = board[-1]
+    x.reverse()
+    lst.extend(x)
+    
+    board = board[:-1]
+    
+#print(lst)
+
+if K <= C * R:    
+    print(*(lst[K-1]))
+else:
+    print(0)
