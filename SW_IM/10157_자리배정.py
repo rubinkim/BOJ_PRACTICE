@@ -18,3 +18,5 @@
 
 C, R = map(int, input().split())
 K = int(input())
+
+board = [[0] * C for _ in range(R)]
