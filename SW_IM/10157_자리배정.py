@@ -28,3 +28,8 @@ for i in range(0, R):
     #print(row)
     
 print(board[0][:])
+
+board = board - board[0][:]
+
+for row in board:
+    print(row)
