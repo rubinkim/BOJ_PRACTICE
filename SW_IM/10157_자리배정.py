@@ -30,8 +30,11 @@ for row in board:
 print()
 
 lst = []
-for i in range(R, 0, -1):
-    lst.append(board[i][0])
+for i in range(R-1, -1, -1):
+    x = board[i][0]
+    lst.append(x)
+
+
     
 print(lst)
 
