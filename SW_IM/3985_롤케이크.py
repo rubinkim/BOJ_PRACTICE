@@ -33,4 +33,11 @@ audience_dict = {}
 
 for i in range(N):
     p, k = tuple(map(int, input().split()))
+    audience_dict[i+1] = p - k + 1
+    for j in range(p, k+1):
+        if cakes[j] == 0:
+            cakes[j] = i+1
+            
+print(audience_dict.items())
+print(cakes)
     
