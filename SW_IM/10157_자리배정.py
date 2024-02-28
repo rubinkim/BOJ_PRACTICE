@@ -35,4 +35,7 @@ print(len(board[0][:]))
 #board = board - board[-1][:]
 #board = board - board[:][-1]
 
+print(board[:][0])
+print(len(board[:][0]))
 
+print(board[0][:] + board[:][0])
