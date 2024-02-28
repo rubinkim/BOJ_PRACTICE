@@ -52,4 +52,8 @@ cakes_dict = {}
 for x in cakes:
     if x > 0 and x not in cakes_dict.keys:
         cakes_dict[x] = 1
+    elif x > 0 and x in cakes_dict.keys:
+        cakes_dict[x] += 1
+        
+actual_max_val = max(cakes_dict.values())
     
