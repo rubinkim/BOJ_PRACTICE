@@ -33,8 +33,6 @@ lst = []
 for i in range(R-1, -1, -1):
     x = board[i][0]
     lst.append(x)
-
-
     
 print(lst)
 
