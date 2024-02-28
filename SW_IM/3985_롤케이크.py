@@ -38,15 +38,16 @@ for i in range(N):
         if cakes[j] == 0:
             cakes[j] = i+1
             
-print(audience_dict)
-print(cakes)
+#print(audience_dict)
+#rint(cakes)
 
 expected_max_val = max(audience_dict.values())
-print(expected_max_val)
+#print(expected_max_val)
 
 for k, v in audience_dict.items():
     if v == expected_max_val:
         print(k)
+        break
         
 cakes_dict = {}
 for x in cakes:
@@ -56,9 +57,10 @@ for x in cakes:
         cakes_dict[x] += 1
         
 actual_max_val = max(cakes_dict.values())
-print(actual_max_val)
+#print(actual_max_val)
 
 for k, v in cakes_dict.items():
     if v == actual_max_val:
         print(k)
+        break
     
