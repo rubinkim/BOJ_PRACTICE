@@ -26,3 +26,5 @@ for i in range(0, R):
         
 for row in board:
     print(row)
+    
+print(board[:][0])
