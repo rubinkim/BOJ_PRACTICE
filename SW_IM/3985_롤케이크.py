@@ -56,4 +56,9 @@ for x in cakes:
         cakes_dict[x] += 1
         
 actual_max_val = max(cakes_dict.values())
+print(actual_max_val)
+
+for k, v in cakes_dict.items():
+    if v == actual_max_val:
+        print(k)
     
