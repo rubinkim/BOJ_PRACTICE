@@ -12,3 +12,18 @@
 12 19 23 14 21
 11 24 9 20 15
 """
+
+bingo = []
+calls = []
+
+
+for i in range(10):    
+    if i < 5:
+        bingo.append(list(map(int, input().split())))
+    else:
+        calls.extend(list(map(int, line.split())))        
+        
+for row in bingo:
+    print(row)
+print()
+print(calls)
