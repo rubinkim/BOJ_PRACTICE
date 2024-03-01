@@ -42,3 +42,4 @@ if K <= C * R:
 else:
     print(0)
 """
+C, R = map(int, input().split())
