@@ -65,5 +65,7 @@ else:
         # 범위 밖에 있거나 또는 이미 숫자로 채워져 있으면 방향꺽기
         else:
             dr = (dr + 1) % 4
-            ci, cj = ci + di[dr],  cj + dj[dr]        
+            ci, cj = ci + di[dr],  cj + dj[dr]       
+            
+print(f"{cj} {ci}") 
     
