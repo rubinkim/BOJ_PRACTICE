@@ -48,3 +48,6 @@ K = int(input())
 if C * R < K:
     print(0)
     
+else:
+    di = [1, 0, -1, 0]
+    dj = [0, 1, 0, -1]
