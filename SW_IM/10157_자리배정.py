@@ -67,5 +67,5 @@ else:
             dr = (dr + 1) % 4
             ci, cj = ci + di[dr],  cj + dj[dr]       
             
-print(f"{cj} {ci}") 
+    print(f"{cj} {ci}") 
     
