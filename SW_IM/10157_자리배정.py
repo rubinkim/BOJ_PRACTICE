@@ -14,7 +14,7 @@
 6 6
 0
 9 64
-"""
+
 
 C, R = map(int, input().split())
 K = int(input())
@@ -41,3 +41,4 @@ if K <= C * R:
     print(*(lst[K-1]))
 else:
     print(0)
+"""
