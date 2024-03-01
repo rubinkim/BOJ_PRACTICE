@@ -58,6 +58,7 @@ else:
     
     for n in range(1, K):           # 관객들에게 배정된 번호표
         arr[ci][cj] = n
-        ni, nj = 
+        ni, nj = ci + di[dr],  cj + dj[dr]
+        
         
     
