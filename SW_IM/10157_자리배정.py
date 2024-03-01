@@ -57,6 +57,7 @@ else:
     ci, cj, dr = 1, 1, 0
     
     for n in range(1, K):           # 관객들에게 배정된 번호표
-        
+        arr[ci][cj] = n
+        ni, nj = 
         
     
