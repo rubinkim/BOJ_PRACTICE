@@ -60,6 +60,7 @@ else:
         arr[ci][cj] = n
         ni, nj = ci + di[dr],  cj + dj[dr]
         # 비어있으면 이동가능
-        
+        if arr[ni][nj] == 0:
+            ci, cj = ni, nj
         
     
