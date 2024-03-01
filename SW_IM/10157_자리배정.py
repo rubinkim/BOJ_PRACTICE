@@ -43,3 +43,4 @@ else:
     print(0)
 """
 C, R = map(int, input().split())
+K = int(input())
