@@ -21,7 +21,7 @@ for i in range(10):
     if i < 5:
         bingo.append(list(map(int, input().split())))
     else:
-        calls.extend(list(map(int, line.split())))        
+        calls.extend(list(map(int, input().split())))        
         
 for row in bingo:
     print(row)
