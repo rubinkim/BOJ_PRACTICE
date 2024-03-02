@@ -27,3 +27,7 @@ for row in bingo:
     print(row)
 print()
 print(calls)
+
+for i in range(len(calls)):
+    
+    
