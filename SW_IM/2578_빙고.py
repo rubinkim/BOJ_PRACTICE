@@ -31,4 +31,7 @@ print(calls)
 for i in range(len(calls)):
     for j in range(5):
         for k in range(5):
+            if bingo[j][k] == calls[i]:
+                bingo[j][k] = 0
+                
     
