@@ -49,9 +49,9 @@ z = [1,2,3,4,5]
 
 cnt = 0
 for x_val in x:
-    for i in range(5):
-        for j in range(5):
-            if (i, j) in [(2,3), (1,4), (1,1)]:
+    for i in range(4):
+        for j in range(4):
+            if (i, j) in [(2,3), (3,0), (1,1)]:
                 cnt += 1     
                 print(f"x_val : {x_val}, cnt : {cnt}, {(i,j)}")                    
              
