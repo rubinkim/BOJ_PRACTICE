@@ -27,6 +27,7 @@ d0 = [bingo[i][i] for i in range(5)]
 d1 = [bingo[4-i][i] for i in range(5)]
 
 cnt = 0
+min_idx = []
 
 for x in calls:
     for i in range(5):
@@ -42,9 +43,9 @@ for x in calls:
                 if (i,j) in [(4,0), (3,1), (2,2), (1,3), (0,4)] and sum([bingo[4-k][k] for k in range(5)]) == 0:
                     cnt += 1
                 if cnt == 3:
-                    print(f"x : {x},  cnt : {cnt}, x의 인덱스 : {calls.index(x) + 1}")
-                    for row in bingo:
-                        print(row)
+                    #print(f"x : {x},  cnt : {cnt}, x의 인덱스 : {calls.index(x) + 1}")
+                    #for row in bingo:
+                        #print(row)
 
         
 
