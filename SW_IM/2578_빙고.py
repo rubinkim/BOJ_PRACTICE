@@ -11,7 +11,7 @@
 3 18 1 6 25
 12 19 23 14 21
 11 24 9 20 15
-
+"""
 
 bingo = []
 calls = []
@@ -23,7 +23,7 @@ for i in range(10):
         calls.extend(list(map(int, input().split())))        
 
 cnt = 0
-min_idx = 30
+flag = False
 
 for x in calls:
     for i in range(5):
@@ -39,10 +39,14 @@ for x in calls:
                 if (i,j) in [(4,0), (3,1), (2,2), (1,3), (0,4)] and sum([bingo[4-k][k] for k in range(5)]) == 0:
                     cnt += 1
                 if cnt == 3:
-                    min_idx = min(min_idx, calls.index(x)+1)
+                    print(calls.index(x)+1)
+                flag = True
+                break
+    if flag == True:
+        break
 print(min_idx)
-"""
 
+"""
 x = [11,42,30,14]
 y = [-1,-2,-3,-4]
 z = [1,2,3,4,5]
@@ -61,7 +65,8 @@ for x_val in x:
             break                    
              
 print()
-print(cnt)                    
+print(cnt)
+"""                    
         
 
     
