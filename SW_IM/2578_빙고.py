@@ -45,8 +45,8 @@ for x in calls:
                     print(f"x : {x},  cnt : {cnt}, x의 인덱스 : {calls.index(x) + 1}")
                     for row in bingo:
                         print(row)
-                break
-            #break
+                    #break
+    break
         
 
     
