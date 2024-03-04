@@ -33,17 +33,17 @@ for x in calls:
         for j in range(5):
             if bingo[i][j] == x:
                 bingo[i][j] = 0
-            if sum(bingo[i]) == 0:
-                cnt += 1                    
-            if sum([bingo[x][j] for x in range(5)]) == 0:
-                cnt += 1
-            if sum([bingo[k][k] for k in range(5)]) == 0:
-                cnt += 1
-            if sum([bingo[4-k][k] for k in range(5)]) == 0:
-                cnt += 1
-            if cnt == 3:
-                print(f"x : {x},  cnt : {cnt}, x의 인덱스 : {calls.index(x) + 1}")
-            break
+                if sum(bingo[i]) == 0:
+                    cnt += 1                    
+                if sum([bingo[x][j] for x in range(5)]) == 0:
+                    cnt += 1
+                if sum([bingo[k][k] for k in range(5)]) == 0:
+                    cnt += 1
+                if sum([bingo[4-k][k] for k in range(5)]) == 0:
+                    cnt += 1
+                if cnt == 3:
+                    print(f"x : {x},  cnt : {cnt}, x의 인덱스 : {calls.index(x) + 1}")
+                break
         
 for row in bingo:
     print(row)
