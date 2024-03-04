@@ -33,16 +33,16 @@ for x in calls:
         for j in range(5):
             if bingo[i][j] == x:
                 bingo[i][j] = 0
-                if sum(bingo[i]) == 0:
-                    cnt += 1
-                if sum([bingo[x][j] for x in range(5)]) == 0:
-                    cnt += 1
-                if sum(d0) == 0:
-                    cnt += 1
-                if sum(d1) == 0:
-                    cnt += 1
-                if cnt == 3:
-                    print(calls.index(x) + 1)
+            if sum(bingo[i]) == 0:
+                cnt += 1                    
+            if sum([bingo[x][j] for x in range(5)]) == 0:
+                cnt += 1
+            if sum(d0) == 0:
+                cnt += 1
+            if sum(d1) == 0:
+                cnt += 1
+            if cnt == 3:
+                print(calls.index(x) + 1)
             break
     
 
