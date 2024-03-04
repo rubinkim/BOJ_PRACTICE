@@ -43,7 +43,7 @@ for x in calls:
 print(min_idx)
 """
 
-x = [11,42,3,14,59,26,17,93]
+x = [11,42,3,14]
 y = [-1,-2,-3,-4,-5]
 z = [1,2,3,4,5]
 
@@ -53,7 +53,7 @@ for x_val in x:
         for j in range(5):
             if (i, j) in [(2,3), (1,4), (1,1)]:
                 cnt += 1     
-                print(f"{cnt}, {(i,j)}")                    
+                print(f"x_val : {x_val}, cnt : {cnt}, {(i,j)}")                    
              
 print()
 print(cnt)                    
