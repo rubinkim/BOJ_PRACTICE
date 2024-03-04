@@ -42,7 +42,7 @@ for x in calls:
             if sum([bingo[4-k][k] for k in range(5)]) == 0:
                 cnt += 1
             if cnt == 3:
-                print(calls.index(x) + 1)
+                print(f"x : {x},  x¿« ¿Œµ¶Ω∫ : {calls.index(x) + 1}")
             break
     
 
