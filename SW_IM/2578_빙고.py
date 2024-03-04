@@ -13,7 +13,34 @@
 11 24 9 20 15
 """
 
+bingo = []
+calls = []
 
+for i in range(10):    
+    if i < 5:
+        bingo.append(list(map(int, input().split())))
+    else:
+        calls.extend(list(map(int, input().split())))        
+
+cnt = 0
+min_idx = 30
+
+for x in calls:
+    for i in range(5):
+        for j in range(5):
+            if bingo[i][j] == x:
+                bingo[i][j] = 0
+                if sum(bingo[i]) == 0:
+                    cnt += 1                    
+                if sum([bingo[x][j] for x in range(5)]) == 0:
+                    cnt += 1
+                if (i,j) in [(0,0), (1,1), (2,2), (3,3), (4,4)] and sum([bingo[k][k] for k in range(5)]) == 0:
+                    cnt += 1
+                if (i,j) in [(4,0), (3,1), (2,2), (1,3), (0,4)] and sum([bingo[4-k][k] for k in range(5)]) == 0:
+                    cnt += 1
+                if cnt == 3:
+                    min_idx = min(min_idx, calls.index(x)+1)
+print(min_idx)
 
         
 
