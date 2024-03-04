@@ -39,7 +39,7 @@ for x in calls:
                 cnt += 1
             if sum([bingo[k][k] for k in range(5)]) == 0:
                 cnt += 1
-            if sum([bingo[4-k][k] for k in rang]) == 0:
+            if sum([bingo[4-k][k] for k in range(5)]) == 0:
                 cnt += 1
             if cnt == 3:
                 print(calls.index(x) + 1)
