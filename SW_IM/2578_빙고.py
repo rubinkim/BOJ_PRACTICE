@@ -42,9 +42,8 @@ for x in calls:
                     print(calls.index(x)+1)
                 flag = True
                 break
-    if flag == True:
-        break
-print(min_idx)
+        if flag == True:
+            break
 
 """
 x = [11,42,30,14]
