@@ -28,10 +28,26 @@ for row in bingo:
 print()
 print(calls)
 
-for i in range(len(calls)):
-    for j in range(5):
-        for k in range(5):
-            if bingo[j][k] == calls[i]:
-                bingo[j][k] = 0
+d0 = [bingo[i][i] for i in range(5)]
+d1 = [bingo[4-i][i] for i in range(5)]
+
+cnt = 0
+
+for x in calls:
+    for i in range(5):
+        for j in range(5):
+            if bingo[i][j] == x:
+                bingo[i][j] = 0
+                if sum(bingo[i]) == 0:
+                    cnt += 1
+                if sum([bingo[x][j] for x in range(5)]) == 0:
+                    cnt += 1
+                if sum(d0) == 0:
+                    cnt += 1
+                if sum(d1) == 0:
+                    cnt += 1
+                if cnt == 3:
+                    print(calls.index(x) + 1)
+
                 
     
