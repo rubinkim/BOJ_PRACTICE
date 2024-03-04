@@ -24,6 +24,7 @@ for i in range(10):
 
 cnt = 0
 flag1 = False
+flag2 = False
 
 for x in calls:
     for i in range(5):
@@ -44,8 +45,8 @@ for x in calls:
                 break
         if flag1 == True:
             break
-        if flag == True:
-            break
+    if flag2 == True:
+        break
 
 """
 x = [11,42,30,14]
