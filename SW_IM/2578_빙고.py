@@ -44,7 +44,7 @@ print(min_idx)
 """
 
 x = [11,42,30,14]
-y = [-1,-2,-3,-4,-5]
+y = [-1,-2,-3,-4]
 z = [1,2,3,4,5]
 
 cnt = 0
@@ -55,7 +55,10 @@ for x_val in x:
             if (i, j) in [(2,0), (0,1), (1,1)]:
                 cnt += 1     
                 print(f"x_val : {x_val}, cnt : {cnt}, {(i,j)}")
-                break                    
+                flag = True
+                break
+        if flag == True:
+            break                    
              
 print()
 print(cnt)                    
