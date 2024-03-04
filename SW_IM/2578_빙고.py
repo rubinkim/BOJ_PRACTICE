@@ -43,10 +43,12 @@ for x in calls:
                     print(calls.index(x)+1)
                 flag1 = True
                 break
-        if flag1 == True:
-            break
+            if flag1 == True:
+                break
+            if bingo[i][j] == 0:
+                flag2 = True
+                break
     if flag2 == True:
-        flag2 = True
         break
 
 """
