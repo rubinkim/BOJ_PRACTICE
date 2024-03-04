@@ -47,7 +47,7 @@ for x in calls:
                     #for row in bingo:
                         #print(row)
                     min_idx.append(calls.index(x)+1)
-print(min_idx)
+print(min(min_idx))
 
         
 
