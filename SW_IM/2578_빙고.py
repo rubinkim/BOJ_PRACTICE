@@ -53,8 +53,8 @@ for x_val in x:
         for j in range(5):
             if (i, j) in [(2,3), (1,4), (1,1)]:
                 cnt += 1     
-                print(f"{cnt}, {(i,j)}")    
-            break   
+                print(f"{cnt}, {(i,j)}")                    
+             
 print()
 print(cnt)                    
         
