@@ -46,6 +46,7 @@ for x in calls:
         if flag1 == True:
             break
     if flag2 == True:
+        flag2 = True
         break
 
 """
