@@ -48,6 +48,7 @@ y = [-1,-2,-3,-4,-5]
 z = [1,2,3,4,5]
 
 cnt = 0
+flag = False
 for x_val in x:
     for i in range(4):
         for j in range(4):
