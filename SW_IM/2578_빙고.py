@@ -43,8 +43,8 @@ for x in calls:
                     cnt += 1
                 if cnt == 3:
                     print(f"x : {x},  cnt : {cnt}, x의 인덱스 : {calls.index(x) + 1}")
-                    for rr in bingo:
-                        print(rr)
+                    for row in bingo:
+                        print(row)
                 break
         
 
