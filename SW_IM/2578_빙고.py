@@ -11,7 +11,7 @@
 3 18 1 6 25
 12 19 23 14 21
 11 24 9 20 15
-"""
+
 
 bingo = []
 calls = []
@@ -41,7 +41,22 @@ for x in calls:
                 if cnt == 3:
                     min_idx = min(min_idx, calls.index(x)+1)
 print(min_idx)
+"""
 
+x = [11,42,3,14,59,26,17,93]
+y = [-1,-2,-3,-4,-5]
+z = [1,2,3,4,5]
+
+cnt = 0
+for x_val in x:
+    for i in range(5):
+        for j in range(5):
+            if (i, j) in [(2,3), (1,4), (1,1)]:
+                cnt += 1     
+                print(f"{cnt}, {(i,j)}")    
+            break   
+print()
+print(cnt)                    
         
 
     
