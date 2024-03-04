@@ -22,11 +22,12 @@ for i in range(10):
         bingo.append(list(map(int, input().split())))
     else:
         calls.extend(list(map(int, input().split())))        
-        
+"""        
 for row in bingo:
     print(row)
 print()
 print(calls)
+"""
 
 d0 = [bingo[i][i] for i in range(5)]
 d1 = [bingo[4-i][i] for i in range(5)]
