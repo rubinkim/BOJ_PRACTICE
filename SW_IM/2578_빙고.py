@@ -51,10 +51,10 @@ cnt = 0
 for x_val in x:
     for i in range(4):
         for j in range(4):
-            if (i, j) in [(2,3), (3,2), (3,1)]:
+            if (i, j) in [(2,0), (0,1), (1,1)]:
                 cnt += 1     
                 print(f"x_val : {x_val}, cnt : {cnt}, {(i,j)}")
-            break                    
+                break                    
              
 print()
 print(cnt)                    
