@@ -23,7 +23,7 @@ for i in range(10):
         calls.extend(list(map(int, input().split())))        
 
 cnt = 0
-flag = False
+flag1 = False
 
 for x in calls:
     for i in range(5):
@@ -40,8 +40,10 @@ for x in calls:
                     cnt += 1
                 if cnt == 3:
                     print(calls.index(x)+1)
-                flag = True
+                flag1 = True
                 break
+        if flag1 == True:
+            break
         if flag == True:
             break
 
