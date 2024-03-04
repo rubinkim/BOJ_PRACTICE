@@ -44,7 +44,7 @@ for x in calls:
                 if cnt == 3:
                     print(calls.index(x) + 1)
                 break
-        break
+
 
                 
     
