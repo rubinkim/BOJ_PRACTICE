@@ -46,6 +46,7 @@ for x in calls:
                     for row in bingo:
                         print(row)
                 break
+    break
         
 
     
