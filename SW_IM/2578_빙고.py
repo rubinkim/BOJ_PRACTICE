@@ -20,7 +20,13 @@ for i in range(10):
     if i < 5:
         bingo.append(list(map(int, input().split())))
     else:
-        calls.extend(list(map(int, input().split())))        
+        calls.extend(list(map(int, input().split()))) 
+print()
+for row in bingo:
+    print(row)
+print()
+print(calls)
+print()       
 
 cnt = 0
 
