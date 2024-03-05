@@ -87,9 +87,8 @@ for i in range(5):
     for j in range(5):
         pos_lst[arr[i][j]] = (i, j)
         
-print(arr)
-
-print(pos_lst)
+#print(arr)
+#print(pos_lst)
     
 
 
