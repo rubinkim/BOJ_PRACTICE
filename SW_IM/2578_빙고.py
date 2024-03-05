@@ -77,7 +77,10 @@ print()
 print(cnt)
 """                    
         
-
+arr = [list(map(int, input().split())) for _ in range(5)]
+lst = []
+for _ in range(5):
+    lst += list(map(int, input().split()))
     
 
 
