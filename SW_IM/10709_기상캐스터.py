@@ -33,3 +33,5 @@ for _ in range(H):
     
 for row in joi:
     print(row)
+
+print(joi)
