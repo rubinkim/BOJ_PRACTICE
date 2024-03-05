@@ -93,6 +93,8 @@ for i in range(5):
 v = [[0] * 10 for _ in range(4)]  
 for n in lst:
     i, j = pos_lst[n]
+    v[0][j] += 1        # 세로방향 개수를 누적한다.
+    
 
     
 
