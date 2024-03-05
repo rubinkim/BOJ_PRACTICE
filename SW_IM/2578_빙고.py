@@ -23,10 +23,9 @@ for i in range(10):
         calls.extend(list(map(int, input().split())))        
 
 cnt = 0
-flag1 = False
-flag2 = False
 
 for x in calls:
+    flag1 = False
     for i in range(5):
         for j in range(5):
             if bingo[i][j] == x:
@@ -39,17 +38,16 @@ for x in calls:
                     cnt += 1
                 if (i,j) in [(4,0), (3,1), (2,2), (1,3), (0,4)] and sum([bingo[4-k][k] for k in range(5)]) == 0:
                     cnt += 1
-                if cnt == 3:
+                if cnt >= 3:
                     print(calls.index(x)+1)
+                    exit(0)        
+
                 flag1 = True
                 break
-            if flag1 == True:
-                break
-            if bingo[i][j] == 0:
-                flag2 = True
-                break
-    if flag2 == True:
-        break
+        if flag1 == True:
+            break
+
+
 
 """
 x = [11,42,30,14]
