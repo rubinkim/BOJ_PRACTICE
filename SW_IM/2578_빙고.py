@@ -100,6 +100,10 @@ for n in lst:
     
     cnt = 0
     for tlst in v:
+        cnt += tlst.count(5)
+    if cnt >= 3:
+        break
+print(sum(v[0]))
     
     
 
