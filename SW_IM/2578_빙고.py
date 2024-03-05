@@ -40,9 +40,9 @@ for x in calls:
                     cnt += 1                    
                 if sum([bingo[x][j] for x in range(5)]) == 0:
                     cnt += 1
-                if (i,j) in [(0,0), (1,1), (2,2), (3,3), (4,4)] and sum([bingo[k][k] for k in range(5)]) == 0:
+                if (i,j) in [(k,k) for k in range(5)] and sum([bingo[k][k] for k in range(5)]) == 0:
                     cnt += 1
-                if (i,j) in [(4,0), (3,1), (2,2), (1,3), (0,4)] and sum([bingo[4-k][k] for k in range(5)]) == 0:
+                if (i,j) in [(4-k,k) for k in range(5)] and sum([bingo[4-k][k] for k in range(5)]) == 0:
                     cnt += 1
                 if cnt >= 3:
                     print(calls.index(x)+1)
