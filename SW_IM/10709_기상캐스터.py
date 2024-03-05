@@ -27,9 +27,11 @@ c..c
 """
 
 H, W = map(int, input().split())
-joi = []
-for _ in range(H):
-    joi.append(" ".join(input()))
+joi = [[0] * W for _ in range(H)]
+for i in range(H):
+    row = input()
+    for j in range(W):
+        joi[i][j] = row[j]    
     
 for row in joi:
     print(row)
