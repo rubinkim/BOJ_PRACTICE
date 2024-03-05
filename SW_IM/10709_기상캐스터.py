@@ -43,10 +43,10 @@ print(joi[0][1])
 """
 
 lst = ['.', 'c', 'c', 'c', '.', '.', 'c', '.']
-cloudy = [0] * len(lst)
+cloudy = [-100] * len(lst)
 
-print(lst)
-print(cloudy)
+#print(lst)
+#print(cloudy)
 
 for i in range(len(lst)):
     if lst[i] == '.':
