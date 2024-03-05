@@ -35,3 +35,4 @@ for row in joi:
     print(row)
 
 print(joi)
+print(len(joi))
