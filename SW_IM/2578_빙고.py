@@ -89,6 +89,8 @@ for i in range(5):
         
 #print(arr)
 #print(pos_lst)
+
+v = [[0] * 10 for _ in range(4)]  
     
 
 
