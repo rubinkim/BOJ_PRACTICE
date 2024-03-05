@@ -31,7 +31,7 @@ print()
 cnt = 0
 
 for x in calls:
-    flag1 = False
+    flag = False
     for i in range(5):
         for j in range(5):
             if bingo[i][j] == x:
