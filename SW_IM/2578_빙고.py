@@ -82,6 +82,10 @@ lst = []
 for _ in range(5):
     lst += list(map(int, input().split()))
     
+pos_lst = [0] * 26
+for i in range(5):
+    for j in range(5):
+    
 
 
                 
