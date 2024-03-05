@@ -36,6 +36,7 @@ for i in range(H):
 for row in joi:
     print(row)
 
-print(joi)
+#print(joi)
 print(len(joi))
 print(len(joi[0]))
+print(joi[0][1])
