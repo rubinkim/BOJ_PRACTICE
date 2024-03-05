@@ -24,7 +24,7 @@ c..c
 -1 -1 -1 -1 0 1 2 3
 -1 -1 0 1 0 0 1 2
 -1 -1 -1 -1 0 1 2 3
-"""
+
 
 H, W = map(int, input().split())
 joi = [[0] * W for _ in range(H)]
@@ -40,3 +40,22 @@ for row in joi:
 print(len(joi))
 print(len(joi[0]))
 print(joi[0][1])
+"""
+
+lst = ['.', 'c', 'c', 'c', '.', '.', 'c', '.']
+cloudy = [0] * len(lst)
+
+print(lst)
+print(cloudy)
+
+for i in range(len(lst)):
+    if lst[i] == '.':
+        cloudy[i] = -1
+    else:
+        cloudy[i] = 0
+        cnt = 1
+        for j in range(i+1, len(lst)):
+            cloudy[j] = cloudy[i] + cnt
+            cnt += 1
+            
+print(cloudy)
