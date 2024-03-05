@@ -91,6 +91,9 @@ for i in range(5):
 #print(pos_lst)
 
 v = [[0] * 10 for _ in range(4)]  
+for n in lst:
+    i, j = pos_lst[n]
+
     
 
 
