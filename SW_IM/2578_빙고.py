@@ -99,7 +99,7 @@ for n in lst:
     v[3][i+j] += 1      # 우상햗 대각선방향 개수를 누적한다.
     
     cnt = 0
-    
+    for tlst in v:
     
     
 
