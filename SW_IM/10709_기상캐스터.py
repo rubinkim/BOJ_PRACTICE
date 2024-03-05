@@ -25,3 +25,11 @@ c..c
 -1 -1 0 1 0 0 1 2
 -1 -1 -1 -1 0 1 2 3
 """
+
+H, W = map(int, input().split())
+joi = []
+for _ in range(H):
+    joi += " ".join(input())
+    
+for row in joi:
+    print(row)
