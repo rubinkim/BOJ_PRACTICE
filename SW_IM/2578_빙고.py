@@ -48,7 +48,7 @@ for x in calls:
                     print(calls.index(x)+1)
                     exit(0)        
 
-                flag1 = True
+                flag = True
                 break
         if flag1 == True:
             break
