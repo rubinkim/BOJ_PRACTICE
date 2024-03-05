@@ -29,7 +29,7 @@ c..c
 H, W = map(int, input().split())
 joi = []
 for _ in range(H):
-    joi += " ".join(input())
+    joi.append(" ".join(input()))
     
 for row in joi:
     print(row)
