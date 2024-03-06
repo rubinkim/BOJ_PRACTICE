@@ -39,3 +39,6 @@ for i in range(H):
             if cnt >= 0:
                 cnt += 1
         v[i][j] = cnt
+
+for lst in v:
+    print(*lst)
