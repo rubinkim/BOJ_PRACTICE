@@ -49,3 +49,4 @@ cloudy = [-5] * len(lst)
 #print(lst)
 #print(cloudy)
 
+for i in range(len(lst)):
