@@ -50,6 +50,8 @@ cloudy = [-5] * len(lst)
 #print(cloudy)
 
 for i in range(len(lst)):
+    if cloudy[i] != 5:
+        continue
     if lst[i] == '.':
         cloudy[i] = -1
     if lst[i] == 'c':
@@ -58,9 +60,6 @@ for i in range(len(lst)):
         for j in range(i+1, len(lst)):
             cloudy[j] = cnt
             cnt += 1
-            if lst[j] == 'c':
-                new_c = j
+            if lst[j] == 'c':                
                 cnt = 1
                 break
-    if i <= new_c:
-        continue
