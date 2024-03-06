@@ -14,3 +14,9 @@
 
 36
 """
+
+N, L = map(int, input().split())
+drg = [(0, 0, 0)]
+for _ in range(N):
+    d, r, g = map(int, input().split())
+    drg.append((d, r, g))
