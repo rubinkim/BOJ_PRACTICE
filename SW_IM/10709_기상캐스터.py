@@ -56,3 +56,5 @@ for i in range(len(lst)):
         cloudy[i] = 0
         cnt = 1
         for j in range(i+1, len(lst)):
+            cloudy[j] = cnt
+            cnt += 1
