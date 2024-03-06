@@ -22,10 +22,13 @@ for _ in range(N):
     drg.append((d, r, g))
     
 t = 0
+
 for i in range(1, len(drg)):
     t += drg[i][0] - drg[i-1][0]
     if t - (t // (drg[i][1] + drg[i][2])) * (drg[i][1] + drg[i][2]) <= drg[i][1]:
-        t = drg[i][1]
-t += L - drg[-1][0]
+        t += (drg[i][1] -t) 
+        
+    #print(f"i : {i}    t : {t}")
 
-print(t)  
+t += L - drg[-1][0]
+print(t)   
