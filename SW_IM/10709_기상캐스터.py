@@ -26,4 +26,8 @@ c..c
 -1 -1 -1 -1 0 1 2 3
 """
 
+H, W = map(int, input().split())
+arr = [input() for _ in range(H)]
+v = [[0] * W for _ in range(H)]
+
 
