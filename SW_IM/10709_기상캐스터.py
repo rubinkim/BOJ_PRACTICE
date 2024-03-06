@@ -52,4 +52,7 @@ cloudy = [-5] * len(lst)
 for i in range(len(lst)):
     if lst[i] == '.':
         cloudy[i] = -1
-    if 
+    if lst[i] == 'c':
+        cloudy[i] = 0
+        cnt = 1
+        for j in range(i+1, len(lst)):
