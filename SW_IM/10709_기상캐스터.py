@@ -62,4 +62,5 @@ for i in range(len(lst)):
                 new_c = j
                 cnt = 1
                 break
-            
+    if i <= new_c:
+        continue
