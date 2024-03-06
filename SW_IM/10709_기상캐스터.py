@@ -30,4 +30,5 @@ H, W = map(int, input().split())
 arr = [input() for _ in range(H)]
 v = [[0] * W for _ in range(H)]
 
-
+for i in range(H):
+    cnt = -1
