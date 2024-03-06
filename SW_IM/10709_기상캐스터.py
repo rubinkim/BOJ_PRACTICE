@@ -58,3 +58,8 @@ for i in range(len(lst)):
         for j in range(i+1, len(lst)):
             cloudy[j] = cnt
             cnt += 1
+            if lst[j] == 'c':
+                new_c = j
+                cnt = 1
+                break
+            
