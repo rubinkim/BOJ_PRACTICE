@@ -44,7 +44,7 @@ print(joi[0][1])
 
 #lst = ['.', 'c', 'c', 'c', '.', '.', 'c', '.']
 lst = ['.', '.', 'c', 'c', '.', 'c', '.', '.', '.', 'c']
-cloudy = [-100] * len(lst)
+cloudy = [-5] * len(lst)
 
 #print(lst)
 #print(cloudy)
