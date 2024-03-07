@@ -16,4 +16,6 @@ N, K = map(int, input().split())
 lst = list(map(int, input().split()))
 
 max_val = -1001
-
+for i in range(len(lst - K + 1)):
+    max_val = max(max_val, sum([x for x in lst[i:i+K]]))
+print(max_val)
