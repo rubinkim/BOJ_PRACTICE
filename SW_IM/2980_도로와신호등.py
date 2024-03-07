@@ -31,5 +31,5 @@ for i in range(1, len(drg)):
         
     #print(f"i : {i}    t : {t}")
 
-t += L - drg[-1][0]
+t = t + L - drg[-1][0]
 print(t)   
