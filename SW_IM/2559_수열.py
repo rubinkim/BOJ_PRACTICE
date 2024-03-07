@@ -34,6 +34,6 @@ lst = list(map(int, input().split()))
 
 ans = sm = lst[:K]
 for i in range(K, N):
-    sm = - lst[i-K] + sm + lst[i]
+    sm = sm + lst[i] - lst[i-K]
     ans = max(ans, sm)
 print(ans)
