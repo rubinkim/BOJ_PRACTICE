@@ -25,8 +25,6 @@ lst = list(map(int, input().split()))
 
 max_val = -1001
 for i in range(len(lst) - K + 1):
-    if i == 0:
-        max_val = max(max_val, sum(lst[i:i+K]))
-    else:
-        max_val = max(max_val, max_val - lst[i-1] + lst[i+K-1])
+    max_val = max(max_val, sum(lst[i:i+K]))
+
 print(max_val)
