@@ -5,6 +5,7 @@
 
 N = int(input())
 cnt5 = N // 5
+cnt3 = (N - cnt5 * 5) // 3
 
 while cnt5 >= 5:
     cnt3 = (N - cnt5 * 5) // 3
