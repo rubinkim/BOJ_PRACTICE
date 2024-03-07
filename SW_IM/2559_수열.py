@@ -35,5 +35,6 @@ lst = list(map(int, input().split()))
 max_val = sum(lst[:K])
 print(max_val)
 for i in range(1, len(lst)-K+1):
+    print(f"i : {i},  {i-1}번쨰값 : {lst[i-1]},  {i+K-1}번째값 : {lst[i+K-1]}")
     max_val = max(max_val, max_val-lst[i-1]+lst[i+K-1])
 print(max_val)
