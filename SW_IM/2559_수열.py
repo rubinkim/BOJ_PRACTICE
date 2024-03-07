@@ -32,8 +32,8 @@ print(max_val)
 N, K = map(int, input().split())
 lst = list(map(int, input().split()))
 
-ans = sm = lst[:K]
+ans = sm = sum(lst[:K])
 for i in range(K, N):
-    sm = sm + lst[i] - lst[i-K]
+    sm = - lst[i-K] + sm + lst[i] 
     ans = max(ans, sm)
 print(ans)
