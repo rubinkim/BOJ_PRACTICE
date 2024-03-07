@@ -28,5 +28,5 @@ for i in range(len(lst) - K + 1):
     if i == 0:
         max_val = max(max_val, sum([x for x in lst[i:i+K]]))
     else:
-        max_val = max(max_val, max_val - lst[i-1] + lst[i+k])
+        max_val = max(max_val, max_val - lst[i-1] + lst[i+K])
 print(max_val)
