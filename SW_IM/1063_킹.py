@@ -45,7 +45,7 @@ king_y, king_x = convert_to_idx(king)
 stone_y, stone_x = convert_to_idx(stone)
 
 for _ in range(N):
-    dy, dx = convert_to_idx(input())
+    dy, dx = moves_dict[input()]
     if king_y + dy < 0 or king_y + dy > 8 or king_x + dx < 0 or king_x + dx > 8:
         continue
     if 0 <= king_y + dy <= 8 and 0 <= king_x + dx <= 8:
