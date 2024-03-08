@@ -21,3 +21,4 @@ row = '87654321'
 col = 'ABCDEFGH'
 for i in range(len(row)):
     for j in range(len(col)):
+        board[i][j] = row[i] + col[j]
