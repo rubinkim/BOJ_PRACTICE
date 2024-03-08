@@ -48,6 +48,11 @@ for _ in range(N):
             king_y += dy
             king_x += dx
         if king_y + dy == stone_y and king_x + dx == stone_x and 0 <= stone_y + dy <=8 and 0 <= stone_x + dx <= 8:
+            king_y += dy
+            king_x += dx
+            stone_y += dy
+            stone_y += dx
+        if king_y + dy == stone_y and king_x + dx == stone_x and (stone_y + dy < 0 or stone_y + dy > 8 or stone_x + dx < 0 or stone_x + dx > 8):
+            continue
         
 
-    
