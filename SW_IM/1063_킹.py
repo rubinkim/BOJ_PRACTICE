@@ -63,7 +63,7 @@ LB
 (B2, A1)
 
 """
-
+"""
 king, stone, N = input().split()
 N = int(N)
 
@@ -110,3 +110,8 @@ for _ in range(N):
 
 print(convert_to_position(*(king_y, king_x)))
 print(convert_to_position(*(stone_y, stone_x)))
+"""
+
+K, S, N = input().split()
+N = int(N)
+dct = {'L':(0,-1), 'R':(), 'T':(), 'B':(), 'LT':(), 'RT':(), 'LB':(), 'RB':()}
