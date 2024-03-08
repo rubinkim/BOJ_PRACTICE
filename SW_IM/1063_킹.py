@@ -135,3 +135,6 @@ for _ in range(N):
             if 1 <= ei <= 8 and 1 <= ej <= 8:
                 ci, cj = ni, nj
                 si, sj = ei, ej
+        else:
+            ci, cj = ni, nj
+            
