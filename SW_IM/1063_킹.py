@@ -121,3 +121,10 @@ def toPos(st):
 
 def toAB(i, j):
     return chr((j-1) + ord('A')) + str(i)
+
+ci, cj = toPos(K)
+si, sj = toAB(S)
+
+for _ in range(N):
+    di, dj = dct[input()]
+    
