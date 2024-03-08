@@ -27,4 +27,4 @@ for row in board:
     print(row)
     
 directions = ['R', 'L', 'B', 'T', 'RT', 'LT', 'RB', 'LB']
-moves = [()]
+moves = [(0, 1), (0, -1), (1, 0), (-1, 0), (1, -1), (-1, -1), (1, 1), (-1, 1)]
