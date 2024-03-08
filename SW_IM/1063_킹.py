@@ -36,5 +36,6 @@ for k, v in zip(directions, moves):
 print(moves_dict)
 
 def convert_to_idx(x):
-    return (8 - int(x[1]), ord(x[0] - 65))
+    return (8 - int(x[1]), ord(x[0]) - 65)
+
     
