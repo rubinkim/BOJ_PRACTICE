@@ -15,3 +15,8 @@ king_x, king_y = ord(king[0]) - 64, int(king[1])
 stone_x, stone_y = ord(stone[0]) - 64, int(stone[1])
 print(f"king : {king},  stone : {stone},  N : {N}")
 print(f"king_x : {king_x},  king_y : {king_y},  stone_x : {stone_x},  stone_y : {stone_y}")
+
+board = [[0] * 8 for _ in range(8)]
+row = '87654321'
+col = 'ABCDEFGH'
+for i in range()
