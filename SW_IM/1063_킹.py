@@ -36,6 +36,11 @@ print(moves_dict)
 def convert_to_idx(x):
     return (8 - int(x[1]), ord(x[0]) - 65)
 
+def convert_to_position(y, x):
+    new_y = str(8 - y)
+    new_x = chr(x + 65)
+    return new_x + new_y 
+
 king_y, king_x = convert_to_idx(king)
 stone_y, stone_x = convert_to_idx(stone)
 
@@ -56,3 +61,4 @@ for _ in range(N):
             continue
         
 
+print(convert_)
