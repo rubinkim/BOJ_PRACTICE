@@ -123,7 +123,7 @@ def toAB(i, j):
     return chr((j-1) + ord('A')) + str(i)
 
 ci, cj = toPos(K)
-si, sj = toAB(S)
+si, sj = toPos(S)
 
 for _ in range(N):
     di, dj = dct[input()]
@@ -138,3 +138,4 @@ for _ in range(N):
         else:
             ci, cj = ni, nj
             
+print(toAB(ci, cj), toAB(si, sj), sep='\n')
