@@ -129,3 +129,9 @@ for _ in range(N):
     di, dj = dct[input()]
     ni, nj = ci + di, cj + dj
     
+    if 1 <= ni <= 8 and 1 <= nj <= 8:
+        if (ni, nj) == (si, sj):
+            ei, ej = si + di, sj + dj
+            if 1 <= ei <= 8 and 1 <= ej <= 8:
+                ci, cj = ni, nj
+                si, sj = ei, ej
