@@ -36,7 +36,9 @@ print(moves_dict)
 def convert_to_idx(x):
     return (8 - int(x[1]), ord(x[0]) - 65)
 
-king
+king_y, king_x = convert_to_idx(king)
+stone_y, stone_x = convert_to_idx(stone)
+
 for _ in range(N):
     y, x = convert_to_idx(input())
     
