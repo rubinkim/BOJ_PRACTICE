@@ -127,4 +127,5 @@ si, sj = toAB(S)
 
 for _ in range(N):
     di, dj = dct[input()]
+    ni, nj = ci + di, cj + dj
     
