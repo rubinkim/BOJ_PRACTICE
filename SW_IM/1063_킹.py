@@ -28,3 +28,6 @@ for row in board:
     
 directions = ['R', 'L', 'B', 'T', 'RT', 'LT', 'RB', 'LB']
 moves = [(0, 1), (0, -1), (1, 0), (-1, 0), (1, -1), (-1, -1), (1, 1), (-1, 1)]
+
+moves_dict = {}
+for k, v in zip(directions, moves):
