@@ -8,6 +8,60 @@ RB
 LT
 
 (A1, A2)
+
+
+A1 H8 1
+T
+
+(A2, H8)
+
+
+
+A1 A2 1
+T
+
+(A2, A3)
+
+
+A1 A2 2
+T
+R
+
+(B2, A3)
+
+
+
+A8 B7 18
+RB
+RB
+RB
+RB
+RB
+RB
+RB
+RB
+RB
+RB
+RB
+RB
+RB
+RB
+RB
+RB
+RB
+RB
+
+(G2, H1)
+
+
+
+C1 B1 3
+L
+T
+LB
+
+(B2, A1)
+
 """
 
 king, stone, N = input().split()
