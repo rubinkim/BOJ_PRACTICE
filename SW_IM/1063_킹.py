@@ -34,3 +34,7 @@ for k, v in zip(directions, moves):
     moves_dict[k] = v
     
 print(moves_dict)
+
+for _ in range(N):
+    dr = input()
+    
