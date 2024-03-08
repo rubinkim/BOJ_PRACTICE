@@ -119,3 +119,5 @@ dct = {'L':(0,-1), 'R':(0,1), 'T':(1,0), 'B':(-1,0), 'LT':(1,-1), 'RT':(1,1), 'L
 def toPos(st):
     return int(st[1]), ord(st[0]) - ord('A') + 1
 
+def toAB(i, j):
+    return chr((j-1) + ord('A')) + str(i)
