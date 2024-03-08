@@ -114,4 +114,8 @@ print(convert_to_position(*(stone_y, stone_x)))
 
 K, S, N = input().split()
 N = int(N)
-dct = {'L':(0,-1), 'R':(0,1), 'T':(1,0), 'B':(-1,0), 'LT':(), 'RT':(), 'LB':(), 'RB':()}
+dct = {'L':(0,-1), 'R':(0,1), 'T':(1,0), 'B':(-1,0), 'LT':(1,-1), 'RT':(1,1), 'LB':(-1,-1), 'RB':(-1,1)}
+
+def toPos(st):
+    return int(st[1]), ord(st[0]) - ord('A') + 1
+
