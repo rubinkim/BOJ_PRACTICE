@@ -41,7 +41,13 @@ stone_y, stone_x = convert_to_idx(stone)
 
 for _ in range(N):
     dy, dx = convert_to_idx(input())
+    if king_y + dy < 0 or king_y + dy > 8 or king_x + dx < 0 or king_x + dx > 8:
+        continue
     if 0 <= king_y + dy <= 8 and 0 <= king_x + dx <= 8:
-        king_y += dy
-        king_x += dx
+        if king_y + dy != stone_y and king_x + dx != stone_x:
+            king_y += dy
+            king_x += dx
+        if king_y + dy == stone_y and king_x + dx == stone_x and 0 <= stone_y + dy <=8 and 0 <= stone_x + dx <= 8:
+        
+
     
