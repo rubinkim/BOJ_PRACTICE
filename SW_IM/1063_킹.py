@@ -19,9 +19,9 @@ print(f"king_x : {king_x},  king_y : {king_y},  stone_x : {stone_x},  stone_y : 
 board = [[0] * 8 for _ in range(8)]
 row = '87654321'
 col = 'ABCDEFGH'
-for j in range(len(col)):
-    for i in range(len(row)):
-        board[i][j] = col[i] + row[j]
+for i in range(len(row)):
+    for j in range(len(col)):
+        board[i][j] = col[j] + row[i]
 
 for row in board:
     print(row)
