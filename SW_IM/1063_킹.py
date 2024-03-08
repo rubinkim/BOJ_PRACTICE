@@ -22,3 +22,8 @@ col = 'ABCDEFGH'
 for i in range(len(row)):
     for j in range(len(col)):
         board[i][j] = row[i] + col[j]
+
+for row in board:
+    print(row)
+    
+directions = ['R', 'L', 'B', 'T', 'RT', 'LT', 'RB', 'LB']
