@@ -61,4 +61,5 @@ for _ in range(N):
             continue
         
 
-print(convert_)
+print(convert_to_position(king_y, king_x))
+print(convert_to_position(stone_y, stone_x))
