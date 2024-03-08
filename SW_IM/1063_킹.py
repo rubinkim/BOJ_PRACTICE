@@ -40,5 +40,8 @@ king_y, king_x = convert_to_idx(king)
 stone_y, stone_x = convert_to_idx(stone)
 
 for _ in range(N):
-    y, x = convert_to_idx(input())
+    dy, dx = convert_to_idx(input())
+    if 0 <= king_y + dy <= 8 and 0 <= king_x + dx <= 8:
+        king_y += dy
+        king_x += dx
     
