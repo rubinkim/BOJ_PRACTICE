@@ -9,3 +9,6 @@ LT
 
 (A1, A2)
 """
+
+king, stone, N = input().split()
+print(f"king : {king},  stone : {stone},  N : {N}")
