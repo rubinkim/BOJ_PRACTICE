@@ -11,8 +11,6 @@ LT
 """
 
 king, stone, N = input().split()
-king_x, king_y = ord(king[0]) - 64, int(king[1])
-stone_x, stone_y = ord(stone[0]) - 64, int(stone[1])
 print(f"king : {king},  stone : {stone},  N : {N}")
 print(f"king_x : {king_x},  king_y : {king_y},  stone_x : {stone_x},  stone_y : {stone_y}")
 
@@ -38,4 +36,7 @@ print(moves_dict)
 def convert_to_idx(x):
     return (8 - int(x[1]), ord(x[0]) - 65)
 
+king
+for _ in range(N):
+    y, x = convert_to_idx(input())
     
