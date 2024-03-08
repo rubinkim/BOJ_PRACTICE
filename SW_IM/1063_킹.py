@@ -11,8 +11,8 @@ LT
 """
 
 king, stone, N = input().split()
+N = int(N)
 print(f"king : {king},  stone : {stone},  N : {N}")
-print(f"king_x : {king_x},  king_y : {king_y},  stone_x : {stone_x},  stone_y : {stone_y}")
 
 board = [[0] * 8 for _ in range(8)]
 row = '87654321'
