@@ -11,4 +11,6 @@ LT
 """
 
 king, stone, N = input().split()
+king_x, king_y = ord(king[0]) - 64, int(king[1])
+stone
 print(f"king : {king},  stone : {stone},  N : {N}")
