@@ -33,7 +33,11 @@ current_height = H[0]
 current_left = L[0]
 area = 0
 
-
+for i in range(len(L)):
+    current_idx = i
+    if H[current_idx] == max(H[current_idx:]):
+        
+    
 
 
         
