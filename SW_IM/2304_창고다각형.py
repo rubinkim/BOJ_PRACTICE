@@ -39,9 +39,9 @@ for i in range(len(L)):
         next_idx = H.index(max(H[current_idx+1:]))
         area += H[current_idx] + (next_idx - current_idx - 1) * H[next_idx]
     elif H[current_idx] < max(H[current_idx:]) and H[current_idx] <= H[current_idx + 1]:
-        area += H[current_idx] * 1
+        area += H[current_idx] * (L[current_idx + 1] - L[current_idx])
     elif H[current_idx] < max(H[current_idx:]) and H[current_idx] > H[current_idx + 1]:
-        continue
+        area += H[current_idx] * (L[current_idx + 1] - L[current_idx])
         
 print(area)
 
