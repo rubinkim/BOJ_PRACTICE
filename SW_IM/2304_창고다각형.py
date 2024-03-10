@@ -43,7 +43,7 @@ for i in range(len(L)):
     elif H[current_idx] < max(H[current_idx:]) and H[current_idx] > H[current_idx + 1]:
         continue
         
-    
+print(area)
 
 
         
