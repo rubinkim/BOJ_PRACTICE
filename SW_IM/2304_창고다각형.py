@@ -15,7 +15,7 @@
 N = int(input())
 lst = []
 for _ in range(N):
-    left, height = input().split()
+    left, height = map(int, input().split())
     lst.append((left, height))
     
 lst.sort(key=lambda x : x[0])
