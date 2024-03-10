@@ -41,7 +41,8 @@ for i in range(len(L)):
     elif H[current_idx] < max(H[current_idx:]) and H[current_idx] <= H[current_idx + 1]:
         area += H[current_idx] * (L[current_idx + 1] - L[current_idx])
     elif H[current_idx] < max(H[current_idx:]) and H[current_idx] > H[current_idx + 1]:
-        area += H[current_idx] * (L[current_idx + 1] - L[current_idx])
+        next_highter_idx = [i for i in range(current_idx+1, len(H)) if H[i] >= H[current_idx]][0]
+        area += H[current_idx] * (L[next_highter_idx] - L[current_idx])
         
 print(area)
 
