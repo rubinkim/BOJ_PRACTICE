@@ -23,4 +23,8 @@ print(lst)
 
 L, H = [], []
 for l, h in lst:
+    L.append(l)
+    H.append(h)
     
+print(L)
+print(H)
