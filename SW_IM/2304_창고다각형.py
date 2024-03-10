@@ -31,13 +31,10 @@ print(H)
 
 current_height = H[0]
 current_left = L[0]
-i = 1
 area = 0
 
-def find_max_height(idx):
-    global H, L
-    current_idx = idx
-    current_height = H[idx]
-    current_left = L[idx]
-    if current_height == max(H[current_idx:])
+
+
+
+        
     
