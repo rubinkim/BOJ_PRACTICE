@@ -20,3 +20,7 @@ for _ in range(N):
     
 lst.sort(key=lambda x : x[0])
 print(lst)
+
+L, H = [], []
+for l, h in lst:
+    
