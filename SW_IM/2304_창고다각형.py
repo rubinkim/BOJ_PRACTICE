@@ -13,3 +13,5 @@
 """
 
 N = int(input())
+lst = []
+for _ in range(N):
