@@ -51,7 +51,9 @@ lst = [0] * 1001
 mx = 0
 mx_i = 0
 
- 
+for _ in range(N):
+    L, H = map(int, input().split())
+     
         
         
     
