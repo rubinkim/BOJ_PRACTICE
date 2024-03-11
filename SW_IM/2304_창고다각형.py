@@ -44,7 +44,7 @@ while current_idx <= len(H)-1:
         
     elif all([H[current_idx] > H[x] for x in range(current_idx+1, N)]):
         first_idx = H.index(max(H[current_idx+1 : N]))
-        area = area + H[current_idx] * 1 + (L[first_idx] - L[current_idx] - 1) * H[first_idx]
+        area = area + H[current_idx] * 1 + (L[first_idx] - L[current_idx]) * H[first_idx]
         print(f"current_idx : {current_idx}, area : {area}")
         current_idx = first_idx
         
