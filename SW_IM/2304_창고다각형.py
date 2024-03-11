@@ -32,7 +32,8 @@ print(f"H : {H}")
 area = 0
 current_idx = 0
 
-
+while current_idx <= len(H)-1:
+    
 
         
     
