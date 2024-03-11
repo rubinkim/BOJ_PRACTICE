@@ -26,8 +26,8 @@ for l, h in lst:
     L.append(l)
     H.append(h)
     
-print(L)
-print(H)
+print(f"L : {L}")
+print(f"H : {H}")
 
 
 
