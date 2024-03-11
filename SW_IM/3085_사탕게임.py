@@ -38,4 +38,7 @@ for row in lst:
     print(row)
     
 print()
+
+for row in lst_t:
+    print(row)
     
