@@ -53,7 +53,9 @@ mx_i = 0
 
 for _ in range(N):
     L, H = map(int, input().split())
-     
+    lst[L] = H
+    if mx < H:
+        mx_i, mx = L, H 
         
         
     
