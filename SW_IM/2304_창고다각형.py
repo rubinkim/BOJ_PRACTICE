@@ -33,6 +33,8 @@ area = 0
 current_idx = 0
 
 while current_idx <= len(H)-1:
+    if current_idx == len(H)-1:
+        break
     print(f"{H[current_idx]}, {[H[x] for x in range(current_idx+1, N)]}")
     if any([H[x] > H[current_idx] for x in range(current_idx+1, N)]):
         first_idx = [x for x in range(current_idx+1, N) if H[x] > H[current_idx]][0]
