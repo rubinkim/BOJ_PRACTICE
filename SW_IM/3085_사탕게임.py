@@ -26,3 +26,8 @@ CPPZZ
 
 4
 """
+N = int(input())
+lst = [list(input()) for _ in range(N)]
+
+for row in lst:
+    print(row)
