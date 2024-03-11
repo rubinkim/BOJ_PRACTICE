@@ -28,6 +28,8 @@ CPPZZ
 """
 N = int(input())
 lst = [list(input()) for _ in range(N)]
+lst_t = [[""] * N for _ in range(N)]
 
 for row in lst:
     print(row)
+    
