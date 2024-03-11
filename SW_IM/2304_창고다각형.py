@@ -48,6 +48,10 @@ print(area)
 
 N = int(input())
 lst = [0] * 1001
+mx = 0
+mx_i = 0
+
+ 
         
         
     
