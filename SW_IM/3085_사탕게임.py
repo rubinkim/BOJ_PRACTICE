@@ -15,4 +15,14 @@ CCPY
 PPCC
 
 4
+
+
+5
+YCPZY
+CYZZP
+CCPPP
+YCYZC
+CPPZZ
+
+4
 """
