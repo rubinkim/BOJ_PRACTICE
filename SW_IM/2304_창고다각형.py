@@ -64,7 +64,13 @@ for i in range(mx_i + 1):
     mx = max(mx, lst[i])
     ans += mx
     
-
+# 오른쪽 처리
+mx = 0
+for i in range(1000, mx_i, -1):
+    mx = max(mx, lst[i])
+    ans += mx
+    
+print(mx)
 
         
         
