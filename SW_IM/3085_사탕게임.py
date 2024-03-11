@@ -30,6 +30,12 @@ N = int(input())
 lst = [list(input()) for _ in range(N)]
 lst_t = [[""] * N for _ in range(N)]
 
+for i in range(N):
+    for j in range(N):
+        lst_t[i][j] = lst[j][i]
+
 for row in lst:
     print(row)
+    
+print()
     
