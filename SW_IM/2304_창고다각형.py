@@ -61,7 +61,10 @@ for _ in range(N):
 ans = 0
 mx = 0
 for i in range(mx_i + 1):
+    mx = max(mx, lst[i])
+    ans += mx
     
+
 
         
         
