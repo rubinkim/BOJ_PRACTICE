@@ -70,7 +70,7 @@ for i in range(1000, mx_i, -1):
     mx = max(mx, lst[i])
     ans += mx
     
-print(mx)
+print(ans)
 
         
         
