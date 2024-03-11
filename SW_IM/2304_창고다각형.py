@@ -55,7 +55,14 @@ for _ in range(N):
     L, H = map(int, input().split())
     lst[L] = H
     if mx < H:
-        mx_i, mx = L, H 
+        mx_i, mx = L, H
+
+# 哭率何磐 贸府
+ans = 0
+mx = 0
+for i in range(mx_i + 1):
+    
+
         
         
     
