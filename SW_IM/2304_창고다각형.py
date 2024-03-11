@@ -33,6 +33,7 @@ area = 0
 current_idx = 0
 
 while current_idx <= len(H)-1:
+    print([H[x] for x in range(current_idx+1, N)])
     if H[current_idx] < any([H[x] for x in range(current_idx+1, N)]):
         first_idx = [x for x in range(current_idx+1, N) if H[x] > H[current_idx]][0]
         area += (L[first_idx] - L[current_idx]) * H[current_idx]
