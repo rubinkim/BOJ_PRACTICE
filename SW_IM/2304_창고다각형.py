@@ -35,6 +35,7 @@ current_idx = 0
 while current_idx <= len(H)-1:
     if H[current_idx] < H[current_idx+1]:
         area += (L[current_idx+1] - L[current_idx]) * H[current_idx]
-
+        current_idx += 1
+        
         
     
