@@ -37,9 +37,10 @@ while current_idx <= len(H)-1:
         area += (L[current_idx+1] - L[current_idx]) * H[current_idx]
         current_idx += 1
         
-    if H[current_idx] >= any([H[x] for x in range(current_idx+1, N)]):
+    if H[current_idx] >= all([H[x] for x in range(current_idx+1, N)]):
         first_idx = H[current_idx+1, N].index(max(H[current_idx+1, N]))
-        area
+        area += (L[first_idx] - L[current_idx]) * H[current_idx]
+        current_idx = first_idx
         
         
     
