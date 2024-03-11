@@ -29,6 +29,9 @@ for l, h in lst:
 print(f"L : {L}")
 print(f"H : {H}")
 
+area = 0
+current_idx = 0
+
 
 
         
