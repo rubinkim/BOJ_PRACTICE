@@ -48,7 +48,7 @@ for i in range(1, mx_i+1):       # mx까지 포함
 current_left = lst[-1][0]
 current_height = lst[-1][1]
 
-for i in range(N-1, mx_i, -1):
+for i in range(N-1, mx_i-1, -1):
     if lst[i][1] > current_height:
         previous_left, previous_height = current_left, current_height
         current_left, current_height = lst[i][0], lst[i][1]
