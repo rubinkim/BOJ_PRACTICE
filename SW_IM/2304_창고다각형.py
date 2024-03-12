@@ -20,7 +20,7 @@ for _ in range(N):
     
 lst.sort(key=lambda x : x[0])
 
-print(lst)
+#print(lst)
 
 mx_i = 0
 mx = 0
@@ -30,7 +30,7 @@ for i in range(N):
         mx = max(mx, lst[i][1])
         mx_i = i
         
-print(f"mx_i : {mx_i},  mx : {mx}")
+#print(f"mx_i : {mx_i},  mx : {mx}")
 
 # 오른쪽 면적 계산
 area = 0
@@ -42,7 +42,7 @@ for i in range(1, mx_i+1):       # mx까지 포함
         previous_left, previous_height = current_left, current_height
         current_left, current_height = lst[i][0], lst[i][1]
         area += (current_left - previous_left) * previous_height
-        print(f"i : {i},  previous_left : {previous_left},  current_left : {current_left},  previous_height : {previous_height},  area : {area}")
+        #print(f"i : {i},  previous_left : {previous_left},  current_left : {current_left},  previous_height : {previous_height},  area : {area}")
     if i == mx_i:
         area += current_height * 1
         
@@ -55,7 +55,7 @@ for i in range(N-1, mx_i-1, -1):
         previous_left, previous_height = current_left, current_height
         current_left, current_height = lst[i][0], lst[i][1]
         area += (previous_left - current_left) * previous_height
-        print(f"i : {i},  previous_left : {previous_left},  current_left : {current_left},  previous_height : {previous_height},  area : {area}")
+        #print(f"i : {i},  previous_left : {previous_left},  current_left : {current_left},  previous_height : {previous_height},  area : {area}")
         
 print(area)
 
