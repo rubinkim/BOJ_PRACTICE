@@ -51,6 +51,9 @@ for i in range(N-1, mx_i, -1):
     if lst[i][1] > current_height:
         previous_left, previous_height = current_left, current_height
         current_left, current_height = lst[i][0], lst[i][1]
+        area += (previous_left - current_left) * previous_height
+        
+print(area)
 
 
 
