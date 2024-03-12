@@ -33,6 +33,7 @@ for i in range(N):
     if lst[i][1] > mx:
         mx = max(mx, lst[i][1])
         mx_i = i
+        break
 print(f"mx_i : {i},  mx : {mx}")
 
 """
