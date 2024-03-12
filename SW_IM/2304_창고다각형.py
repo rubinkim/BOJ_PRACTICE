@@ -23,7 +23,8 @@ lst.sort(key=lambda x : x[0])
 print(lst)
 
 area = 0
-
+current_left = lst[0][0]
+current_height = lst[0][1]
 
 """
 # 문어박사 풀이방법
