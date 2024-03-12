@@ -41,4 +41,10 @@ print()
 
 for row in lst_t:
     print(row)
-    
+
+cnt = 0    
+for i in range(N):
+    for j in range(N-1):
+        if lst[i][j] != lst[i][j+1]:
+            lst[i][j], lst[i][j+1] = lst[i][j+1], lst[i][j]
+            
