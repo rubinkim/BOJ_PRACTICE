@@ -32,19 +32,18 @@ for i in range(N):
         
 print(f"mx_i : {mx_i},  mx : {mx}")
 
-
+# 오른쪽 면적 계산
 area = 0
 current_left = lst[0][0]
 current_height = lst[0][1]
 
-# 오른쪽 면적 계산
 for i in range(1, mx_i+1):       # mx까지 포함
     if lst[i][1] > current_height:
         previoust_left, previous_height = current_left, current_height
         current_left, current_height = lst[i][0], lst[i][1]
         area += (current_left - previoust_left) * previous_height
         
-        
+
 
 
 
