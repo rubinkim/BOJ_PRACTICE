@@ -40,8 +40,12 @@ current_height = lst[0][1]
 # 오른쪽 면적 계산
 for i in range(1, mx_i+1):       # mx까지 포함
     if lst[i][1] > current_height:
-        current_left = lst[i][0]
-        current_height = lst[i][1]
+        previoust_left, previous_height = current_left, current_height
+        current_left, current_height = lst[i][0], lst[i][1]
+        area += (current_left - previoust_left) * previous_height
+        
+        
+
 
 
 """
