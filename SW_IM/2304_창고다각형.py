@@ -20,34 +20,11 @@ for _ in range(N):
     
 lst.sort(key=lambda x : x[0])
 
-L, H = [], []
-for l, h in lst:
-    L.append(l)
-    H.append(h)
-    
-area = 0
-current_idx = 0
-
-while current_idx <= len(H)-1:
-    if current_idx == len(H)-1:
-        break
-
-    if any([H[x] > H[current_idx] for x in range(current_idx+1, N)]):
-        first_idx = [x for x in range(current_idx+1, N) if H[x] > H[current_idx]][0]
-
-        area += (L[first_idx] - L[current_idx]) * H[current_idx]
-        current_idx = first_idx
-        
-    elif all([H[current_idx] > H[x] for x in range(current_idx+1, N)]):
-        first_idx = H.index(max(H[current_idx+1 : N]))
-        area = area + H[current_idx] * 1 + (L[first_idx] - L[current_idx]) * H[first_idx]
-        current_idx = first_idx
-        
-print(area)
+print(lst)
 
 
 """
-# ¹®¾î¹Ú»ç Ç®ÀÌ¹ı
+# ë¬¸ì–´ë°•ì‚¬ í’€ì´ë°©ë²•
 
 N = int(input())
 lst = [0] * 1001
@@ -60,14 +37,14 @@ for _ in range(N):
     if mx < H:
         mx_i, mx = L, H
 
-# ¿ŞÂÊºÎÅÍ Ã³¸®
+# ï¿½ï¿½ï¿½Êºï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
 ans = 0
 mx = 0
 for i in range(mx_i + 1):
     mx = max(mx, lst[i])
     ans += mx
     
-# ¿À¸¥ÂÊ Ã³¸®
+# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
 mx = 0
 for i in range(1000, mx_i, -1):
     mx = max(mx, lst[i])
