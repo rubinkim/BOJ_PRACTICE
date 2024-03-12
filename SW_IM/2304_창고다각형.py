@@ -53,7 +53,7 @@ for i in range(N-1, mx_i-1, -1):
         previous_left, previous_height = current_left, current_height
         current_left, current_height = lst[i][0], lst[i][1]
         area += (previous_left - current_left) * previous_height
-        print(f"i : {i},  area : {area}")
+        print(f"i : {i},  previous_left : {previous_left},  current_left : {current_left},  previous_height : {previous_height},  area : {area}")
         
 print(area)
 
