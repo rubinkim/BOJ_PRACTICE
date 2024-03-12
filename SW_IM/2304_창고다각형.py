@@ -47,6 +47,8 @@ print(area)
 """
 
 """
+# 문어박사 풀이법
+
 N = int(input())
 lst = [0] * 1001
 mx = 0
@@ -72,7 +74,7 @@ for i in range(1000, mx_i, -1):
     ans += mx
     
 print(ans)
-
+"""
         
         
     
