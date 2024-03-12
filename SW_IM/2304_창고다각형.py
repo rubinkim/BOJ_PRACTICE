@@ -39,17 +39,21 @@ current_height = lst[0][1]
 
 for i in range(1, mx_i+1):       # mx까지 포함
     if lst[i][1] > current_height:
-        previoust_left, previous_height = current_left, current_height
+        previous_left, previous_height = current_left, current_height
         current_left, current_height = lst[i][0], lst[i][1]
-        area += (current_left - previoust_left) * previous_height
+        area += (current_left - previous_left) * previous_height
         
 # 왼쪽 면적 계산
 current_left = lst[-1][0]
 current_height = lst[-1][1]
 
+for i in range(N-1, mx_i, -1):
+    if lst[i][1] > current_height:
+        previous_left, previous_height = current_left, current_height
+        
 
 
-"""
+
 # 문어박사 풀이방법
 
 N = int(input())
@@ -63,21 +67,21 @@ for _ in range(N):
     if mx < H:
         mx_i, mx = L, H
 
-# ���ʺ��� ó��
+
 ans = 0
 mx = 0
 for i in range(mx_i + 1):
     mx = max(mx, lst[i])
     ans += mx
     
-# ������ ó��
+
 mx = 0
 for i in range(1000, mx_i, -1):
     mx = max(mx, lst[i])
     ans += mx
     
 print(ans)
-"""
+
         
         
     
