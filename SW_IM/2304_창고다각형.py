@@ -28,6 +28,7 @@ current_height = lst[0][1]
 
 mx_i = 0
 mx = 0
+
 for i in range(N):
     
 
