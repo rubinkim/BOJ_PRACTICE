@@ -44,6 +44,8 @@ for i in range(1, mx_i+1):       # mx까지 포함
         area += (current_left - previoust_left) * previous_height
         
 # 왼쪽 면적 계산
+current_left = lst[-1][0]
+current_height = lst[-1][1]
 
 
 
