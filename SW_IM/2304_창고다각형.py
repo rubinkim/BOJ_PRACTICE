@@ -37,7 +37,9 @@ area = 0
 current_left = lst[0][0]
 current_height = lst[0][1]
 
-for i in range(mx_i+1):       # mx까지 포함
+# 오른쪽 면적 계산
+for i in range(1, mx_i+1):       # mx까지 포함
+    
 
 """
 # 문어박사 풀이방법
