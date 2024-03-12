@@ -32,7 +32,8 @@ mx = 0
 for i in range(N):
     if lst[i][1] > mx:
         mx = max(mx, lst[i][1])
-print(f"mx_i : {mx_i},  mx : {mx}")
+        mx_i = i
+print(f"mx_i : {i},  mx : {mx}")
 
 """
 # 문어박사 풀이방법
