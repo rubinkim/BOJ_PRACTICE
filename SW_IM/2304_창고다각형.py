@@ -10,7 +10,7 @@
 13 6
 
 98
-
+"""
 
 N = int(input())
 lst = []
@@ -44,7 +44,7 @@ while current_idx <= len(H)-1:
         current_idx = first_idx
         
 print(area)
-"""
+
 
 """
 # 문어박사 풀이법
