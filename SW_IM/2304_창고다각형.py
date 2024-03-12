@@ -22,6 +22,8 @@ lst.sort(key=lambda x : x[0])
 
 print(lst)
 
+area = 0
+
 
 """
 # 문어박사 풀이방법
