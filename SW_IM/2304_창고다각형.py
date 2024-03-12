@@ -43,7 +43,7 @@ for i in range(1, mx_i+1):       # mx까지 포함
         current_left, current_height = lst[i][0], lst[i][1]
         area += (current_left - previoust_left) * previous_height
         
-
+# 왼쪽 면적 계산
 
 
 
