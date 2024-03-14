@@ -35,4 +35,6 @@ my_dict = {}
 cnt = 0
 for i in range(N):
     S, Y = map(int, input().split())
-    
+    if Y not in my_dict:
+        if S == 0:
+            my_dict[Y][0] = 1
