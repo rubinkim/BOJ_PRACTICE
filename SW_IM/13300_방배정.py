@@ -28,28 +28,24 @@
 0 6
 
 (3)
+
+7 2
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
 """
 
 N, K = map(int, input().split())
 my_dict = {}
 
-for i in range(N):
-    S, Y = map(int, input().split())
-    if (S,Y) not in my_dict:
-        my_dict[(S, Y)] = 1
-    else:
-        my_dict[(S, Y)] += 1
-            
-#print(my_dict)
-
-cnt = 0
-for val in my_dict.values():
-    if val  % 2 == 0:
-        cnt += val // 2
-    else:
-        cnt += val // 2 + 1
+for sex in range(0, 2):
+    for year in range(1, 7):
+        my_dict[(sex, year)] = 0
         
-print(cnt)
-
+print(my_dict)
 
 
