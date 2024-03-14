@@ -50,4 +50,10 @@ print(my_dict)
 
 cnt = 0
 for f, m in my_dict.values():
+    if f  % 2 == 0:
+        cnt += f // 2
+    else:
+        cnt += f // 2 + 1
     
+    if m % 2 == 0:
+        cnt += m // 2
