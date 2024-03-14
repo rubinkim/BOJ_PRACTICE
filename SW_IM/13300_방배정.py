@@ -28,7 +28,7 @@
 0 6
 
 (3)
-"""
+
 
 N, K = map(int, input().split())
 my_dict = {}
@@ -72,3 +72,4 @@ else:
         cnt += my_dict[1][1] // 2 + 1
 
 print(cnt)
+"""
