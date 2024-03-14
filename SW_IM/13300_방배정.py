@@ -48,4 +48,10 @@ for sex in range(0, 2):
         
 print(my_dict)
 
+for _ in range(N):
+    sex, year = map(int, input().split())
+    my_dict[(sex, year)] += 1
+    
+print(my_dict)
+
 
