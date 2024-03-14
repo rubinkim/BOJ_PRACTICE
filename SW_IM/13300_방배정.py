@@ -46,4 +46,4 @@ for i in range(N):
         else:
             my_dict[Y][1] += 1
             
-print(my_dict.items())
+print(my_dict)
