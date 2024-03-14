@@ -46,7 +46,7 @@ for i in range(N):
         else:
             my_dict[Y][1] += 1
             
-#print(my_dict)
+print(my_dict)
 
 cnt = 0
 for f, m in my_dict.values():
@@ -67,6 +67,8 @@ if 1 not in my_dict:
     print(0)
 else:
     if my_dict[1][1] % 2 == 0:
-        cnt += my_dict
+        cnt += my_dict[1][1] // 2
+    else:
+        cnt += my_dict[1][1] // 2 + 1
 
 print(cnt)
