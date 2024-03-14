@@ -47,3 +47,7 @@ for i in range(N):
             my_dict[Y][1] += 1
             
 print(my_dict)
+
+cnt = 0
+for f, m in my_dict.values():
+    
