@@ -57,3 +57,7 @@ for f, m in my_dict.values():
     
     if m % 2 == 0:
         cnt += m // 2
+    else:
+        cnt += m // 2 + 1
+
+print(cnt)
