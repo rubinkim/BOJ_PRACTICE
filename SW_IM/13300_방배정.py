@@ -61,3 +61,12 @@ for f, m in my_dict.values():
         cnt += m // 2 + 1
 
 print(cnt)
+
+cnt = 0
+if 1 not in my_dict:
+    print(0)
+else:
+    if my_dict[1][1] % 2 == 0:
+        cnt += my_dict
+
+print(cnt)
