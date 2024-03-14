@@ -31,3 +31,8 @@
 """
 
 N, K = map(int, input().split())
+my_dict = {}
+cnt = 0
+for i in range(N):
+    S, Y = map(int, input().split())
+    
