@@ -32,7 +32,7 @@
 
 N, K = map(int, input().split())
 my_dict = {}
-cnt = 0
+
 for i in range(N):
     S, Y = map(int, input().split())
     if Y not in my_dict:
@@ -40,4 +40,4 @@ for i in range(N):
             my_dict[Y][0] = 1
         else:
             my_dict[Y][1] = 1
-    
+    else:
