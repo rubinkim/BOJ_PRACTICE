@@ -54,4 +54,7 @@ for _ in range(N):
     
 print(my_dict)
 
+cnt = 0
+for val in my_dict:
+
 
