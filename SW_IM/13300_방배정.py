@@ -61,3 +61,4 @@ for val in my_dict:
     else:
         cnt += val // 2 + 1
 
+print(cnt)
