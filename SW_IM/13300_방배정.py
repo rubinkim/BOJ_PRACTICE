@@ -41,3 +41,7 @@ for i in range(N):
         else:
             my_dict[Y][1] = 1
     else:
+        if S == 0:
+            my_dict[Y][0] += 1
+        else:
+            my_dict[Y][1] += 1
