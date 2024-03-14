@@ -38,3 +38,6 @@ for i in range(N):
     if Y not in my_dict:
         if S == 0:
             my_dict[Y][0] = 1
+        else:
+            my_dict[Y][1] = 1
+    
