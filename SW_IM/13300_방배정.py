@@ -37,11 +37,13 @@ for i in range(N):
     S, Y = map(int, input().split())
     if Y not in my_dict:
         if S == 0:
-            my_dict[Y][0] = 1
+            my_dict[Y] = [1, 0]
         else:
-            my_dict[Y][1] = 1
+            my_dict[Y] = [0, 1]
     else:
         if S == 0:
             my_dict[Y][0] += 1
         else:
             my_dict[Y][1] += 1
+            
+print(my_dict.items())
