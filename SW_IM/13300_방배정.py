@@ -56,5 +56,8 @@ print(my_dict)
 
 cnt = 0
 for val in my_dict:
-
+    if val % 2 == 0:
+        cnt += val // 2
+    else:
+        cnt += val // 2 + 1
 
