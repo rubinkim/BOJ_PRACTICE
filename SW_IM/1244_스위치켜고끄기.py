@@ -25,4 +25,8 @@ def switch_motion(sex, switch_num):
         for i in range(switch_num, N):
             if i % switch_num == 0:
                 lst[i] = 1 - lst[i]
+    else:
+        lst[switch_num] = 1 - lst[switch_num]
+        
+        
       
