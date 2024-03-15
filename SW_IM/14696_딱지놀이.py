@@ -31,4 +31,5 @@ D B A A
 N = int(input())
 for _ in range(N):
     card_dict = {1 : [0, 0], 2 : [0, 0], 3 : [0, 0], 4 : [0, 0]}
-    A_lst = 
+    A_lst = list(map(int, input().split()))
+    
