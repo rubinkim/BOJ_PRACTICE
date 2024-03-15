@@ -36,4 +36,5 @@ for _ in range(N):
     
     for x in A_lst:
         card_dict[x][0] += 1
-    
+    for x in B_lst:
+        card_dict[x][1] += 1
