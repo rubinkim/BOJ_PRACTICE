@@ -95,3 +95,14 @@ for i in range(N):
     print(f"i : {i},  card_dict :  {card_dict}")
     
     print(f"card_dict[1][0] : {card_dict[1][0]}, card_dict[1][1] : {card_dict[1][1]}")
+    
+    k = 4
+    while k >= 1:
+        if card_dict[k][0] > card_dict[k][1]:
+            print('A')
+        elif card_dict[k][0] < card_dict[k][1]:
+            print('B')
+        elif card_dict[k][0] == card_dict[k][1]:
+            k -= 1
+        if k == 1 and card_dict[k][0] == card_dict[k][1]:
+            print('D')
