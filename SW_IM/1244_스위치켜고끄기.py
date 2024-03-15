@@ -36,7 +36,13 @@ def switch_motion(sex, switch_num):
             elif switch_num - i <= -1 or switch_num + i >= N or lst[switch_num - i] != lst[switch_num + i]:
                 break
             
-
+for gender, switch_num in k_lst:
+    switch_motion(gender, switch_num)
+    for i in range(len(lst)):
+        if i % 20 == 19:
+            print(lst[i], end='\n')
+        else:
+            print(lst[i], end=' ')
             
         
       
