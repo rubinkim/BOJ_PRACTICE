@@ -14,8 +14,8 @@ lst = list(map(int, input().split()))   # 스위치 리스트
 K = int(input())                        # 학생수
 k_lst = []
 for _ in range(K):
-    gender, switch_num = map(int, input().split())
-    k_lst.append((gender, switch_num))
+    sex, switch_num = map(int, input().split())
+    k_lst.append((sex, switch_num))
     
 print(lst)
 print(k_lst)
