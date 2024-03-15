@@ -55,8 +55,10 @@ for i in range(N):
     elif card_dict[4][0] == card_dict[4][1]:
         if card_dict[3][0] > card_dict[3][1]:
             print('A')
+            break
         elif card_dict[3][0] < card_dict[3][1]:
             print('B')
+            break
         elif card_dict[3][0] == card_dict[3][1]:
             if card_dict[2][0] > card_dict[2][1]:
                 print('A')
