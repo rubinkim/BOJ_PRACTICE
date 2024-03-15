@@ -82,27 +82,30 @@ for i in range(N):
     card_dict = {1 : [0, 0], 2 : [0, 0], 3 : [0, 0], 4 : [0, 0]}
     A_lst = list(map(int, input().split()))[1:]
     #A_lst = A_lst[1:]
-    print(f"i : {i},  A_lst : {A_lst}")
+    #print(f"i : {i},  A_lst : {A_lst}")
     B_lst = list(map(int, input().split()))[1:]
     #B_lst = B_lst[1:]
-    print(f"i : {i},  B_lst : {B_lst} ")
+    #print(f"i : {i},  B_lst : {B_lst} ")
     
     for x in A_lst:
             card_dict[x][0] += 1
     for x in B_lst:
         card_dict[x][1] += 1
         
-    print(f"i : {i},  card_dict :  {card_dict}")
+    #print(f"i : {i},  card_dict :  {card_dict}")
     
-    print(f"card_dict[1][0] : {card_dict[1][0]}, card_dict[1][1] : {card_dict[1][1]}")
+    #print(f"card_dict[1][0] : {card_dict[1][0]}, card_dict[1][1] : {card_dict[1][1]}")
     
     k = 4
     while k >= 1:
         if card_dict[k][0] > card_dict[k][1]:
             print('A')
+            break
         elif card_dict[k][0] < card_dict[k][1]:
             print('B')
+            break
         elif card_dict[k][0] == card_dict[k][1]:
             k -= 1
         if k == 1 and card_dict[k][0] == card_dict[k][1]:
             print('D')
+            break
