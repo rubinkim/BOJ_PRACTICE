@@ -92,4 +92,11 @@ for i in range(N):
     for x in B_lst:
         card_dict[x][1] += 1
         
-    print(f"i : {i},  card_dict :  {card_dict}")    
+    print(f"i : {i},  card_dict :  {card_dict}")
+    
+    if card_dict[4][0] > card_dict[4][1]:
+        print('A')
+        break
+    elif card_dict[4][0] < card_dict[4][1]:
+        print('B')
+        break
