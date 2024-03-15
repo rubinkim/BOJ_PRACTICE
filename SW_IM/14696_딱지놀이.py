@@ -94,9 +94,4 @@ for i in range(N):
         
     print(f"i : {i},  card_dict :  {card_dict}")
     
-    if card_dict[4][0] > card_dict[4][1]:
-        print('A')
-        break
-    elif card_dict[4][0] < card_dict[4][1]:
-        print('B')
-        break
+    print(card_dict[4][0], card_dict[4][1])
