@@ -10,3 +10,4 @@
 """
 
 N = int(input())    # 스위치 개수
+lst = list(map(int, input().split()))    # 스위치 리스트
