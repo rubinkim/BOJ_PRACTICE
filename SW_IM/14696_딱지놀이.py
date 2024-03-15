@@ -46,5 +46,9 @@ for i in range(N):
         if k == 4:
             if card_dict[k][0] > card_dict[k][1]:
                 print('A')
+                break
             elif card_dict[k][0] < card_dict[k][1]:
                 print('B')
+                break
+            elif card_dict[k][0] == card_dict[k][1]:
+                
