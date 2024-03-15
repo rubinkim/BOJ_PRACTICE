@@ -41,7 +41,7 @@ for i in range(N):
         
     print(f"i : {i} : {card_dict}")
     print()    
-
+    
     if card_dict[4][0] > card_dict[4][1]:
         print('A')
         break
@@ -53,4 +53,16 @@ for i in range(N):
             print('A')
         elif card_dict[3][0] < card_dict[3][1]:
             print('B')
-            
+        elif card_dict[3][0] == card_dict[3][1]:
+            if card_dict[2][0] > card_dict[2][1]:
+                print('A')
+            elif card_dict[2][0] < card_dict[2][1]:
+                print('B')
+            elif card_dict[2][0] == card_dict[2][1]:
+                if card_dict[1][0] > card_dict[1][1]:
+                    print('A')
+                elif card_dict[1][0] < card_dict[1][1]:
+                    print('B')
+                elif card_dict[1][0] == card_dict[1][1]:
+                    print('D')
+        
