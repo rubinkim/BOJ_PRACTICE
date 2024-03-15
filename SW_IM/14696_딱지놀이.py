@@ -29,7 +29,7 @@ D B A A
 """
 
 N = int(input())
-for _ in range(N):
+for i in range(N):
     card_dict = {1 : [0, 0], 2 : [0, 0], 3 : [0, 0], 4 : [0, 0]}
     A_lst = list(map(int, input().split()))
     B_lst = list(map(int, input().split()))
@@ -38,3 +38,6 @@ for _ in range(N):
         card_dict[x][0] += 1
     for x in B_lst:
         card_dict[x][1] += 1
+        
+    print(f"i : {i} : {card_dict}")
+    print()
