@@ -19,4 +19,10 @@ for _ in range(K):
     
 print(lst)
 print(k_lst)
+
+def switch_motion(sex, switch_num):
+    if sex == 1:
+        for i in range(switch_num, N):
+            if i % switch_num == 0:
+                lst[i] = 1 - lst[i]
       
