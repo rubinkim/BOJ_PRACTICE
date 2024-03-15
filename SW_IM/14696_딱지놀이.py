@@ -36,7 +36,7 @@ for i in range(N):
     print(f"i : {i},  A_lst : {A_lst}")
     B_lst = list(map(int, input().split()))[1:]
     #B_lst = B_lst[1:]
-    pr
+    print(f"i : {i},  B_lst : {B_lst} ")
     
     for x in A_lst:
         card_dict[x][0] += 1
