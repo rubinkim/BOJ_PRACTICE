@@ -94,4 +94,4 @@ for i in range(N):
         
     print(f"i : {i},  card_dict :  {card_dict}")
     
-    print(card_dict[4][0], card_dict[4][1])
+    print(f"card_dict[3][0] : {card_dict[3][0]}, card_dict[3][1] : {card_dict[3][1]}")
