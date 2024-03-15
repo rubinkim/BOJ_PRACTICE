@@ -29,3 +29,5 @@ D B A A
 """
 
 N = int(input())
+for _ in range(N):
+    card_dict
