@@ -31,8 +31,8 @@ D B A A
 N = int(input())
 for i in range(N):
     card_dict = {1 : [0, 0], 2 : [0, 0], 3 : [0, 0], 4 : [0, 0]}
-    A_lst = list(map(int, input().split()))
-    B_lst = list(map(int, input().split()))
+    A_lst = list(map(int, input().split()))[1:]
+    B_lst = list(map(int, input().split()))[1:]
     
     for x in A_lst:
         card_dict[x][0] += 1
