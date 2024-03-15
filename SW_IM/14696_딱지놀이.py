@@ -34,3 +34,6 @@ for _ in range(N):
     A_lst = list(map(int, input().split()))
     B_lst = list(map(int, input().split()))
     
+    for x in A_lst:
+        card_dict[x][0] += 1
+    
