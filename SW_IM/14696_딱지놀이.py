@@ -27,3 +27,5 @@ A B B A D
 
 D B A A
 """
+
+N = int(input())
