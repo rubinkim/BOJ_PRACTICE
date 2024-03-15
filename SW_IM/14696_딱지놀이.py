@@ -40,15 +40,13 @@ for i in range(N):
         card_dict[x][1] += 1
         
     print(f"i : {i} : {card_dict}")
-    print()
-    
-    for k, v in card_dict.items():
-        if k == 4:
-            if card_dict[k][0] > card_dict[k][1]:
-                print('A')
-                break
-            elif card_dict[k][0] < card_dict[k][1]:
-                print('B')
-                break
-            elif card_dict[k][0] == card_dict[k][1]:
-                
+    print()    
+
+    if card_dict[4][0] > card_dict[4][1]:
+        print('A')
+        break
+    elif card_dict[k][0] < card_dict[k][1]:
+        print('B')
+        break
+    elif card_dict[k][0] == card_dict[k][1]:
+        if card_
