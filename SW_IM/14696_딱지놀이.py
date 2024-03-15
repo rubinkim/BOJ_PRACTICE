@@ -26,7 +26,7 @@ A B B A D
 3 3 2 1
 
 D B A A
-"""
+
 
 N = int(input())
 for i in range(N):
@@ -43,8 +43,7 @@ for i in range(N):
     for x in B_lst:
         card_dict[x][1] += 1
         
-    print(f"i : {i} : {card_dict}")
-    print()    
+    print(f"i : {i},  card_dict :  {card_dict}")
     
     if card_dict[4][0] > card_dict[4][1]:
         print('A')
@@ -62,13 +61,18 @@ for i in range(N):
         elif card_dict[3][0] == card_dict[3][1]:
             if card_dict[2][0] > card_dict[2][1]:
                 print('A')
+                break
             elif card_dict[2][0] < card_dict[2][1]:
                 print('B')
+                break
             elif card_dict[2][0] == card_dict[2][1]:
                 if card_dict[1][0] > card_dict[1][1]:
                     print('A')
+                    break
                 elif card_dict[1][0] < card_dict[1][1]:
                     print('B')
+                    break
                 elif card_dict[1][0] == card_dict[1][1]:
                     print('D')
-        
+                    break
+"""    
