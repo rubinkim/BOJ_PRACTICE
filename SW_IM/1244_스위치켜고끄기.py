@@ -32,6 +32,8 @@ def switch_motion(sex, switch_num):
             if lst[switch_num - i] == lst[switch_num + i]:
                 lst[switch_num - i] = 1 - lst[switch_num - i]
                 lst[switch_num + i] = 1 - lst[switch_num + i]
+                i += 1
+            elif switch_num - i <= -1 or switch_num + i >= N:
             
         
       
