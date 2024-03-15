@@ -29,12 +29,17 @@ def switch_motion(sex, switch_num):
         #lst[switch_num-1] = 1 - lst[switch_num-1]
         i = 0
         while True:
-            if lst[switch_num -1 - i] == lst[switch_num -1 + i]:
-                lst[switch_num -1 - i] = 1 - lst[switch_num -1 - i]
-                lst[switch_num -1 + i] = 1 - lst[switch_num -1 + i]
+            if i == 0:
+                lst[switch_num - 1] = 1 - lst[switch_num - 1]
                 i += 1
-            elif switch_num -1 - i <= -1 or switch_num -1 + i >= N or lst[switch_num -1 - i] != lst[switch_num -1 + i]:
-                break
+            if i >= 1 and switch_num -1 -i >= 0 and switch_num -1 + i <= N-1:
+                
+                if lst[switch_num -1 - i] == lst[switch_num -1 + i]:
+                    lst[switch_num -1 - i] = 1 - lst[switch_num -1 - i]
+                    lst[switch_num -1 + i] = 1 - lst[switch_num -1 + i]
+                    i += 1
+                elif switch_num -1 - i <= -1 or switch_num -1 + i >= N or lst[switch_num -1 - i] != lst[switch_num -1 + i]:
+                    break
             
 for sex, switch_num in k_lst:
     switch_motion(sex, switch_num)
