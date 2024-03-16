@@ -114,7 +114,7 @@ def calculate_area(lst):
             if lst[1][1] == max_height:
                 total_plantable_area = max_area - lst[4][1] * lst[5][1]
             else:
-                total_plantable_area = max_area - lst[1][1] * lst[2][1]
+                total_plantable_area = max_area - lst[1][0] * lst[2][5]
                 
     elif lst[0][0] in [3, 4]:    
         if lst[0][1] == max_height:
