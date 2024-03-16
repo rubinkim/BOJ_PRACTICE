@@ -11,3 +11,7 @@
 47600
 """
 quant = int(input())
+lst = []
+
+for i in range(6):
+    
