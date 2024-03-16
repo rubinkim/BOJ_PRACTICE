@@ -72,6 +72,8 @@ print(f"no_max_height : {no_max_height},  no_max_width : {no_max_width}")
 
 total_plantable_area = 0
 max_area = max_height * max_width
+
+"""
 i = 0
 while i <= len(lst) - 1:
     if lst[i][0] == 1:    # 시작이 동쪽(1) -> 다음 방향은 북쪽(4)
@@ -97,5 +99,35 @@ while i <= len(lst) - 1:
                 total_plantable_area = max_area - lst[i+4][1] * lst[i+5][1]
             else:
                 total_plantable_area = max_area - lst[i+1][1] * lst[i+2][1]
+"""
+                
+def calculate_area(lst):
+    global max_area
+    
+    if lst[0][0] in [1, 2]:    
+        if lst[i][1] == max_width:
+            if lst[i+1][1] == max_height:
+                total_plantable_area = max_area - lst[i+3][1] * lst[i+4][1]
+            else:
+                total_plantable_area = max_area - lst[i+2][1] * lst[i+3][1]
+        else:
+            if lst[i+1][1] == max_height:
+                total_plantable_area = max_area - lst[i+4][1] * lst[i+5][1]
+            else:
+                total_plantable_area = max_area - lst[i+1][1] * lst[i+2][1]
+                
+    elif lst[0][0] in [3, 4]:    
+        if lst[i][1] == max_height:
+            if lst[i+1][1] == max_width:
+                total_plantable_area = max_area - lst[i+3][1] * lst[i+4][1]
+            else:
+                total_plantable_area = max_area - lst[i+2][1] * lst[i+3][1]
+        else:
+            if lst[i+1][1] == max_width:
+                total_plantable_area = max_area - lst[i+4][1] * lst[i+5][1]
+            else:
+                total_plantable_area = max_area - lst[i+1][1] * lst[i+2][1]
+    return total_plantable_area
 
+print(total_plantable_area)
                 
