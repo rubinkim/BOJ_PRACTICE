@@ -84,6 +84,18 @@ while i <= len(lst) - 1:
             if lst[i+1][1] == max_height:
                 total_plantable_area = max_area - lst[i+4][1] * lst[i+5][1]
             else:
+                total_plantable_area = max_area - lst[i+1][1] * lst[i+2][1]
                 
+    elif lst[i][0] == 2:    # 시작이 서쪽(2) -> 다음 방향은 남쪽(3)
+        if lst[i][1] == max_width:
+            if lst[i+1][1] == max_height:
+                total_plantable_area = max_area - lst[i+3][1] * lst[i+4][1]
+            else:
+                total_plantable_area = max_area - lst[i+2][1] * lst[i+3][1]
+        else:
+            if lst[i+1][1] == max_height:
+                total_plantable_area = max_area - lst[i+4][1] * lst[i+5][1]
+            else:
+                total_plantable_area = max_area - lst[i+1][1] * lst[i+2][1]
 
                 
