@@ -51,7 +51,7 @@ for i in range(6):
 plantable_area = max_height * max_width - subtract_height * subtract_width
 total_product = quant * plantable_area
 print(total_product)
-"""
+
 
 quant = int(input())
 lst = []
@@ -60,7 +60,7 @@ for i in range(6):
     direction, length = map(int, input().split())
     lst.append((direction, length))
     
-print(lst)
+#print(lst)
 
 max_height = max([lst[i][1] for i in range(6) if lst[i][0] in [3, 4]])
 max_width = max([lst[i][1]  for i in range(6) if lst[i][0] in [1, 2]])
@@ -73,7 +73,7 @@ print(f"no_max_height : {no_max_height},  no_max_width : {no_max_width}")
 total_plantable_area = 0
 max_area = max_height * max_width
 
-"""
+
 i = 0
 while i <= len(lst) - 1:
     if lst[i][0] == 1:    # 시작이 동쪽(1) -> 다음 방향은 북쪽(4)
@@ -100,6 +100,26 @@ while i <= len(lst) - 1:
             else:
                 total_plantable_area = max_area - lst[i+1][1] * lst[i+2][1]
 """
+
+quant = int(input())
+lst = []
+
+for i in range(6):
+    direction, length = map(int, input().split())
+    lst.append((direction, length))
+    
+#print(lst)
+
+max_height = max([lst[i][1] for i in range(6) if lst[i][0] in [3, 4]])
+max_width = max([lst[i][1]  for i in range(6) if lst[i][0] in [1, 2]])
+print(f"max_height : {max_height},  max_width : {max_width}")
+
+no_max_height = [lst[i][1] for i in range(6) if lst[i][0] in [3, 4] and lst[i][1] != max_height]
+no_max_width = [lst[i][1] for i in range(6) if lst[i][0] in [1, 2] and lst[i][1] != max_width]
+print(f"no_max_height : {no_max_height},  no_max_width : {no_max_width}")
+
+total_plantable_area = 0
+max_area = max_height * max_width
                 
 def calculate_area(lst):
     global max_area
@@ -111,10 +131,16 @@ def calculate_area(lst):
             else:
                 total_plantable_area = max_area - lst[2][1] * lst[3][1]
         else:
-            if lst[1][1] == max_height:
+            if lst[1][1] == max_height and lst[2][1] == max_width:
                 total_plantable_area = max_area - lst[4][1] * lst[5][1]
+            elif lst[1][1] == max_height and lst[2][1] != max_width:
+                total_plantable_area = max_area - lst[3][1] * lst[4][1]                
+                
             else:
-                total_plantable_area = max_area - lst[1][0] * lst[2][5]
+                if lst[2][1] == max_width:
+                    total_plantable_area = max_area - lst[5][1] * lst[0][1]
+                else:
+                    total_plantable_area = max_area - lst[1][1] * lst[2][1]                
                 
     elif lst[0][0] in [3, 4]:    
         if lst[0][1] == max_height:
@@ -123,10 +149,17 @@ def calculate_area(lst):
             else:
                 total_plantable_area = max_area - lst[2][1] * lst[3][1]
         else:
-            if lst[1][1] == max_width:
+            if lst[1][1] == max_width and lst[2][1] == max_height:
                 total_plantable_area = max_area - lst[4][1] * lst[5][1]
+            elif lst[1][1] == max_width and lst[2][1] != max_height:
+                total_plantable_area = max_area - lst[3][1] * lst[4][1]
+                
             else:
-                total_plantable_area = max_area - lst[1][1] * lst[2][1]
+                if lst[2][1] == max_height:
+                    total_plantable_area = max_area - lst[5][1] * lst[0][1]
+                else:
+                    total_plantable_area = max_area - lst[1][1] * lst[2][1]
+                    
     return total_plantable_area
 
 print(calculate_area(lst))
