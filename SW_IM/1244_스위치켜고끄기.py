@@ -17,8 +17,8 @@ for _ in range(K):
     sex, switch_num = map(int, input().split())
     k_lst.append((sex, switch_num))
     
-print(lst)
-print(k_lst)
+#print(lst)
+#print(k_lst)
 
 def switch_motion(sex, switch_num):
     if sex == 1:
