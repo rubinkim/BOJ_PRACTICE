@@ -30,12 +30,15 @@ for i in range(6):
     if lst[i][0] in [3, 4]:
         if i == 0 and lst[i+1][0] == lst[5][0]:
             subtract_height = lst[i][1]
-        else:
-            if lst[i-1][0] == lst[i+1][0]:
-                subtract_height = lst[i][1]
+        elif 1 <= i <= 4 and lst[i-1][0] == lst[i+1][0]:
+            subtract_height = lst[i][1]
     
     else:
         if i == 0 and lst[i+1][0] == lst[5][0]:
             subtract_width = lst[i][1]
-        else
+        else:
+            if lst[i-1][0] == lst[i+1][0]:
+                subtract_width = lst[i][1]
+                
+print(f"subtract_height : {subtract_height},  subtract_width : {subtract_width}")
         
