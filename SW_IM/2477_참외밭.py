@@ -70,9 +70,11 @@ no_max_height = [lst[i][1] for i in range(6) if lst[i][0] in [3, 4] and lst[i][1
 no_max_width = [lst[i][1] for i in range(6) if lst[i][0] in [1, 2] and lst[i][1] != max_width]
 print(f"no_max_height : {no_max_height},  no_max_width : {no_max_width}")
 
+"""
 i = 0
 while i <= len(lst) - 1:
     if lst[i][0] == 1:    # 시작이 동쪽(1) -> 다음 방향은 북쪽(4)
         if lst[i][1] == max_width:
             if lst[i+1][1] == max_height:
+"""
                 
