@@ -10,3 +10,4 @@
 
 47600
 """
+quant = int(input())
