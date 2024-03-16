@@ -20,5 +20,5 @@ for i in range(6):
 print(lst)
 
 i = 0
-while i < len(lst) - 1:
-    
+while i <= len(lst) - 1:
+    if lst[i][0] == lst[i+2][0]:
