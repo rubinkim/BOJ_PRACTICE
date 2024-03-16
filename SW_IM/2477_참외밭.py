@@ -45,4 +45,8 @@ for i in range(6):
             subtract_width = lst[i][1]
                 
 print(f"subtract_height : {subtract_height},  subtract_width : {subtract_width}")
+
+plantable_area = max_height * max_width - subtract_height * subtract_width
+total_product = quant * plantable_area
+print(total_product)
         
