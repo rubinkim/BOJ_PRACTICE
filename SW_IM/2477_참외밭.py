@@ -35,5 +35,7 @@ for i in range(6):
                 subtract_height = lst[i][1]
     
     else:
-        
+        if i == 0 and lst[i+1][0] == lst[5][0]:
+            subtract_width = lst[i][1]
+        else
         
