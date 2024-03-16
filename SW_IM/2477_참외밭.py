@@ -18,3 +18,7 @@ for i in range(6):
     lst.append((direction, length))
     
 print(lst)
+
+i = 0
+while i < len(lst) - 1:
+    
