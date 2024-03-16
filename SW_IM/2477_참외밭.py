@@ -24,6 +24,8 @@ max_width = max([lst[i][1]  for i in range(6) if lst[i][0] in [1, 2]])
 print(f"max_height : {max_height},  max_width : {max_width}")
 
 subtract_height = 0
+subtract_width = 0
+
 for i in range(6):
     if lst[i][0] in [3, 4]:
         if i == 0 and lst[i+1][0] == lst[5][0]:
@@ -32,4 +34,6 @@ for i in range(6):
             if lst[i-1][0] == lst[i+1][0]:
                 subtract_height = lst[i][1]
     
+    else:
+        
         
