@@ -105,16 +105,16 @@ def calculate_area(lst):
     global max_area
     
     if lst[0][0] in [1, 2]:    
-        if lst[i][1] == max_width:
-            if lst[i+1][1] == max_height:
-                total_plantable_area = max_area - lst[i+3][1] * lst[i+4][1]
+        if lst[0][1] == max_width:
+            if lst[1][1] == max_height:
+                total_plantable_area = max_area - lst[3][1] * lst[4][1]
             else:
-                total_plantable_area = max_area - lst[i+2][1] * lst[i+3][1]
+                total_plantable_area = max_area - lst[2][1] * lst[3][1]
         else:
-            if lst[i+1][1] == max_height:
-                total_plantable_area = max_area - lst[i+4][1] * lst[i+5][1]
+            if lst[1][1] == max_height:
+                total_plantable_area = max_area - lst[4][1] * lst[5][1]
             else:
-                total_plantable_area = max_area - lst[i+1][1] * lst[i+2][1]
+                total_plantable_area = max_area - lst[1][1] * lst[2][1]
                 
     elif lst[0][0] in [3, 4]:    
         if lst[i][1] == max_height:
@@ -129,5 +129,5 @@ def calculate_area(lst):
                 total_plantable_area = max_area - lst[i+1][1] * lst[i+2][1]
     return total_plantable_area
 
-print(total_plantable_area)
+print(calculate_area(lst))
                 
