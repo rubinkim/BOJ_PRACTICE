@@ -61,3 +61,12 @@ for i in range(6):
     lst.append((direction, length))
     
 print(lst)
+
+max_height = max([lst[i][1] for i in range(6) if lst[i][0] in [3, 4]])
+max_width = max([lst[i][1]  for i in range(6) if lst[i][0] in [1, 2]])
+print(f"max_height : {max_height},  max_width : {max_width}")
+
+i = 0
+while i <= len(lst) - 1:
+    if lst[i][0] == 1:    # 시작이 동쪽(1) -> 다음 방향은 북쪽(4)
+        if lst
