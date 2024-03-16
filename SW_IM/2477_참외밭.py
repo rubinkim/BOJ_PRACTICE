@@ -17,11 +17,11 @@ for i in range(6):
     direction, length = map(int, input().split())
     lst.append((direction, length))
     
-print(lst)
+#print(lst)
 
 max_height = max([lst[i][1] for i in range(6) if lst[i][0] in [3, 4]])
 max_width = max([lst[i][1]  for i in range(6) if lst[i][0] in [1, 2]])
-print(f"max_height : {max_height},  max_width : {max_width}")
+#print(f"max_height : {max_height},  max_width : {max_width}")
 
 subtract_height = 0
 subtract_width = 0
