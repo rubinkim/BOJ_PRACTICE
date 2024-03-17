@@ -76,7 +76,7 @@ max_area = max_height * max_width
 
 i = 0
 while i <= len(lst) - 1:
-    if lst[i][0] == 1:    # ?‹œ?‘?´ ?™ìª?(1) -> ?‹¤?Œ ë°©í–¥??? ë¶ìª½(4)
+    if lst[i][0] == 1:    # ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ ?ï¿½ï¿½ï¿½?(1) -> ?ï¿½ï¿½?ï¿½ï¿½ ë°©í–¥??? ë¶ìª½(4)
         if lst[i][1] == max_width:
             if lst[i+1][1] == max_height:
                 total_plantable_area = max_area - lst[i+3][1] * lst[i+4][1]
@@ -88,7 +88,7 @@ while i <= len(lst) - 1:
             else:
                 total_plantable_area = max_area - lst[i+1][1] * lst[i+2][1]
                 
-    elif lst[i][0] == 2:    # ?‹œ?‘?´ ?„œìª?(2) -> ?‹¤?Œ ë°©í–¥??? ?‚¨ìª?(3)
+    elif lst[i][0] == 2:    # ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½ ?ï¿½ï¿½ï¿½?(2) -> ?ï¿½ï¿½?ï¿½ï¿½ ë°©í–¥??? ?ï¿½ï¿½ï¿½?(3)
         if lst[i][1] == max_width:
             if lst[i+1][1] == max_height:
                 total_plantable_area = max_area - lst[i+3][1] * lst[i+4][1]
@@ -99,8 +99,8 @@ while i <= len(lst) - 1:
                 total_plantable_area = max_area - lst[i+4][1] * lst[i+5][1]
             else:
                 total_plantable_area = max_area - lst[i+1][1] * lst[i+2][1]
-"""
-"""
+
+
 quant = int(input())
 lst = []
 
