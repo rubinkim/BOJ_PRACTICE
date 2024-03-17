@@ -182,6 +182,12 @@ def calculate_area(lst):
     global max_height, max_width
     max_area = max_height * max_width
     
+    if lst[0][0] in [1, 2]:
+        if lst[0][1] == max_width:
+            if lst[1][1] == max_height:
+                plant_area = max_area - lst[3][1] * lst[4][1]
+            else:
+                plant_area = max_area - lst[2][1] * lst[3][1]
 
 print(calculate_area(lst))
                 
