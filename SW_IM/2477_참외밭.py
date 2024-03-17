@@ -76,7 +76,7 @@ max_area = max_height * max_width
 
 i = 0
 while i <= len(lst) - 1:
-    if lst[i][0] == 1:    # ÏãúÏûëÏù¥ ÎèôÏ™Ω(1) -> Îã§Ïùå Î∞©Ìñ•ÏùÄ Î∂ÅÏ™Ω(4)
+    if lst[i][0] == 1:    # ?ãú?ûë?ù¥ ?èôÏ™?(1) -> ?ã§?ùå Î∞©Ìñ•??? Î∂ÅÏ™Ω(4)
         if lst[i][1] == max_width:
             if lst[i+1][1] == max_height:
                 total_plantable_area = max_area - lst[i+3][1] * lst[i+4][1]
@@ -88,7 +88,7 @@ while i <= len(lst) - 1:
             else:
                 total_plantable_area = max_area - lst[i+1][1] * lst[i+2][1]
                 
-    elif lst[i][0] == 2:    # ÏãúÏûëÏù¥ ÏÑúÏ™Ω(2) -> Îã§Ïùå Î∞©Ìñ•ÏùÄ ÎÇ®Ï™Ω(3)
+    elif lst[i][0] == 2:    # ?ãú?ûë?ù¥ ?ÑúÏ™?(2) -> ?ã§?ùå Î∞©Ìñ•??? ?Ç®Ï™?(3)
         if lst[i][1] == max_width:
             if lst[i+1][1] == max_height:
                 total_plantable_area = max_area - lst[i+3][1] * lst[i+4][1]
@@ -177,49 +177,7 @@ max_width = max([lst[i][1]  for i in range(6) if lst[i][0] in [1, 2]])
 
 total_plantable_area = 0
 max_area = max_height * max_width
-                
-def calculate_area(lst):
-    global max_area
-    
-    if lst[0][0] in [1, 2]:    
-        if lst[0][1] == max_width:
-            if lst[1][1] == max_height:
-                total_plantable_area = max_area - lst[3][1] * lst[4][1]
-            else:
-                total_plantable_area = max_area - lst[2][1] * lst[3][1]
-        else:
-            if lst[1][1] == max_height:
-                if lst[2][1] == max_width:
-                    total_plantable_area = max_area - lst[4][1] * lst[5][1]
-                else:
-                    total_plantable_area = max_area - lst[3][1] * lst[4][1]                
-                
-            else:
-                if lst[2][1] == max_width:
-                    total_plantable_area = max_area - lst[5][1] * lst[0][1]
-                else:
-                    total_plantable_area = max_area - lst[1][1] * lst[2][1]                
-                
-    elif lst[0][0] in [3, 4]:    
-        if lst[0][1] == max_height:
-            if lst[1][1] == max_width:
-                total_plantable_area = max_area - lst[3][1] * lst[4][1]
-            else:
-                total_plantable_area = max_area - lst[2][1] * lst[3][1]
-        else:
-            if lst[1][1] == max_width:
-                if lst[2][1] == max_height:
-                    total_plantable_area = max_area - lst[4][1] * lst[5][1]
-                else:
-                    total_plantable_area = max_area - lst[3][1] * lst[4][1]
-                
-            else:
-                if lst[2][1] == max_height:
-                    total_plantable_area = max_area - lst[5][1] * lst[0][1]
-                else:
-                    total_plantable_area = max_area - lst[1][1] * lst[2][1]
-                    
-    return total_plantable_area
+
 
 print(calculate_area(lst))
                 
