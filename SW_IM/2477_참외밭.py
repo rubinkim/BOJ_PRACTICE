@@ -79,3 +79,6 @@ print(f"small_width_idxes : {small_width_idxes},  small_height_idxes : {small_he
 small_rectangle_width = abs(lst[small_width_idxes[0][1] - lst[small_width_idxes[1][1]]])
 small_rectangle_height = abs(lst[small_height_idxes[0][1] - lst[small_height_idxes][1][1]])
 
+small_rectangle_area = small_rectangle_height * small_rectangle_width
+max_area = max_height * max_width
+plantable_area = max_area - small_rectangle_area
