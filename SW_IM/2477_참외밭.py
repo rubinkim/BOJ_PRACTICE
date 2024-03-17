@@ -207,5 +207,5 @@ def calculate_area(lst):
                 plant_area = max_area - lst[1][1] * lst[2][1]
     return plant_area
 
-print(calculate_area(lst))
+print(quant * calculate_area(lst))
                 
