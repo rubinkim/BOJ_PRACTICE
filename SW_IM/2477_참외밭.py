@@ -63,3 +63,11 @@ max_height = max([lst[i][1] for i in range(6) if lst[i][0] in [3, 4]])
 max_width = max([lst[i][1]  for i in range(6) if lst[i][0] in [1, 2]])
 
 for i in range(6):
+    if lst[i][0] in [1, 2] and lst[i][1] == max_width:
+        max_width_idx = i
+    if lst[i][0] in [3, 4] and lst[i][1] == max_height:
+        max_height_idx = i
+
+print(f"lst : {lst}")
+print(f"max_width_idx : {max_width_idx},  max_width : {max_width}")
+print(f"max_height_idx : {max_height_idx},  max_height : {max_height}")
