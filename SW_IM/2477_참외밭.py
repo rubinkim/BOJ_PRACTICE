@@ -175,9 +175,6 @@ for i in range(6):
 max_height = max([lst[i][1] for i in range(6) if lst[i][0] in [3, 4]])
 max_width = max([lst[i][1]  for i in range(6) if lst[i][0] in [1, 2]])
 
-total_plantable_area = 0
-max_area = max_height * max_width
-
 def calculate_area(lst):
     global max_height, max_width
     max_area = max_height * max_width
