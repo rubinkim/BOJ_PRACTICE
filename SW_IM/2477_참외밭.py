@@ -180,6 +180,8 @@ max_area = max_height * max_width
 
 def calculate_area(lst):
     global max_height, max_width
+    max_area = max_height * max_width
+    
 
 print(calculate_area(lst))
                 
