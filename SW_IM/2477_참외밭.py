@@ -77,3 +77,5 @@ small_height_idxes = ((max_width_idx + 6 - 1) % 6, (max_width_idx + 6 + 1) % 6)
 print(f"small_width_idxes : {small_width_idxes},  small_height_idxes : {small_height_idxes}")
 
 small_rectangle_width = abs(lst[small_width_idxes[0][1] - lst[small_width_idxes[1][1]]])
+small_rectangle_height = abs(lst[small_height_idxes[0][1] - lst[small_height_idxes][1][1]])
+
