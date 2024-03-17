@@ -201,6 +201,8 @@ def calculate_area(lst):
             else:
                 plant_area = max_area - lst[2][1] * lst[3][1]
         else:
+            if lst[1][1] == max_width:
+                plant_area = max_area - lst[4][1] * lst[5][1]
 
 print(calculate_area(lst))
                 
