@@ -9,7 +9,7 @@
 1 100
 
 47600
-"""
+
 quant = int(input())
 lst = []
 
@@ -50,4 +50,4 @@ def calculate_area(lst):
     return plant_area
 
 print(quant * calculate_area(lst))
-                
+"""                
