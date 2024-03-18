@@ -31,7 +31,7 @@ print(f"new_p : {new_p},  new_q : {new_q}")
 
 di = [1, 1, -1, -1]     #down_right, down_left, up_right, up_left
 dj = [1, -1, 1, -1]
-dr = 2                  # up_rights
+dr = 2                  # up_right
 cnt = 0
 while cnt <= t:
     ni, nj = i + di[]
