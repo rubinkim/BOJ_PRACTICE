@@ -40,5 +40,5 @@ while cnt <= t:
         i, j = ni, nj
     elif i == 0 and dr == 2:     # 천장에 부딪혔을때 화살표 방향이 up_right이라면,  화살표 방향을 down_right으로 변경해라.
         dr = 0
-    elif i == 0 and dr == 3:
+    elif i == 0 and dr == 3:     # 천장에 부딪혔을때 화살표 방향이 up_left라면,  화살표 방향을 down_left로 변경해라.
         dr = 1
