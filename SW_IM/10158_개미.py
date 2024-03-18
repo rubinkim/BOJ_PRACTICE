@@ -38,25 +38,25 @@ while cnt <= t:
     if 0 <= ni <= h and 0 <= nj <= w:
         cnt += 1
         i, j = ni, nj
-    elif i == 0 and dr == 2:     # 천장에 부딪혔을때 화살표 방향이 up_right이라면,  화살표 방향을 down_right으로 변경해라.
+    if i == 0 and dr == 2:     # 천장에 부딪혔을때 화살표 방향이 up_right이라면,  화살표 방향을 down_right으로 변경해라.
         dr = 0
-    elif i == 0 and dr == 3:     # 천장에 부딪혔을때 화살표 방향이 up_left라면,  화살표 방향을 down_left로 변경해라.
+    if i == 0 and dr == 3:     # 천장에 부딪혔을때 화살표 방향이 up_left라면,  화살표 방향을 down_left로 변경해라.
         dr = 1
-    elif i == h and dr == 0:     # 바닥에 부딪혔을때 화살표 방향이 down_right라면,  화살표 방향을 up_right로 변경해라.
+    if i == h and dr == 0:     # 바닥에 부딪혔을때 화살표 방향이 down_right라면,  화살표 방향을 up_right로 변경해라.
         dr = 2
-    elif i == h and dr == 1:     # 바닥에 부딪혔을때 화살표 방향이 down_left라면,  화살표 방향을 up_left로 변경해라.
+    if i == h and dr == 1:     # 바닥에 부딪혔을때 화살표 방향이 down_left라면,  화살표 방향을 up_left로 변경해라.
         dr = 3
-    elif j == 0 and dr == 1:     # 왼쪽옆면에 부딪혔을때 화살표 방향이 down_left라면,  화살표 방향을 down_right로 변경해라.
+    if j == 0 and dr == 1:     # 왼쪽옆면에 부딪혔을때 화살표 방향이 down_left라면,  화살표 방향을 down_right로 변경해라.
         dr = 0
-    elif j == 0 and dr == 3:     # 왼쪽옆면에 부딪혔을때 화살표 방향이 up_left라면,  화살표 방향을 up_right로 변경해라.
+    if j == 0 and dr == 3:     # 왼쪽옆면에 부딪혔을때 화살표 방향이 up_left라면,  화살표 방향을 up_right로 변경해라.
         dr = 2
-    elif j == w and dr == 0:     # 오른쪽옆면에 부딪혔을때 화살표 방향이 down_right라면,  화살표 방향을 down_left로 변경해라.
+    if j == w and dr == 0:     # 오른쪽옆면에 부딪혔을때 화살표 방향이 down_right라면,  화살표 방향을 down_left로 변경해라.
         dr = 1
-    elif j == w and dr == 2:     # 왼쪽옆면에 부딪혔을때 화살표 방향이 down_left라면,  화살표 방향을 down_right로 변경해라.
+    if j == w and dr == 2:     # 왼쪽옆면에 부딪혔을때 화살표 방향이 down_left라면,  화살표 방향을 down_right로 변경해라.
         dr = 3
-    elif i == 0 and j == w:      # 천장 오른쪽 모서리에 부딪혔을때
+    if i == 0 and j == w:      # 천장 오른쪽 모서리에 부딪혔을때
         dr = 1
-    elif i == h and j == 0:      # 바닥 왼쪽 모서리에 부딪혔을때
+    if i == h and j == 0:      # 바닥 왼쪽 모서리에 부딪혔을때
         dr = 2
         
         
