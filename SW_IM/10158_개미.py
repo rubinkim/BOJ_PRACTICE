@@ -24,5 +24,6 @@ def reverse_convert_coord(w, h, i, j):   # 원래 좌표를 문제에서 주어�
     return (j, h - i)
 
 cnt = 0
-while cnt <= t:
+i, j = convert_coord(p, q)
+print(f"i : {i},  j : {j}")
     
