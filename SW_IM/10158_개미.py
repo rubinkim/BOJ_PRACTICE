@@ -56,6 +56,6 @@ while cnt <= t:
     if i == h and j == 0:      # 바닥 왼쪽 모서리에 부딪혔을때
         dr = 2
         
-new_p, new_q = reverse_convert_coord(w, h, i, j)
-print(f"new_p : {new_p},  new_q : {new_q}")  
+    new_p, new_q = reverse_convert_coord(w, h, i, j)
+    print(f"new_p : {new_p},  new_q : {new_q}")  
 
