@@ -13,3 +13,4 @@
 
 (3 1)
 """
+w, h = map(int, input().split())
