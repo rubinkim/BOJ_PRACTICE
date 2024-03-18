@@ -50,5 +50,6 @@ while cnt <= t:
         dr = 0
     elif j == 0 and dr == 1:     # 왼쪽옆면에 부딪혔을때 화살표 방향이 up_left라면,  화살표 방향을 up_right로 변경해라.
         dr = 2
-    
+    elif j == w and dr == 0:     # 오른쪽옆면에 부딪혔을때 화살표 방향이 down_right라면,  화살표 방향을 down_left로 변경해라.
+        dr = 1
         
