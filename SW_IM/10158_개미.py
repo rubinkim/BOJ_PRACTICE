@@ -57,5 +57,5 @@ while cnt <= t:
         dr = 2
         
     new_p, new_q = reverse_convert_coord(w, h, i, j)
-    print(f"new_p : {new_p},  new_q : {new_q}")  
+    print(f"cnt : {cnt}, new_p : {new_p},  new_q : {new_q}")  
 
