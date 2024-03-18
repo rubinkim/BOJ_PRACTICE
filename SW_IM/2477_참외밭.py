@@ -82,4 +82,5 @@ small_rectangle_height = abs(lst[small_height_idxes[0]][1] - lst[small_height_id
 small_rectangle_area = small_rectangle_height * small_rectangle_width
 max_area = max_height * max_width
 plantable_area = max_area - small_rectangle_area
-print(plantable_area)
+total_products = quant * plantable_area
+print(total_products)
