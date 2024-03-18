@@ -34,4 +34,11 @@ dj = [1, -1, 1, -1]
 dr = 2                  # up_right
 cnt = 0
 while cnt <= t:
-    ni, nj = i + di[]
+    ni, nj = i + di[dr],  j + dj[dr]
+    if 0 <= ni <= h and 0 <= nj <= w:
+        cnt += 1
+        i, j = ni, nj
+    elif i == 0 and dr == 2:     # 천장에 부딪혔을때 화살표 방향이 up_right이라면,  화살표 방향을 down_right으로 변경해라.
+        dr = 0
+    elif i == 0 and dr == 3:
+        dr = 1
