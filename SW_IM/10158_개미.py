@@ -22,3 +22,7 @@ def convert_coord(w, h, p, q):   # 문제에서 주어진 좌표를 원래대로
 
 def reverse_convert_coord(w, h, i, j):   # 원래 좌표를 문제에서 주어진 좌표로 변경
     return (j, h - i)
+
+cnt = 0
+while cnt <= t:
+    
