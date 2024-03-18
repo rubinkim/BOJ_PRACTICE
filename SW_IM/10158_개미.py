@@ -29,6 +29,7 @@ print(f"i : {i},  j : {j}")
 new_p, new_q = reverse_convert_coord(w, h, i, j)
 print(f"new_p : {new_p},  new_q : {new_q}")  
 
-  
+di = [1, 1, -1, -1]     #down_right, down_left, up_right, up_left
 cnt = 0
 while cnt <= t:
+    
