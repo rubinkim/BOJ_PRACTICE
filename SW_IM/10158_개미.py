@@ -73,3 +73,4 @@ if a % 2 == 0:
     x = (p + t) % w
 else:
     x = w - (p + t) % w
+if b % 2 == 0:
