@@ -68,3 +68,6 @@ t = int(input())
 
 a = (p + t) // w
 b = (q + t) // h
+
+if a % 2 == 0:
+    x = (p + t) % w
