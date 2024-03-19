@@ -13,6 +13,7 @@
 
 (3 1)
 """
+"""
 w, h = map(int, input().split())
 p, q = map(int, input().split())
 t = int(input())
@@ -30,7 +31,7 @@ di = [1, 1, -1, -1]     #down_right, down_left, up_right, up_left
 dj = [1, -1, 1, -1]
 dr = 2                  # up_right
 cnt = 0
-while cnt <= t:
+while cnt < t:
     ni, nj = i + di[dr],  j + dj[dr]
     if 0 <= ni <= h and 0 <= nj <= w:
         cnt += 1
@@ -59,3 +60,5 @@ while cnt <= t:
     new_p, new_q = reverse_convert_coord(w, h, i, j)
     print(f"cnt : {cnt}, new_p : {new_p},  new_q : {new_q}")  
 
+print(new_p, new_q)
+"""
