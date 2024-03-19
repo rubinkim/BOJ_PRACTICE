@@ -75,3 +75,5 @@ else:
     x = w - (p + t) % w
 if b % 2 == 0:
     y = (q + t) % h
+else:
+    y =
