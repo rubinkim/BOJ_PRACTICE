@@ -77,3 +77,5 @@ if b % 2 == 0:
     y = (q + t) % h
 else:
     y = h - (q + t) % h
+    
+print(x, y)
