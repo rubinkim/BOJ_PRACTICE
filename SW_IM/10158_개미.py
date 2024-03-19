@@ -74,3 +74,4 @@ if a % 2 == 0:
 else:
     x = w - (p + t) % w
 if b % 2 == 0:
+    y = (q + t) % h
