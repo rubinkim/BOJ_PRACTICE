@@ -13,7 +13,7 @@
 
 (3 1)
 """
-"""
+
 w, h = map(int, input().split())
 p, q = map(int, input().split())
 t = int(input())
@@ -79,3 +79,4 @@ else:
     y = h - (q + t) % h
     
 print(x, y)
+"""
