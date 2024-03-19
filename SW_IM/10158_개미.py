@@ -76,4 +76,4 @@ else:
 if b % 2 == 0:
     y = (q + t) % h
 else:
-    y =
+    y = h - (q + t) % h
