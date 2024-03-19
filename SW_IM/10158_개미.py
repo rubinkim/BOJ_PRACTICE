@@ -62,3 +62,4 @@ while cnt < t:
 
 print(new_p, new_q)
 """
+w, h = map(int, input().split())
