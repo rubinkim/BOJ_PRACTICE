@@ -71,3 +71,4 @@ b = (q + t) // h
 
 if a % 2 == 0:
     x = (p + t) % w
+else:
