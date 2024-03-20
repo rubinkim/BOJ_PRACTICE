@@ -45,3 +45,9 @@ for x in ans:
         max_len = len(x)
 print(max_len)
 """
+
+N = int(input())
+nums = list(map(int, input().split()))
+#print(f"N : {N},  nums : {nums}")
+
+ans = []
