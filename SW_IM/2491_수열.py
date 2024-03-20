@@ -19,4 +19,4 @@ print(f"N : {N},  nums : {nums}")
 print()
 ans = []
 
-def dfs(n, lst_asc, lst_desc):      #
+def dfs(n, lst_asc, lst_desc):      # n : nums라는 list의 각 원소들의 index
