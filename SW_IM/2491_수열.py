@@ -34,8 +34,7 @@ def dfs(n, lst_asc, lst_desc):      # n : nums라는 list의 각 원소들의 in
     elif nums[n] == nums[n-1]:
         dfs(n+1, lst_asc+[nums[n]], lst_desc+[nums[n]])
         
-    if nums[n] <= nums[n-1]:
-
+    elif nums[n] < nums[n-1]:
         ans.append(lst_asc)
         lst_asc = []
         dfs(n+1, lst_asc, lst_desc+[nums[n]])
