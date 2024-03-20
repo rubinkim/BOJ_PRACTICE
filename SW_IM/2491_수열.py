@@ -28,7 +28,8 @@ def dfs(n, lst_asc, lst_desc):      # n : nums라는 list의 각 원소들의 in
     elif n < N:
         if nums[n] > nums[n-1]:
             ans.append(lst_desc)
-            dfs(n+1, lst_asc+[nums[n]], [nums[n]])
+            lst_desc = [nums[0]]
+            dfs(n+1, lst_asc+[nums[n]], lst_desc)
     
         elif nums[n] == nums[n-1]:
             ans.append(lst_asc)
@@ -37,7 +38,8 @@ def dfs(n, lst_asc, lst_desc):      # n : nums라는 list의 각 원소들의 in
         
         elif nums[n] < nums[n-1]:
             ans.append(lst_asc)
-            dfs(n+1, [nums[n]], lst_desc+[nums[n]])
+            lst_asc = [nums[0]]
+            dfs(n+1, lst_asc, lst_desc+[nums[n]])
         
 dfs(1, [nums[0]], [nums[0]])
 max_len = 0
