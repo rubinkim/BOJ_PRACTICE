@@ -52,7 +52,11 @@ def dfs(n, lst_asc, lst_desc):      # n : nums라는 list의 각 원소들의 in
 dfs(1, [nums[0]], [nums[0]])
 print(max_len)
 """
-
+"""
+n개의 수가 나열된 수열이 있다. 그 수열 안에서 연속해서 커지거나 작아지는 수열 중 가장 길이가 긴 것을 찾아, 
+그 길이를 출력하는 문제. 커지는 것과 작아지는 것을 관리하는 두 배열을 만든 후 반복문을 이용하여 조건에 충족했을 때 
+dp[i] = dp[i-1] + 1의 점화식을 이용하여 풀었다.
+"""
 n = int(input())
 lst = list(map(int, input().split()))
 pdp = [1 for _ in range(n)]
