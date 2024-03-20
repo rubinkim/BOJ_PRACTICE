@@ -54,5 +54,10 @@ ans = []
 lst_asc,  lst_desc = [nums[0]], [nums[0]]
 
 for i in range(1, N+1):
-    if nums[i] >= nums[i-1]:
-        
+    if nums[i] > nums[i-1]:
+        lst_asc.append(nums[i])
+        lst_desc = []
+    elif nums[i] == nums[i-1]:
+        lst_asc.append(nums[i])
+        lst_desc.append(nums[i])
+    elif nums[i] <= 
