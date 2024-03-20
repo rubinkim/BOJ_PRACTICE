@@ -11,7 +11,7 @@
 
 (8   4   2)
 """
-
+"""
 N = int(input())
 nums = list(map(int, input().split()))
 #print(f"N : {N},  nums : {nums}")
@@ -44,3 +44,4 @@ for x in ans:
     if len(x) > max_len:
         max_len = len(x)
 print(max_len)
+"""
