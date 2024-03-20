@@ -21,3 +21,5 @@ ans = []
 
 def dfs(n, lst_asc, lst_desc):      # n : nums라는 list의 각 원소들의 index
     if n >= N:
+        lens_lst = [len(x) for x in ans]
+        
