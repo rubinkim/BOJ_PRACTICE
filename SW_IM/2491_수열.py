@@ -10,7 +10,7 @@
 1 5 3 6 4 7 1 3 2 9 5
 
 (8   4   2)
-"""
+
 
 import sys
 sys.setrecursionlimit(105000)
@@ -51,3 +51,17 @@ def dfs(n, lst_asc, lst_desc):      # n : nums라는 list의 각 원소들의 in
         
 dfs(1, [nums[0]], [nums[0]])
 print(max_len)
+"""
+
+n = int(input())
+lst = list(map(int, input().split()))
+pdp = [1 for _ in range(n)]
+ndp = [1 for _ in range(n)]
+
+for i in range(1, n):
+    if lst[i] >= lst[i-1]: 
+        pdp[i] = pdp[i-1] + 1
+    if lst[i] <= lst[i-1]: 
+        ndp[i] = ndp[i-1] + 1
+
+print(max(max(pdp), max(ndp)))
