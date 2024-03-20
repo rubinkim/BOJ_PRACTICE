@@ -17,3 +17,4 @@ nums = list(map(int, input().split()))
 print(f"N : {N},  nums : {nums}")
 
 print()
+ans = []
