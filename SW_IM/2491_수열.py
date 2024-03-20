@@ -24,7 +24,7 @@ def dfs(n, lst_asc, lst_desc):      # n : nums라는 list의 각 원소들의 in
     if n >= N:
         print(f"n : {n}")
         lens_lst = [len(x) for x in ans]
-        return max(lens_lst)
+        return lens_lst
     
     if nums[n] >= nums[n-1]:
         ans.append(lst_desc)
