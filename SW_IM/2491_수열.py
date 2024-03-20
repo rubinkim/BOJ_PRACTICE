@@ -29,4 +29,6 @@ def dfs(n, lst_asc, lst_desc):      # n : nums라는 list의 각 원소들의 in
         lst_desc = []
         dfs(n+1, lst_asc+[nums[n]], lst_desc)
         
-    
+    if nums[n] <= nums[n-1]:
+        ans.append(lst_asc)
+        
