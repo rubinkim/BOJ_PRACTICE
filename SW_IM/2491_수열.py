@@ -27,8 +27,8 @@ def dfs(n, lst_asc, lst_desc):      # n : nums라는 list의 각 원소들의 in
         return
     
     if nums[n] >= nums[n-1]:
-        if lst_desc != []:
-            ans.append(lst_desc)
+
+        ans.append(lst_desc)
         lst_desc = []
         dfs(n+1, lst_asc+[nums[n]], lst_desc)
         
