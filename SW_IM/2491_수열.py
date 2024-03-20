@@ -25,19 +25,17 @@ def dfs(n, lst_asc, lst_desc):      # n : nums라는 list의 각 원소들의 in
         ans.append(lst_asc)
         ans.append(lst_desc)
         return
+    elif n < N:
+        if nums[n] > nums[n-1]:
+            ans.append(lst_desc)
+            dfs(n+1, lst_asc+[nums[n]], [nums[n]])
     
-    if nums[n] > nums[n-1]:
-        ans.append(lst_desc)
-        lst_desc = [nums[n]]
-        dfs(n+1, lst_asc+[nums[n]], lst_desc)
-    
-    elif nums[n] == nums[n-1]:
-        dfs(n+1, lst_asc+[nums[n]], lst_desc+[nums[n]])
+        elif nums[n] == nums[n-1]:
+            dfs(n+1, lst_asc+[nums[n]], lst_desc+[nums[n]])
         
-    elif nums[n] < nums[n-1]:
-        ans.append(lst_asc)
-        lst_asc = [nums[n]]
-        dfs(n+1, lst_asc, lst_desc+[nums[n]])
+        elif nums[n] < nums[n-1]:
+            ans.append(lst_asc)
+            dfs(n+1, [nums[n]], lst_desc+[nums[n]])
         
 dfs(1, [nums[0]], [nums[0]])
 max_len = 0
@@ -45,23 +43,3 @@ for x in ans:
     if len(x) > max_len:
         max_len = len(x)
 print(max_len)
-
-"""
-N = int(input())
-nums = list(map(int, input().split()))
-#print(f"N : {N},  nums : {nums}")
-
-ans = []
-lst_asc,  lst_desc = [nums[0]], [nums[0]]
-
-for i in range(1, N+1):
-    if nums[i] > nums[i-1]:
-        lst_asc.append(nums[i])
-        lst_desc = []
-    elif nums[i] == nums[i-1]:
-        lst_asc.append(nums[i])
-        lst_desc.append(nums[i])
-    elif nums[i] < nums[i-1]:
-        lst_asc = []
-        lst_desc.append(nums[i])
-"""
