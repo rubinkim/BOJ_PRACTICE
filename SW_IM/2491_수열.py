@@ -14,9 +14,9 @@
 
 N = int(input())
 nums = list(map(int, input().split()))
-print(f"N : {N},  nums : {nums}")
+#print(f"N : {N},  nums : {nums}")
 
-print()
+#print()
 ans = []
 
 def dfs(n, lst_asc, lst_desc):      # n : nums라는 list의 각 원소들의 index
@@ -37,4 +37,8 @@ def dfs(n, lst_asc, lst_desc):      # n : nums라는 list의 각 원소들의 in
         dfs(n+1, lst_asc, lst_desc+[nums[n]])
         
 dfs(1, [nums[0]], [nums[0]])
-print(ans)
+max_len = 0
+for x in ans:
+    if len(x) > max_len:
+        max_len = len(x)
+print(max_len)
