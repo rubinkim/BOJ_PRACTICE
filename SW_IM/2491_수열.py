@@ -18,3 +18,5 @@ print(f"N : {N},  nums : {nums}")
 
 print()
 ans = []
+
+def dfs(n, lst_asc, lst_desc):      #
