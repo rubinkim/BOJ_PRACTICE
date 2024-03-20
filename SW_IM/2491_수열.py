@@ -20,6 +20,7 @@ print()
 ans = []
 
 def dfs(n, lst_asc, lst_desc):      # n : nums라는 list의 각 원소들의 index
+    global ans
     if n >= N:
         lens_lst = [len(x) for x in ans]
         return max(lens_lst)
@@ -33,4 +34,6 @@ def dfs(n, lst_asc, lst_desc):      # n : nums라는 list의 각 원소들의 in
         ans.append(lst_asc)
         lst_asc = []
         dfs(n+1, lst_asc, lst_desc+[nums[n]])
+        
+print(ans)
 print(dfs(1, [nums[0]], [nums[0]]))
