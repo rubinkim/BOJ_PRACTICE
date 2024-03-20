@@ -23,3 +23,6 @@ def dfs(n, lst_asc, lst_desc):      # n : nums라는 list의 각 원소들의 in
     if n >= N:
         lens_lst = [len(x) for x in ans]
         return max(lens_lst)
+    
+    if nums[n] >= nums[n-1]:
+        
