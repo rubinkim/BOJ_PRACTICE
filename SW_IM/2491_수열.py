@@ -51,3 +51,6 @@ nums = list(map(int, input().split()))
 #print(f"N : {N},  nums : {nums}")
 
 ans = []
+
+for i in range(1, N+1):
+    
