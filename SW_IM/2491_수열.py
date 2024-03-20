@@ -45,7 +45,7 @@ for x in ans:
         max_len = len(x)
 print(max_len)
 """
-
+"""
 N = int(input())
 nums = list(map(int, input().split()))
 #print(f"N : {N},  nums : {nums}")
@@ -60,4 +60,7 @@ for i in range(1, N+1):
     elif nums[i] == nums[i-1]:
         lst_asc.append(nums[i])
         lst_desc.append(nums[i])
-    elif nums[i] <= 
+    elif nums[i] < nums[i-1]:
+        lst_asc = []
+        lst_desc.append(nums[i])
+"""
