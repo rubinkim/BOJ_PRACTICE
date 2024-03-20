@@ -51,6 +51,7 @@ nums = list(map(int, input().split()))
 #print(f"N : {N},  nums : {nums}")
 
 ans = []
+lst_asc,  lst_desc = [], []
 
 for i in range(1, N+1):
-    
+    if nums[i] >= nums[]
