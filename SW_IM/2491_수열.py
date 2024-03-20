@@ -35,5 +35,5 @@ def dfs(n, lst_asc, lst_desc):      # n : nums라는 list의 각 원소들의 in
         lst_asc = []
         dfs(n+1, lst_asc, lst_desc+[nums[n]])
         
-print(dfs(1, [nums[0]], [nums[0]]))
+dfs(1, [nums[0]], [nums[0]])
 print(ans)
