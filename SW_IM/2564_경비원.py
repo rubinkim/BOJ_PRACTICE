@@ -36,3 +36,4 @@ for i in range(N):
         total_dist += 2 * (w + h) - lst[i][1]
     else:
         total_dist += abs(my_location - lst[i][1])
+print(total_dist)
