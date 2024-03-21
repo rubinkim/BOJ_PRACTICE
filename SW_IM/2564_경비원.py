@@ -11,3 +11,4 @@
 """
 
 w, h = map(int, input().split())
+N = int(input())
