@@ -27,13 +27,13 @@ for _ in range(N+1):
         distance = h + w + (h - distance)
     lst.append((direction, distance))
         
-print(lst)
+#print(lst)
 
 total_dist = 0
 my_location = lst[-1][1]
 for i in range(N):
     if abs(my_location - lst[i][1]) > w + h:
-        total_dist += 2 * (w + h) - lst[i][1] + my_location
+        total_dist += 2 * (w + h) - abs(my_location - lst[i][1])
     else:
         total_dist += abs(my_location - lst[i][1])
 print(total_dist)
