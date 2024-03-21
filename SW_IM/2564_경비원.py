@@ -19,4 +19,5 @@ for _ in range(N+1):
     direction, distance = map(int, input().split())
     if direction == 1:
         distance = h + w + h + (w - distance)
-    
+    elif direction == 2:
+        distance = h + distance
