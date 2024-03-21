@@ -30,3 +30,6 @@ for _ in range(N+1):
 print(lst)
 
 total_dist = 0
+my_location = lst[-1][1]
+for i in range(N):
+    
