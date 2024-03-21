@@ -28,3 +28,5 @@ for _ in range(N+1):
     lst.append((direction, distance))
         
 print(lst)
+
+total_dist = 0
