@@ -25,3 +25,5 @@ for _ in range(N+1):
         distance = distance
     elif direction == 4:
         distance = h + w + (h - distance)
+        
+print(lst)
