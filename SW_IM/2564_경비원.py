@@ -21,3 +21,6 @@ for _ in range(N+1):
         distance = h + w + h + (w - distance)
     elif direction == 2:
         distance = h + distance
+    elif direction == 3:
+        distance = distance
+    elif direction == 4:
