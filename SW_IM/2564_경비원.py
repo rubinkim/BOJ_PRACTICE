@@ -9,3 +9,5 @@
 
 23
 """
+
+w, h = map(int, input().split())
