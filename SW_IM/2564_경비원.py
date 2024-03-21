@@ -14,5 +14,7 @@ w, h = map(int, input().split())
 N = int(input())
 lst = []
 
+# direction : 1(north), 2(south), 
 for _ in range(N+1):
     direction, distance = map(int, input().split())
+    if 
