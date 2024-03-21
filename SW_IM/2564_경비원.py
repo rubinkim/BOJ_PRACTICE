@@ -12,3 +12,7 @@
 
 w, h = map(int, input().split())
 N = int(input())
+lst = []
+
+for _ in range(N+1):
+    
