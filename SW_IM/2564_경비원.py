@@ -27,7 +27,7 @@ for _ in range(N+1):
         distance = h + w + (h - distance)
     lst.append((direction, distance))
         
-#print(lst)
+print(lst)
 
 total_dist = 0
 my_location = lst[-1][1]
