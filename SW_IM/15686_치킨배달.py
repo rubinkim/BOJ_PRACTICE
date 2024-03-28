@@ -53,3 +53,5 @@ for i in range(N):
             
 print(f"houses : {houses}")
 print(f"chickens : {chickens}")
+
+ans = 2 * N * len(houses)      # 도시의 치킨거리의 최솟값을 구하는 문제이므로 default로 매우 큰값을 할당하였다.
