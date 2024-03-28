@@ -60,7 +60,8 @@ def get_dist(a, b):
     return abs(a[0] - b[0]) + abs(a[1] - b[1])
 
 for combi in combinations(chickens, M):
-    tot = 0     # 이번 combi에서의 도시의 치킨거리의 최솟값
+    tot = 0     # 이번 combi에서의 도시의 치킨거리
     for house in houses:
         tot += min(get_dist(house, chicken) for chicken in combi)
     print(f"combi : {combi},  tot : {tot}")
+    ans = min(ans, tot)
