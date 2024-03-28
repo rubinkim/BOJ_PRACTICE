@@ -65,3 +65,5 @@ for combi in combinations(chickens, M):
         tot += min(get_dist(house, chicken) for chicken in combi)
     print(f"combi : {combi},  tot : {tot}")
     ans = min(ans, tot)
+    
+print(ans)
