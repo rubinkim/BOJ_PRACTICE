@@ -37,6 +37,14 @@
 1 2 0 2 1
 
 (32)
+
+
+5 2
+0 2 0 1 0
+1 0 1 0 0
+0 0 0 0 0
+2 0 0 1 1
+2 2 0 1 2
 """
 from itertools import combinations
 
@@ -49,3 +57,6 @@ for i in range(N):
             houses.append((i, j))
         elif v == 2:
             chickens.append((i, j))
+            
+print(f"houses : {houses}")
+print(f"chickens : {chickens}")
