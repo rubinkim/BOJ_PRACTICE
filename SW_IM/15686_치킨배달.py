@@ -42,3 +42,6 @@ from itertools import combinations
 
 N, M = map(int, input().split())     # N : one-side length of the city,  M : maximum number of chicken houses
 houses, chickens = [], []
+
+for i in range(N):
+    for j, v in enumerate(map(int, input().split())):
