@@ -45,3 +45,7 @@ houses, chickens = [], []
 
 for i in range(N):
     for j, v in enumerate(map(int, input().split())):
+        if v == 1:
+            houses.append((i, j))
+        elif v == 2:
+            chickens.append((i, j))
