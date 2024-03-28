@@ -58,3 +58,7 @@ ans = 2 * N * len(houses)      # 도시의 치킨거리의 최솟값을 구하�
 
 def get_dist(a, b):
     return abs(a[0] - b[0]) + abs(a[1] - b[1])
+
+for combi in combinations(chickens, M):
+    tot = 0     # 이번 combi에서의 도시의 치킨거리의 최솟값
+    
