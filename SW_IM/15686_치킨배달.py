@@ -38,3 +38,5 @@
 
 (32)
 """
+
+N, M = map(int, input().split())     # N : one-side length of the city,  M : maximum number of chicken houses
