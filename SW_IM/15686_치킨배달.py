@@ -38,5 +38,6 @@
 
 (32)
 """
+from itertools import combinations
 
 N, M = map(int, input().split())     # N : one-side length of the city,  M : maximum number of chicken houses
