@@ -62,7 +62,7 @@ def get_dist(a, b):
 for combi in combinations(chickens, M):
     tot = 0     # 이번 combi에서의 도시의 치킨거리
     for house in houses:
-        print(get_dist(house, chicken) for chicken in combi)
+        print([get_dist(house, chicken) for chicken in combi])
         tot += min(get_dist(house, chicken) for chicken in combi)
     print(f"combi : {combi},  tot : {tot}")
     ans = min(ans, tot)
