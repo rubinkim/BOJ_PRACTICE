@@ -28,3 +28,8 @@ for row in adj:
 # 노드들간의 최단거리를 구하려면 우리는 bfs를 사용하거나 floyd-warshall 알고리즘을 이용할 수 있다.
 # 지금은 bfs를 사용해서 문제를 풀것인데 floyd-warshall로도 꼭 풀어보길 바란다.
 
+from collections import deque
+
+# 1. 어떤 임의의 한 사람으로부터 다른 임의의 한 사람까지의 최단 거리를 구하는 함수
+def bfs(start, goal):
+    
