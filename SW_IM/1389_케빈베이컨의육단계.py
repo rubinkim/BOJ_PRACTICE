@@ -45,4 +45,4 @@ def bfs(start, goal):
         for nxt in adj[now]:
             if not chk[nxt]:
                 chk[nxt] = True
-                
+                dq.append((nxt, nd))
