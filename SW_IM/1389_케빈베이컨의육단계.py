@@ -57,6 +57,12 @@ def get_kevin(start):
             tot += bfs(start, i)
     return tot
 
+# 3. 주어진 n명의 유저들의 케빈베이컨의 수를 kevin이라는 리스트에 저장하기
+kevin = []
+for i in range(n):
+    kevin.append(get_kevin(i))
+print(f"kevin : {kevin}")
+
 
 
 
