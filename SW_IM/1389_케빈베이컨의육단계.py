@@ -51,8 +51,8 @@ def bfs(start, goal):
 # 2. 어떤 임의의 한 사람으로부터 다른 모든 사람들까지의 최단거리의 합을 구하는 함수
 # 즉 어떤 사람의 케빈베이컨의 수를 구하는 함수이다.
 def get_kevin(start):
-    for i in range(n):
-        tot = 0
+    tot = 0
+    for i in range(n):        
         if i != start:
             tot += bfs(start, i)
     return tot
