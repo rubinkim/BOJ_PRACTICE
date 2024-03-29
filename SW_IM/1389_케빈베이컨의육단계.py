@@ -16,4 +16,10 @@
 
 n, m = map(int, input().split())        # n : 유저의 수,  m : 친구관계의 수
 adj = [[] for _ in range(n)]            # adj : 인접리스트
-
+for _ in range(m):
+    a, b = map(lambda x : x-1,  map(int, input().split()))
+    adj[a].append(b)
+    adj[b].append(a)
+    
+for row in adj:
+    print(row)
