@@ -33,4 +33,7 @@ from collections import deque
 # 1. 어떤 임의의 한 사람으로부터 다른 임의의 한 사람까지의 최단 거리를 구하는 함수
 def bfs(start, goal):
     chk = [False] * n        # 어떤 유저를 방문한 적이 있는지 없는지를 체크하는 리스트
+    chk[start] = True
+    dq = deque()
+    dq.append((start, 0))    # 출발하는 유저의 인덱스 & 출발유저와의 거리가 얼마나 되는가를 나타내는 숫자의 튜플로 dq에 저장한다.
     
