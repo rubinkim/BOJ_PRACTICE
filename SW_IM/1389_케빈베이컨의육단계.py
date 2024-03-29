@@ -32,4 +32,5 @@ from collections import deque
 
 # 1. 어떤 임의의 한 사람으로부터 다른 임의의 한 사람까지의 최단 거리를 구하는 함수
 def bfs(start, goal):
+    chk = [False] * n        # 어떤 유저를 방문한 적이 있는지 없는지를 체크하는 리스트
     
