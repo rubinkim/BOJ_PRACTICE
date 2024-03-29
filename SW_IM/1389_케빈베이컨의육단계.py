@@ -39,4 +39,6 @@ def bfs(start, goal):
     
     while dq:
         now, d = dq.popleft()
+        if now == goal:
+            return d
         
