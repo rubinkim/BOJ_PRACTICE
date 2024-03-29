@@ -54,6 +54,9 @@ def get_kevin(start):
     for i in range(n):
         tot = 0
         if i != start:
-            
+            tot += bfs(start, i)
+    return tot
+
+
 
 
