@@ -65,6 +65,11 @@ print(f"kevin : {kevin}")
 
 ans = (-1, n**2)
 
+for i, v in enumerate(kevin):
+    if ans[1] > v:
+        ans = (i, v)
+print(ans)
+print(ans[0] + 1)
 
 
 
