@@ -37,3 +37,6 @@ def bfs(start, goal):
     dq = deque()
     dq.append((start, 0))    # 출발하는 유저의 인덱스 & 출발유저와의 거리가 얼마나 되는가를 나타내는 숫자의 튜플로 dq에 저장한다.
     
+    while dq:
+        now, d = dq.popleft()
+        
