@@ -46,3 +46,5 @@ def bfs(start, goal):
             if not chk[nxt]:
                 chk[nxt] = True
                 dq.append((nxt, nd))
+                
+# 2. 어떤 임의의 한 사람으로부터 다른 모든 사람들까지의 최단거리의 합을 구하는 함수
