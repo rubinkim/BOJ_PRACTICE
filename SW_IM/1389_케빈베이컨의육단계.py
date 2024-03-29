@@ -63,6 +63,8 @@ for i in range(n):
     kevin.append(get_kevin(i))
 print(f"kevin : {kevin}")
 
+ans = (-1, n**2)
+
 
 
 
