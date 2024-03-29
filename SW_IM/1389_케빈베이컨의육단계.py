@@ -41,4 +41,8 @@ def bfs(start, goal):
         now, d = dq.popleft()
         if now == goal:
             return d
-        
+        nd = d + 1
+        for nxt in adj[now]:
+            if not chk[nxt]:
+                chk[nxt] = True
+                
