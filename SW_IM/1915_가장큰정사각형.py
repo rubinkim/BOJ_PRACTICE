@@ -85,7 +85,7 @@ while lo <= hi:
             continue
         break
     
-    if area_sum < mid ** 2:
+    if ans < mid ** 2:
         hi = mid - 1
     mid = (lo + hi) // 2
     #print(f"mid : {mid}, hi : {hi}, lo : {lo}")                
