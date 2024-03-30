@@ -60,6 +60,7 @@ for row in arr:
     
 lo, hi = 1, min(n, m)
 mid = (lo + hi) // 2
+print(f"mid : {mid}")
 ans = 1
 
 while lo <= hi:
