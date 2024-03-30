@@ -56,4 +56,11 @@ ans = 1
 while lo <= hi:
     for i in range(n-mid):
         for j in range(m-mid):
-            
+            area_sum = sum([sum([arr[ii][jj] for jj in range(j, j+mid)]) for ii in range(i, i+mid)])
+            ans = max(ans, area_sum)
+    if ans < mid ** 2:
+        hi = mid - 1
+    else:
+        lo = mid + 1
+    mid = (lo + hi) // 2
+
