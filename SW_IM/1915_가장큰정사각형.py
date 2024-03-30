@@ -71,7 +71,7 @@ for row in arr:
     
 lo, hi = 1, min(n, m)
 mid = (lo + hi) // 2
-print(f"mid : {mid}")
+#print(f"mid : {mid}")
 ans = 1
 
 while lo <= hi:
@@ -81,7 +81,7 @@ while lo <= hi:
                 area_sum = sum([sum([arr[ii][jj] for jj in range(j, j+mid)]) for ii in range(i, i+mid)])                
                 if area_sum == mid ** 2:
                     ans = max(ans, area_sum)
-                    print(f"(i, j) {i, j},  area_sum : {area_sum}")
+                    #print(f"(i, j) {i, j},  area_sum : {area_sum}")
                     lo = mid + 1
                     break
         else:
