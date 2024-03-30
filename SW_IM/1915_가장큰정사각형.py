@@ -8,3 +8,7 @@
 
 (4)
 """
+
+n, m = map(int, input().split())
+arr = [[0] * m for _ in range(n)]
+dp = [[0] * m for _ in range(n)]
