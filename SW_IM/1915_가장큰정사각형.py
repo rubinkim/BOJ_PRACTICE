@@ -82,11 +82,15 @@ while lo <= hi:
                 if area_sum == mid ** 2:
                     ans = max(ans, area_sum)
                     print(f"(i, j) {i, j},  area_sum : {area_sum}")
-    if ans == mid ** 2:
-        lo = mid + 1
-    elif area_sum < mid ** 2:
+                    lo = mid + 1
+                    break
+        else:
+            continue
+        break
+    
+    if ans > mid ** 2:
         hi = mid - 1
     mid = (lo + hi) // 2
-    print(f"mid : {mid}, hi : {hi}, lo : {lo}")                
+    #print(f"mid : {mid}, hi : {hi}, lo : {lo}")                
 
 print(ans)
