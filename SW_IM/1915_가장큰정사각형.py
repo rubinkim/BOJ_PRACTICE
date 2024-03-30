@@ -8,10 +8,10 @@
 
 7 10
 0011100000
-1010011001
-1110000000
-1100101010
-1111000101
+1010011111
+1110011110
+1110111110
+1111011111
 0110110110
 1111001101
 
@@ -66,10 +66,10 @@ while lo <= hi:
     for i in range(n-mid):
         for j in range(m-mid):
             if arr[i][j] == 1:
-                area_sum = sum([sum([arr[ii][jj] for jj in range(j, j+mid)]) for ii in range(i, i+mid)])
-                print(f"(i, j) {i, j},  area_sum : {area_sum}")
+                area_sum = sum([sum([arr[ii][jj] for jj in range(j, j+mid)]) for ii in range(i, i+mid)])                
                 if area_sum == mid ** 2:
                     ans = max(ans, area_sum)
+                    print(f"(i, j) {i, j},  area_sum : {area_sum}")
     if ans == mid ** 2:
         lo = mid + 1
     elif area_sum < mid ** 2:
