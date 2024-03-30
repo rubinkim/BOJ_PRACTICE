@@ -88,6 +88,6 @@ while lo <= hi:
     if ans < mid ** 2:
         hi = mid - 1
     mid = (lo + hi) // 2
-    #print(f"mid : {mid}, hi : {hi}, lo : {lo}")                
+    print(f"mid : {mid}, hi : {hi}, lo : {lo}")                
 
 print(ans)
