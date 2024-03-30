@@ -48,3 +48,5 @@ for i in range(n):
         
 for row in arr:
     print(row) 
+    
+lo, hi = 1, min(n, m)
