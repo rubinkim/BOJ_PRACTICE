@@ -64,11 +64,8 @@ arr = [[] for _ in range(n)]
 for i in range(n):
     row = list(map(int, input()))
     for j in range(m):
-        arr[i].append(row[j])  
-        
-for row in arr:
-    print(row) 
-    
+        arr[i].append(row[j])          
+   
 lo, hi = 1, min(n, m)
 mid = (lo + hi) // 2
 #print(f"mid : {mid}")
