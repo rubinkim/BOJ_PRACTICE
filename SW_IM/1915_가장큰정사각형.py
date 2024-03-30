@@ -59,12 +59,12 @@ while lo <= hi:
             area_sum = sum([sum([arr[ii][jj] for jj in range(j, j+mid)]) for ii in range(i, i+mid)])
             print(f"(i, j) {i, j},  area_sum : {area_sum}")
             ans = max(ans, area_sum)
-            if area_sum == mid ** 2:
-                ans = max(ans, area_sum)
-                lo = mid + 1
-            elif area_sum < mid ** 2:
-                hi = mid - 1
-            mid = (lo + hi) // 2
+    if area_sum == mid ** 2:
+        ans = max(ans, area_sum)
+        lo = mid + 1
+    elif area_sum < mid ** 2:
+        hi = mid - 1
+    mid = (lo + hi) // 2
                 
 
 print(ans)
