@@ -74,7 +74,6 @@ while lo <= hi:
         lo = mid + 1
     elif area_sum < mid ** 2:
         hi = mid - 1
-    mid = (lo + hi) // 2
-                
+    mid = (lo + hi) // 2                
 
 print(ans)
