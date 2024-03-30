@@ -10,11 +10,14 @@
 """
 
 n, m = map(int, input().split())
-arr = [[0] * m for _ in range(n)]
+arr = [[] for _ in range(n)]
 for i in range(n):
     row = list(map(int, input()))
     for j in range(m):
-        arr[i][j] == row[j]        
+        arr[i].append(row[j])  
+        
+for row in arr:
+    print(row)   
         
 dp = [[0] * m for _ in range(n)]
 ans = 0
