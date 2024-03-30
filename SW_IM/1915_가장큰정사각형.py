@@ -68,7 +68,7 @@ for i in range(n):
    
 lo, hi = 1, min(n, m)
 mid = (lo + hi) // 2
-#print(f"mid : {mid}")
+print(f"mid : {mid}")
 ans = 1
 
 while lo <= hi:
