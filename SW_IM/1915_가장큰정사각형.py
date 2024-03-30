@@ -50,3 +50,9 @@ for row in arr:
     print(row) 
     
 lo, hi = 1, min(n, m)
+mid = (lo + hi) // 2
+
+while lo <= hi:
+    for i in range(n-mid):
+        for j in range(m-mid):
+            
