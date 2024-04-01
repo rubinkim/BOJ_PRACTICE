@@ -7,9 +7,9 @@
 x = int(input())
 lst = []
 while True:
-    if x == 1:
-        print(sum(lst))
-        break
     lst.append(x%2)
     x //= 2
+    if x == 1:
+        print(sum(lst))
+    break
 print(lst)
