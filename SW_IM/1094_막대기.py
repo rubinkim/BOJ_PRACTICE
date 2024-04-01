@@ -7,10 +7,11 @@
 x = int(input())
 lst = []
 while True:
-    lst.append(x%2)
-    x //= 2
     if x == 1:
         lst.append(x)
         print(sum(lst))
         break
+    lst.append(x%2)
+    x //= 2
+
 print(lst)
