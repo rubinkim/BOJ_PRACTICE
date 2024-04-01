@@ -11,5 +11,5 @@ while True:
     x //= 2
     if x == 1:
         print(sum(lst))
-    break
+        break
 print(lst)
