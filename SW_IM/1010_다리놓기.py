@@ -8,4 +8,7 @@
 (1 5 67863915)
 """
 
+from itertools import combinations
 tc = int(input())
+for _ in range(tc):
+    
