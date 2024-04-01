@@ -8,8 +8,11 @@
 (1 5 67863915)
 """
 
-from itertools import combinations
+from math import factorial
+import time
+
 tc = int(input())
 for _ in range(tc):
     n, m = map(int, input().split())
-    
+    ans = int(factorial(m) / (factorial(m-n) * factorial(n)))
+    print(ans)
