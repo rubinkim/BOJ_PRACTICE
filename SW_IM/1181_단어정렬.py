@@ -25,9 +25,9 @@ for _ in range(n):
         lst[len(word)].append(word)
     
 for l in lst:
-    if l == []:
+    if len(l) == 0:
         continue
-    elif l != []:
+    else:
         l.sort()
         for w in l:
             print(w)
