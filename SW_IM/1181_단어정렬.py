@@ -17,12 +17,12 @@ yours
 """
 
 n = int(input())
-lst = [[] for _ in range(n)]
+lst = [[] for _ in range(n+1)]
 
 for _ in range(n):
     word = input()
-    if word not in lst[len(word)-1]:
-        lst[len(word)-1].append(word)
+    if word not in lst[len(word)]:
+        lst[len(word)].append(word)
     
 for l in lst:
     if l == []:
