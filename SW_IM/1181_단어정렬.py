@@ -14,7 +14,7 @@ cannot
 wait
 im
 yours
-
+"""
 
 n = int(input())
 lst = [[] for _ in range(n+1)]
@@ -34,7 +34,7 @@ for l in lst:
         for w in l:
             print(w)
 """
-
+"""
 N = int(input())
 lst = []
 
@@ -45,3 +45,4 @@ lst = list(set(lst))
 lst.sort(key=lambda x : (len(x),x))
 
 print("\n".join(lst))
+"""
