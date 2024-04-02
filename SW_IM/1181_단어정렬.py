@@ -15,3 +15,5 @@ wait
 im
 yours
 """
+
+n = int(input())
