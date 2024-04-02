@@ -10,8 +10,10 @@ y, x = 0, 0
 
 n = int(input())
 step = 0
+dr = 0
+
 while step <= n:
     if step == n:
         print(str(y+1) + '/' + str(x+1))
         break
-    
+    if y % 2 == 0 and x == 0:
