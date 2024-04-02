@@ -17,3 +17,9 @@ while step <= n:
         print(str(y+1) + '/' + str(x+1))
         break
     if y % 2 == 0 and x == 0:
+        dr = 0
+    if y % 2 == 1 and x == 0:
+        dr = 1
+    if y == 0 and x % 2 == 1:
+        dr = 2
+    
