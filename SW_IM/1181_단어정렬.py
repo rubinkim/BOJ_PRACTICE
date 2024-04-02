@@ -22,3 +22,6 @@ lst = [[] for _ in range(n)]
 for _ in range(n):
     word = input()
     lst[len(word)-1].append(word)
+    
+for l in lst:
+    print(l)
