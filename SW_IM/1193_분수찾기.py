@@ -24,4 +24,6 @@ while step <= n:
         dr = 2
     if y == 0 and x % 2 == 0:
         dr = 3
-    
+    y = y + dy[dr]
+    x = x + dx[dr]
+    step += 1
