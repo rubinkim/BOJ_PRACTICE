@@ -17,7 +17,7 @@ yours
 """
 
 n = int(input())
-lst = [[] for _ in range(n+1)]
+lst = [[] for _ in range(51)]
 
 for _ in range(n):
     word = input()
