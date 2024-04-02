@@ -23,5 +23,9 @@ for _ in range(n):
     word = input()
     lst[len(word)-1].add(word)
     
-for l in lst:
-    print(l)
+for l in lst:    
+    l = list(l)
+    if l != []:
+        l.sort()
+        for w in l:
+            print(w)
