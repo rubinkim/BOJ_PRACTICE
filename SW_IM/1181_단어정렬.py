@@ -29,3 +29,5 @@ for l in lst:
         l.sort()
         for w in l:
             print(w)
+    else:
+        continue
