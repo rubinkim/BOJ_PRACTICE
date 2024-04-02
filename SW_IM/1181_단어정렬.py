@@ -15,7 +15,7 @@ wait
 im
 yours
 """
-print()
+
 n = int(input())
 lst = [set() for _ in range(n)]
 
