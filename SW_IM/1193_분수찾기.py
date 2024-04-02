@@ -17,11 +17,11 @@ while step <= n:
         dr = 0
     if y > 1 and y % 2 == 0 and x == 1:
         dr = 1
-    if y == 0 and x > 1 and x % 2 == 0:
+    if y == 1 and x > 1 and x % 2 == 0:
         dr = 2
-    if y == 0 and x > 0 and x % 2 == 1:
+    if y == 1 and x > 1 and x % 2 == 1:
         dr = 3
-    if y > 1 and y % 2 == 1 and x == 0:
+    if y > 1 and y % 2 == 1 and x == 1:
         dr = 0
     y = y + dy[dr]
     x = x + dx[dr]
