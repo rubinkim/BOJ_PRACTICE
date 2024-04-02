@@ -27,7 +27,7 @@ for _ in range(n):
 for l in lst:
     if l == []:
         continue
-    else:
+    elif l != []:
         l.sort()
         for w in l:
             print(w)
