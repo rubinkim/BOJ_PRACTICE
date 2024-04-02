@@ -22,4 +22,6 @@ while step <= n:
         dr = 1
     if y == 0 and x % 2 == 1:
         dr = 2
+    if y == 0 and x % 2 == 0:
+        dr = 3
     
