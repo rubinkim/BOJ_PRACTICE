@@ -13,9 +13,6 @@ step = 0
 dr = 0
 
 while step <= n:
-    if step == n:
-        print(str(y+1) + '/' + str(x+1))
-        break
     if y == 0 and x == 0:
         dr = 0
     if y > 0 and y % 2 == 0 and x == 0:
@@ -29,3 +26,7 @@ while step <= n:
     y = y + dy[dr]
     x = x + dx[dr]
     step += 1
+
+    if step == n:
+        print(str(y+1) + '/' + str(x+1))
+        break
