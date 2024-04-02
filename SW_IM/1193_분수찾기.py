@@ -9,10 +9,14 @@ dx = (0, 1, 1, -1)
 y, x = 1, 1
 
 n = int(input())
-step = 0
+step = 1
 dr = 0
 
 while step <= n:
+    if step == n:
+        print(str(y) + '/' + str(x))
+        break
+    
     if y == 1 and x == 1:
         dr = 0
     if y > 1 and y % 2 == 0 and x == 1:
@@ -27,6 +31,3 @@ while step <= n:
     x = x + dx[dr]
     step += 1
 
-    if step == n:
-        print(str(y) + '/' + str(x))
-        break
