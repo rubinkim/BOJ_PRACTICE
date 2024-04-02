@@ -25,8 +25,4 @@ for _ in range(n):
         lst[len(word)-1].append(word)
     
 for l in lst:
-    if l != set():    
-        l = list(l)    
-        l.sort()
-        for w in l:
-            print(w)
+    print(l)
