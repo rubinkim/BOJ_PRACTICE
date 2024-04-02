@@ -27,6 +27,8 @@ for _ in range(n):
 for l in lst:
     if len(l) == 0:
         continue
+    elif len(l) == 1:
+        print(l[0])
     else:
         l.sort()
         for w in l:
