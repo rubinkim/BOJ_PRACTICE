@@ -5,7 +5,7 @@
 (2/4)
 """
 dy = (1, -1, 0, 1)
-dx = {0, 1, 1, -1}
+dx = (0, 1, 1, -1)
 y, x = 0, 0
 
 n = int(input())
@@ -16,13 +16,15 @@ while step <= n:
     if step == n:
         print(str(y+1) + '/' + str(x+1))
         break
-    if y % 2 == 0 and x == 0:
+    if y == 0 and x == 0:
+        dr = 0
+    if y > 0 and y % 2 == 0 and x == 0:
         dr = 0
     if y % 2 == 1 and x == 0:
         dr = 1
     if y == 0 and x % 2 == 1:
         dr = 2
-    if y == 0 and x % 2 == 0:
+    if y == 0 and x > 0 and x % 2 == 0:
         dr = 3
     y = y + dy[dr]
     x = x + dx[dr]
