@@ -14,7 +14,7 @@ cannot
 wait
 im
 yours
-"""
+
 
 n = int(input())
 lst = [[] for _ in range(n+1)]
@@ -33,3 +33,5 @@ for l in lst:
         l.sort()
         for w in l:
             print(w)
+"""
+
