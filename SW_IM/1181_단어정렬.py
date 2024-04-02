@@ -21,7 +21,7 @@ lst = [set() for _ in range(n)]
 
 for _ in range(n):
     word = input()
-    lst[len(word)-1].append(word)
+    lst[len(word)-1].add(word)
     
 for l in lst:
     print(l)
