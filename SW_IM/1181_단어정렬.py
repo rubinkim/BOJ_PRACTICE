@@ -17,11 +17,12 @@ yours
 """
 
 n = int(input())
-lst = [set() for _ in range(n)]
+lst = [[] for _ in range(n)]
 
 for _ in range(n):
     word = input()
-    lst[len(word)-1].add(word)
+    if word not in lst[len(word)-1]:
+        lst[len(word)-1].append(word)
     
 for l in lst:
     if l != set():    
