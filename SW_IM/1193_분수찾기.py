@@ -50,3 +50,6 @@ if len(lst) % 2 == 0:
     ans = (len(lst)-leftover, leftover)
 elif len(lst) % 2 == 1:
     start = (1, len(lst))
+    ans = (leftover, len(lst)-leftover)
+
+print(ans)
