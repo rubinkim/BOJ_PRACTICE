@@ -12,5 +12,6 @@ print(min_ord)
 print(min_idx)
 
 first_part = word[: min_idx+1]
+print(first_part)
 word = word[min_idx+1 :]
 print(word)
