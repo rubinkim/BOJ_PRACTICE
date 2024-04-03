@@ -46,6 +46,7 @@ print(lst)
 
 leftover = n - lst[-2]
 if len(lst) % 2 == 0:
-    start = (len(lst), 0)
+    start = (len(lst), 1)
     ans = (len(lst)-leftover, leftover)
 elif len(lst) % 2 == 1:
+    start = (1, len(lst))
