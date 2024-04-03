@@ -11,5 +11,4 @@ min_idx = word.index(chr(min_ord))
 print(min_ord)
 print(min_idx)
 
-min_chr = chr(min_ord)
-print(min_chr)
+
