@@ -24,4 +24,4 @@ second_part = word[: min_idx+1]
 third_part = word[min_idx+1 :]
 
 print(f"first_part : {first_part},  second_part : {second_part},  third_part : {third_part}")
-print(firt_part[::-1] + second_part[::-1] + third_part[::-1])
+print(first_part[::-1] + second_part[::-1] + third_part[::-1])
