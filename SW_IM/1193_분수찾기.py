@@ -40,4 +40,5 @@ sum = 1
 i = 2
 
 while sum < n:
-    
+    sum += i
+    lst.append(sum)
