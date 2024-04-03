@@ -42,7 +42,7 @@ while sum < n:
     lst.append(sum)
     i += 1
 
-print(lst)
+#print(lst)
 if len(lst) == 1:
     ans = (1, 1)
 else:
