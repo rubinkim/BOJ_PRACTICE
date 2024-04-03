@@ -54,5 +54,4 @@ else:
         start = (1, len(lst))
         ans = (leftover, len(lst)-leftover+1)
 
-#print(leftover)
 print(ans)
