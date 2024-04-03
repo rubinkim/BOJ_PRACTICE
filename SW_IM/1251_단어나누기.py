@@ -1,8 +1,6 @@
 #-*- coding: utf-8 -*-
 """
 mobitel         (bometil)
-
-arrested        (ratserde)
 """
 word = input()
 min_ch = 1e5
