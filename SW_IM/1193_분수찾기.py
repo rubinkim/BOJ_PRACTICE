@@ -4,8 +4,6 @@
 
 (2/4)
 
-# 시간 초과!!!
-
 dy = (0, 1, 1, -1)
 dx = (1, -1, 0, 1)
 y, x = 1, 1
@@ -42,3 +40,6 @@ i = 2
 while sum < n:
     sum += i
     lst.append(sum)
+    i += 1
+
+print(lst)
