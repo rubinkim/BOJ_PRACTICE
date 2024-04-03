@@ -34,3 +34,5 @@ while step <= n:
     step += 1
 """
 n = int(input())
+lst = [1]
+ans = (1, 1)
