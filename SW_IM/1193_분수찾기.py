@@ -33,3 +33,4 @@ while step <= n:
     x = x + dx[dr]
     step += 1
 """
+n = int(input())
