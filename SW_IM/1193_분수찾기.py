@@ -36,3 +36,5 @@ while step <= n:
 n = int(input())
 lst = [1]
 ans = (1, 1)
+sum = 1
+i = 2
