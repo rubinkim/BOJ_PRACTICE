@@ -54,4 +54,4 @@ else:
         start = (1, len(lst))
         ans = (leftover, len(lst)-leftover+1)
 
-print(ans)
+print(str(ans[0]) + '/' + str(ans[1]))
