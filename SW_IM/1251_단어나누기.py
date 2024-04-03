@@ -18,4 +18,9 @@ print(word)
 
 min_ord = 1e5
 for ch in word:
-    min_ord = min()
+    min_ord = min(min_ord, ord(ch))
+min_idx = word.index(chr(min_ord))
+second_part = word[: min_idx+1]
+third_part = word[min_idx+1 :]
+
+print(f"first_part : {first_part},  second_part : {second_part},  third_part : {third_part}")
