@@ -38,3 +38,6 @@ lst = [1]
 ans = (1, 1)
 sum = 1
 i = 2
+
+while sum < n:
+    
