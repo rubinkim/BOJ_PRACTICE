@@ -52,4 +52,5 @@ elif len(lst) % 2 == 1:
     start = (1, len(lst))
     ans = (leftover, len(lst)-leftover)
 
+print(leftover)
 print(ans)
