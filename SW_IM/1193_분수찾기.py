@@ -45,12 +45,12 @@ while sum < n:
 print(lst)
 
 leftover = n - lst[-2]
-if len(lst) % 2 == 0:
+if len(lst) % 2 == 1:
     start = (len(lst), 1)
-    ans = (len(lst)-leftover, leftover)
-elif len(lst) % 2 == 1:
+    ans = (len(lst)-leftover+1, leftover)
+elif len(lst) % 2 == 010:
     start = (1, len(lst))
-    ans = (leftover, len(lst)-leftover)
+    ans = (leftover, len(lst)-leftover+1)
 
 print(leftover)
 print(ans)
