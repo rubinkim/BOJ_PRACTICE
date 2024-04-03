@@ -6,5 +6,6 @@ arrested        (ratserde)
 """
 word = input()
 min_ch = 1e5
-for i, ch in enumerate(word):
-    
+
+for ch in word:
+    min_ch = min(min_ch, ord(ch))
