@@ -3,9 +3,12 @@
 mobitel         (bometil)
 """
 word = input()
-min_ch = 1e5
+min_ord = 1e5
 
 for ch in word:
-    min_ch = min(min_ch, ord(ch))
-min_idx = word.index(ch(min_ch))
-print(min_idx)
+    min_ord = min(min_ord, ord(ch))
+#min_idx = word.index(ch(min_ch))
+print(min_ord)
+
+min_chr = chr(min_ord)
+print(min_chr)
