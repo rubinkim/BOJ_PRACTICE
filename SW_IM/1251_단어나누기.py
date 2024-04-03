@@ -1,11 +1,12 @@
 #-*- coding: utf-8 -*-
 """
 mobitel         (bometil)
+arrested        (a)
 """
 word = input()
 min_ord = 1e5
 
-for ch in word:
+for ch in word[:-2]:
     min_ord = min(min_ord, ord(ch))
 min_idx = word.index(chr(min_ord))
 print(min_ord)
@@ -17,7 +18,7 @@ word = word[min_idx+1 :]
 print(word)
 
 min_ord = 1e5
-for ch in word:
+for ch in word[:-1]:
     min_ord = min(min_ord, ord(ch))
 min_idx = word.index(chr(min_ord))
 second_part = word[: min_idx+1]
