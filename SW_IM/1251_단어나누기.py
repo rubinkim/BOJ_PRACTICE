@@ -3,3 +3,4 @@
 mobitel         (bometil)
 arrested        (aerrdets)
 """
+word = input()
