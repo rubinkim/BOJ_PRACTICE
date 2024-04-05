@@ -8,6 +8,8 @@ input = sys.stdin.readline
 word = list(input().rstrip('\n'))
 print(word)
 
+res = []
+
 for i in range(1, len(word)):
     for j in range(len(word)):
         first_part = word[:i]
@@ -18,4 +20,3 @@ for i in range(1, len(word)):
         second_part.reverse()
         third_part.reverse()
 
-    
