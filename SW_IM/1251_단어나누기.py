@@ -13,5 +13,9 @@ for i in range(1, len(word)):
         first_part = word[:i]
         second_part = word[i:j]
         third_part = word[j:]
+        
+        first_part.reverse()
+        second_part.reverse()
+        third_part.reverse()
 
     
