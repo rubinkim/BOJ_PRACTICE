@@ -11,8 +11,9 @@ for i, ch in enumerate(word):
 #lst.sort(key=lambda x : (x[1], x[0]))    
 print(lst)
 
-for i, ord_ch in lst[:-2]:
-    print(i, ord_ch)
+min_idx = min([x[1] for x in lst])
+print(min_idx)
+
 
 
     
