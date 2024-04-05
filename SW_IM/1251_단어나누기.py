@@ -20,6 +20,7 @@ for i, ord_ch in lst:
         min_idx_lst.append(i)
 print(min_idx_lst)
 
-
+if len(min_idx_lst) >= 2 and min_idx_lst[-1] <= len(lst) - 2:
+    if 
 
     
