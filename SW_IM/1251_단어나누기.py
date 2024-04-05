@@ -10,8 +10,8 @@ print(word)
 
 res = []
 
-for i in range(1, len(word)):
-    for j in range(len(word)):
+for i in range(1, len(word)-1):
+    for j in range(i+1, len(word)):
         first_part = word[:i]
         second_part = word[i:j]
         third_part = word[j:]
