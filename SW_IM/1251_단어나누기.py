@@ -14,6 +14,13 @@ print(lst)
 min_idx = min([x[1] for x in lst])
 print(min_idx)
 
+cnt = 0
+min_idx_lst = []
+for i, ord_ch in lst:
+    if ord == min_idx:
+        min_idx_lst.append(i)
+print(min_idx_lst)
+
 
 
     
