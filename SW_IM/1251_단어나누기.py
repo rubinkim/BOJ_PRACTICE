@@ -5,7 +5,7 @@ arrested        (aerrdets)
 """
 import sys
 input = sys.stdin.readline
-word = list(map(str, input().rstrip('\n')))
+word = list(input().rstrip('\n'))
 
 res = []
 
