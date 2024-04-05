@@ -17,7 +17,7 @@ print(min_idx)
 cnt = 0
 min_idx_lst = []
 for i, ord_ch in lst:
-    if ord == min_idx:
+    if ord_ch == min_idx:
         min_idx_lst.append(i)
 print(min_idx_lst)
 
