@@ -5,3 +5,8 @@
 
 (D-26)
 """
+def is_leap(yr):
+    if yr % 4 == 0 and yr % 100 == 0 and yr % 400 == 0:
+        return True
+    
+        
