@@ -21,3 +21,4 @@ calendar_leap = {1:31, 2:29, 3:31, 4:30, 5:31, 6:30, 7:31, 8:31, 9:30, 10:31, 11
 sy, sm, sd = map(int, input().split())     # 2008 12 27     2024 1 31   2024 11 30
 ey, em, ed = map(int, input().split())     # 2009 1 22
 
+cnt = 0
