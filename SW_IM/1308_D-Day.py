@@ -10,5 +10,10 @@ def is_leap(yr):
         return True
     elif yr % 4 == 0 and yr % 100 == 0 and yr % 400 != 0:
         return False
+    elif yr % 4 == 0 and yr % 100 != 0:
+        return True
+    elif yr % 4 != 0:
+        return False
     
+
         
