@@ -119,3 +119,5 @@ elif ey - sy == 1000:
 
 elif ey - sy > 1000:
     cnt == "gg"  
+    
+print(f"D-{cnt}")
