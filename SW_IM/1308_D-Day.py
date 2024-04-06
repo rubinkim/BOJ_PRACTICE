@@ -34,6 +34,17 @@ if sy == ey:
                 cnt += calendar_leap[m]
             if m == em:
                 cnt += ed
+                
+    elif not is_leap(sy):
+        for m in range(sm, em+1):
+            if m == sm and m == em:
+                cnt += ed - sd
+            elif m == sm and em > sm:
+                cnt += calendar_normal[m] - sd
+            if m > sm and m < em:
+                cnt += calendar_normal[m]
+            if m == em:
+                cnt += ed
 
 elif 0 < ey - sy < 1000:
     for yr in range(sy, ey+1):
