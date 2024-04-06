@@ -1,5 +1,7 @@
 #-*- coding: utf-8 -*-
 """
-mobitel         (bometil)
-arrested        (aerrdets)
+2008 12 27
+2009 1 22
+
+(D-26)
 """
