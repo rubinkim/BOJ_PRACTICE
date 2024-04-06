@@ -6,6 +6,9 @@
 2024 1 31
 2024 11 30
 
+1024 4 8
+2024 4 9
+
 (D-26)
 """
 def is_leap(yr):
@@ -123,4 +126,4 @@ elif ey - sy == 1000:
 elif ey - sy > 1000:
     cnt == "gg"  
     
-print(f"D-{cnt}")
+print("D-" + str(cnt) if cnt != "gg" else "gg")
