@@ -10,4 +10,4 @@ a, b, n = map(int, input().split())
 
 #print(f"a/b : {a * 10**n / b}")
 ans = str(a * 10 ** n / b)[:n+1][-1]
-print()
+print(int(ans))
