@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 """
-May 10, 1980 00:31
+May 10, 1981 00:31
 
 (35.348363774733635)
 """
@@ -38,7 +38,7 @@ if is_leap(y):
                     
 elif is_leap(y):
     for m0 in range(1, 13):
-        for d0 in range(1, calendar_leap[m0]):
+        for d0 in range(1, calendar_normal[m0]):
             for h0 in range(25):
                 for mm0 in range(61):
                     total_mins += 1
