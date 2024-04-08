@@ -15,6 +15,10 @@ December 31, 2007 23:59
 July 02, 2008 00:00
 
 (50.0)
+
+January 31, 1900 00:47
+
+(8.228120243531203)
 """
 date = input()
 date = date.replace(',', ' ')
