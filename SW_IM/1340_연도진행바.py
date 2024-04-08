@@ -29,7 +29,7 @@ month_dict = {'January':1, 'February':2, 'March':3, 'April':4, 'May':5, 'June':6
 m, d, y, hh, mm = date.split()
 m = month_dict[m]
 d, y, hh, mm = int(d), int(y), int(hh), int(mm)
-print(f"m : {m}, d : {d}, y : {y}, hh : {hh}, mm : {mm}")
+#print(f"m : {m}, d : {d}, y : {y}, hh : {hh}, mm : {mm}")
 
 def is_leap(yr):
     if yr % 4 == 0 and yr % 100 == 0 and yr % 400 == 0:
@@ -103,8 +103,8 @@ elif not is_leap(y):
                                     upto_mins += 1
                             elif h0 == hh:
                                 upto_mins += mm
-print(total_mins) 
-print(upto_mins)
+#print(total_mins) 
+#print(upto_mins)
 print(upto_mins * 100 / total_mins)          
 
 
