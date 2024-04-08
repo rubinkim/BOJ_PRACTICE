@@ -14,3 +14,4 @@ print(f"ln_ans : {ln_ans}")
 ans = math.exp(ln_ans)
 ans = str(ans)[:n+1][-1]
 print(f"ans : {ans}")
+print(ans)
