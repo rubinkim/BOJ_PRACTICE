@@ -35,6 +35,13 @@ if is_leap(y):
             for h0 in range(25):
                 for mm0 in range(61):
                     total_mins += 1
+                    
+elif is_leap(y):
+    for m0 in range(1, 13):
+        for d0 in range(1, calendar_leap[m0]):
+            for h0 in range(25):
+                for mm0 in range(61):
+                    total_mins += 1
 print(total_mins)           
 
 
