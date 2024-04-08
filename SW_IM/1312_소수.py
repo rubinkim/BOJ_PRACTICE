@@ -4,3 +4,6 @@
 
 (2)
 """
+
+a, b, n = map(int, input().split())
+print(f"a : {a}, b : {b}, n : {n}")
