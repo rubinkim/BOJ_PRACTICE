@@ -24,5 +24,5 @@ print(f"ln_ans : {ln_ans},   ln_ans_above : {ln_ans_above}")
 ans = 1
 for i in range(ln_ans_above):
     ans = ans * math.exp(1)
-ans = ans * math(ln_ans - ln_ans_above)
+ans = ans * math.exp(ln_ans - ln_ans_above)
 print(ans)
