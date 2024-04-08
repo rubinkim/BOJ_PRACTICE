@@ -30,6 +30,8 @@ calendar_leap = {1:31, 2:29, 3:31, 4:30, 5:31, 6:30, 7:31, 8:31, 9:30, 10:31, 11
 
 total_mins = 0
 if is_leap(y):
-    
+    for m in range(1, 13):
+        for d in range(1, calendar_leap[m]):
+            
 
 
