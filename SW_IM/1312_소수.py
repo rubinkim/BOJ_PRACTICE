@@ -3,7 +3,7 @@
 25 7 5
 
 (2)
-"""
+
 import math
 a, b, n = map(int, input().split())
 #print(f"a : {a}, b : {b}, n : {n}")
@@ -15,3 +15,4 @@ ans = math.exp(ln_ans)
 ans = str(ans)[:n+1][-1]
 #print(f"ans : {ans}")
 print(ans)
+"""
