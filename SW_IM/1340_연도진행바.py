@@ -86,6 +86,6 @@ elif not is_leap(y):
                             upto_mins += mm
 print(total_mins) 
 print(upto_mins)
-print(upto_mins / total_mins)          
+print(upto_mins * 100 / total_mins)          
 
 
