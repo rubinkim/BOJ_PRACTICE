@@ -12,5 +12,5 @@ print(f"a/b : {a * 10**n / b}")
 ln_ans = math.log(a) + n *  math.log(10) - math.log(b)
 print(f"ln_ans : {ln_ans}")
 ans = math.exp(ln_ans)
+ans = str(ans)[:n+1]
 print(f"ans : {ans}")
-print(f"round_ans : {round(ans)}" )
