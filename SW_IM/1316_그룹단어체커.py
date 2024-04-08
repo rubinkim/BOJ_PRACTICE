@@ -1,6 +1,15 @@
 #-*- coding: utf-8 -*-
 """
-25 7 5
+9
+aaa
+aaazbz
+babb
+aazz
+azbz
+aabbaa
+abacc
+aba
+zzaz
 
 (2)
 """
