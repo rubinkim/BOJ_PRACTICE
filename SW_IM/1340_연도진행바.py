@@ -39,6 +39,9 @@ calendar_leap = {1:31, 2:29, 3:31, 4:30, 5:31, 6:30, 7:31, 8:31, 9:30, 10:31, 11
 total_mins = 0
 upto_mins = 0
 
+# normal year : 525,600 mins
+# leap year : 527,040 mins
+
 if is_leap(y):
     for m0 in range(1, 13):
         for d0 in range(1, calendar_leap[m0]):
