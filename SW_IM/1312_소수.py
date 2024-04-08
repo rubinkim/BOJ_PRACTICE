@@ -7,3 +7,5 @@
 
 a, b, n = map(int, input().split())
 print(f"a : {a}, b : {b}, n : {n}")
+
+print(f"a/b : {a/b}")
