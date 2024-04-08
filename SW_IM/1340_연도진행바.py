@@ -56,8 +56,7 @@ if is_leap(y):
                             for mm0 in range(61):
                                 upto_mins += 1
                         elif h0 == hh:
-                            upto_mins += mm
-                                    
+                            upto_mins += mm                                    
                     
 elif not is_leap(y):
     for m0 in range(1, 13):
@@ -65,6 +64,28 @@ elif not is_leap(y):
             for h0 in range(25):
                 for mm0 in range(61):
                     total_mins += 1
-print(total_mins)           
+                    
+    for m0 in range(1, m+1):
+        if m0 != m:
+            for d0 in range(1, calendar_normal[m0]):
+                for h0 in range(25):
+                    for mm0 in range(61):
+                        upto_mins += 1
+        elif m0 == m:
+            for d0 in range(1, d+1):
+                if d0 != d:
+                    for h0 in range(25):
+                        for mm0 in range(61):
+                            upto_mins += 1
+                elif d0 == d:
+                    for h0 in range(hh+1):
+                        if h0 != hh:
+                            for mm0 in range(61):
+                                upto_mins += 1
+                        elif h0 == hh:
+                            upto_mins += mm
+print(total_mins) 
+print(upto_mins)
+print(upto_mins / total_mins)          
 
 
