@@ -13,3 +13,4 @@ zzaz
 
 (2)
 """
+n = int(input())
