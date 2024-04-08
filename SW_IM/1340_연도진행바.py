@@ -48,12 +48,12 @@ upto_mins = 0
 
 if is_leap(y):
     for m0 in range(1, 13):
-        for d0 in range(1, calendar_leap[m0]):
+        for d0 in range(calendar_leap[m0]):
             for h0 in range(24):
                 for mm0 in range(60):
                     total_mins += 1
                     
-    for m0 in range(1, m+1):
+    for m0 in range(1,m+1):
         if m0 != m:
             for d0 in range(calendar_leap[m0]):
                 for h0 in range(24):
@@ -67,11 +67,11 @@ if is_leap(y):
                             upto_mins += 1
                 elif d0 == d-1:
                     for h0 in range(hh+1):
-                        if h0 != hh:
-                            for mm0 in range(60):
-                                upto_mins += 1
-                        elif h0 == hh:
-                            upto_mins += mm                                    
+                            if h0 != hh:
+                                for mm0 in range(60):
+                                    upto_mins += 1
+                            elif h0 == hh:
+                                upto_mins += mm                                  
                     
 elif not is_leap(y):
     for m0 in range(1, 13):
