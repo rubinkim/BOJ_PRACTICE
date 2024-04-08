@@ -6,7 +6,7 @@
 2024 1 31
 2024 11 30
 
-1024 4 8
+1024 4 10
 2024 4 9
 
 (D-26)
@@ -87,9 +87,9 @@ elif 0 < ey - sy < 1000:
                     
 elif ey - sy == 1000:
     if em > sm:
-        cnt == "gg"
+        cnt = -1
     elif em == sm and ed >= sd:
-        cnt == "gg"
+        cnt = -1
     elif em == sm and ed < sd:
         for yr in range(sy, ey+1):
             if yr == sy and is_leap(yr):
@@ -124,6 +124,9 @@ elif ey - sy == 1000:
                         cnt += ed
 
 elif ey - sy > 1000:
-    cnt == "gg"  
+    cnt = -1
     
-print("D-" + str(cnt) if cnt != "gg" else "gg")
+if cnt > 0:
+    print(f"D-{cnt}")
+elif cnt == -1:
+    print("gg")
