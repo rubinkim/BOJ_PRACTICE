@@ -19,7 +19,7 @@ print(ans)
 import math
 a, b, n = map(int, input().split())
 ln_ans = math.log(a) + n * math.log(10) - math.log(b)
-ln_ans_above = round(ln_ans, -1)
+ln_ans_above = round(ln_ans, 1)
 print(f"ln_ans : {ln_ans},   ln_ans_above : {ln_ans_above}")
 ans = 1
 
