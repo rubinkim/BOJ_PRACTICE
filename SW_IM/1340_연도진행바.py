@@ -35,6 +35,6 @@ if is_leap(y):
             for h0 in range(25):
                 for mm0 in range(61):
                     total_mins += 1
-            
+print(total_mins)           
 
 
