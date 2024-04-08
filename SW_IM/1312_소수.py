@@ -4,18 +4,17 @@
 
 (2)
 """
-import math
 a, b, n = map(int, input().split())
-ln_ans = math.log(a) + n * math.log(10) - math.log(b)
-ln_ans_above = math.floor(ln_ans)
+print(f"a : {a},  b : {b},  n : {n}")
+print(f"a/b : {a/b}")
+print()
 
-print(f"ln_ans : {ln_ans},   ln_ans_above : {ln_ans_above}")
-ans = 1
-for i in range(ln_ans_above):
-    ans = ans * math.exp(1)
-ans = ans * math.exp(ln_ans - ln_ans_above)
-print(f"ans : {ans}")
+a %= b
+print(f"a : {a}")
+print()
 
-ans = math.floor(ans)
-ans = str(ans)[-1]
-print(int(ans))
+for i in range(n-1):
+    a = (a*10) % b
+    print(f"a : {a}")
+
+print((a*10) // b)
