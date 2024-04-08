@@ -9,4 +9,4 @@ a, b, n = map(int, input().split())
 print(f"a : {a}, b : {b}, n : {n}")
 
 print(f"a/b : {a * 10**n / b}")
-print(str(a * 10 ** n / b))
+print(str(a * 10 ** n / b).rstrip('\.'))
