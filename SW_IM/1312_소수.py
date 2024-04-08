@@ -26,4 +26,5 @@ for i in range(ln_ans_above):
     ans = ans * math.exp(1)
 ans = ans * math.exp(ln_ans - ln_ans_above)
 ans = math.floor(ans)
+ans = str[ans][-1]
 print(ans)
