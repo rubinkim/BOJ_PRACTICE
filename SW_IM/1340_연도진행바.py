@@ -1,15 +1,6 @@
 #-*- coding: utf-8 -*-
 """
-9
-aaa
-aaazbz
-babb
-aazz
-azbz
-aabbaa
-abacc
-aba
-zzaz
+May 10, 1981 00:31
 
 (2)
 """
