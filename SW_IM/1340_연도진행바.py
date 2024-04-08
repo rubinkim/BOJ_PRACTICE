@@ -89,11 +89,11 @@ elif not is_leap(y):
                         for mm0 in range(60):
                             upto_mins += 1
                 elif d0 == d-1:
-                    for h0 in range(hh):
-                            if h0 != hh-1:
+                    for h0 in range(hh+1):
+                            if h0 != hh:
                                 for mm0 in range(60):
                                     upto_mins += 1
-                            elif h0 == hh-1:
+                            elif h0 == hh:
                                 upto_mins += mm
 print(total_mins) 
 print(upto_mins)
