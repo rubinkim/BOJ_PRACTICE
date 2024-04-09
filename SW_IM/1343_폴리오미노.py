@@ -15,5 +15,6 @@ for i, ch in enumerate(board):
         if cnt % 2 == 1:
             print(-1)
         else:
-            
+            if cnt >= 6:
+                
             
