@@ -11,8 +11,7 @@ poly = []
 for i, ch in enumerate(board):
     if ch == 'X':
         cnt += 1
-    elif ch == '.':
-        poly.append(0)
+    if ch == '.':
         poly.append(cnt)
         cnt = 0
     if i == len(board)-1 and board[-1] == 'X':
