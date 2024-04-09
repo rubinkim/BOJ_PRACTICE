@@ -19,6 +19,11 @@ for i, ch in enumerate(board):
         
 print(poly)
 
+num_poly = []
+
+def convert_to_ch(num):
+   
+
 
             
             
