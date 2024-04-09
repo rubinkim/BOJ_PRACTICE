@@ -29,7 +29,10 @@ def convert_to_ch(poly):
             print(-1)
             break
         else:
-            
+            if num >= 4:
+                num_poly.append('AAAA' * (num//4))
+                num -= 4 * (num//4)
+                
         
 
 
