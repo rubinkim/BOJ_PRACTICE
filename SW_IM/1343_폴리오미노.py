@@ -28,8 +28,7 @@ def convert_to_ch(poly):
     
     for num in poly:
         if num % 2 == 1:
-            print(-1)
-            break
+            return -1
         else:
             if num >= 4:
                 num_poly.append('AAAA' * (num//4))
@@ -40,9 +39,10 @@ def convert_to_ch(poly):
                 num_poly.append('BB')
             if num == 0:
                 num_poly.append('.')
+            return ''.join(num_poly)
                 
 convert_to_ch(poly)               
-print(''.join(num_poly))
+
 
         
 
