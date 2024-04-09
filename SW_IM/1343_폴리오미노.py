@@ -36,7 +36,10 @@ def convert_to_ch(poly):
                 num_poly.append('BB')
             if num == 0:
                 num_poly.append('.')
+                
+convert_to_ch(poly)               
 print(num_poly)
+
         
 
 
