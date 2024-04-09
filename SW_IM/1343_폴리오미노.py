@@ -19,9 +19,7 @@ for i, ch in enumerate(board):
         print(True)
         poly.append(cnt)
 print(poly)
-print(cnt)
-print(len(board))
-print(board[-1])
+
 
             
             
