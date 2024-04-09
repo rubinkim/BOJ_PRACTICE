@@ -12,7 +12,9 @@ for i, ch in enumerate(board):
     if ch == 'X':
         cnt += 1
     if ch == '.':
-        poly.append(cnt)
+        if cnt != 0:
+            poly.append(cnt)
+        poly.append(0)
         cnt = 0
     if i == len(board)-1 and board[-1] == 'X':
         poly.append(cnt)
@@ -31,7 +33,9 @@ def convert_to_ch(poly):
         else:
             if num >= 4:
                 num_poly.append('AAAA' * (num//4))
-                num -= 4 * (num//4)
+                new_num -= 4 * (num//4)
+                if new_num == 2:
+                    num = new_num
             if num == 2:
                 num_poly.append('BB')
             if num == 0:
