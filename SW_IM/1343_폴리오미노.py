@@ -26,5 +26,5 @@ for i, ch in enumerate(board):
             cnt = 0
         else:
             print(-1)
-print(*poly)
+print("".join(poly))
             
