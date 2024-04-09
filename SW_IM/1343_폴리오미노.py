@@ -4,7 +4,7 @@ XX.XXXXXXXXXX..XXXXXXXX...XXXXXX
 
 (BB.AAAAAAAABB..AAAAAAAA...AAAABB)
 """
-board = input()
+board = list(input())
 cnt = 0
 poly = []
 
