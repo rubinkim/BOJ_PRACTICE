@@ -22,6 +22,7 @@ for i, ch in enumerate(board):
 #print(poly)
 
 num_poly = []
+ans = 0
 
 def convert_to_ch(poly):
     global num_poly
@@ -42,7 +43,8 @@ def convert_to_ch(poly):
             if num == 0:
                 num_poly.append('.')
             ans =  ''.join(num_poly)
-                
+
+convert_to_ch(poly)              
 print(ans)
 
 
