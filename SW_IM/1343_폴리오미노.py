@@ -9,6 +9,7 @@ cnt = 0
 poly = []
 
 for i, ch in enumerate(board):
+    print(i, end=' ')
     if ch == 'X':
         cnt += 1
     elif ch == '.':
@@ -18,5 +19,7 @@ for i, ch in enumerate(board):
         poly.append(cnt)
 print(poly)
 print(cnt)
+print(len(board))
+
             
             
