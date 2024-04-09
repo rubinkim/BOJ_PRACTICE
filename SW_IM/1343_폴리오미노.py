@@ -17,5 +17,6 @@ for i, ch in enumerate(board):
     elif i == len(board)-1 and board[-1] == 'X':
         poly.append(cnt)
 print(poly)
+print(cnt)
             
             
