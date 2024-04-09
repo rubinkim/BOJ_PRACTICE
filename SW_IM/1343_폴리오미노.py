@@ -9,4 +9,11 @@ cnt = 0
 poly = []
 
 for i, ch in enumerate(board):
-    
+    if ch == 'X':
+        cnt += 1
+    elif ch == '.':
+        if cnt % 6 == 0:
+            poly.append('AAAABB' *  (cnt//6))
+        elif cnt % 4 == 0:
+            poly.append('AAAA' * (cnt//4))
+        elif cnt 
