@@ -20,4 +20,5 @@ for i, ch in enumerate(board):
             poly.append(ch)
         elif cnt % 2 == 0:
             poly.append('BB' * (cnt//2))
+            poly.append(ch)
             
