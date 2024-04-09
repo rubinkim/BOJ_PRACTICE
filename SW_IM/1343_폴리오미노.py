@@ -25,10 +25,12 @@ num_poly = []
 
 def convert_to_ch(poly):
     global num_poly
+    global ans
     
     for num in poly:
         if num % 2 == 1:
-            return -1
+            ans = -1
+            break
         else:
             if num >= 4:
                 num_poly.append('AAAA' * (num//4))
@@ -39,9 +41,9 @@ def convert_to_ch(poly):
                 num_poly.append('BB')
             if num == 0:
                 num_poly.append('.')
-            return ''.join(num_poly)
+            ans =  ''.join(num_poly)
                 
-print(convert_to_ch(poly))
+print(ans)
 
 
         
