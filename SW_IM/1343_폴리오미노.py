@@ -16,5 +16,7 @@ for i, ch in enumerate(board):
             print(-1)
         else:
             if cnt >= 6:
-                
+                board[i-cnt : (i-cnt) * (cnt//6)] == 'AAAABB' * (cnt//6)
+                cnt -= 6 * (cnt//6)
+            
             
