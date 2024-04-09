@@ -12,5 +12,8 @@ for i, ch in enumerate(board):
     if ch == 'X':
         cnt += 1
     elif ch == '.':
-
+        if cnt % 2 == 1:
+            print(-1)
+        else:
+            
             
