@@ -32,6 +32,10 @@ def convert_to_ch(poly):
             if num >= 4:
                 num_poly.append('AAAA' * (num//4))
                 num -= 4 * (num//4)
+            if num == 2:
+                num_poly.append('BB')
+            if num == 0:
+                num_poly.append('.')
                 
         
 
