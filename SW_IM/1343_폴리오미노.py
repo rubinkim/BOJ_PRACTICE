@@ -38,7 +38,7 @@ def convert_to_ch(poly):
                 num_poly.append('.')
                 
 convert_to_ch(poly)               
-print(num_poly)
+print('.'.join(num_poly))
 
         
 
