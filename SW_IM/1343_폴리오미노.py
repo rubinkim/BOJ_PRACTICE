@@ -33,7 +33,7 @@ def convert_to_ch(poly):
         else:
             if num >= 4:
                 num_poly.append('AAAA' * (num//4))
-                new_num -= 4 * (num//4)
+                new_num = num - 4 * (num//4)
                 if new_num == 2:
                     num = new_num
             if num == 2:
