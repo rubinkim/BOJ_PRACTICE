@@ -21,8 +21,16 @@ print(poly)
 
 num_poly = []
 
-def convert_to_ch(num):
-   
+def convert_to_ch(poly):
+    global num_poly
+    
+    for num in poly:
+        if num % 2 == 1:
+            print(-1)
+            break
+        else:
+            
+        
 
 
             
