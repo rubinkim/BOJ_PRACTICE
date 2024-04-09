@@ -14,6 +14,9 @@ for i, ch in enumerate(board):
     elif ch == '.':
         if cnt % 6 == 0:
             poly.append('AAAABB' *  (cnt//6))
+            poly.append(ch)
         elif cnt % 4 == 0:
             poly.append('AAAA' * (cnt//4))
-        elif cnt 
+        elif cnt % 2 == 0:
+            poly.append('BB' * (cnt//2))
+            
