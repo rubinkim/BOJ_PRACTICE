@@ -23,7 +23,7 @@ Margaret Thatcher
 """
 
 n = -1
-while scenario_num == 0:
+while n == 0:
     if scenario_num == 0:
         break
     scenario_num = int(input())
