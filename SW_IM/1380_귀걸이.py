@@ -24,6 +24,7 @@ Margaret Thatcher
 
 n = 200
 while n > 0:
+    scenario_num = 1    
     n = int(input())
     if n == 0:
         break
@@ -40,6 +41,8 @@ while n > 0:
         num = int(num)
         if ch != name_dict[num][1]:
             del name_dict[num]
+        
+            
 
         
     
