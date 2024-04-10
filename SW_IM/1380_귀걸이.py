@@ -41,7 +41,7 @@ while n > 0:
         num = int(num)
         if ch != name_dict[num][1]:
             del name_dict[num]
-    print(f"{scenario_num} {name_dict.values()}")
+    print(f"{scenario_num} {name_dict.values()[0]}")
     scenario_num += 1
             
 
