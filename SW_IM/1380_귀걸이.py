@@ -27,7 +27,8 @@ scenario_num = 1
 while n > 0: 
     n = int(input())
     if n == 0:
-        break     
+        break
+    scenario_num = 1     
     name_dict = {}
     for i in range(n):
         name_dict[i+1] = [input()]
