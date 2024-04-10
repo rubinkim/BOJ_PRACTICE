@@ -34,7 +34,7 @@ while n > 0:
         num, ch = input().split()
         num = int(num)
         name_dict[num].append(ch)
-    print(name_dict)
+    #print(name_dict)
 
         
     
