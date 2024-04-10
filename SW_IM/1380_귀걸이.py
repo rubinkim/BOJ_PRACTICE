@@ -28,6 +28,7 @@ while n == 0:
     if n == 0:
         break
     name_dict = {}
-    
+    for i in range(n):
+        
     
     
