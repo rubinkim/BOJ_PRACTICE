@@ -23,11 +23,11 @@ Margaret Thatcher
 """
 
 n = 200
+scenario_num = 1
 while n > 0: 
     n = int(input())
     if n == 0:
-        break
-    scenario_num = 1 
+        break     
     name_dict = {}
     for i in range(n):
         name_dict[i+1] = [input()]
