@@ -35,6 +35,8 @@ while n > 0:
         num = int(num)
         name_dict[num].append(ch)
     #print(name_dict)
+    for _ in range(n-1):
+        num, ch = input().split()
 
         
     
