@@ -29,6 +29,9 @@ while n == 0:
         break
     name_dict = {}
     for i in range(n):
+        name_dict[i+1] = [input()]
+    for _ in range(n):
+        num, ch = input().split()
         
     
     
