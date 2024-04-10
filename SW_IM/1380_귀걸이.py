@@ -21,3 +21,10 @@ Margaret Thatcher
 1 Alison Addaway
 2 Helen Clark
 """
+
+scenario_num = -1
+while scenario_num == 0:
+    if scenario_num == 0:
+        break
+    scenario_num = int(input())
+    
