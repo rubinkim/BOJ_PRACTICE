@@ -22,19 +22,19 @@ Margaret Thatcher
 2 Helen Clark
 """
 
-n = -1
-name_dict = {}
-while n == 0:
-    n = int(input())
+n = int(input())
+while n > 0:
     if n == 0:
         break
-    #name_dict = {}
+    name_dict = {}
     for i in range(n):
         name_dict[i+1] = [input()]
     for _ in range(n):
         num, ch = input().split()
+        num = int(num)
         name_dict[num].append(ch)
     print(name_dict)
+    n = int(input())
         
     
     
