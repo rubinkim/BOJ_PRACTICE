@@ -32,6 +32,8 @@ while n == 0:
         name_dict[i+1] = [input()]
     for _ in range(n):
         num, ch = input().split()
+        name_dict[num].append(ch)
+print(name_dict)
         
     
     
