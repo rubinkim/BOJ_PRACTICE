@@ -24,6 +24,7 @@ Margaret Thatcher
 
 n = 200
 scenario_num = 1
+
 while n > 0: 
     n = int(input())
     if n == 0:
