@@ -26,6 +26,6 @@ n = -1
 while n == 0:
     if n == 0:
         break
-    scenario_num = int(input())
+    n = int(input())
     
     
