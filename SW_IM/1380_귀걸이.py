@@ -20,5 +20,4 @@ Margaret Thatcher
 # answer
 1 Alison Addaway
 2 Helen Clark
-
 """
