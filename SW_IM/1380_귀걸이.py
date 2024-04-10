@@ -38,6 +38,8 @@ while n > 0:
     for _ in range(n-1):
         num, ch = input().split()
         num = int(num)
+        if ch != name_dict[num][1]:
+            del name_dict[num]
 
         
     
