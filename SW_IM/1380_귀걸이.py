@@ -22,8 +22,9 @@ Margaret Thatcher
 2 Helen Clark
 """
 
-n = int(input())
+n = 200
 while n > 0:
+    n = int(input())
     if n == 0:
         break
     name_dict = {}
