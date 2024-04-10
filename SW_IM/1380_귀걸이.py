@@ -33,7 +33,7 @@ while n == 0:
     for _ in range(n):
         num, ch = input().split()
         name_dict[num].append(ch)
-print(name_dict)
+    print(name_dict)
         
     
     
