@@ -37,6 +37,7 @@ while n > 0:
     #print(name_dict)
     for _ in range(n-1):
         num, ch = input().split()
+        num = int(num)
 
         
     
