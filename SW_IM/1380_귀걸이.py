@@ -44,7 +44,7 @@ while n > 0:
         if ch != name_dict[num][1]:
             del name_dict[num]
     #print(f"{scenario_num} {list(name_dict.values())[0][0]}")
-    print(f"{scenario_num} {name_dict.values()}")
+    print(f"{scenario_num} {name_dict}")
     scenario_num += 1
 
             
