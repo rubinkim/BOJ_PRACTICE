@@ -36,6 +36,12 @@ for idx, (k, v) in enumerate(name_dict.items()):
         if v[i] == 'N':
             cnt += 1
             num_backward = len(v) - 1 - i
-            if       
+            if idx - num_backward < 0:
+                from_person = list(name_dict.keys())[len(name_dict.keys()) + idx - num_backward][1]    
+                to_person = k[1]
+                print(f"{from_person} was nasty about {to_person}.")
+            else:
+                from_person = list(name_dict.keys())[k[1] - num_backward]
+                to_p
 
 
