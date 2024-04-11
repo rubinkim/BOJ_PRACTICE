@@ -28,3 +28,7 @@ n = int(input())
 name_dict = {}
 for i in range(n):
     row = list(input().split())
+    name_dict[(i, row[0])] = row[1:]
+    
+for k, v in name_dict.items():
+    print(k, v)
