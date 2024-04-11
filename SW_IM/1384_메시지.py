@@ -29,7 +29,8 @@ name_dict = {}
 for i in range(n):
     row = list(input().split())
     name_dict[(i, row[0])] = row[1:]
-    cnt = 0
+    
+cnt = 0
         
 
 
