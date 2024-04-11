@@ -78,4 +78,5 @@ while n > 0:
     if cnt == 0:
         print("Nobody was nasty")
     group_num += 1
+    print()
 
