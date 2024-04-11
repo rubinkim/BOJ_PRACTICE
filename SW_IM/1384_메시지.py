@@ -32,3 +32,5 @@ for i in range(n):
     
 for k, v in name_dict.items():
     print(k, v)
+print()
+
