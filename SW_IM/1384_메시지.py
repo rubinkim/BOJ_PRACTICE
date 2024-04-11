@@ -76,5 +76,5 @@ while n > 0:
                     print(f"{from_person} was nasty about {to_person}")
     if cnt == 0:
         print("Nobody was nasty")
-
+    group_num += 1
 
