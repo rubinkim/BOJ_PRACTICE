@@ -49,7 +49,7 @@ if cnt == 0:
 print(cnt)
 """
 
-group_num = -1
+group_num = 1
 while n > 0:    
     n = int(input())
     if n == 0:
@@ -76,5 +76,5 @@ while n > 0:
                     print(f"{from_person} was nasty about {to_person}")
     if cnt == 0:
         print("Nobody was nasty")
-    print(cnt)
+
 
