@@ -14,4 +14,12 @@ Will P P P P P
 Veronica P P P P P
 Utah P P P P P
 0
+
+
+Group 1
+Debby was nasty about Ann
+Bob was nasty about Debby
+
+Group 2
+Nobody was nasty
 """
