@@ -49,7 +49,7 @@ if cnt == 0:
 print(cnt)
 """
 
-
+group_num = -1
 n = int(input())
 name_dict = {}
 for i in range(n):
