@@ -25,3 +25,4 @@ Nobody was nasty
 """
 
 n = int(input())
+name_dict = {}
