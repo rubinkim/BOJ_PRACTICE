@@ -26,3 +26,5 @@ Nobody was nasty
 
 n = int(input())
 name_dict = {}
+for i in range(n):
+    row = list(input().split())
