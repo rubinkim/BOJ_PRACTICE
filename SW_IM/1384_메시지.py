@@ -31,12 +31,11 @@ for i in range(n):
     name_dict[(i, row[0])] = row[1:]
     
 cnt = 0
-for k, v in name_dict.items():
+for idx, (k, v) in enumerate(name_dict.items()):
     for i in range(len(v)):
         if v[i] == 'N':
             cnt += 1
             num_backward = len(v) - 1 - i
-    
-        
+            if       
 
 
