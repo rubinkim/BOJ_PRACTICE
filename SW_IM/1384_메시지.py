@@ -43,7 +43,7 @@ for idx, (k, v) in enumerate(name_dict.items()):
             else:
                 from_person = list(name_dict.keys())[idx - num_backward][1]
                 to_person = k[1]
-                print(f"{from_person} was nasty about {to_person}.")
+                print(f"{from_person} was nasty about {to_person}")
 if cnt == 0:
     print("Nobody was nasty")
 print(cnt)
