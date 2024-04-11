@@ -45,7 +45,7 @@ for idx, (k, v) in enumerate(name_dict.items()):
                 to_person = k[1]
                 print(f"{from_person} was nasty about {to_person}.")
 if cnt == 0:
-    print("Nobody was nasty.")
+    print("Nobody was nasty")
 print(cnt)
 
 
