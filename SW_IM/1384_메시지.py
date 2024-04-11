@@ -42,6 +42,7 @@ for idx, (k, v) in enumerate(name_dict.items()):
                 print(f"{from_person} was nasty about {to_person}.")
             else:
                 from_person = list(name_dict.keys())[k[1] - num_backward]
-                to_p
+                to_person = k[1]
+                
 
 
