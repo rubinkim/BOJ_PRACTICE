@@ -23,7 +23,7 @@ Bob was nasty about Debby
 Group 2
 Nobody was nasty
 """
-
+"""
 n = int(input())
 name_dict = {}
 for i in range(n):
@@ -47,5 +47,5 @@ for idx, (k, v) in enumerate(name_dict.items()):
 if cnt == 0:
     print("Nobody was nasty")
 print(cnt)
-
+"""
 
