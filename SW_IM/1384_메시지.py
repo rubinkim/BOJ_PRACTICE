@@ -23,3 +23,5 @@ Bob was nasty about Debby
 Group 2
 Nobody was nasty
 """
+
+n = int(input())
