@@ -59,7 +59,8 @@ while n > 0:
     for i in range(n):
         row = list(input().split())
         name_dict[(i, row[0])] = row[1:]
-        
+    
+    print(f"Group {group_num}")   
     cnt = 0
     for idx, (k, v) in enumerate(name_dict.items()):
         for i in range(len(v)):
