@@ -29,7 +29,8 @@ for num in range(2, n+1):
             #print(f"{num} : {i}")
             max_lst.append(i)
     print(f"{num}, {max_lst}")
-    final_lst.append(max(max_lst))          
+    if max_lst != []:
+        final_lst.append(max(max_lst))          
             
             
 print(len(final_lst))
