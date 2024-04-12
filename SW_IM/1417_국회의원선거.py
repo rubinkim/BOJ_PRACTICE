@@ -12,3 +12,9 @@ votes = []
 for i in range(n):
     votes.append(int(input()))
     
+max_vote = 0
+
+while True:
+    max_vote = max(max_vote, votes[1:])
+
+    
