@@ -48,6 +48,8 @@ if cnt == 0:
     print("Nobody was nasty")
 print(cnt)
 """
+
+"""
 n = 21
 group_num = 1
 while n > 0:    
@@ -79,4 +81,4 @@ while n > 0:
         print("Nobody was nasty")
     group_num += 1
     print()
-
+"""
