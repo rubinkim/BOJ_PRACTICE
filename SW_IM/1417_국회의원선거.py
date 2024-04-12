@@ -34,6 +34,7 @@ n = int(input())
 votes = []
 for i in range(n):
     votes.append(int(input()))
+print(votes)
     
 max_vote = 0
 cnt = 0
@@ -54,5 +55,6 @@ while True:
         cnt += 1
         votes[0] += 1
         votes[max_vote_idx] -= 1
+    print(votes)
 
     
