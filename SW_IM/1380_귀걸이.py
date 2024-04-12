@@ -48,11 +48,13 @@ while n > 0:
 """
 test = 1
 while True:
+    n = int(input())
     if test == 0:
         break
     else:
         test += 1
-    girl_arr = []  
+    girl_arr = []
+    for _ in range(n):  
 
         
     
