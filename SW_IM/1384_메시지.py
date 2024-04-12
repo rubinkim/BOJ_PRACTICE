@@ -90,4 +90,8 @@ while True:
         break
     else:
         group += 1
-    
+        
+    messages = []
+    for _ in range(n):
+        
+        
