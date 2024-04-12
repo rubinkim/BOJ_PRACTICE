@@ -23,7 +23,7 @@ cnt = 0
 final_lst = []
 for num in range(2, n+1):
     max_lst = []
-    for i in range(2, num):        
+    for i in range(2, num+1):        
         if dp[i] and i <= k and num % i == 0:
             #cnt += 1
             #print(f"{num} : {i}")
