@@ -95,6 +95,9 @@ while True:
     for _ in range(n):
         message = input().split()
         messages.append(message)
-        
     
+    flag = True    
+    for i in range(n):
+        if 'N' in messages[i][1:]:
+            
         
