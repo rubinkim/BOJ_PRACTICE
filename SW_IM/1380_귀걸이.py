@@ -58,6 +58,7 @@ while True:
         girl_arr.append(input())
     arr = []
     for _ in range(2*n-1):
+        a, b = input().split()
          
 
         
