@@ -49,7 +49,7 @@ while n > 0:
 test = 1
 while True:
     n = int(input())
-    if test == 0:
+    if n == 0:
         break
     else:
         test += 1
