@@ -20,11 +20,16 @@ for num in range(2, n+1):
 print(primes)
 
 cnt = 0
+final_lst = []
 for num in range(2, n+1):
     max_lst = []
     for i in range(2, num):        
-        if dp[i] and num % i == 0:
+        if dp[i] and i <= k and num % i == 0:
             #cnt += 1
             #print(f"{num} : {i}")
+            max_lst.append(i)
+    print(f"{num}, {max_lst}")
+    final_lst.append(max(max_lst))          
             
-print(cnt)
+            
+print(len(final_lst))
