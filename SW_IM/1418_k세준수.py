@@ -24,5 +24,5 @@ for num in range(2, n+1):
     for i in range(2, num):
         if dp[i] and i <= k and num % i == 0:
             cnt += 1
-            print(i, end=', ')
+            print(f"{num} : {i}")
 print(cnt)
