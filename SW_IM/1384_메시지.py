@@ -82,3 +82,7 @@ while n > 0:
     group_num += 1
     print()
 """
+
+group = 0
+while True:
+    n = int(input())
