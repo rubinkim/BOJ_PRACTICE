@@ -22,7 +22,7 @@ print(primes)
 cnt = 0
 for num in range(2, n+1):
     for i in range(2, num):
-        if dp[i] and i <= k and num % i == 0:
-            cnt += 1
-            print(f"{num} : {i}")
+        if dp[i] and num % i == 0:
+            #cnt += 1
+            #print(f"{num} : {i}")
 print(cnt)
