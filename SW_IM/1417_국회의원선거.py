@@ -23,6 +23,8 @@ while True:
         print(cnt)
         break
     else:
-        
+        cnt += 1
+        votes[0] += 1
+        votes[max_vote_idx] -= 1
 
     
