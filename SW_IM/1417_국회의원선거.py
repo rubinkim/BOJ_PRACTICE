@@ -8,6 +8,7 @@
 (2)
 """
 n = int(input())
-lst = []
+votes = []
 for i in range(n):
-    lst.append(int(input()))
+    votes.append(int(input()))
+    
