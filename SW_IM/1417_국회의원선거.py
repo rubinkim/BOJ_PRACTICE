@@ -20,6 +20,9 @@ while True:
     max_vote_idx = votes.index(max_vote)
     
     if max_vote_idx == 0 and votes.count(max_vote) == 1:
-        print()
+        print(cnt)
+        break
+    else:
+        
 
     
