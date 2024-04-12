@@ -93,5 +93,8 @@ while True:
         
     messages = []
     for _ in range(n):
+        message = input().split()
+        messages.append(message)
         
+    
         
