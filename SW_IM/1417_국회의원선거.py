@@ -34,14 +34,14 @@ n = int(input())
 votes = []
 for i in range(n):
     votes.append(int(input()))
-print(votes)
+#print(votes)
     
 max_vote = 0
 cnt = 0
 
 while True:
-    max_vote = max(max_vote, max(votes))
-    print(max_vote)
+    max_vote = max(votes)
+    #print(max_vote)
     max_vote_idx = votes.index(max_vote)
     
     if max_vote_idx == 0 and votes.count(max_vote) == 1:
@@ -56,6 +56,6 @@ while True:
         cnt += 1
         votes[0] += 1
         votes[max_vote_idx] -= 1
-    print(votes)
+    #print(votes)
 
     
