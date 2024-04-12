@@ -103,4 +103,6 @@ while True:
             for j in range(1, n):
                 if messages[i][j] == 'N':
                     print(f"{messages[i-j][0]} was nasty about {messages[i][0]}")
+    if flag:
+        print("Nobody was nasty")
         
