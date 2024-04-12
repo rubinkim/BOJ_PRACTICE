@@ -99,5 +99,8 @@ while True:
     flag = True    
     for i in range(n):
         if 'N' in messages[i][1:]:
-            
+            flag = False
+            for j in range(1, n):
+                if messages[i][j] == 'N':
+                    
         
