@@ -50,7 +50,9 @@ test = 1
 while True:
     if test == 0:
         break
-      
+    else:
+        test += 1
+    girl_arr = []  
 
         
     
