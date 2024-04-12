@@ -20,7 +20,7 @@ Margaret Thatcher
 # answer
 1 Alison Addaway
 2 Helen Clark
-"""
+
 
 n = 200
 scenario_num = 1
@@ -45,7 +45,7 @@ while n > 0:
             del name_dict[num]
     print(f"{scenario_num} {list(name_dict.values())[0][0]}")
     scenario_num += 1
-
+"""
             
 
         
