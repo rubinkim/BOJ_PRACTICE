@@ -64,8 +64,8 @@ while True:
     idx = 0
     for i in range(1, n+1):
         if arr.count(i) == 1:
-             
-
+             idx = i
+    print(test, arr[idx-1])
         
     
     
