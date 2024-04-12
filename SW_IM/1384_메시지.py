@@ -106,4 +106,4 @@ while True:
                     print(f"{messages[i-j][0]} was nasty about {messages[i][0]}")
     if flag:
         print("Nobody was nasty")
-        
+    print()        
