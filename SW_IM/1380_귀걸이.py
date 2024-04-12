@@ -59,7 +59,12 @@ while True:
     arr = []
     for _ in range(2*n-1):
         a, b = input().split()
-        arr.append(int(a)) 
+        arr.append(int(a))
+        
+    idx = 0
+    for i in range(1, n+1):
+        if arr.count(i) == 1:
+             
 
         
     
