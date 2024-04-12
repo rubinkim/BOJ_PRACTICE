@@ -54,7 +54,8 @@ while True:
     else:
         test += 1
     girl_arr = []
-    for _ in range(n):  
+    for _ in range(n): 
+        girl_arr.append(input()) 
 
         
     
