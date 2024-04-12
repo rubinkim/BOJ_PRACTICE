@@ -16,3 +16,4 @@ for num in range(2, n+1):
     if prime:
         dp[num] = True
         primes.append(num)
+print(primes)
