@@ -1,6 +1,7 @@
 #-*- coding: utf-8 -*-
 """
-XX.XXXXXXXXXX..XXXXXXXX...XXXXXX
+1
+6 5
 
-(BB.AAAAAAAABB..AAAAAAAA...AAAABB)
+(yes)
 """
