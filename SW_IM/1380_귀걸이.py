@@ -59,7 +59,7 @@ while True:
     arr = []
     for _ in range(2*n-1):
         a, b = input().split()
-         
+        arr.append(int(a)) 
 
         
     
