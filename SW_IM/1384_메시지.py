@@ -96,6 +96,7 @@ while True:
         message = input().split()
         messages.append(message)
     
+    print(f"Grout {group}")
     flag = True    
     for i in range(n):
         if 'N' in messages[i][1:]:
