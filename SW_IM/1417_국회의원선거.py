@@ -30,7 +30,7 @@ while True:
     if max_vote_idx == 0 and votes.count(max_vote) == 1:
         print(cnt)
         break
-    elif max_vote_idx == 0 and votes.counts(max_vote) > 1:
+    elif max_vote_idx == 0 and votes.count(max_vote) > 1:
         cnt += 1
         votes[0] += 1
         nxt_max_vote_idx = max(votes[1:])
