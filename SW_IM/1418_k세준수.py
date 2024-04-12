@@ -17,3 +17,10 @@ for num in range(2, n+1):
         dp[num] = True
         primes.append(num)
 print(primes)
+
+cnt = 0
+for num in range(2, n+1):
+    for i in range(2, num):
+        if dp[i] and i <= k and num % i == 0:
+            cnt += 1
+print(cnt)
