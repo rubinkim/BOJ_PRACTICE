@@ -65,6 +65,7 @@ while True:
     for i in range(1, n+1):
         if arr.count(i) == 1:
              idx = i
+             break
     print(test, girl_arr[idx-1])
         
     
