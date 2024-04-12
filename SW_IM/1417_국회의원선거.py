@@ -33,7 +33,7 @@ while True:
     elif max_vote_idx == 0 and votes.count(max_vote) > 1:
         cnt += 1
         votes[0] += 1
-        nxt_max_vote_idx = max(votes[1:])
+        nxt_max_vote_idx = votes.index(max(votes[1:]))
         votes[nxt_max_vote_idx] -= 1
     elif max_vote_idx > 0:
         cnt += 1
