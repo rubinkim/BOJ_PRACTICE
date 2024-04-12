@@ -6,3 +6,4 @@
 (yes)
 """
 n = int(input())       # 주어지는 자연수 (1 <= n <= 1e5)
+k = int(input())       # k-세준수계산을 위한 k
