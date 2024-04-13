@@ -52,3 +52,25 @@ for num in range(2, n+1):
             
 print(len(final_lst))
 """
+
+import math
+import sys
+input = sys.stdin.readline
+n = int(input())
+k = int(input())
+array = [True] * (n+1)
+
+cnt = 0
+for i in range(2, int(math.sqrt(n))+1):
+    j = 2
+    max_prime = 0
+    while i*j <= n:
+        if i*j > n:
+            break
+        if array[i*j]:
+            array[i*j] = False
+            if max_prime <= k:
+                max_prime = max(max_prime, j)
+    if max_prime:
+        cnt += 1  
+print(cnt)    
