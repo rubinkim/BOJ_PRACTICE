@@ -71,6 +71,8 @@ def prime_factors(x):
     lst = []
     for i in range(2, x+1):
         if is_prime(i) and x % i == 0:
+            lst.append(i)
+    return lst
             
 
 for i in range(2, n+1):
