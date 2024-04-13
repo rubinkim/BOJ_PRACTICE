@@ -74,9 +74,10 @@ def prime_factors(x):
             lst.append(i)
     return lst
             
-cnt = 0
+cnt = 1
 for i in range(2, n+1):
-    cnt += sum([x <= k for x in prime_factors(i)])
+    if max(prime_factors(i)) <= k:
+        cnt += 1
 
 print(cnt)
 
