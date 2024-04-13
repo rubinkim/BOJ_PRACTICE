@@ -59,17 +59,10 @@ input = sys.stdin.readline
 n = int(input())
 k = int(input())
 array = [True] * (n+1)
-
 cnt = 0
 for i in range(2, n+1):
     if array[i]:
-        j = 2
-        max_prime = 0
-        while i*j <= n:        
-            array[i*j] = False
-            if max_prime <= k:
-                max_prime = max(max_prime, j)
-            j += 1
-        if max_prime:
-            cnt += 1  
-print(cnt)    
+        j = 1
+        while i*j <= n:
+            
+                
