@@ -20,6 +20,7 @@
 100
 (17442)
 """
+"""
 n = int(input())       # 주어지는 자연수 (1 <= n <= 1e5)
 k = int(input())       # k-세준수계산을 위한 k
 
@@ -50,3 +51,4 @@ for num in range(2, n+1):
             
             
 print(len(final_lst))
+"""
