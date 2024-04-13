@@ -60,9 +60,23 @@ n = int(input())
 k = int(input())
 array = [True] * (n+1)
 cnt = 0
+
+def is_prime(x):
+    for i in range(2, x):
+        if x % i == 0:
+            return False
+    return True
+
+def prime_factors(x):
+    lst = []
+    for i in range(2, x+1):
+        if is_prime(i) and x % i == 0:
+            
+
 for i in range(2, n+1):
     if array[i]:
-        j = 1
-        while i*j <= n:
+        j = 2
+
             
+
                 
