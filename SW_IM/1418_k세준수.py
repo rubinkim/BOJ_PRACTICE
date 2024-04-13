@@ -74,10 +74,9 @@ def prime_factors(x):
             lst.append(i)
     return lst
             
-
+cnt = 0
 for i in range(2, n+1):
-    if array[i]:
-        j = 2
+    
 
             
 
