@@ -21,8 +21,8 @@
 (17442)
 """
 """
-n = int(input())       # 주어지는 자연수 (1 <= n <= 1e5)
-k = int(input())       # k-세준수계산을 위한 k
+n = int(input())       
+k = int(input())       
 
 dp = [False] * (n+1)
 primes = []
@@ -61,16 +61,15 @@ k = int(input())
 array = [True] * (n+1)
 
 cnt = 0
-for i in range(2, int(math.sqrt(n))+1):
-    j = 2
-    max_prime = 0
-    while i*j <= n:
-        if i*j > n:
-            break
-        if array[i*j]:
+for i in range(2, n+1):
+    if array[i]:
+        j = 2
+        max_prime = 0
+        while i*j <= n:        
             array[i*j] = False
             if max_prime <= k:
                 max_prime = max(max_prime, j)
-    if max_prime:
-        cnt += 1  
+            j += 1
+        if max_prime:
+            cnt += 1  
 print(cnt)    
