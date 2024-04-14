@@ -20,3 +20,4 @@ for i in range(len(n)):
             n[i], n[j] = n[j], n[i]
 
 int_n = int("".join(n))
+print(int_n)
