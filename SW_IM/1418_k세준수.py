@@ -85,4 +85,6 @@ print(cnt)
             
 n = int(input())
 k = int(input())
+
+# n보다 작거나 같은 소수 판별하기 위해 Sieve of Eratosthenes를 이용한다.
                 
