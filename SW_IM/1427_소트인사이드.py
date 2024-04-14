@@ -19,4 +19,4 @@ for i in range(len(n)):
         if n[i] < n[j]:
             n[i], n[j] = n[j], n[i]
 
-print(n)
+int_n = int("".join(n))
