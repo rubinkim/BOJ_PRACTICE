@@ -84,4 +84,5 @@ print(cnt)
 """
             
 n = int(input())
+k = int(input())
                 
