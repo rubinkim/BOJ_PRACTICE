@@ -96,4 +96,6 @@ for i in range(2, int(n ** 0.5)+1):
 # n보다 작으면서 k보다 큰 소수의 배수를 구별해낸다.
 k_numbers = [1] * (n+1)
 for i in range(2, n+1):
-                    
+    if arr[i] and i > k:
+        for j in range(i, n+1, i):
+                           
