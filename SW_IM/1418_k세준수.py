@@ -52,7 +52,8 @@ for num in range(2, n+1):
             
 print(len(final_lst))
 """
-
+"""
+# 내방법은 시간초과!!!
 import math
 import sys
 input = sys.stdin.readline
@@ -80,7 +81,7 @@ for i in range(2, n+1):
         cnt += 1
 
 print(cnt)
-
+"""
             
 
                 
