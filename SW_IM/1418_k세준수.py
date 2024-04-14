@@ -98,4 +98,6 @@ k_numbers = [1] * (n+1)
 for i in range(2, n+1):
     if arr[i] and i > k:
         for j in range(i, n+1, i):
+            k_numbers[j] = 0
+            
                            
