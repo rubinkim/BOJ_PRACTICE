@@ -92,4 +92,6 @@ for i in range(2, int(n ** 0.5)+1):
     if arr[i]:
         for j in range(i*2, n+1, i):
             arr[j] = False
+
+# n보다 작으면서 k보다 큰 소수의 배수를 구별해낸다.
                 
