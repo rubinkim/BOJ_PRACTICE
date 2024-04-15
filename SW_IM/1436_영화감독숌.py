@@ -9,7 +9,6 @@
 import time
 import sys
 
-
 start = time.time()
 n = int(input())
 cnt = 0
