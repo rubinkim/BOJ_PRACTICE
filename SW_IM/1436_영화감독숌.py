@@ -13,3 +13,4 @@ for i in range(100000001):
     if cnt == n:
         print(i)
         break
+end = time.time()
