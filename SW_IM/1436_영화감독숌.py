@@ -8,6 +8,6 @@ cnt = 0
 for i in range(100001):
     if '666' in str(i):
         cnt += 1
-    if cnt = n:
+    if cnt == n:
         print(i)
         break
