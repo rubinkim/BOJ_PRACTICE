@@ -24,9 +24,9 @@ while i <= len(s)-1:
     elif s[i-1] != s[i] and s[i] == '0':
         cnt_zero += 1
     i += 1
-if s[-2] != s[-1] and s[-1] == '1':
+if s[-1] == '1':
     cnt_zero += 1
-if s[-2] != s[-1] and s[-1] == '0':
+if s[-1] == '0':
     cnt_one += 1      
     
 print(f"cnt_zero : {cnt_zero},   cnt_one : {cnt_one}")
