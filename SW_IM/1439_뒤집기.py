@@ -28,6 +28,7 @@ while i <= len(s)-1:
         cnt_zero += 1
     elif s[i-1] == 1 and s[i] == 1:
         continue
+    i += 1    
     
 print(f"cnt_zero : {cnt_zero},   cnt_one : {cnt_one}")
         
