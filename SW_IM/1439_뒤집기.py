@@ -21,6 +21,7 @@ cnt_zero, cnt_one = 0, 0    # cnt_zero : number of flipping to make every elemen
 i = 1
 while i <= len(s)-1:
     if s[i-1] == '0' and s[i] == '0':
+        i += 1  
         continue
     elif s[i-1] == '0' and s[i] == '1':
         cnt_one += 1
@@ -28,7 +29,7 @@ while i <= len(s)-1:
         cnt_zero += 1
     elif s[i-1] == '1' and s[i] == '1':
         continue
-    i += 1    
+      
     
 print(f"cnt_zero : {cnt_zero},   cnt_one : {cnt_one}")
         
