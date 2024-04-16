@@ -16,3 +16,7 @@
 (2)
 """
 s = input()
+
+def flopping(arr, x):
+     
+    
