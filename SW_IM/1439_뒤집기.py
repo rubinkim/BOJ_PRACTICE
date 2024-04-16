@@ -31,7 +31,7 @@ if s[-2] != s[-1] and s[-1] == '0':
     cnt_one += 1
       
     
-print(f"cnt_zero : {cnt_zero},   cnt_one : {cnt_one}")
+#print(f"cnt_zero : {cnt_zero},   cnt_one : {cnt_one}")
 print(min(cnt_zero, cnt_one))
         
 
