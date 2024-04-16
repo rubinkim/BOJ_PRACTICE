@@ -17,6 +17,8 @@
 """
 s = input()
 
-def flopping(arr, x):
+def flopping(arr, x):   # make every element of arr into x
+    for i in range(len(arr)):
+    
      
     
