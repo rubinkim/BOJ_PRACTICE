@@ -11,4 +11,40 @@
 
 888888
 (6)
+
+126549666
+(3)
 """
+
+from collections import Counter
+lst = list(map(int, input()))     # 126549666
+print(lst)
+
+num_dict = Counter(lst)
+print(num_dict)
+
+for k, v in num_dict.items():
+    if num_dict[6] and num_dict[9]:
+        if (num_dict[6] + num_dict[9]) % 2 == 0:
+            num_dict[6] += num_dict[9]
+            num_dict[6] = num_dict[6] // 2
+            num_dict[9] = 0
+        elif (num_dict[6] + num_dict[9]) % 2 == 1:
+            num_dict[6] += num_dict[9]
+            num_dict[6] = num_dict[6] // 2 + 1
+            num_dict[9] = 0
+            
+    elif num_dict[6] and not num_dict[9]:
+        if num_dict[6] % 2 == 0:
+            num_dict[6] = num_dict[6] // 2
+        elif num_dict[6] % 2 == 1:
+            num_dict[6] = num_dict[6] // 2 + 1  
+    
+    elif not num_dict[6] and num_dict[9]:
+        if num_dict[9] % 2 == 0:
+            num_dict[9] = num_dict[9] // 2
+        elif num_dict[9] % 2 == 1:
+            num_dict[9] = num_dict[9] // 2 + 1
+            
+print(num_dict)
+print(max(num_dict.values()))
