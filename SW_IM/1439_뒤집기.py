@@ -15,9 +15,11 @@
 11101101
 (2)
 """
-s = int(input())
+s = input()
+cnt_into_zero, cnt_into_one = 0, 0
 
-
+for i in range(len(s)):
+    if s[i] ==
             
     
      
