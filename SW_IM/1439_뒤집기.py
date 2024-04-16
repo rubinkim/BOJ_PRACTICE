@@ -15,11 +15,14 @@
 11101101
 (2)
 """
-s = input()
+s = int(input())
 cnt_into_zero, cnt_into_one = 0, 0
 
 for i in range(len(s)):
-    if s[i] ==
+    if s[i] == 0:
+        continue
+    else:
+        
             
     
      
