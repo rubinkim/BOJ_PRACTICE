@@ -17,7 +17,7 @@
 """
 s = list(input())
 
-
+cnt_zero, cnt_ont = 0, 0    # cnt_zero : number of flipping to make every element zero,  cnt_one : vice versa
         
         
             
