@@ -16,7 +16,6 @@
 (2)
 """
 s = list(input())
-
 cnt_zero, cnt_one = 0, 0    # cnt_zero : number of flipping to make every element zero,  cnt_one : vice versa
 i = 1
 while i <= len(s)-1:
