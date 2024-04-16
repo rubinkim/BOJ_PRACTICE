@@ -25,6 +25,8 @@ while i <= len(s)-1:
     elif s[i-1] == 0 and s[i] == 1:
         cnt_one += 1
     elif s[i-1] == 1 and s[i] == 0:
+        cnt_zero += 1
+    
         
 
         
