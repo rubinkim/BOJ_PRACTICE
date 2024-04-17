@@ -17,6 +17,13 @@ e, s, m = map(int, input().split())
 year = 1
 
 while True:
-    if ((year - 1) * 15 + e) % 15 == e and ((year - 1) * 28 + s) % 28 == s and ((year - 1) * 19 + m) % 19 == m:
+    if e == 15:
+        e = 0
+    if s == 28:
+        s = 0
+    if m == 19:
+        m = 0
+    if year % 15 == e and year % 28 == s and year % 19 == m:
         print(year)
-        break    
+        break
+    year += 1
