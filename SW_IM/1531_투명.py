@@ -19,4 +19,6 @@ for _ in range(n):
 ans = 0
 for i in range(100):
     for j in range(100):
-        
+        if board[i][j] > m:
+            ans += 1
+print(ans)
