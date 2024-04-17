@@ -14,3 +14,5 @@ for _ in range(n):
     xd, yd, xu, yu = map(int, input().split())
     for i in range(yd, yu+1):
         for j in range(xd, xu+1):
+            board[i][j] += 1
+            
