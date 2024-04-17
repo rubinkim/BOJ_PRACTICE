@@ -23,3 +23,6 @@ for i in range(100):
         if board[i][j] > m:
             ans += 1
 print(ans)
+
+for row in board:
+    print(row)
