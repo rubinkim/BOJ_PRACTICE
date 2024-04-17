@@ -9,3 +9,4 @@
 """
 
 n, m = map(int, input().split())
+board = [[1] * 100 for _ in range(100)]
