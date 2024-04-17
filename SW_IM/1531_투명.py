@@ -16,5 +16,3 @@ for _ in range(n):
         for j in range(xd, xu+1):
             board[i][j] += 1
             
-for row in board:
-    print(row)
