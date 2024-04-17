@@ -12,3 +12,5 @@
 15 28 19
 (7980)
 """
+
+e, s, m = map(int, input().split())
