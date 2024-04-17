@@ -10,6 +10,10 @@
 
 n, m = map(int, input().split())
 board = [[1] * 100 for _ in range(100)]
+
+for row in board:
+    print(row)
+    
 for _ in range(n):
     xd, yd, xu, yu = map(int, input().split())
     xd, yd, xu, yu = 100-xd, 100-yd, 100-xu, 100-yu
@@ -24,5 +28,3 @@ for i in range(100):
             ans += 1
 print(ans)
 
-for row in board:
-    print(row)
