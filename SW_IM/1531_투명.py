@@ -13,8 +13,8 @@ board = [[1] * 100 for _ in range(100)]
 for _ in range(n):
     xd, yd, xu, yu = map(int, input().split())
     xd, yd, xu, yu = 100-xd, 100-yd, 100-xu, 100-yu
-    for i in range(yd, yu+1):
-        for j in range(xd, xu+1):
+    for i in range(yu-1, yd):
+        for j in range(xu-1, xd):
             board[i][j] += 1
             
 ans = 0
