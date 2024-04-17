@@ -9,15 +9,12 @@
 """
 
 n, m = map(int, input().split())
-board = [[1] * 100 for _ in range(100)]
+board = [[0] * 100 for _ in range(100)]
 
-for row in board:
-    print(row)
-    
 for _ in range(n):
     xd, yd, xu, yu = map(int, input().split())
     yd, yu = 100-yd, 100-yu
-    for i in range(yu-1, yd):
+    for i in range(yu, yd+1):
         for j in range(xd, xu+1):
             board[i][j] += 1
             
