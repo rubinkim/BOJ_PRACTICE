@@ -16,3 +16,7 @@ for _ in range(n):
         for j in range(xd, xu+1):
             board[i][j] += 1
             
+ans = 0
+for i in range(100):
+    for j in range(100):
+        
