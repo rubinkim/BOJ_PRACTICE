@@ -16,9 +16,9 @@ for row in board:
     
 for _ in range(n):
     xd, yd, xu, yu = map(int, input().split())
-    xd, yd, xu, yu = 100-xd, 100-yd, 100-xu, 100-yu
+    yd, yu = 100-yd, 100-yu
     for i in range(yu-1, yd):
-        for j in range(xu-1, xd):
+        for j in range(xd, xu+1):
             board[i][j] += 1
             
 ans = 0
