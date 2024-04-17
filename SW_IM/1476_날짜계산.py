@@ -14,3 +14,7 @@
 """
 
 e, s, m = map(int, input().split())
+year = 1
+
+while True:
+    
