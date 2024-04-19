@@ -31,4 +31,7 @@ print()
 arr_tr = list(zip(*arr))
 for row in arr_tr:
     print(row)
+    
+col_cnt, row_cnt = 0, 0
+
         
