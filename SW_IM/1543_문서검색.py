@@ -22,3 +22,4 @@ aa
 """
 
 lst = list(input())
+word = input()
