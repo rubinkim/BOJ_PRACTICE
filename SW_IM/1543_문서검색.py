@@ -33,7 +33,7 @@ while len(lst) >= len(word):
         lst = lst[len(word):]
     elif lst[:len(word)] != word:
         i += 1
-        lst = lst[i:]
+        lst = lst[1:]
     if len(lst) == len(word) and lst != word:
         break
     
