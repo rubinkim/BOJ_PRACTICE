@@ -20,3 +20,5 @@ aa
 
 (3)
 """
+
+lst = list(input())
