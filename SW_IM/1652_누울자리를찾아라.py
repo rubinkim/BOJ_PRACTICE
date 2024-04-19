@@ -37,6 +37,7 @@ for row in arr_tr:
     
 col_cnt, mtt = 0, 0
 for i in range(n):
+    j = 0
     
     
 row_cnt = 0
