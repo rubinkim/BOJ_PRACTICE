@@ -53,4 +53,5 @@ for i in range(len(arr_tr)):
         row_cnt += 1
     if 1 <= i <= i-2 and sum(arr_tr[i]) == 0 and (sum(arr_tr[i-1]) >= 1 or sum(arr_tr[i+1]) >= 1):
         row_cnt += 1    
-        
+
+print(col_cnt, row_cnt)
