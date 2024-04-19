@@ -83,3 +83,4 @@ for i in range(n):
     if i == n-1 and sum(arr_tr[i]) == 0 and sum(arr_tr[i-1]) >= 1:
         row_cnt += 1         
     
+print(col_cnt, row_cnt)
