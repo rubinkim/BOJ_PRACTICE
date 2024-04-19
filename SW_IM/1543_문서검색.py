@@ -22,19 +22,19 @@ aa
 """
 
 lst = list(input())
-word = input()
+word = list(input())
 
 cnt = 0
 i = 0
 while len(lst) >= len(word):
-    if lst[:len(word)] == list(word):
+    if lst[:len(word)] == word:
         cnt += 1
         i += len(word)
         lst = lst[len(word):]
-    elif lst[:len(word)] != list(word):
+    elif lst[:len(word)] != word:
         i += 1
         lst = lst[i:]
-    if len(lst) == len(word) and lst != list(word):
+    if len(lst) == len(word) and lst != word:
         break
     
 print(cnt)
