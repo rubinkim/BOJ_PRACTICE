@@ -26,3 +26,5 @@ word = input()
 
 cnt = 0
 i = 0
+while len(lst) <= len(word):
+    
