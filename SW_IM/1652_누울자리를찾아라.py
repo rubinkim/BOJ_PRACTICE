@@ -44,6 +44,9 @@ for i in range(n):
         if arr[i][j] == 1:
             if mtt >= 2:
                 col_cnt += 1
+        if j == n-1:
+            if mtt >= 2:
+                col_cnt += 1
             
     
 row_cnt = 0
