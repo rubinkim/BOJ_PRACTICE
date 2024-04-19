@@ -26,5 +26,7 @@ word = input()
 
 cnt = 0
 i = 0
-while len(lst) <= len(word):
-    
+while len(lst) >= len(word):
+    if lst[:len(word)] == word:
+        cnt += 1
+        lst = lst[len(word):]
