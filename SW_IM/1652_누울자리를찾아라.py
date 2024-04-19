@@ -15,8 +15,6 @@ for i in range(len(arr)):
     row = input()
     for j in range(len(row)):
         arr[i][j] = row[j]
-for row in arr:
-    print(row)    
     
 for i in range(n):
     for j in range(len(row)):
