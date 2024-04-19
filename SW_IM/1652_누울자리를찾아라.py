@@ -54,7 +54,7 @@ for i in range(n):
 for i in range(n):
     if i == 0 and sum(arr[i]) == 0 and sum(arr[i+1]) >= 1:
         col_cnt += 1
-if 
+    elif 1 <= i <= n-2 and sum(arr[i]) == 0 and (sum(arr[i-1]) >= 1 or sum(arr[i+1]) >= 1): 
             
     
 row_cnt = 0
