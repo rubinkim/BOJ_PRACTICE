@@ -51,7 +51,8 @@ for i in range(n):
             mtt = 0
         j += 1
 
-if sum(arr[0]) == 0 
+if sum(arr[0]) == 0 and sum(arr[1]) >= 1:
+    col_cnt += 1
             
     
 row_cnt = 0
