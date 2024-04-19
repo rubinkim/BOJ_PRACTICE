@@ -36,7 +36,6 @@ for row in arr_tr:
     print(row)
     
 col_cnt, mtt = 0, 0
-
 for i in range(n):
     
     
