@@ -37,6 +37,8 @@ col_cnt, row_cnt = 0, 0
 for i in range(len(arr)):
     if any([arr[i][j:j+2] == 0 for j in range(len(arr[i])-1)]) and sum(arr[i]) >= 1:
         col_cnt += 1
+    if i == 0 and sum(arr[i]) == 0 and sum(arr[i+1]) >= 1:
+        col_cnt += 1
         
         
         
