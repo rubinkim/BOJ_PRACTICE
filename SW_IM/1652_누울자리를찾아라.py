@@ -13,7 +13,8 @@ arr = [[0] * n for _ in range(n)]
 
 for i in range(len(arr)):
     row = input().split()
-    
+    for j in range(len(row)):
+        
     
     
 for i in range(n):
