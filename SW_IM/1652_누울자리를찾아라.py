@@ -30,7 +30,6 @@ for row in arr:
     
 print()
 
-#arr_tr = list(list(zip(*arr)))
 arr_tr = list(map(list, zip(*arr)))
     
 for row in arr_tr:
