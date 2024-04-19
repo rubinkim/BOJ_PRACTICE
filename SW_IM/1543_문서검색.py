@@ -23,3 +23,6 @@ aa
 
 lst = list(input())
 word = input()
+
+cnt = 0
+i = 0
