@@ -25,14 +25,14 @@ for i in range(n):
         elif arr[i][j] == 'X':
             arr[i][j] = 1
             
-for row in arr:
-    print(row)
+#for row in arr:
+#   print(row)
     
 print()
 
 arr_tr = list(zip(*arr))
-for row in arr_tr:
-    print(row)
+#for row in arr_tr:
+#    print(row)
     
 col_cnt, row_cnt = 0, 0
 
