@@ -50,7 +50,8 @@ for i in range(n):
                 col_cnt += 1
             mtt = 0
         j += 1
-        
+
+if sum(arr[0]) == 0 
             
     
 row_cnt = 0
