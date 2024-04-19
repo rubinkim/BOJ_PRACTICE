@@ -80,6 +80,6 @@ for i in range(n):
         row_cnt += 1
     if 1 <= i <= n-2 and sum(arr_tr[i]) == 0 and (sum(arr_tr[i-1]) >= 1 or sum(arr_tr[i+1]) >= 1):
         row_cnt += 1
-    if i == n-1 and sum(arr[i]) == 0 and sum(arr[i-1]) >= 1:
+    if i == n-1 and sum(arr_tr[i]) == 0 and sum(arr_tr[i-1]) >= 1:
         col_cnt += 1         
     
