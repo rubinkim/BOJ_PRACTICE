@@ -10,11 +10,15 @@ X....
 
 n = int(input())
 arr = [[0] * n for _ in range(n)]
-for row in arr:
-    print(row)
+
+for i in range(len(arr)):
+    row = input().split()
+    
+    
     
 for i in range(n):
-    for j in range(n):
+    row = input().split()
+    for j in range(len(row)):
         if arr[i][j] == '.':
             arr[i][j] = 0
         elif arr[i][j] == 'X':
