@@ -71,7 +71,7 @@ for i in range(n):
             mtt = 0
         if j == n-1:
             if mtt >= 2:
-                col_cnt += 1
+                row_cnt += 1
             mtt = 0
         j += 1
 
