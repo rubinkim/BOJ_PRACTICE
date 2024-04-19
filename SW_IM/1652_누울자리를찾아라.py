@@ -35,7 +35,7 @@ arr_tr = list(map(list, zip(*arr)))
 for row in arr_tr:
     print(row)
     
-col_cnt,  = 0, 0
+col_cnt, mtt = 0, 0
 
 for i in range(n):
     
