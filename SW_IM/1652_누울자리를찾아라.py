@@ -41,6 +41,9 @@ for i in range(n):
     while j < n:
         if arr[i][j] == 0:
             mtt += 1
+        if arr[i][j] == 1:
+            if mtt < 2:
+                mtt = 0
     
 row_cnt = 0
 for i in range(len(arr_tr)):
