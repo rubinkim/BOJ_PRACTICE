@@ -39,6 +39,10 @@ for i in range(len(arr)):
         col_cnt += 1
     if i == 0 and sum(arr[i]) == 0 and sum(arr[i+1]) >= 1:
         col_cnt += 1
+    if i == n-1 and sum(arr[i]) == 0 and sum(arr[i-1]) >= 1:
+        col_cnt += 1
+    if 1 <= i <= i-2 and sum(arr[i]) == 0 and (sum(arr[i-1]) >= 1 or sum(arr[i+1]) >= 1):
+        col_cnt += 1
         
         
         
