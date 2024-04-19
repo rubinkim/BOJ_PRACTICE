@@ -6,6 +6,8 @@
 .....
 .XX..
 X....
+
+(5 4)
 """
 
 n = int(input())
@@ -35,7 +37,7 @@ for row in arr_tr:
 col_cnt, row_cnt = 0, 0
 
 for i in range(len(arr)):
-    if any([sum([arr[i][j:j+2]) == 0 for j in range(len(arr[i])-1])]) and sum(arr[i]) >= 1:
+    if any([sum(arr[i][j:j+2]) == 0 for j in range(len(arr[i])-1)]) and sum(arr[i]) >= 1:
         col_cnt += 1
     if i == 0 and sum(arr[i]) == 0 and sum(arr[i+1]) >= 1:
         col_cnt += 1
@@ -45,7 +47,7 @@ for i in range(len(arr)):
         col_cnt += 1
         
 for i in range(len(arr_tr)):
-    if any([sum([arr_tr[i][j:j+2]) == 0 for j in range(len(arr_tr[i])-1])]) and sum(arr_tr[i]) >= 1:
+    if any([sum(arr_tr[i][j:j+2]) == 0 for j in range(len(arr_tr[i])-1)]) and sum(arr_tr[i]) >= 1:
         row_cnt += 1
     if i == 0 and sum(arr_tr[i]) == 0 and sum(arr_tr[i+1]) >= 1:
         row_cnt += 1
