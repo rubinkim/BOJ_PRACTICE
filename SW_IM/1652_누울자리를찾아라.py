@@ -45,7 +45,7 @@ for i in range(n):
             if mtt >= 2:
                 col_cnt += 1
             mtt = 0
-        if j == n-1:
+        if j == n-1 and arr[i][j] == 0:
             if mtt >= 2:
                 col_cnt += 1
             mtt = 0
