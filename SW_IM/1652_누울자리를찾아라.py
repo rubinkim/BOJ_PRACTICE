@@ -35,12 +35,12 @@ arr_tr = list(map(list, zip(*arr)))
 for row in arr_tr:
     print(row)
     
-col_cnt, row_cnt = 0, 0
+col_cnt,  = 0, 0
 
 for i in range(n):
     
     
-
+row_cnt = 0
 for i in range(len(arr_tr)):
     if any([sum(arr_tr[i][j:j+2]) == 0 for j in range(len(arr_tr[i])-1)]) and sum(arr_tr[i]) >= 1:
         row_cnt += 1
