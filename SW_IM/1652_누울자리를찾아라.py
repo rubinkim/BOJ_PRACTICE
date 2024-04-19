@@ -38,7 +38,9 @@ for row in arr_tr:
 col_cnt, mtt = 0, 0
 for i in range(n):
     j = 0
-    
+    while j < n:
+        if arr[i][j] == 0:
+            mtt += 1
     
 row_cnt = 0
 for i in range(len(arr_tr)):
