@@ -48,6 +48,7 @@ for i in range(n):
         if j == n-1:
             if mtt >= 2:
                 col_cnt += 1
+            mtt = 0
             
     
 row_cnt = 0
