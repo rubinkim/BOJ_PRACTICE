@@ -59,7 +59,7 @@ for i in range(n):
     if i == n-1 and sum(arr[i]) == 0 and sum(arr[i-1]) >= 1:
         col_cnt += 1
      
-col_cnt, mtt = 0, 0
+row_cnt, mtt = 0, 0
 for i in range(n):
     j = 0
     while j < n:
