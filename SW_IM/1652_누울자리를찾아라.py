@@ -63,7 +63,7 @@ row_cnt, mtt = 0, 0
 for i in range(n):
     j = 0
     while j < n:
-        if arr[i][j] == 0:
+        if arr_tr[i][j] == 0:
             mtt += 1
         if arr[i][j] == 1:
             if mtt >= 2:
