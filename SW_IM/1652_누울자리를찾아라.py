@@ -43,7 +43,8 @@ for i in range(n):
             mtt += 1
         if arr[i][j] == 1:
             if mtt >= 2:
-                
+                col_cnt += 1
+            
     
 row_cnt = 0
 for i in range(len(arr_tr)):
