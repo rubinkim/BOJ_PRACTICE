@@ -36,4 +36,5 @@ while len(lst) >= len(word) or i <:
         lst = lst[i:]
     if len(lst) == len(word) and lst != word:
         break
+    
 print(cnt)
