@@ -43,8 +43,17 @@ for i in range(len(arr)):
         col_cnt += 1
     if i == n-1 and sum(arr[i]) == 0 and sum(arr[i-1]) >= 1:
         col_cnt += 1
-    if 1 <= i <= i-2 and sum(arr[i]) == 0 and (sum(arr[i-1]) >= 1 or sum(arr[i+1]) >= 1):
+    if 1 <= i <= n-2 and sum(arr[i]) == 0 and (sum(arr[i-1]) >= 1 or sum(arr[i+1]) >= 1):
         col_cnt += 1
         
-for i in range(len(arr)):
-    print(sum(arr[i]))
+for i in range(len(arr_tr)):
+    if any([sum(arr_tr[i][j:j+2]) == 0 for j in range(len(arr_tr[i])-1)]) and sum(arr_tr[i]) >= 1:
+        row_cnt += 1
+    if i == 0 and sum(arr_tr[i]) == 0 and sum(arr_tr[i+1]) >= 1:
+        row_cnt += 1
+    if i == n-1 and sum(arr_tr[i]) == 0 and sum(arr_tr[i-1]) >= 1:
+        row_cnt += 1
+    if 1 <= i <= n-2 and sum(arr_tr[i]) == 0 and (sum(arr_tr[i-1]) >= 1 or sum(arr_tr[i+1]) >= 1):
+        row_cnt += 1    
+
+print(col_cnt, row_cnt)
