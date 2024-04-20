@@ -36,8 +36,7 @@ for i in range(n):
         elif j == n-1 and arr[i][j] == 0:
             if mtt >= 1 and sum(arr[i]) == 0:
                 col_cnt += 1
-            else:
-                break               
+          
         if arr[i][j] == 1:
             if mtt >= 2:
                 col_cnt += 1
@@ -64,8 +63,7 @@ for i in range(n):
         elif j == n-1 and arr_tr[i][j] == 0:
             if mtt >= 1 and sum(arr_tr[i]) == 0:
                 row_cnt += 1
-            else:
-                break              
+             
         if arr_tr[i][j] == 1:
             if mtt >= 2:
                 row_cnt += 1
