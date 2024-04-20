@@ -37,8 +37,9 @@ for i in range(n):
             if mtt >= 2:
                 col_cnt += 1
             mtt = 0
-        if j == n-1 and sum(arr[i]) >= 1 and mtt >= 2:
-            col_cnt += 1        
+        if j == n-1 and mtt >= 2:
+            if sum(arr[i]) >= 1:
+                col_cnt += 1        
         j += 1
     mtt = 0
 
