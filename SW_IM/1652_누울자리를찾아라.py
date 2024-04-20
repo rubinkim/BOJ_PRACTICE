@@ -37,7 +37,7 @@ for i in range(n):
             if mtt >= 1:
                 col_cnt += 1
             else:
-                continue               
+                break               
         if arr[i][j] == 1:
             if mtt >= 2:
                 col_cnt += 1
@@ -65,7 +65,7 @@ for i in range(n):
             if mtt >= 1:
                 row_cnt += 1
             else:
-                continue               
+                break              
         if arr_tr[i][j] == 1:
             if mtt >= 2:
                 row_cnt += 1
