@@ -15,8 +15,7 @@ cache = [0] * (n+1)
 def cal_factorial(x):
     if x <= 1:
         return 1
-    else:
-        
+    else:        
         cache[x] = x * cal_factorial(x-1)
         return cache[x]
 
