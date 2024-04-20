@@ -28,24 +28,7 @@ for i in range(n):
 arr_tr = list(map(list, zip(*arr)))
     
 col_cnt, mtt = 0, 0
-for i in range(n):
-    j = 0
-    while j < n:
-        if arr[i][j] == 0:
-            mtt += 1
-        if arr[i][j] == 1:
-            if mtt >= 2:
-                col_cnt += 1
-                mtt = 0
-            else:
-                mtt = 0
-        if j == n-1 and mtt >= 2:
-            if sum(arr[i]) >= 1:
-                col_cnt += 1
-            else:
-                continue        
-        j += 1
-    mtt = 0
+
 
 for i in range(n):
     if i == 0 and sum(arr[i]) == 0 and sum(arr[i+1]) >= 1:
