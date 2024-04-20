@@ -8,6 +8,9 @@
 X....
 
 (5 4)
+
+1
+.
 """
 
 n = int(input())
@@ -48,12 +51,15 @@ for i in range(n):
     mtt = 0
 
 for i in range(n):
-    if i == 0 and sum(arr[i]) == 0 and sum(arr[i+1]) >= 1:
-        col_cnt += 1
-    if 1 <= i <= n-2 and sum(arr[i]) == 0 and (sum(arr[i-1]) >= 1 or sum(arr[i+1]) >= 1):
-        col_cnt += 1
-    if i == n-1 and sum(arr[i]) == 0 and sum(arr[i-1]) >= 1:
-        col_cnt += 1
+    if n == 1:
+        col_cnt = 0
+    else:
+        if i == 0 and sum(arr[i]) == 0 and sum(arr[i+1]) >= 1:
+            col_cnt += 1
+        if 1 <= i <= n-2 and sum(arr[i]) == 0 and (sum(arr[i-1]) >= 1 or sum(arr[i+1]) >= 1):
+            col_cnt += 1
+        if i == n-1 and sum(arr[i]) == 0 and sum(arr[i-1]) >= 1:
+            col_cnt += 1
      
 row_cnt, mtt = 0, 0
 for i in range(n):
