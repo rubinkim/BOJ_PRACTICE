@@ -36,5 +36,14 @@ cnt = 0
 
 while len(x) >= 1:
     if len(x) == 1:
+        x_added = int(x[0])
+        print(cnt)
+        print('YES' if x_added % 3 == 0 else 'NO')
         break
     x_added = sum([int(i) for i in range(x)])
+    cnt += 1
+    
+    if x_added < 10:
+        if x_added % 3 == 0:
+            print(cnt)
+            print('YES' if x_added % 3 == 0 else 'NO')
