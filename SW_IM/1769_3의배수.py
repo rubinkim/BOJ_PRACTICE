@@ -47,5 +47,5 @@ while len(x) >= 1:
         print(cnt)
         print('YES' if x_added % 3 == 0 else 'NO')
     else:
-        
+        x = list(str(x_added))
         
