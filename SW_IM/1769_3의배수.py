@@ -31,3 +31,8 @@ print("YES" if x_added % 3 == 0 else "NO")
 end = time.time()
 print(f"time elapsed : {end - start}")
 """
+x = list(input())
+cnt = 0
+
+while len(x) >= 1:
+    
