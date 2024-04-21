@@ -43,6 +43,7 @@ while len(x) >= 1:
     else:
         x_added = sum([int(i) for i in x])
         cnt += 1
+        x = list(str(x_added))
         
         if x_added < 10:
             x = list(str(x_added))
