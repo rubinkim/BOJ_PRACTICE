@@ -14,3 +14,5 @@ for i in range(2, 100001):
     
 print(x[100000])
 print(cum_x[100000])
+
+s = int(input())
