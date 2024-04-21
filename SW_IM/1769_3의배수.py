@@ -44,6 +44,8 @@ while len(x) >= 1:
     cnt += 1
     
     if x_added < 10:
-        if x_added % 3 == 0:
-            print(cnt)
-            print('YES' if x_added % 3 == 0 else 'NO')
+        print(cnt)
+        print('YES' if x_added % 3 == 0 else 'NO')
+    else:
+        
+        
