@@ -16,3 +16,8 @@ print(x[100000])
 print(cum_x[100000])
 
 s = int(input())
+for i in range(1, len(cum_x)):
+    if s == cum_x[i]:
+        print(x[i])
+    if cum_x[i-1] < s < cum_x[i]:
+        print(x[i-1])
