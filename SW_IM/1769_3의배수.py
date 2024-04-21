@@ -40,12 +40,13 @@ while len(x) >= 1:
         print(cnt)
         print('YES' if x_added % 3 == 0 else 'NO')
         break
-    x_added = sum([int(i) for i in x])
-    cnt += 1
-    
-    if x_added < 10:
-        print(cnt)
-        print('YES' if x_added % 3 == 0 else 'NO')
     else:
-        x = list(str(x_added))
+        x_added = sum([int(i) for i in x])
+        cnt += 1
+        
+        if x_added < 10:
+            print(cnt)
+            print('YES' if x_added % 3 == 0 else 'NO')
+        else:
+            x = list(str(x_added))
         
