@@ -35,4 +35,6 @@ x = list(input())
 cnt = 0
 
 while len(x) >= 1:
-    
+    if len(x) == 1:
+        break
+    x_added = sum([int(i) for i in range(x)])
