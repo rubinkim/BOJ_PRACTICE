@@ -37,7 +37,7 @@ while True:
         elif i == len(target)-1 and target[i] == guess[i-1]:
             grey_cnt += 1
         
-    print(f"{guess}: {black_cnt} black")
+    print(f"{guess}: {black_cnt} black, {grey_cnt} grey,")
         
 
 
