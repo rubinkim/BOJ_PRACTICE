@@ -21,5 +21,5 @@ BCBCAA: 2 black, 2 grey, 0 white
 while True:
     if input() == "#":
         break
-    target, guess = map(str, input().split())
+    target, guess = input().split(sep=[' ', '\n'])
     print(f"target : {target},  guess : {guess}")
