@@ -54,7 +54,7 @@ while True:
             white_cnt += 1
             chk[i] = True
         
-    print(f"{guess}: {black_cnt} black, {grey_cnt} grey,")
+    print(f"{guess}: {black_cnt} black, {grey_cnt} grey, {white_cnt} white")
         
 
 
