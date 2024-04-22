@@ -18,17 +18,6 @@ ABCD: 4 black, 0 grey, 0 white
 BCBCAA: 2 black, 2 grey, 0 white
 """
 
-import os
-client_sock=socket(AF_INET, SOCK_STREAM)
-try:
-    client_sock.connect((Host,Port))
-
-except ConnectionRefusedError:
-    print('서버에 연결할 수 없습니다.')
-    print('1. 서버의 ip주소와 포트번호가 올바른지 확인하십시오.')
-    print('2. 서버 실행 여부를 확인하십시오.')
-    os._exit(1)
-
 while True:
     arrangement = input()
     if arrangement == "#":
@@ -38,16 +27,23 @@ while True:
     print(f"target : {target},  guess : {guess}")
     
     black_cnt, grey_cnt, white_cnt = 0, 0, 0
-    chk = [False] * len(target)
+    target_chk = [False] * len(target)
+    guess_chk = [False] * len(guess)
     
     for i in range(len(target)):
-        if target[i] == guess[i] and not chk[i]:
+        if target[i] == guess[i] and not target_chk[i] and not guess_chk[i]:
             black_cnt += 1
-            chk[i] = True
+            target_chk[i] = True
+            guess_chk[i] = True
             
-        if i == 0 and target[i] == guess[i+1] and not chk[i]:
+        if i == 0 and target[i] == guess[i+1] and not target_chk[i] and not guess_chk[i+1]:
             grey_cnt += 1
-            chk[i] = True
+            target_chk[i] = True
+            guess_chk[i+1] = True
+        elif 0 < i < len(target)-1 and target[i] == guess[i-1] and not chk[i]:
+            grey_cnt += 1
+            target_chk[i] = True
+            guess_chk[i-1] = True
         elif 0 < i < len(target)-1 and (target[i] == guess[i-1] or target[i] == guess[i+1]) and not chk[i]:
             grey_cnt += 1
             chk[i] = True
