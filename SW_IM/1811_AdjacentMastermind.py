@@ -18,6 +18,17 @@ ABCD: 4 black, 0 grey, 0 white
 BCBCAA: 2 black, 2 grey, 0 white
 """
 
+import os
+client_sock=socket(AF_INET, SOCK_STREAM)
+try:
+    client_sock.connect((Host,Port))
+
+except ConnectionRefusedError:
+    print('서버에 연결할 수 없습니다.')
+    print('1. 서버의 ip주소와 포트번호가 올바른지 확인하십시오.')
+    print('2. 서버 실행 여부를 확인하십시오.')
+    os._exit(1)
+
 while True:
     arrangement = input()
     if arrangement == "#":
