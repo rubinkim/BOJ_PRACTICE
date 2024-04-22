@@ -31,7 +31,7 @@ while True:
         if target[i] == guess[i]:
             black_cnt += 1
         
-    print(f"{guess}: {black_cnt}")
+    print(f"{guess}: {black_cnt} black")
         
 
 
