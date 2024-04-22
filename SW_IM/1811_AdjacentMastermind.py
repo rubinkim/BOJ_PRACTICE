@@ -16,10 +16,12 @@ ACBC: 1 black, 2 grey, 0 white
 BEAA: 0 black, 1 grey, 1 white
 ABCD: 4 black, 0 grey, 0 white
 BCBCAA: 2 black, 2 grey, 0 white
-"""
+
 
 while True:
     if input() == "#":
         break
-    target, guess = input().split(sep=' ')
-    print(f"target : {target},  guess : {guess}")
+    else:
+        target, guess = input().split(sep=' ')
+        print(f"target : {target},  guess : {guess}")
+"""
