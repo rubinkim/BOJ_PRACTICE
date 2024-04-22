@@ -1,4 +1,13 @@
 #-*- coding: utf-8 -*-
 """
+ABCD AAAA
+ABCD ACEB
+ABCD EFBB
+ABCD ACBC
+ABCD BEAA
+ABCD ABCD
+ABABAA BCBCAA
+#
+
 
 """
