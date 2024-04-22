@@ -40,11 +40,11 @@ while True:
             grey_cnt += 1
             target_chk[i] = True
             guess_chk[i+1] = True
-        elif 0 < i < len(target)-1 and target[i] == guess[i-1] and not chk[i]:
+        elif 0 < i < len(target)-1 and target[i] == guess[i-1] and not target_chk[i] and not guess_chk[i-1]:
             grey_cnt += 1
             target_chk[i] = True
             guess_chk[i-1] = True
-        elif 0 < i < len(target)-1 and target[i] == guess[i+1] and not chk[i]:
+        elif 0 < i < len(target)-1 and target[i] == guess[i+1] and not target_chk[i] and guess_chk[i+1]:
             grey_cnt += 1
             target_chk[i] = True
             guess_chk[i+1] = True
