@@ -35,7 +35,7 @@ while True:
             black_cnt += 1
             target_chk[i] = True
 
-            
+    for i in range(len(target)):       
         if i == 0 and target[i] == guess[i+1] and not target_chk[i]:
             grey_cnt += 1
             target_chk[i] = True
@@ -52,7 +52,7 @@ while True:
             grey_cnt += 1
             target_chk[i] = True
            
-        # ABABAA BCBCAA  
+    for i in range(len(target)):
         for j in range(len(target)):
             if i <= 1 and target[i] == guess[j] and j >= i+2 and not target_chk[i]:
                 white_cnt += 1
