@@ -22,3 +22,4 @@ while True:
     if input() == "#":
         break
     target, guess = input().split()
+    print(f"target : {target},  guess : {guess}")
