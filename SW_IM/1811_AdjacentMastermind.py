@@ -62,6 +62,12 @@ while True:
         elif i >= len(target)-2 and any([target[i] == guess[j] for j in range(i-1) if not guess_chk[j]]) and not target_chk[i]:
             white_cnt += 1
             target_chk[i] = True
+            
+        for j in range(len(target)):
+            if i <= 1 and taget[i] == guess[j] and j >= i+2 and not target_chk[i] and not guess_chk[j]:
+                white_cnt += 1
+            if 1 < i < len(target)-2:
+                if (target[i] in guess[:i-1] or target[i] in guess[i+2:]) and not target_chk[]
         
     print(f"{guess}: {black_cnt} black, {grey_cnt} grey, {white_cnt} white")
         
