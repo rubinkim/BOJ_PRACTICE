@@ -26,10 +26,12 @@ while True:
     target, guess = arrangement.split()
     print(f"target : {target},  guess : {guess}")
     
-    black_cnt = 0
+    black_cnt, grey_cnt = 0, 0
     for i in range(len(target)):
         if target[i] == guess[i]:
             black_cnt += 1
+        if i == 0 and target[i] == guess[i+1]:
+            
         
     print(f"{guess}: {black_cnt} black")
         
