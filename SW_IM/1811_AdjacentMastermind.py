@@ -36,7 +36,7 @@ while True:
             
         if i == 0 and target[i] == guess[i+1] and not chk[i]:
             grey_cnt += 1
-        elif 0 < i < len(target)-1 and (target[i] == guess[i-1] or target[i] == guess[i+1]):
+        elif 0 < i < len(target)-1 and (target[i] == guess[i-1] or target[i] == guess[i+1]) and not chk[i]:
             grey_cnt += 1
         elif i == len(target)-1 and target[i] == guess[i-1]:
             grey_cnt += 1
