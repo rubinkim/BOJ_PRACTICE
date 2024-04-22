@@ -22,9 +22,15 @@ while True:
     arrangement = input()
     if arrangement == "#":
         break
-    else:
-        target, guess = arrangement.split()
-        print(f"target : {target},  guess : {guess}")
+
+    target, guess = arrangement.split()
+    print(f"target : {target},  guess : {guess}")
+    
+    black_cnt = 0
+    for i in range(len(target)):
+        if target[i] == guess[i]:
+            black_cnt += 1
+        
 
 
 
