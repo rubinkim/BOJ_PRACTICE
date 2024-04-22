@@ -19,10 +19,12 @@ BCBCAA: 2 black, 2 grey, 0 white
 """
 
 while True:
-    if input() == "#":
+    arrangement = input()
+    if arrangement == "#":
         break
     else:
-        target, guess = input().split(sep=' ')
+        target, guess = arrangement.split()
         print(f"target : {target},  guess : {guess}")
+
 
 
