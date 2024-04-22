@@ -50,6 +50,9 @@ while True:
         elif 0 < i < len(target)-2 and (target[i] == guess[i-2] or target[i] == guess[i+2]) and not chk[i]:
             white_cnt += 1
             chk[i] = True
+        elif i == len(target)-2 and target[i] == guess[i-2] and not chk[i]:
+            white_cnt += 1
+            chk[i] = True
         
     print(f"{guess}: {black_cnt} black, {grey_cnt} grey,")
         
