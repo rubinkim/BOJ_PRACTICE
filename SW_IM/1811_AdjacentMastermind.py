@@ -50,7 +50,10 @@ while True:
         elif 0 < i < len(target)-2 and (target[i] == guess[i-2] or target[i] == guess[i+2]) and not chk[i]:
             white_cnt += 1
             chk[i] = True
-        elif i == len(target)-2 and target[i] == guess[i-2] and not chk[i]:
+        elif 1 < i < len(target)-2 and (any([target[i] == guess[j] for j in range(4, len(target))]) or any([target[i] == guess[j] for j in range(i-2, len(target)-2)])) and not chk[i]:
+            white_cnt += 1
+            chk[i] = True
+        elif i == len(target)-2 and any([target[i] == guess[j] for j in range(i-2, len(target)-1)]) and not chk[i]:
             white_cnt += 1
             chk[i] = True
         
