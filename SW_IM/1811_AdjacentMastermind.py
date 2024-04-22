@@ -44,13 +44,10 @@ while True:
             grey_cnt += 1
             chk[i] = True
             
-        if i == 0 and any([target[i] == guess[j] for j in range(2, len(target))]) and not chk[i]:
+        if i <= 1 and any([target[i] == guess[j] for j in range(i+2, len(target))]) and not chk[i]:
             white_cnt += 1
             chk[i] = True
-        elif i == 1 and any([target[i] == guess[j] for j in range(3, len(target))]) and not chk[i]:
-            white_cnt += 1
-            chk[i] = True
-        elif 1 < i < len(target)-2 and (any([target[i] == guess[j] for j in range(4, len(target))]) or any([target[i] == guess[j] for j in range(i-2, len(target)-2)])) and not chk[i]:
+        elif 1 < i < len(target)-2 and (any([target[i] == guess[j] for j in range(i+2, len(target))]) or any([target[i] == guess[j] for j in range(i-2, len(target)-2)])) and not chk[i]:
             white_cnt += 1
             chk[i] = True
         elif i >= len(target)-2 and any([target[i] == guess[j] for j in range(i-1)]) and not chk[i]:
