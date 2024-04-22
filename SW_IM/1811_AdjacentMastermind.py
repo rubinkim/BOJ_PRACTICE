@@ -30,10 +30,11 @@ while True:
     chk = [False] * len(target)
     
     for i in range(len(target)):
-        if target[i] == guess[i]:
+        if target[i] == guess[i] and not chk[i]:
             black_cnt += 1
+            chk[i] = True
             
-        if i == 0 and target[i] == guess[i+1]:
+        if i == 0 and target[i] == guess[i+1] and not chk[i]:
             grey_cnt += 1
         elif 0 < i < len(target)-1 and (target[i] == guess[i-1] or target[i] == guess[i+1]):
             grey_cnt += 1
