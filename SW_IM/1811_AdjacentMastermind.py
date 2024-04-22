@@ -27,6 +27,8 @@ while True:
     print(f"target : {target},  guess : {guess}")
     
     black_cnt, grey_cnt = 0, 0
+    chk = [False] * len(target)
+    
     for i in range(len(target)):
         if target[i] == guess[i]:
             black_cnt += 1
