@@ -48,9 +48,10 @@ while True:
             grey_cnt += 1
             target_chk[i] = True
             guess_chk[i+1] = True
-        elif i == len(target)-1 and target[i] == guess[i-1] and not chk[i]:
+        elif i == len(target)-1 and target[i] == guess[i-1] and not target_chk[i] and not guess_chk[i-1]:
             grey_cnt += 1
-            chk[i] = True
+            target_chk[i] = True
+            guess_chk[i-1] = True
             
         if i <= 1 and any([target[i] == guess[j] for j in range(i+2, len(target))]) and not chk[i]:
             white_cnt += 1
