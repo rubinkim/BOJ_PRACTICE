@@ -91,7 +91,7 @@ while True:
             target_chk[i] = True
             
     # check grey
-         
+    for i in range(len(guess)):     
 
 
 
