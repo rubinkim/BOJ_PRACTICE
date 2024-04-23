@@ -108,5 +108,7 @@ while True:
             grey_cnt += 1
             guess_chk[i] = True
             target_chk[i-1] = True
+            
+    # check white
 
 
