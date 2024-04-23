@@ -19,3 +19,7 @@
 n = int(input())
 nums = list(map(int, input().split()))
 print(f"nums : {nums}")
+
+from collections import Counter
+nums_dict = Counter(nums)
+print(f"nums_dict : {nums_dict}")
