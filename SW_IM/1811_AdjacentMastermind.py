@@ -74,7 +74,9 @@ while True:
 
 while True:
     arrangement = input()
-    if arrangement == "#":        
+    if arrangement == "#":
+        break
+            
 
 
 
