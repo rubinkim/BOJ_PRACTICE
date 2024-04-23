@@ -28,3 +28,11 @@ for i in range(n+1):
         nums_dict[i] = nums.count(i)
             
 print(f"nums_dict : {nums_dict}")
+
+ans = 0
+for k, v in nums_dict.items():
+    if k == v:
+        ans = k
+    if k == 0 and v == 1:
+        ans = -1
+print(ans)
