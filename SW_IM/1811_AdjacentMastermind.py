@@ -76,7 +76,8 @@ while True:
     arrangement = input()
     if arrangement == "#":
         break
-    target, guess = arrangement.split()        
+    target, guess = arrangement.split()
+    print(f"target : {target},  guess : {guess}")        
 
 
 
