@@ -111,5 +111,7 @@ while True:
             
     # check white
     for i in range(len(guess)):
+        for j in range(len(target)):
+            
 
 
