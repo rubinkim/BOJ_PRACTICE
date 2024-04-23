@@ -93,7 +93,7 @@ while True:
     # check grey
     for i in range(len(guess)):
         if i == 0 and guess[i] == target[i+1] and not guess_chk[i] and not target_chk[i+1]:
-                 
+            grey_cnt += 1     
 
 
 
