@@ -27,3 +27,4 @@ for i in range(n+1):
     elif i in nums:
         nums_dict[i] = nums.count(i)
             
+print(f"nums_dict : {nums_dict}")
