@@ -118,5 +118,6 @@ while True:
                 target_chk[j] = True
             if 1 < i < len(guess)-2 and (j <= i-2 or j >= i+2) and guess[i] == target[j] and not guess_chk[i] and not target_chk[j]:
                 white_cnt += 1
+                guess_chk[i] = True
 
 
