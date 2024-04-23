@@ -18,7 +18,7 @@
 """
 n = int(input())
 nums = list(map(int, input().split()))
-print(f"nums : {nums}")
+#print(f"nums : {nums}")
 
 nums_dict = {}
 for i in range(n+1):
@@ -27,7 +27,7 @@ for i in range(n+1):
     elif i in nums:
         nums_dict[i] = nums.count(i)
             
-print(f"nums_dict : {nums_dict}")
+#print(f"nums_dict : {nums_dict}")
 
 ans = 0
 for k, v in nums_dict.items():
