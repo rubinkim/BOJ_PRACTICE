@@ -73,7 +73,8 @@ while True:
 """
 
 while True:
-    arrangement = input()        
+    arrangement = input()
+    if arrangement == "#":        
 
 
 
