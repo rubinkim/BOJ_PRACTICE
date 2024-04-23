@@ -76,7 +76,7 @@ while True:
     arrangement = input()
     if arrangement == "#":
         break
-            
+    target, guess = arrangement.split()        
 
 
 
