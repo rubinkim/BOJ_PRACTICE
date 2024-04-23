@@ -77,7 +77,9 @@ while True:
     if arrangement == "#":
         break
     target, guess = arrangement.split()
-    print(f"target : {target},  guess : {guess}")        
+    print(f"target : {target},  guess : {guess}")   
+    
+    black_cnt, grey_cnt, white_cnt = 0, 0, 0     
 
 
 
