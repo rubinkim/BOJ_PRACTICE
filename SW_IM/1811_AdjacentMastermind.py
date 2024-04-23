@@ -79,7 +79,8 @@ while True:
     target, guess = arrangement.split()
     print(f"target : {target},  guess : {guess}")   
     
-    black_cnt, grey_cnt, white_cnt = 0, 0, 0     
+    black_cnt, grey_cnt, white_cnt = 0, 0, 0
+    target_chk = [False] * len(target)     
 
 
 
