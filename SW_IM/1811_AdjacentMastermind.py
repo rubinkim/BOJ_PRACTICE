@@ -115,5 +115,6 @@ while True:
             if i <= 1 and j >= i+2 and guess[i] == target[j] and not guess_chk[i] and not target_chk[j]:
                 white_cnt += 1
                 guess_chk[i] = True
+                target_chk[j] = True
 
 
