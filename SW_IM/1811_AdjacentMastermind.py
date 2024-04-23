@@ -95,7 +95,9 @@ while True:
         if i == 0 and guess[i] == target[i+1] and not guess_chk[i] and not target_chk[i+1]:
             grey_cnt += 1
             guess_chk[i] = True
-            target_chk[i+1] = True     
+            target_chk[i+1] = True
+        if 0 < i < len(guess)-1 and guess[i] == target[i-1] and not guess_chk[i] and not target_chk[i-1]:
+                 
 
 
 
