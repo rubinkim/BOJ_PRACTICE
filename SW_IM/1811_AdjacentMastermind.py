@@ -84,7 +84,8 @@ while True:
     guess_chk = [False] * len(guess)
     
     # check black
-         
+    for i in range(len(guess)):
+             
 
 
 
