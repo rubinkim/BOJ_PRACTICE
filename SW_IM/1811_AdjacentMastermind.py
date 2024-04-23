@@ -72,7 +72,8 @@ while True:
     print(f"{guess}: {black_cnt} black, {grey_cnt} grey, {white_cnt} white")
 """
 
-        
+while True:
+    arrangement = input()        
 
 
 
