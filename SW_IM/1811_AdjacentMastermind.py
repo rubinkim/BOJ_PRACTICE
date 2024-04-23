@@ -16,7 +16,7 @@ ACBC: 1 black, 2 grey, 0 white
 BEAA: 0 black, 1 grey, 1 white
 ABCD: 4 black, 0 grey, 0 white
 BCBCAA: 2 black, 2 grey, 0 white
-"""
+
 
 while True:
     arrangement = input()
@@ -41,15 +41,15 @@ while True:
             grey_cnt += 1
             target_chk[i] = True
             guess_chk[i+1] = True
-        elif 0 < i < len(target)-1 and target[i] == guess[i-1] and not target_chk[i] and not guess_chk[i-1]:
+        if 0 < i < len(target)-1 and target[i] == guess[i-1] and not target_chk[i] and not guess_chk[i-1]:
             grey_cnt += 1
             target_chk[i] = True
             guess_chk[i-1] = True
-        elif 0 < i < len(target)-1 and target[i] == guess[i+1] and not target_chk[i] and guess_chk[i+1]:
+        if 0 < i < len(target)-1 and target[i] == guess[i+1] and not target_chk[i] and not guess_chk[i+1]:
             grey_cnt += 1
             target_chk[i] = True
             guess_chk[i+1] = True
-        elif i == len(target)-1 and target[i] == guess[i-1] and not target_chk[i] and not guess_chk[i-1]:
+        if i == len(target)-1 and target[i] == guess[i-1] and not target_chk[i] and not guess_chk[i-1]:
             grey_cnt += 1
             target_chk[i] = True
             guess_chk[i-1] = True
@@ -70,6 +70,8 @@ while True:
                 guess_chk[j] = True
         
     print(f"{guess}: {black_cnt} black, {grey_cnt} grey, {white_cnt} white")
+"""
+
         
 
 
