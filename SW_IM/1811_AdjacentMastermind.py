@@ -124,5 +124,7 @@ while True:
                 white_cnt += 1
                 guess_chk[i] = True
                 target_chk[j] = True
+                
+    # print the answer
 
 
