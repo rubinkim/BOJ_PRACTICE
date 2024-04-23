@@ -20,3 +20,10 @@ n = int(input())
 nums = list(map(int, input().split()))
 print(f"nums : {nums}")
 
+nums_dict = {}
+for i in range(n+1):
+    if i not in nums:
+        nums_dict[i] = 0
+    elif i in nums:
+        nums_dict[i] = nums.count(i)
+            
