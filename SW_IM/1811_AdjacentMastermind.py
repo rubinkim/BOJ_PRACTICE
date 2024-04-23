@@ -85,7 +85,8 @@ while True:
     
     # check black
     for i in range(len(guess)):
-        if guess[i] == target[i] and not guess_chk[i] and not target_chk[i]:     
+        if guess[i] == target[i] and not guess_chk[i] and not target_chk[i]:
+            black_cnt += 1     
 
 
 
