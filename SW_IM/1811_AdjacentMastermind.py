@@ -110,5 +110,6 @@ while True:
             target_chk[i-1] = True
             
     # check white
+    for i in range(len(guess)):
 
 
