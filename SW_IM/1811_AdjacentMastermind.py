@@ -105,5 +105,6 @@ while True:
             guess_chk[i] = True
             target_chk[i+1] = True
         if i == len(guess)-1 and guess[i] == target[i-1] and not guess_chk[i] and not target_chk[i-1]:
+            grey_cnt += 1
 
 
