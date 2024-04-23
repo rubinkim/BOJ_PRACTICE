@@ -81,7 +81,10 @@ while True:
     
     black_cnt, grey_cnt, white_cnt = 0, 0, 0
     target_chk = [False] * len(target)
-    guess_chk = [False] * len(guess)     
+    guess_chk = [False] * len(guess)
+    
+    # check black
+         
 
 
 
