@@ -43,3 +43,6 @@ for i in range(1, n+1):
                 mines[i][j] = "M"
         elif arr[i][j] > 0:
             mines[i][j] = "*"
+            
+for row in mines:
+    print(row)
