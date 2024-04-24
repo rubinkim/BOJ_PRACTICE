@@ -23,7 +23,7 @@ n, m = map(int, input().split())
 lst = list(map(int, input().split()))
 
 book_weight = 0
-cnt = 0             # no. of boxes to put books in
+cnt = 1             # no. of boxes to put books in
 
 while True:
     if n == 0:
@@ -37,7 +37,7 @@ while True:
     book_weight += last_bw
     if book_weight > m:
         cnt += 1
-        book_weight -= last_bw
-        bw = 0
+        book_weight = last_bw
+
         
 print(cnt)
