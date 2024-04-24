@@ -27,13 +27,13 @@ cnt = 1             # no. of boxes to put books in
 
 if n == 0:
     cnt = 0
-while True:
-    if n > 0 and not lst:
+while True:    
+    if not lst:
         break
     if n == 0:
         cnt = 0
         break
-    
+        
     last_bw = lst.pop()
     book_weight += last_bw
     if book_weight > m:
