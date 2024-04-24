@@ -25,11 +25,9 @@ lst = list(map(int, input().split()))
 book_weight = 0
 cnt = 1             # no. of boxes to put books in
 
+if n == 0:
+    cnt = 0
 while True:
-    if n == 0:
-        cnt = 0
-        break
-    
     if not lst:
         break
     
@@ -38,6 +36,5 @@ while True:
     if book_weight > m:
         cnt += 1
         book_weight = last_bw
-
         
 print(cnt)
