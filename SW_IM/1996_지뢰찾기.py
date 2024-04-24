@@ -33,3 +33,5 @@ for i in range(len(arr)):
     
 for row in arr:
     print(row)
+    
+mines = [[0] * (n+2) for _ in range(n+2)]
