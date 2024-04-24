@@ -19,3 +19,4 @@
 0 7
 (0)
 """
+n, m = map(int, input().split())
