@@ -29,3 +29,6 @@ while True:
     if n == 0:
         cnt = 0
         break
+    
+    if not lst:
+        break
