@@ -31,8 +31,8 @@ for i in range(len(arr)):
         elif arr[i][j] in str_nums:
             arr[i][j] = int(arr[i][j])
     
-for row in arr:
-    print(row)
+#for row in arr:
+    #print(row)
     
 mines = [[0] * (n+2) for _ in range(n+2)]
 for i in range(1, n+1):
