@@ -22,8 +22,6 @@
 n, m = map(int, input().split())
 if n > 0:
     lst = list(map(int, input().split()))
-if n == 0:
-    lst = []
 
 book_weight = 0
 cnt = 1             # no. of boxes to put books in
@@ -39,5 +37,3 @@ if n == 0:
     print(0)       
 elif n > 0:
     print(cnt)     
-if n == 0:
-    print(0)
