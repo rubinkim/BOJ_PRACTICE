@@ -21,3 +21,6 @@
 """
 n, m = map(int, input().split())
 lst = list(map(int, input().split()))
+
+book_weight = 0
+cnt = 0             # no. of boxes to put books in
