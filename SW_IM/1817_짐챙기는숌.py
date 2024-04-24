@@ -32,3 +32,6 @@ while True:
     
     if not lst:
         break
+    
+    last_bw = lst.pop()
+    book_weight += last_bw
