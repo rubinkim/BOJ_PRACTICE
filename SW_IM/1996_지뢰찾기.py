@@ -45,4 +45,4 @@ for i in range(1, n+1):
             mines[i][j] = "*"
             
 for row in mines[1:-1]:
-    print(row[1:-1])
+    print("".join(row[1:-1]))
