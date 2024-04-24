@@ -19,7 +19,7 @@ arr = []
 for i in range(n):
     arr.append(input())
     
-#arr = "." * (n+2) + ["." + arr[i] + "." for i in range(n)] + "." * (n+2)
+arr = ["." * (n+2)] + ["." + arr[i] + "." for i in range(n)] + ["." * (n+2)]
     
 for row in arr:
     print(row)
