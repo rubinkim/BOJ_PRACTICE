@@ -31,7 +31,7 @@ while True:
     if not lst:
         break
     if n == 0:
-        cnt = 0
+        print(0)
         break
         
     last_bw = lst.pop()
