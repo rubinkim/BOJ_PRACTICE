@@ -42,4 +42,4 @@ for i in range(1, n+1):
             if mines[i][j] >= 10:
                 mines[i][j] = "M"
         elif arr[i][j] > 0:
-            
+            mines[i][j] = "*"
