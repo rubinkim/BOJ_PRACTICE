@@ -41,6 +41,8 @@ for i in range(1, n+1):
             mines[i][j] = sum([sum([arr[x][y] for y in range(j-1, j+2)]) for x in range(i-1, i+2)])
             if mines[i][j] >= 10:
                 mines[i][j] = "M"
+            else:
+                mines[i][j] = str(mines[i][j])
             
         elif arr[i][j] > 0:
             mines[i][j] = "*"
