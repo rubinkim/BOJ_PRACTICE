@@ -30,9 +30,6 @@ if n == 0:
 while True:    
     if not lst:
         break
-    if n == 0:
-        print(0)
-        break
         
     last_bw = lst.pop()
     book_weight += last_bw
@@ -41,4 +38,4 @@ while True:
         book_weight = last_bw
         
         
-print(cnt)
+print(cnt if n > 0 else 0)
