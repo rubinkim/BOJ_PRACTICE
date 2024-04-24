@@ -34,8 +34,10 @@ while n > 0 and len(lst) > 0:
     if book_weight > m:
         cnt += 1
         book_weight = last_bw
-        
-if n > 0:
+
+if n == 0:
+    print(0)       
+elif n > 0:
     print(cnt)     
 if n == 0:
     print(0)
