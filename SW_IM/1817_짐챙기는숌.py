@@ -20,7 +20,10 @@
 (0)
 """
 n, m = map(int, input().split())
-lst = list(map(int, input().split()))
+if n > 0:
+    lst = list(map(int, input().split()))
+if n == 0:
+    lst = []
 
 book_weight = 0
 cnt = 1             # no. of boxes to put books in
@@ -32,7 +35,7 @@ while n > 0 and len(lst) > 0:
         cnt += 1
         book_weight = last_bw
         
+if n > 0:
+    print(cnt)     
 if n == 0:
     print(0)
-elif n > 0:
-    print(cnt)     
