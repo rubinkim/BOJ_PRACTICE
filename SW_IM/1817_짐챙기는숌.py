@@ -40,3 +40,4 @@ while True:
         book_weight -= last_bw
         bw = 0
         
+print(cnt)
