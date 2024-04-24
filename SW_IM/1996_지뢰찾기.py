@@ -20,6 +20,9 @@ for i in range(n):
     arr.append(input())
     
 arr = ["." * (n+2)] + ["." + arr[i] + "." for i in range(n)] + ["." * (n+2)]
+
+for i in range(len(arr)):
+    for j in range(len(arr[i])):
     
 for row in arr:
     print(row)
