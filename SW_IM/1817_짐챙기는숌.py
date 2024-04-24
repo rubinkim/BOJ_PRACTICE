@@ -24,3 +24,8 @@ lst = list(map(int, input().split()))
 
 book_weight = 0
 cnt = 0             # no. of boxes to put books in
+
+while True:
+    if n == 0:
+        cnt = 0
+        break
