@@ -35,3 +35,8 @@ while True:
     
     last_bw = lst.pop()
     book_weight += last_bw
+    if book_weight > m:
+        cnt += 1
+        book_weight -= last_bw
+        bw = 0
+        
