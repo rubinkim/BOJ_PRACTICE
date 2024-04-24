@@ -16,3 +16,8 @@
 """
 n = int(input())
 arr = []
+for i in range(n):
+    arr.append(input())
+    
+for row in arr:
+    print(row)
