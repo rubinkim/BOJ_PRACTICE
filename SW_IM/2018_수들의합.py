@@ -16,3 +16,4 @@ while left <= right:
     
     elif acc < n:
         right += 1
+        acc += right
