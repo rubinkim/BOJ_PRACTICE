@@ -13,3 +13,6 @@ while left <= right:
         ans += 1
         right += 1
         acc += right
+    
+    elif acc < n:
+        right += 1
