@@ -5,6 +5,15 @@
 NO
 """
 
+def factorial(x):
+    global dp
+    if x == 0 or x == 1:
+        return 1
+    dp[x] = x * factorial(x-1)
+    return dp[x]
+
+dp = [1] * (21)
+
 left, right = 0, 0
 ans, acc = 0, 0
 
@@ -16,9 +25,9 @@ while left <= right:
         break
     elif acc > n:
         right += 1
-        acc += dp[right]
+        acc += factorial(right)
     elif acc < n:
-        acc -= dp[left]
+        acc -= factorial(left)
         left += 1
         
 if left > right:
