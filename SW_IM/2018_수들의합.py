@@ -9,4 +9,4 @@ ans, acc = 0, 1
 n = int(input())
 
 while left <= right:
-    if acc 
+    if acc == n:
