@@ -20,3 +20,4 @@ while left <= right:
         
     elif acc > n:
         acc -= left
+        left += 1
