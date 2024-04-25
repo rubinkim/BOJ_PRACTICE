@@ -19,3 +19,4 @@ while left <= right:
         acc += right
         
     elif acc > n:
+        acc -= left
