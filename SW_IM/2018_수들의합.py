@@ -11,5 +11,4 @@ n = int(input())
 while left <= right:
     if acc == n:
         ans += 1
-        acc += right
-        left += 1
+        right += 1
