@@ -16,4 +16,7 @@ print(max_side_plus_one)
 one_side_length = max_side_plus_one - 1
 
 ans = 0
-if max_side_plus_one ** 2 < n= 
+if max_side_plus_one ** 2 < n <= max_side_plus_one ** 2 + max_side_plus_one:
+    ans = 2 * (one_side_length + one_side_length + 1)
+elif max_side_plus_one ** 2 + max_side_plus_one < n <= (max_side_plus_one + 1) ** 2:
+    
