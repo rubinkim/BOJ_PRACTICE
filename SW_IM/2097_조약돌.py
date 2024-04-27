@@ -20,3 +20,5 @@ if max_side_plus_one ** 2 < n <= max_side_plus_one ** 2 + max_side_plus_one:
     ans = 2 * (one_side_length + one_side_length + 1)
 elif max_side_plus_one ** 2 + max_side_plus_one < n <= (max_side_plus_one + 1) ** 2:
     ans = 4 * (one_side_length + 1)
+
+print(ans)
