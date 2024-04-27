@@ -14,21 +14,4 @@ def factorial(x):
 
 dp = [1] * (21)
 
-left, right = 0, 0
-ans, acc = 0, 0
-
 n = int(input())
-
-while left <= right:
-    if acc == n:
-        print("YES")
-        break
-    elif acc > n:
-        right += 1
-        acc += factorial(right)
-    elif acc < n:
-        acc -= factorial(left)
-        left += 1
-        
-if left > right:
-    print("NO")
