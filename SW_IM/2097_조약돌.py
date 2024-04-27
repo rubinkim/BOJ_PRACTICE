@@ -14,3 +14,6 @@ for i in range(int((n-1)**0.5)+1):
 print(max_side_plus_one)
 
 one_side_length = max_side_plus_one - 1
+
+ans = 0
+if max_side_plus_one ** 2 < n= 
