@@ -25,3 +25,4 @@ for i in range(20, -1, -1):
     elif sum + dp[i] == n:
         print("YES")
         break
+print("NO")
