@@ -24,3 +24,5 @@ for row in arr:
     print(row)
     
 k = int(input())
+for _ in range(k):
+    
