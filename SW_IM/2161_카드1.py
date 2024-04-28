@@ -32,5 +32,7 @@ lst = []
 
 while len(arr) >= 2:
     lst.append(arr.pop(0))
-    
+    if len(arr) >= 2:
+        arr.append(arr.pop(0))
+        
 
