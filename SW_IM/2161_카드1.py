@@ -6,3 +6,4 @@
 from collections import deque
 n = int(input())
 arr = list(range(1, n+1))
+lst = []
