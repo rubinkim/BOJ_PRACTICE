@@ -14,3 +14,4 @@ lst = []
 for _ in range(n):
     max_first_digit = -1
     for combi in combinations(map(int, input().split()), 3):
+        temp = sum(combi) % 10
