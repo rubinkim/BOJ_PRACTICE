@@ -21,3 +21,4 @@ for _ in range(n):
 print(lst)
 ans = 0
 for i in range(len(lst)):
+    if lst[i] == max(lst):
