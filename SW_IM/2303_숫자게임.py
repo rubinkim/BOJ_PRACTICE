@@ -8,3 +8,4 @@
 (1)
 """
 from itertools import combinations
+n = int(input())
