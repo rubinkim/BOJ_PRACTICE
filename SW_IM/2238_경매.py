@@ -29,3 +29,6 @@ for k, v in price_dict.items():
         if int(k) == price_lst[i]:
             final_lst.append((v, price_lst[i], name_lst[i]))
 print(final_lst)
+
+final_lst = sorted(final_lst, key=lambda x : [x[0], x[1], x[2]])
+print(final_lst)
