@@ -11,9 +11,9 @@ print(arr)
 lst = []
 
 while len(arr) >= 2:
-    arr.popleft()
+    lst.append(arr.popleft())
     if len(arr) >= 2:
-        lst.append(arr.popleft())
+        arr.append(arr.popleft())
     else:
         break
     
