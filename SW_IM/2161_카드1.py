@@ -39,4 +39,5 @@ while len(arr) >= 2:
 
 if len(lst):
     print(*lst, end=' ')
+    print(arr[0])
 
