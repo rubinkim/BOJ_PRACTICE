@@ -22,3 +22,9 @@ price_dict = {}
 for p in set(price_lst):
     price_dict[p] = price_lst.count(p)
 print(price_dict)
+
+for k, v in price_dict.items():
+    for i in range(len(price_lst)):
+        if int(k) == price_lst[i]:
+            final_lst.append((v, price_lst[i], name_lst[i]))
+print(final_lst)
