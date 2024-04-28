@@ -25,6 +25,7 @@ for row in arr:
     
 k = int(input())
 for _ in range(k):
+    ans = 0
     x1, y1, x2, y2 = map(int, input().split())
     ans = sum([sum([arr[i][j] for j in range(y1-1, y2)]) for i in range(x1-1, x2)])
     print(ans)
