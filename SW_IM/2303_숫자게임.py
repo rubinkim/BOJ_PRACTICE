@@ -9,5 +9,7 @@
 """
 from itertools import combinations
 n = int(input())
+lst = []
+
 for _ in range(n):
-    
+    max_first_d
