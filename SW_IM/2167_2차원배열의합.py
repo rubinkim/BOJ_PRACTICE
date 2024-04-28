@@ -16,7 +16,7 @@
 n, m = map(int, input().split())
 arr = [[0] * m for _ in range(n)]
 for i in range(n):
-    row = map(int, input().split())
+    row = list(map(int, input().split()))
     for j in range(m):
         arr[i][j] = row[j]
 
