@@ -25,3 +25,6 @@ else:
     print(arr[0])
 """
 
+# Using stack
+
+
