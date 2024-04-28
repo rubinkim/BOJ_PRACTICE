@@ -31,5 +31,6 @@ arr = list(range(1, n+1))
 lst = []
 
 while len(arr) >= 2:
+    lst.append(arr.pop(0))
     
 
