@@ -32,3 +32,4 @@ print(final_lst)
 
 final_lst = sorted(final_lst, key=lambda x : [x[0], x[1], x[2]])
 print(final_lst)
+print(final_lst[0][2], final_lst[0][1])
