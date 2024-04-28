@@ -19,3 +19,6 @@ for i in range(n):
     row = map(int, input().split())
     for j in range(m):
         arr[i][j] = row[j]
+
+for row in arr:
+    print(row)
