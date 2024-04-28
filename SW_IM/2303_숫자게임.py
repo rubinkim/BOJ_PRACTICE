@@ -16,3 +16,4 @@ for _ in range(n):
     for combi in combinations(map(int, input().split()), 3):
         temp = sum(combi) % 10
         max_first_digit = max(max_first_digit, temp)
+    lst.append(max_first_digit)
