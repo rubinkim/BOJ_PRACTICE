@@ -8,3 +8,4 @@ CD 7
 
 (CD 7)
 """
+u, n = map(int, input().split())
