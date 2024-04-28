@@ -37,3 +37,6 @@ while len(arr) >= 2:
     else:
         break
 
+if len(lst):
+    print(*lst, end=' ')
+
