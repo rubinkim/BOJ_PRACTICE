@@ -19,3 +19,5 @@ for _ in range(n):
     lst.append(max_first_digit)
 
 print(lst)
+ans = 0
+for i in range(len(lst)):
