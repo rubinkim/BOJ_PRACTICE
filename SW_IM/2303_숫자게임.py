@@ -12,4 +12,4 @@ n = int(input())
 lst = []
 
 for _ in range(n):
-    max_first_d
+    max_first_digit = -1
