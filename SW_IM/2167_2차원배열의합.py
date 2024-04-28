@@ -22,3 +22,5 @@ for i in range(n):
 
 for row in arr:
     print(row)
+    
+k = int(input())
