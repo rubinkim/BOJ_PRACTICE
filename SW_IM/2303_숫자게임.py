@@ -18,7 +18,7 @@ for _ in range(n):
         max_first_digit = max(max_first_digit, temp)
     lst.append(max_first_digit)
 
-print(lst)
+#print(lst)
 ans = 0
 for i in range(len(lst)):
     if lst[i] == max(lst):
