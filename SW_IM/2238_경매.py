@@ -12,6 +12,7 @@ u, n = map(int, input().split())
 name_lst, price_lst, final_lst = [], [], []
 for _ in range(n):
     name, price = input().split()
+    price = int(price)
     name_lst.append(name)
     price_lst.append(price)
 
