@@ -9,3 +9,4 @@ CD 7
 (CD 7)
 """
 u, n = map(int, input().split())
+name_lst, price_lst, final_lst = [], []
