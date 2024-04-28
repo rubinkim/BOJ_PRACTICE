@@ -17,3 +17,5 @@ for _ in range(n):
         temp = sum(combi) % 10
         max_first_digit = max(max_first_digit, temp)
     lst.append(max_first_digit)
+
+print(lst)
