@@ -22,3 +22,4 @@ print(lst)
 ans = 0
 for i in range(len(lst)):
     if lst[i] == max(lst):
+        ans = i + 1
