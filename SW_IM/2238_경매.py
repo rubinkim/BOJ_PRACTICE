@@ -17,3 +17,8 @@ for _ in range(n):
 
 print(name_lst)
 print(price_lst)
+
+price_dict = {}
+for p in set(price_lst):
+    price_dict[p] = price_lst.count(p)
+print(price_dict)
