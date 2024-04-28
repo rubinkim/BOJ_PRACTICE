@@ -18,4 +18,5 @@ while len(arr) >= 2:
         break
     
 print(*lst, end=' ')
+print(arr[0])
 
