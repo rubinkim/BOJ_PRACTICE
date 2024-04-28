@@ -10,3 +10,6 @@ arr = deque(arr)
 print(arr)
 lst = []
 
+while len(arr) >= 2:
+    
+
