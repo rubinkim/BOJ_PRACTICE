@@ -15,3 +15,4 @@ for _ in range(n):
     max_first_digit = -1
     for combi in combinations(map(int, input().split()), 3):
         temp = sum(combi) % 10
+        max_first_digit = max(max_first_digit, temp)
