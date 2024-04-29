@@ -15,3 +15,4 @@ tc = int(input())
 input()
 
 for _ in range(tc):
+    r, c = map(int, input().split())
