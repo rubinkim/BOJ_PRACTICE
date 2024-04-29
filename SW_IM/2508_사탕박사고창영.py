@@ -26,5 +26,6 @@ for _ in range(tc):
             if ord(box[i][j]) == 111:
                 if (1 <= i <= r-1) and (ord(box[i-1][j]) == 118 and ord(box[i+1][j]) == 94):
                     cnt += 1
-                if () and (ord(box[i][j-1]) == 62 and ord(box[i][j+1]) == 60):
+                if (1 <= j <= c-1) and (ord(box[i][j-1]) == 62 and ord(box[i][j+1]) == 60):
+                    cnt += 1
     print(cnt)
