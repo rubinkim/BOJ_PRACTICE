@@ -12,3 +12,4 @@ ooo.
 (3)
 """
 tc = int(input())
+print()
