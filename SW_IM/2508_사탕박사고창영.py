@@ -21,3 +21,6 @@ for _ in range(tc):
         box[i] = input()
     
     cnt = 0
+
+    for row in box:
+        print(row)
