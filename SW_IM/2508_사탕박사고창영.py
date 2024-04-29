@@ -13,4 +13,5 @@ ooo.
 """
 tc = int(input())
 input()
+
 for _ in range(tc):
