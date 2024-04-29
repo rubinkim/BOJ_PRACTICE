@@ -19,3 +19,5 @@ for _ in range(tc):
     box = [[] for _ in range(r)]
     for i in range(r):
         box[i] = input()
+    
+    cnt = 0
