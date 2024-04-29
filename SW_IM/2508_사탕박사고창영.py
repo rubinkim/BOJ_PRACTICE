@@ -17,4 +17,5 @@ input()
 for _ in range(tc):
     r, c = map(int, input().split())
     box = [[] for _ in range(r)]
-    
+    for i in range(r):
+        box[i] = input()
