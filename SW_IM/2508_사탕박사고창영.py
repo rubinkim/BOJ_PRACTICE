@@ -21,9 +21,10 @@ for _ in range(tc):
         box[i] = input()
     
     cnt = 0
-    for i in range(1, r-1):
-        for j in range(1, c-1):
+    for i in range(r):
+        for j in range(c):
             if ord(box[i][j]) == 111:
-                if (ord(box[i-1][j]) == 118 and ord(box[i+1][j]) == 94) or (ord(box[i][j-1]) == 62 and ord(box[i][j+1]) == 60):
+                if (1 <= i <= r-1) and (ord(box[i-1][j]) == 118 and ord(box[i+1][j]) == 94):
                     cnt += 1
+                if () and (ord(box[i][j-1]) == 62 and ord(box[i][j+1]) == 60):
     print(cnt)
