@@ -12,4 +12,5 @@ ooo.
 (3)
 """
 tc = int(input())
-print()
+input()
+for _ in range(tc):
