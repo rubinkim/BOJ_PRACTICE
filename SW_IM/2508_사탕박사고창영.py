@@ -10,11 +10,11 @@ ooo.
 >o<<
 
 (3)
-"""
+
 tc = int(input())
-input()
 
 for _ in range(tc):
+    input()
     r, c = map(int, input().split())
     box = [[] for _ in range(r)]
     for i in range(r):
@@ -29,3 +29,4 @@ for _ in range(tc):
                 if (1 <= j <= c-1) and (ord(box[i][j-1]) == 62 and ord(box[i][j+1]) == 60):
                     cnt += 1
     print(cnt)
+"""
