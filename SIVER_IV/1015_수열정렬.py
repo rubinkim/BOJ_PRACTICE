@@ -28,5 +28,16 @@ for i in range(len(a)):
     a_sort.append((a[i], i))
     
 print(a_sort)
-print(sorted(a_sort))
+a_sort.sort()
+print(a_sort)
+
+lst = []
+chk = [False] * n
+for i in range(len(a)):
+    for j in range(len(a_sort)):
+        if a[i] == a_sort[j][0] and not chk[j]:
+            chk[j] = True
+            lst.append(a_sort.index(a_sort[j]))
+
+print(lst)
 

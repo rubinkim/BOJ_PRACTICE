@@ -47,24 +47,24 @@ for _ in range(tc):
     elif r == 1 and c >= 3:
         for j in range(1, c-1):
             if ord(box[0][j-1]) == 62 and ord(box[0][j]) == 111 and ord(box[0][j+1]) == 60:
-                cnt = 1
+                cnt += 1
     elif r == 2 and c >= 3:
         for j in range(1, c-1):
             if ord(box[0][j-1]) == 62 and ord(box[0][j]) == 111 and ord(box[0][j+1]) == 60:
-                cnt = 1
+                cnt += 1
             if ord(box[1][j-1]) == 62 and ord(box[1][j]) == 111 and ord(box[1][j+1]) == 60:
-                cnt = 1
+                cnt += 1
                 
     elif r >= 3 and c == 1:
         for i in range(1, r-1):                                                                           
             if ord(box[i-1][0]) == 118 and ord(box[i][0]) == 111 and ord(box[i+1][0]) == 94:
-                cnt = 1
+                cnt += 1
     elif r >=3 and c == 2:                                                                                   
         for i in range(1, r-1):                                                                          
             if ord(box[i-1][0]) == 118 and ord(box[i][0]) == 111 and ord(box[i+1][0]) == 94:
-                cnt = 1
+                cnt += 1
             if ord(box[i-1][1]) == 118 and ord(box[i][1]) == 111 and ord(box[i+1][1]) == 94:
-                cnt = 1
+                cnt += 1
                     
     if r >= 3 and c >= 3:
         for i in range(r):
