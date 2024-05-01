@@ -20,3 +20,12 @@ n = int(input())
 a = list(map(int, input().split()))
 
 print(f"n : {n},   a : {a}")
+
+p = []
+
+a_sort = []
+for i in range(len(a)):
+    a_sort.append((a[i], i))
+    
+print(a_sort)
+
