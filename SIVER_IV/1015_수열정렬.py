@@ -15,3 +15,8 @@
 
 (4 0 6 1 3 7 2 5)
 """
+
+n = int(input())
+a = list(map(int, input().split()))
+
+print(f"n : {n},   a : {a}")
