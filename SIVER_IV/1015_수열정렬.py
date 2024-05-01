@@ -28,4 +28,5 @@ for i in range(len(a)):
     a_sort.append((a[i], i))
     
 print(a_sort)
+print(sorted(a_sort))
 
