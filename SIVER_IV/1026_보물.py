@@ -25,8 +25,8 @@ b = list(map(int, input().split()))
 a.sort()
 b.sort(reverse=True)
 
-print(f"a : {a}")
-print(f"b : {b}")
+#print(f"a : {a}")
+#print(f"b : {b}")
 
 ans = 0
 for i in range(len(a)):
