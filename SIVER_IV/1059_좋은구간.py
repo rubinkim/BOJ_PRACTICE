@@ -27,3 +27,7 @@ s.sort()
 n = int(input())
 
 print(f"l : {l}, s : {s}, n : {n}")
+
+cnt = 0
+for i in range(l):
+    
