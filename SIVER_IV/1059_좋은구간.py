@@ -44,5 +44,4 @@ for i in range(l-1):
         cnt = 0
         break
 print(cnt)
-
 """
