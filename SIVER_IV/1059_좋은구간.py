@@ -29,7 +29,6 @@ n = int(input())
 #print(f"l : {l}, s : {s}, n : {n}")
 
 cnt = 0
-
 for i in range(l-1):
     if s[i] < n < s[i+1]:
         for j in range(s[i]+1, n+1):
