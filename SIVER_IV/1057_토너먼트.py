@@ -20,4 +20,7 @@ n, kim, lim = map(int, input().split())
 cnt = 1
 
 while True:
+    if (kim-1) // 2 == (lim-1) // 2:
+        print(cnt)
+        break
     
