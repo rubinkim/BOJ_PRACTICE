@@ -26,3 +26,4 @@ s = list(map(int, input().split()))
 s.sort()
 n = int(input())
 
+print(f"l : {l}, s : {s}, n : {n}")
