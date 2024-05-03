@@ -29,11 +29,28 @@ n = int(input())
 #print(f"l : {l}, s : {s}, n : {n}")
 
 cnt = 0
+
 for i in range(l-1):
     if s[i] < n < s[i+1]:
-        for j in range(s[i]+1, n):
-            cnt += s[i+1]-n-1
+        for j in range(s[i]+1, n+1):
+            for k in range(n, s[i+1]):
+                cnt += s[i+1]-n
+        break            
 
+    if s[i] == n or s[i+1] == n:
+        cnt = 0
+        break
+print(cnt)
+
+"""
+for i in range(l-1):
+    if n == s[i] + 1:
+        cnt = s[i+1]-1-n
+        break
+    if s[i] < n < s[i+1]:
+        for j in range(s[i]+1, n+1):
+            for k in range(n, s[i+1]):
+                cnt += s[i+1]-n
         break
             
 
@@ -41,3 +58,4 @@ for i in range(l-1):
         cnt = 0
         break
 print(cnt)
+"""
