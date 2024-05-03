@@ -43,3 +43,5 @@
 96 57
 (6)
 """
+
+n, m = map(int, input().split())
