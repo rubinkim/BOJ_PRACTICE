@@ -49,4 +49,5 @@ print(cnt)
 l = int(input())
 s = list(map(int, input().split()))
 s.insert(0, 0)
+n = int(input())
 
