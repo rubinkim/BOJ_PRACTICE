@@ -19,6 +19,7 @@
 3 7 12 18 25 100 33 1000
 59
 (1065)
+"""
 
 l = int(input())
 s = list(map(int, input().split()))
@@ -29,28 +30,14 @@ n = int(input())
 #print(f"l : {l}, s : {s}, n : {n}")
 
 cnt = 0
-for i in range(l-1):
+for i in range(l):    
     if s[i] < n < s[i+1]:
         for j in range(s[i]+1, n+1):
             for k in range(n, s[i+1]):
-                if not(j==n and k ==n):
+                if not(j == k == n):
                     cnt += 1
-                else:
-                    continue
         break
-    else:
-        continue
-    if s[i] == n or s[i+1] == n:
+    if s[i] == n:
         cnt = 0
         break
 print(cnt)
-"""
-
-l = int(input())
-s = list(map(int, input().split()))
-s.insert(0, 0)
-s.sort()
-n = int(input())
-
-if n in s:
-    print(0)
