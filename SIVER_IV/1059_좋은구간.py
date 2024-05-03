@@ -40,9 +40,9 @@ for i in range(l):
                         cnt += 1
             break            
 
-        if s[i] == n
-            cnt = 0
-            break
+    if s[i] == n:
+        cnt = 0
+        break
 print(cnt)
 
 """
