@@ -45,3 +45,6 @@ for i in range(l-1):
         break
 print(cnt)
 """
+
+l = int(input())
+
