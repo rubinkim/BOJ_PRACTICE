@@ -46,3 +46,8 @@
 
 n, m = map(int, input().split())
 lst_pack, lst_piece = [], []
+
+for _ in range(m):
+    a, b = map(int, input().split())
+    lst_pack.append(a/6)
+    lst_piece.append(b)
