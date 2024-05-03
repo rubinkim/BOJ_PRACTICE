@@ -55,4 +55,4 @@ for _ in range(m):
 min_val = 0
 for i in range(m):
     if n <= 6:
-        min_val = min(lst_pac)
+        min_val = min(lst_pack[i] * 6, lst_piece[i] * n)
