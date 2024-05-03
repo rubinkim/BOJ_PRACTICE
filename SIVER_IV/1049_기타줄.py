@@ -56,3 +56,8 @@ min_pack = min(lst_pack)
 min_piece = min(lst_piece)
     
 min_val = 0
+if n <= 6:
+    min_val = min(min_pack*6, min_piece*n)
+else:
+    min_val = min(min_pack*(n//6+1), min_pack*(n//6)+min_piece*(n%6))
+
