@@ -51,3 +51,7 @@ for _ in range(m):
     a, b = map(int, input().split())
     lst_pack.append(a/6)
     lst_piece.append(b)
+    
+min_val = 0
+if n <= 6:
+    
