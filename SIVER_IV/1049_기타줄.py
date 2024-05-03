@@ -59,6 +59,6 @@ min_val = 0
 if n <= 6:
     min_val = min(min_pack*6, min_piece*n)
 else:
-    min_val = min(min_pack*(n//6+1), min_pack*(n//6)+min_piece*(n%6))
+    min_val = min(min_pack*6*(n//6+1), min_pack*6*(n//6)+min_piece*(n%6))
 
 print(int(min_val))
