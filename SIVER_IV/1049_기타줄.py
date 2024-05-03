@@ -49,7 +49,7 @@ lst_pack, lst_piece = [], []
 
 for _ in range(m):
     a, b = map(int, input().split())
-    lst_pack.append(a/6)
+    lst_pack.append(a)
     lst_piece.append(b)
     
 min_pack = min(lst_pack)
@@ -60,8 +60,8 @@ if min_pack == 0 or min_piece == 0:
     min_val = 0
 else: 
     if n <= 6:
-        min_val = min(min_pack*6, min_piece*n)
+        min_val = min(min_pack, min_piece*n)
     else:
-        min_val = min(min_pack*6*(n//6+1), min_pack*6*(n//6)+min_piece*(n%6))
+        min_val = min(min_pack*(n//6+1), min_pack*(n//6)+min_piece*(n%6))
 
-print(int(min_val))
+print(min_val)
