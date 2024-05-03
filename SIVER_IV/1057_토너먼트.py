@@ -27,3 +27,6 @@ while True:
         n /= 2
         kim = (kim-1) // 2 + 1
         lim = (lim-1) // 2 + 1
+    else:
+        n += 1
+        n /= 2
