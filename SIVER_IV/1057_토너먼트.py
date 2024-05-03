@@ -21,7 +21,6 @@ cnt = 1
 
 while True:
     if (kim-1) // 2 == (lim-1) // 2:
-        print(cnt)
         break
     if n % 2 == 1:
         n /= 2
@@ -30,3 +29,11 @@ while True:
     else:
         n += 1
         n /= 2
+        kim = (kim-1) // 2 + 1
+        lim = (lim-1) // 2 + 1
+    cnt += 1
+
+if (kim-1) // 2 == (lim-1) // 2:
+    print(cnt)
+else:
+    print(-1)
