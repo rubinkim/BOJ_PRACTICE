@@ -53,5 +53,7 @@ for _ in range(m):
     lst_piece.append(b)
     
 min_val = 0
-if n <= 6:
-    
+
+for i in range(m):
+    if n <= 6:
+        min_val = min(lst_pac)
