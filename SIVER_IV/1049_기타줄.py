@@ -52,7 +52,7 @@ for _ in range(m):
     lst_pack.append(a/6)
     lst_piece.append(b)
     
+min_pack = min(lst_pack)
+min_piece = min(lst_piece)
+    
 min_val = 0
-for i in range(m):
-    if n <= 6:
-        min_val = min(lst_pack[i] * 6, lst_piece[i] * n)
