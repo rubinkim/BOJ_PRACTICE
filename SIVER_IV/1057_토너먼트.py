@@ -15,3 +15,5 @@
 60000 101 891
 (10)
 """
+
+n, kim, lim = map(int, input().split())
