@@ -45,3 +45,4 @@
 """
 
 n, m = map(int, input().split())
+lst_pack, lst_piece = [], []
