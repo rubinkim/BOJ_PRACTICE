@@ -52,3 +52,5 @@ s.insert(0, 0)
 s.sort()
 n = int(input())
 
+if n in s:
+    print(0)
