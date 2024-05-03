@@ -17,3 +17,7 @@
 """
 
 n, kim, lim = map(int, input().split())
+cnt = 1
+
+while True:
+    
