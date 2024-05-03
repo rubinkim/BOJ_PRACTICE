@@ -26,15 +26,17 @@ s = list(map(int, input().split()))
 s.sort()
 n = int(input())
 
-print(f"l : {l}, s : {s}, n : {n}")
+#print(f"l : {l}, s : {s}, n : {n}")
 
 cnt = 0
 for i in range(l-1):
     if s[i] < n < s[i+1]:
-        for j in range(s[i]+1, n+1):
-            cnt += s[i+1]-1-j
-            print(f"s[i+1]-1 : {s[i+1]-1}, j : {j},  cnt : {cnt}")
+        for j in range(s[i]+1, n):
+            cnt += s[i+1]-n-1
+
         break
+            
+
     if s[i] == n:
         cnt = 0
         break
