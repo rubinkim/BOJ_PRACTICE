@@ -23,7 +23,6 @@ for x in range(0, n+1):
     elif x >= 100:
         x = str(x)
         if (int(x[0]) - int(x[1])) == (int(x[1]) - (int(x[2]))):
-            cnt += 1
-        
+            cnt += 1       
         
 print(cnt)
