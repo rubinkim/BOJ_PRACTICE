@@ -34,7 +34,9 @@ for combi in combinations(dist, 2):
     lst.append(2*(combi[0] + combi[1]))
 
 ans = 0
-if (x_a == x_b == x_c) or (y_a == y_b == y_c) or (abs((x_a-x_b)/(y_a-y_b)) == abs((x_a-x_c)/(y_a-y_c))):
-    print(-1)
+if (x_a == x_b == x_c) or (y_a == y_b == y_c):
+    print(-1.0)
+elif (x_b - x_a != 0) and (x_c - x_a != 0) and ((y_b - y_a)/(x_b - x_a)) == ((y_c - y_a)/(x_c - x_a)):
+    print(-1.0)
 else:   
     print(max(lst) - min(lst))
