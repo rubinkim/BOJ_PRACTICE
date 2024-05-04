@@ -22,4 +22,4 @@ def calc_distance(x1, y1, x2, y2):
     dist = (abs(x2 - x1) ** 2 + abs(y2 - y1) ** 2) ** 0.5
     return dist
 
-print(calc_distance())
+print(calc_distance(x_a, y_a, x_b, y_b))
