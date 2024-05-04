@@ -16,7 +16,7 @@
 (-1.0)
 """
 x_a, y_a, x_b, y_b, x_c, y_c = map(int, input().split())
-print(f"{(x_a, y_a), (x_b, y_b), (x_c, y_c)}")
+#print(f"{(x_a, y_a), (x_b, y_b), (x_c, y_c)}")
 
 def calc_distance(x1, y1, x2, y2):
     dist = (abs(x2 - x1) ** 2 + abs(y2 - y1) ** 2) ** 0.5
@@ -31,7 +31,6 @@ dist = [dist_ab, dist_bc, dist_ca]
 from itertools import combinations
 lst = []
 for combi in combinations(dist, 2):
-    print(combi)
     lst.append(2*(combi[0] + combi[1]))
     
 print(max(lst) - min(lst))
