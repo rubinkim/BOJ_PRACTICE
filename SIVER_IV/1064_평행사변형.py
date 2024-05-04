@@ -26,4 +26,8 @@ dist_ab = calc_distance(x_a, y_a, x_b, y_b)
 dist_bc = calc_distance(x_b, y_b, x_c, y_c)
 dist_ca = calc_distance(x_c, y_c, x_a, y_a)
 
+dist = [dist_ab, dist_bc, dist_ca]
+
 from itertools import combinations
+lst = []
+for combi 
