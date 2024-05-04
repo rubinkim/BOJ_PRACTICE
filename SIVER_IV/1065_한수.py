@@ -16,3 +16,8 @@
 (119)
 """
 n = int(input())
+cnt = 0
+for x in range(0, n+1):
+    if 1 <= x <= 99:
+        cnt += 1
+print(cnt)
