@@ -30,4 +30,5 @@ dist = [dist_ab, dist_bc, dist_ca]
 
 from itertools import combinations
 lst = []
-for combi 
+for combi in combinations(dist, 2):
+    print(combi)
