@@ -16,3 +16,4 @@
 (-1.0)
 """
 x_a, y_a, x_b, y_b, x_c, y_c = map(int, input().split())
+print(f"{(x_a, y_a), (x_b, y_b), (x_c, y_c)}")
