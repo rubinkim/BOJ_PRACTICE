@@ -34,4 +34,4 @@ for combi in combinations(dist, 2):
     print(combi)
     lst.append(2*(combi[0] + combi[1]))
     
-print(lst)
+print(max(lst) - min(lst))
