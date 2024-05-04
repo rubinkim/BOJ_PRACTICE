@@ -17,3 +17,5 @@
 """
 x_a, y_a, x_b, y_b, x_c, y_c = map(int, input().split())
 print(f"{(x_a, y_a), (x_b, y_b), (x_c, y_c)}")
+
+def calc_distance((x1, y1), (x2, y2)):
