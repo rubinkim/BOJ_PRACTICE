@@ -18,3 +18,4 @@
 
 n, ts, p = map(int, input().split())
 lst = list(map(int, input().split()))
+print(f"n : {n},  ts : {ts},  p : {p}")
