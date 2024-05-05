@@ -15,3 +15,9 @@ abc topabcoder
 giorgi igroig
 (6)
 """
+
+a, b = input().split()
+print(f"a : {a},  b : {b}")
+
+diff = len(b) - len(a)
+print(f"diff : {diff}")
