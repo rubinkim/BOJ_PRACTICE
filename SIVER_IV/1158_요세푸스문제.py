@@ -15,10 +15,15 @@ while True:
     if len(lst) == 1:
         ans.append(lst.pop())
         break
-    if len(lst) >= k:
+    if len(lst) > k:
         ans.append(lst.pop(k-1))
         cnt += 1
         lst = lst[k-1:] + lst
+        lst = lst[:n-cnt]
+    elif len(lst) == k:
+        ans.append(lst.pop(k-1))
+        cnt += 1
+        lst = lst + lst
         lst = lst[:n-cnt]
     elif len(lst) < k:
         lst += lst
