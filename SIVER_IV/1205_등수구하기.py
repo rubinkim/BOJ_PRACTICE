@@ -18,6 +18,7 @@
 
 n, ts, p = map(int, input().split())
 lst = list(map(int, input().split()))
+lst.sort()
 print(f"n : {n},  ts : {ts},  p : {p}")
 print(f"lst : {lst}")
 
