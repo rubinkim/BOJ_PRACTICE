@@ -30,7 +30,7 @@ if diff == 0:
             
 else:
     for i in range(diff+1):
-        new_a = b[:i] + a + b[-(diff-i):]
+        new_a = b[:i] + a + b[-i:]
         print(f"i : {i},  new_a : {new_a},  b : {b}")
     
     
