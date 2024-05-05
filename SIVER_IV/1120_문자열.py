@@ -17,10 +17,10 @@ giorgi igroig
 """
 
 a, b = input().split()
-print(f"a : {a},  b : {b}")
+#print(f"a : {a},  b : {b}")
 
 diff = len(b) - len(a)
-print(f"diff : {diff}")
+#print(f"diff : {diff}")
 
 if diff == 0:
     cnt = 0
