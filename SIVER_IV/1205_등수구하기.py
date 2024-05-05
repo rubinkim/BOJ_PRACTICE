@@ -24,20 +24,20 @@ n, ts, p = map(int, input().split())
 if n > 0:
     lst = list(map(int, input().split()))
 
-print(f"n : {n},  ts : {ts},  p : {p}")
-print(f"lst : {lst}")
+    print(f"n : {n},  ts : {ts},  p : {p}")
+    print(f"lst : {lst}")
 
-from bisect import bisect_left, bisect_right
+    from bisect import bisect_left, bisect_right
 
-original_left_idx = bisect_left(sorted(lst), ts)
-original_right_idx = bisect_right(sorted(lst), ts)
+    original_left_idx = bisect_left(sorted(lst), ts)
+    original_right_idx = bisect_right(sorted(lst), ts)
 
-left_idx = len(lst) - original_right_idx
-right_idx = len(lst) - original_left_idx
+    left_idx = len(lst) - original_right_idx
+    right_idx = len(lst) - original_left_idx
 
-print(f"left_idx : {left_idx},  right_idx : {right_idx}")
+    print(f"left_idx : {left_idx},  right_idx : {right_idx}")
 
-if right_idx + 1 > p:
-    print(-1)
-else:
-    print(left_idx + 1)
+    if right_idx + 1 > p:
+        print(-1)
+    else:
+        print(left_idx + 1)
