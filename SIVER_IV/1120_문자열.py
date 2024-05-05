@@ -29,8 +29,8 @@ if diff == 0:
             cnt += 1
             
 else:
-    for i in range(1, diff):
-        new_a = b[:i] + a + b[:diff-i]
+    for i in range(diff):
+        new_a = b[:i+1] + a + b[:diff-i]
         print(f"i : {i},  new_a : {new_a},  b : {b}")
     
     
