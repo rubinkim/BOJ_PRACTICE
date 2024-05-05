@@ -18,12 +18,16 @@
 
 n, ts, p = map(int, input().split())
 lst = list(map(int, input().split()))
-lst.sort()
+
 print(f"n : {n},  ts : {ts},  p : {p}")
 print(f"lst : {lst}")
 
 from bisect import bisect_left, bisect_right
 
-left_idx = bisect_left(lst, ts)
-right_idx = bisect_right(lst, ts)
+original_left_idx = bisect_left(sorted(lst), ts)
+original_right_idx = bisect_right(sorted(lst), ts)
+
+left_idx = len(lst) - original_right_idx
+right_idx = len(lst) - original_left_idx
+
 print(f"left_idx : {left_idx},  right_idx : {right_idx}")
