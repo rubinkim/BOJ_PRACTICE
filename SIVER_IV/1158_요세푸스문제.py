@@ -28,3 +28,4 @@ while True:
         lst = lst[:n-cnt]
         
 print(ans)
+print(f"<{ans}>")
