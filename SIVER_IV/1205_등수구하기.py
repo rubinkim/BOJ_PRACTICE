@@ -35,3 +35,8 @@ left_idx = len(lst) - original_right_idx
 right_idx = len(lst) - original_left_idx
 
 print(f"left_idx : {left_idx},  right_idx : {right_idx}")
+
+if right_idx > p:
+    print(-1)
+else:
+    print(left_idx + 1)
