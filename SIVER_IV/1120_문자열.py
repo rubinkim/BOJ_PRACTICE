@@ -38,7 +38,7 @@ else:
             new_a = b[:i] + a + b[-(diff-i):]
         elif i == diff:
             new_a = b[:i] + a
-        print(f"i : {i},  new_a : {new_a},  b : {b}")
+        #print(f"i : {i},  new_a : {new_a},  b : {b}")
         
         sub_cnt = 0
         for j in range(len(b)):
