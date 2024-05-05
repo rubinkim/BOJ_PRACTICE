@@ -28,3 +28,5 @@ while True:
         lst = lst[:n-cnt]
         
 print("<", end="")
+print(*ans, end="")
+print(">")
