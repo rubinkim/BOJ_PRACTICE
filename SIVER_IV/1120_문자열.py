@@ -22,13 +22,15 @@ print(f"a : {a},  b : {b}")
 diff = len(b) - len(a)
 print(f"diff : {diff}")
 
-cnt = 100
 if diff == 0:
+    cnt = 0
     for i in range(len(b)):
         if a[i] != b[i]:
-            cnt += 1
+            cnt += 
+            
             
 else:
+    cnt = 51
     for i in range(diff+1):
         if i == 0:
             new_a = a + b[-(diff-i):]
