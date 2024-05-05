@@ -6,3 +6,5 @@
 """
 
 n, k = map(int, input().split())
+lst = list(range(1, n+1))
+print(f"n : {n},  k : {k},  lst : {lst}")
