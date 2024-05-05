@@ -22,3 +22,7 @@ print(f"n : {n},  ts : {ts},  p : {p}")
 print(f"lst : {lst}")
 
 from bisect import bisect_left, bisect_right
+
+left_idx = bisect_left(lst, ts)
+right_idx = bisect_right(lst, ts)
+print(f"left_idx : {left_idx},  right_idx : {right_idx}")
