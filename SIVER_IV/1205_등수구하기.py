@@ -24,8 +24,8 @@ n, ts, p = map(int, input().split())
 if n > 0:
     lst = list(map(int, input().split()))
 
-    print(f"n : {n},  ts : {ts},  p : {p}")
-    print(f"lst : {lst}")
+    #print(f"n : {n},  ts : {ts},  p : {p}")
+    #print(f"lst : {lst}")
 
     from bisect import bisect_left, bisect_right
 
@@ -35,7 +35,7 @@ if n > 0:
     left_idx = len(lst) - original_right_idx
     right_idx = len(lst) - original_left_idx
 
-    print(f"left_idx : {left_idx},  right_idx : {right_idx}")
+    #print(f"left_idx : {left_idx},  right_idx : {right_idx}")
 
     if right_idx + 1 > p:
         print(-1)
