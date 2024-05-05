@@ -22,7 +22,7 @@ print(f"a : {a},  b : {b}")
 diff = len(b) - len(a)
 print(f"diff : {diff}")
 
-cnt = 0
+cnt = 100
 if diff == 0:
     for i in range(len(b)):
         if a[i] != b[i]:
@@ -37,5 +37,12 @@ else:
         elif i == diff:
             new_a = b[:i] + a
         print(f"i : {i},  new_a : {new_a},  b : {b}")
+        
+        sub_cnt = 0
+        for j in range(len(b)):
+            if new_a[j] != b[j]:
+                sub_cnt += 1
+        cnt = min(cnt, sub_cnt)
+print(cnt) 
     
     
