@@ -20,3 +20,5 @@ n, ts, p = map(int, input().split())
 lst = list(map(int, input().split()))
 print(f"n : {n},  ts : {ts},  p : {p}")
 print(f"lst : {lst}")
+
+from bisect import bisect_left, bisect_right
