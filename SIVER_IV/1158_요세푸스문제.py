@@ -25,8 +25,8 @@ while True:
         cnt += 1
         lst = lst + lst
         lst = lst[:n-cnt]
-    elif len(lst) < k:
-        lst += lst
+    elif len(lst) < k:        
+        lst = lst * (k//len(lst) + 1)
         ans.append(lst.pop(k-1))
         cnt += 1
         lst = lst[k-1:] + lst
