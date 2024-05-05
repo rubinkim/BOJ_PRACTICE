@@ -17,4 +17,4 @@
 """
 
 n, ts, p = map(int, input().split())
-lst
+lst = list(map(int, input().split()))
