@@ -30,10 +30,12 @@ if diff == 0:
             
 else:
     for i in range(diff+1):
-        if i != 0:
-            new_a = b[:i] + a + b[-i:]
-        elif i == 0:
-            new_a = a + b[:diff]
+        if i == 0:
+            new_a = a + b[-(diff-i):]
+        elif 0 < i < diff:
+            new_a = b[:i] + a + b[-(diff-i):]
+        elif i == diff:
+            new_a = b[:i] + a
         print(f"i : {i},  new_a : {new_a},  b : {b}")
     
     
