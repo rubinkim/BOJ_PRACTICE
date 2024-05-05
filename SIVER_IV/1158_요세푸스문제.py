@@ -13,3 +13,6 @@ ans = []
 while True:
     if len(lst) == 1:
         break
+    if len(lst) >= k:
+        ans.append(lst.pop(k-1))
+    
