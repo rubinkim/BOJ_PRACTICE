@@ -41,3 +41,6 @@ if n > 0:
         print(-1)
     else:
         print(left_idx + 1)
+
+else:
+    print(1)
