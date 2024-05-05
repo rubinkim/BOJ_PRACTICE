@@ -16,3 +16,5 @@
 (1)
 """
 
+n, ts, p = map(int, input().split())
+lst
