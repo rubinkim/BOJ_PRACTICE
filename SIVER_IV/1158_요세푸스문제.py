@@ -16,4 +16,6 @@ while True:
     if len(lst) >= k:
         ans.append(lst.pop(k-1))
     elif len(lst) < k:
+        lst += lst
+        ans.append(lst.pop(k-1))
         
