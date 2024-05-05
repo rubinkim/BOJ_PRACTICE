@@ -7,7 +7,7 @@
 
 n, k = map(int, input().split())
 lst = list(range(1, n+1))
-print(f"n : {n},  k : {k},  lst : {lst}")
+#print(f"n : {n},  k : {k},  lst : {lst}")
 
 ans = []
 cnt = 0
@@ -28,5 +28,5 @@ while True:
         lst = lst[:n-cnt]
         
 print("<", end="")
-print(*ans, end="")
+print(*ans, end="", sep=", ")
 print(">")
