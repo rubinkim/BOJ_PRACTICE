@@ -27,5 +27,4 @@ while True:
         lst = lst[k-1:] + lst
         lst = lst[:n-cnt]
         
-print(ans)
-print(f"<{ans}>")
+print("<", end="")
