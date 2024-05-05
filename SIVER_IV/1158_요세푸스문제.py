@@ -19,3 +19,4 @@ while True:
         lst += lst
         ans.append(lst.pop(k-1))
         
+print(ans)
