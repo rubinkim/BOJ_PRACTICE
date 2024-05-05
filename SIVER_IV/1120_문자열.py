@@ -24,7 +24,11 @@ print(f"diff : {diff}")
 
 cnt = 0
 if diff == 0:
-    
+    for i in range(len(b)):
+        if a[i] != b[i]:
+            cnt += 1
+            
+else:
 
 for i in range(diff):
     new_a = b[:i] + a + b[:diff-i]
