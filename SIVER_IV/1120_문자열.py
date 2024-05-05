@@ -24,5 +24,5 @@ print(f"diff : {diff}")
 
 for i in range(diff):
     new_a = b[:i] + a + b[diff-i:]
-    print(f"new_a : {new_a},  b : {b}")
+    print(f"i : {i},  new_a : {new_a},  b : {b}")
     
