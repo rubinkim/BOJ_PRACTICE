@@ -31,4 +31,5 @@ while bids:
 max_bid, min_bid = max(bids), min(bids)
 lst = []
 for pr in range(max_bid, min_bid-1):
+    revenue = 0
     
