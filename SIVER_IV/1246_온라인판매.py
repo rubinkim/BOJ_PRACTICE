@@ -13,15 +13,17 @@ bids = []
 for _ in range(m):
     bids.append(int(input()))
 bids.sort(reverse=True)
-print(f"bids : {bids}")
+#print(f"bids : {bids}")
 
 max_bid, min_bid = max(bids), min(bids)
 lst = []
 for pr in range(max_bid, min_bid-1, -1):
     revenue = 0
+    cnt = 1
     for i in range(len(bids)):
-        if bids[i] >= pr:
+        if bids[i] >= pr and cnt < n:
             revenue += pr
+            cnt += 1
     lst.append((pr, revenue))
     
 new_lst = sorted(lst, key=lambda x : x[1], reverse=True)
