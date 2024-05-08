@@ -12,7 +12,7 @@ n, m = map(int, input().split())
 bids = []
 for _ in range(m):
     bids.append(int(input()))
-bids.sort(inverse=True)
+bids.sort(reverse=True)
 print(f"bids : {bids}")
 
 max_bid, min_bid = max(bids), min(bids)
