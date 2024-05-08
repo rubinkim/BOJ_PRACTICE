@@ -8,3 +8,4 @@
 
 (7 21)
 """
+n, m = map(int, input().split())
