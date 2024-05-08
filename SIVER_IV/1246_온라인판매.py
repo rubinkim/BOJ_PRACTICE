@@ -17,3 +17,6 @@ print(f"bids : {bids}")
 
 while bids:
     max_price, min_price = max(bids), min(bids)
+    lst = []
+    for pr in range(max_price, min_price-1):
+        
