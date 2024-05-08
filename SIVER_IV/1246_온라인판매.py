@@ -22,8 +22,8 @@ for pr in range(max_bid, min_bid-1, -1):
     for i in range(len(bids)):
         if bids[i] >= pr:
             revenue += pr
-    lst.append((revenue, pr))
+    lst.append((pr, revenue))
     
-new_lst = sorted(lst, key=lambda x : x[0], reverse=True)
+new_lst = sorted(lst, key=lambda x : x[1], reverse=True)
     
-print(new_lst)
+print(new_lst[0][0], new_lst[0][1])
