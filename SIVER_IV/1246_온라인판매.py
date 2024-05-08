@@ -21,7 +21,7 @@ for pr in range(max_bid, min_bid-1, -1):
     revenue = 0
     cnt = 1
     for i in range(len(bids)):
-        if bids[i] >= pr and cnt < n:
+        if bids[i] >= pr and cnt <= n:
             revenue += pr
             cnt += 1
     lst.append((pr, revenue))
