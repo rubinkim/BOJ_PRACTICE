@@ -14,3 +14,6 @@ for _ in range(m):
     bids.append(int(input()))
 bids.sort()
 print(f"bids : {bids}")
+
+while bids:
+    max_price, min_price = max(bids), min(bids)
