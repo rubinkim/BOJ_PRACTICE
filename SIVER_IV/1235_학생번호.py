@@ -16,6 +16,8 @@ print(num_len)
 
 
 for i in range(num_len-1, -1, -1):
+    backward_lst = []
     for j in range(len(student_nums)):
-        print(student_nums[j][i:], end=" ")
-    print()
+        #print(student_nums[j][i:], end=" ")
+        backward_lst.append(student_nums[j][i:])
+    print(f"if i == {i} : {backward_lst}")
