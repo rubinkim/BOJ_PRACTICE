@@ -10,3 +10,7 @@
 """
 n, m = map(int, input().split())
 bids = []
+for _ in range(m):
+    bids.append(int(input()))
+bids.sort()
+print(f"bids : {bids}")
