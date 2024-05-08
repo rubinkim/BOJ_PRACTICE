@@ -14,7 +14,7 @@ for _ in range(n):
 #print(student_nums)
 
 num_len = len(student_nums[0])
-print(num_len)
+#print(num_len)
 
 
 for i in range(num_len-1, -1, -1):
