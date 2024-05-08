@@ -6,3 +6,4 @@
 0033445
 """
 n = int(input())
+student_nums = []
