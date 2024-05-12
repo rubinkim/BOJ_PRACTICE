@@ -160,7 +160,7 @@ E6
 (Valid)
 """
 chk = [[False] * 6 for _ in range(6)]
-moves = [()]
+moves = [(-2,-1), (-2,1), (2,-1), (2,1), (-1,-2), (-1,2), ]
 x, y = input()
 x = ord(x) - ord('A')
 y = int(y) - 1
