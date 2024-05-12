@@ -166,6 +166,7 @@ x = ord(x) - ord('A')
 y = int(y) - 1
 print(f"y : {y},  x : {x}")
 
+cnt = 0
 for _ in range(1):
     new_x, new_y = input()
     new_x = ord(new_x) - ord('A')
@@ -179,6 +180,9 @@ for _ in range(1):
             chk[new_y][new_x] = True
             y = new_y
             x = new_x
+            break
+    else:
+        
             
     
 
