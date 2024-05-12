@@ -162,5 +162,5 @@ E6
 
 x, y = input()
 x = ord(x) - ord('A')
-y = int(y)
+y = int(y) - 1
 print(f"y : {y},  x : {x}")
