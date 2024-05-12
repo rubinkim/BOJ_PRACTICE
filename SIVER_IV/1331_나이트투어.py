@@ -176,7 +176,10 @@ for _ in range(1):
         ny = y + moves[i][0]
         nx = x + moves[i][1]
         if ny == new_y and nx == new_x and not chk[new_y][new_x] and 0 <= new_y <= 5 and 0 <= new_x <= 5:
+            chk[new_y][new_x] = True
             y = new_y
+            x = new_x
+            
     
 
 
