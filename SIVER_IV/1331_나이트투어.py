@@ -164,23 +164,28 @@ moves = [(-2,-1), (-2,1), (2,-1), (2,1), (-1,-2), (-1,2), (1,-2), (1,2)]
 x, y = input()
 x = ord(x) - ord('A')
 y = int(y) - 1
+start_x, start_y = x, y
 print(f"y : {y},  x : {x}")
 
 cnt = 0
-for _ in range(1):
+for _ in range(35):
     new_x, new_y = input()
     new_x = ord(new_x) - ord('A')
     new_y = int(new_y) - 1
+    
     print(f"new_y : {new_y},  new_x : {new_x}")
     
     for i in range(len(moves)):
         ny = y + moves[i][0]
         nx = x + moves[i][1]
-        if ny == new_y and nx == new_x and not chk[new_y][new_x] and 0 <= new_y <= 5 and 0 <= new_x <= 5:
-            chk[new_y][new_x] = True
-            y = new_y
-            x = new_x
-            break
+        if 0 <= i <= 33:
+            if ny == new_y and nx == new_x and not chk[new_y][new_x] and 0 <= new_y <= 5 and 0 <= new_x <= 5:
+                chk[new_y][new_x] = True
+                y = new_y
+                x = new_x
+                break
+        if i == 34:
+            
     else:
         cnt += 1
         
