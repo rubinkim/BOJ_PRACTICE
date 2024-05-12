@@ -9,3 +9,4 @@
 len_a, len_b = map(int, input().split())
 a = set(map(int, input().split()))
 b = set(map(int, input().split()))
+print(f"a : {a},  b : {b}")
