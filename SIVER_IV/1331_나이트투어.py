@@ -159,3 +159,5 @@ E6
 
 (Valid)
 """
+
+y, x = input().split()
