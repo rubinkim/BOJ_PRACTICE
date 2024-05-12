@@ -166,11 +166,14 @@ x = ord(x) - ord('A')
 y = int(y) - 1
 print(f"y : {y},  x : {x}")
 
-for _ in range(35):
+for _ in range(1):
     new_x, new_y = input()
     new_x = ord(new_x) - ord('A')
     new_y = int(new_y) - 1
-    print(f"new_y : {new_y},  new_x")
+    print(f"new_y : {new_y},  new_x : {new_x}")
+    
+    for i in range(len(moves)):
+        
     
 
 
