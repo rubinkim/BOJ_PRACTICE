@@ -13,3 +13,4 @@ print(f"a : {a},  b : {b}")
 
 not_a = a - b
 not_b = b - a
+print(f"not_a : {not_a},  not_b : {not_b}")
