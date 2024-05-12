@@ -161,3 +161,4 @@ E6
 """
 
 y, x = input().split()
+print(f"y : {y},  x : {x}")
