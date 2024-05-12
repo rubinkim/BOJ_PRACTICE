@@ -187,15 +187,14 @@ for _ in range(35):
         cnt += 1
         
 if cnt == 0:
-    print("Valid")
-else:
     for i in range(len(moves)):
         ny = y + moves[i][0]
         nx = x + moves[i][1]
         if ny == start_y and nx == start_x:
-            print("Invalid")
+            print("Valid")
             break
-            
+elif cnt > 0:
+    print("Invalid")
             
     
 
