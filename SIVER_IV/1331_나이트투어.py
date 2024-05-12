@@ -160,10 +160,17 @@ E6
 (Valid)
 """
 chk = [[False] * 6 for _ in range(6)]
-moves = [(-2,-1), (-2,1), (2,-1), (2,1), (-1,-2), (-1,2), ]
+moves = [(-2,-1), (-2,1), (2,-1), (2,1), (-1,-2), (-1,2), (1,-2), (1,2)]
 x, y = input()
 x = ord(x) - ord('A')
 y = int(y) - 1
 print(f"y : {y},  x : {x}")
+
+for _ in range(35):
+    new_x, new_y = input()
+    new_x = ord(new_x) - ord('A')
+    new_y = int(new_y) - 1
+    print(f"new_y : {new_y},  new_x")
+    
 
 
