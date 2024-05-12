@@ -160,5 +160,5 @@ E6
 (Valid)
 """
 
-y, x = input()
+x, y = input()
 print(f"y : {y},  x : {x}")
