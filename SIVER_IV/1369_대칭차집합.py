@@ -14,3 +14,6 @@ print(f"a : {a},  b : {b}")
 not_a = a - b
 not_b = b - a
 print(f"not_a : {not_a},  not_b : {not_b}")
+
+symmetric_not_a_b = not_a or not_b
+print(f"symmetric_not_a_b : {symmetric_not_a_b}")
