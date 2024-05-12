@@ -165,7 +165,7 @@ x, y = input()
 x = ord(x) - ord('A')
 y = int(y) - 1
 start_x, start_y = x, y
-print(f"y : {y},  x : {x}")
+#print(f"y : {y},  x : {x}")
 
 cnt = 0
 for _ in range(35):
@@ -173,7 +173,7 @@ for _ in range(35):
     new_x = ord(new_x) - ord('A')
     new_y = int(new_y) - 1
     
-    print(f"new_y : {new_y},  new_x : {new_x}")
+    #print(f"new_y : {new_y},  new_x : {new_x}")
     
     for i in range(len(moves)):
         ny = y + moves[i][0]
@@ -193,8 +193,9 @@ if cnt == 0:
         if ny == start_y and nx == start_x:
             print("Valid")
             break
-elif cnt > 0:
+else:    
     print("Invalid")
+
             
     
 
