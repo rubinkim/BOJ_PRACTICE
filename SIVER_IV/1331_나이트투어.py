@@ -159,8 +159,11 @@ E6
 
 (Valid)
 """
-
+chk = [[False] * 6 for _ in range(6)]
+moves = [()]
 x, y = input()
 x = ord(x) - ord('A')
 y = int(y) - 1
 print(f"y : {y},  x : {x}")
+
+
