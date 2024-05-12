@@ -9,13 +9,14 @@
 len_a, len_b = map(int, input().split())
 a = set(map(int, input().split()))
 b = set(map(int, input().split()))
-print(f"a : {a},  b : {b}")
+#print(f"a : {a},  b : {b}")
 
 not_a = a - b
 not_b = b - a
-print(f"not_a : {not_a},  not_b : {not_b}")
+#print(f"not_a : {not_a},  not_b : {not_b}")
 
 symmetric_not_a_b = (not_a).union(not_b)
-print(f"symmetric_not_a_b : {symmetric_not_a_b}")
+#print(f"symmetric_not_a_b : {symmetric_not_a_b}")
+print(len(symmetric_not_a_b))
 
 
