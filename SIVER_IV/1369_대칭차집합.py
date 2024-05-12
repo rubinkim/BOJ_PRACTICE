@@ -6,3 +6,4 @@
 
 (4)
 """
+len_a, len_b = map(int, input().split())
