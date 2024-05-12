@@ -173,6 +173,8 @@ for _ in range(1):
     print(f"new_y : {new_y},  new_x : {new_x}")
     
     for i in range(len(moves)):
+        ny = y + moves[i][0]
+        nx = x + moves[i][1]
         
     
 
