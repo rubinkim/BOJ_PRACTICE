@@ -43,7 +43,7 @@
 n = int(input())
 arr = [int(input()) for _ in range(n)]
 arr.sort()
-print(f"arr : {arr}")
+#print(f"arr : {arr}")
 
 ans = 51
 for i in range(n):
