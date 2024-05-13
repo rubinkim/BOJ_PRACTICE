@@ -42,4 +42,5 @@
 
 n = int(input())
 arr = [int(input()) for _ in range(n)]
+arr.sort()
 print(f"arr : {arr}")
