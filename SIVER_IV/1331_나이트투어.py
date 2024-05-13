@@ -193,6 +193,9 @@ if cnt == 0:
         if ny == start_y and nx == start_x:
             print("Valid")
             break
+    else:
+        print("Invalid")
+        
 else:    
     print("Invalid")
 
