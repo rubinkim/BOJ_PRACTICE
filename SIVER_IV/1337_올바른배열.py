@@ -48,5 +48,7 @@ print(f"arr : {arr}")
 ans = 51
 for i in range(n):
     for j in range(5):
-        temp = list(range(arr[i]-j, arr[i]-j+5))
-        
+        temp = set(list(range(arr[i]-j, arr[i]-j+5))).difference(arr[i-j], arr[i-j+5])
+        ans = min(ans, temp)
+
+print(ans)
