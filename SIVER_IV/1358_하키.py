@@ -63,7 +63,7 @@ for _ in range(p):
     if (x <= coord_x <= x+w) and (y <= coord_y <= y+h):
         cnt += 1
     else:
-        if ((x - coord_x) ** 2 + (y+r - coord_y) ** 2) ** 0.5 <= r and coord_x not in [x, x+w] and coord_y not in [y, y+h]:
+        if ((x - coord_x) ** 2 + (y+r - coord_y) ** 2) ** 0.5 <= r:
             cnt += 1
         elif ((coord_x - (x+w)) ** 2 + (coord_y - (y+r)) ** 2) ** 0.5 <= r and coord_x not in [x, x+w] and coord_y not in [y, y+h]:
             cnt += 1
