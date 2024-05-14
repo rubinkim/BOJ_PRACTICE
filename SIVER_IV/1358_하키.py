@@ -60,4 +60,4 @@ cnt = 0
 
 for _ in range(p):
     coord_x, coord_y = map(int, input().split())
-    if (x <= coord_x <= x+w) and ():
+    if (x <= coord_x <= x+w) and (y <= coord_y <= y+h):
