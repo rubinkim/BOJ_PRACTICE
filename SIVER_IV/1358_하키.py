@@ -60,3 +60,4 @@ cnt = 0
 
 for _ in range(p):
     coord_x, coord_y = map(int, input().split())
+    if () and ():
