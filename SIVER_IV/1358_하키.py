@@ -55,3 +55,6 @@
 (6)
 """
 w, h, x, y, p = map(int, input().split())
+r = h / 2
+cnt = 0
+
