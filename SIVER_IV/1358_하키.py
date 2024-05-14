@@ -62,3 +62,6 @@ for _ in range(p):
     coord_x, coord_y = map(int, input().split())
     if (x <= coord_x <= x+w) and (y <= coord_y <= y+h):
         cnt += 1
+    else:
+        if ((x - coord_x) ** 2 + (y+r - coord_y) ** 2) ** 0.5 <= r:
+            cnt += 1
