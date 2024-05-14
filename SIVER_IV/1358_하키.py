@@ -65,3 +65,4 @@ for _ in range(p):
     else:
         if ((x - coord_x) ** 2 + (y+r - coord_y) ** 2) ** 0.5 <= r:
             cnt += 1
+        if ((coord_x - (x+w)) ** 2 + (coord_y - (y+r)) ** 2) ** 0.5 <= r:
