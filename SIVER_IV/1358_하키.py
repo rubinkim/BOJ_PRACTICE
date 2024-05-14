@@ -54,3 +54,4 @@
 
 (6)
 """
+w, h, x, y, p = map(int, input().split())
