@@ -58,3 +58,5 @@ w, h, x, y, p = map(int, input().split())
 r = h / 2
 cnt = 0
 
+for _ in range(p):
+    coord_x, coord_y = map(int, input().split())
