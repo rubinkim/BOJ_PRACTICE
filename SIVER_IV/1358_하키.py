@@ -67,3 +67,4 @@ for _ in range(p):
             cnt += 1
         if ((coord_x - (x+w)) ** 2 + (coord_y - (y+r)) ** 2) ** 0.5 <= r:
             cnt += 1
+print(cnt)
