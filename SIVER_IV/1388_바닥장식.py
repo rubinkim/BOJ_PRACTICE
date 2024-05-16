@@ -72,6 +72,7 @@ for i in range(n):
 
 for i in range(m):
     for j in range(1, n):
-        if arr_transpose[i][j-1] == arr_transpose[i][j] == '|':               
+        if arr_transpose[i][j-1] == arr_transpose[i][j] == '|':
+            if j < n-1 and arr_transpose[i][j+1] == '-':               
 
         
