@@ -61,3 +61,6 @@ for row in arr_transpose:
     print(row)
     
 cnt = 0
+for i in range(n):
+    for j in range(m):
+        
