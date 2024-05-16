@@ -90,6 +90,18 @@ for i in range(m):
             if j == n-1:
                 cnt += 1
                 
+for i in range(m):
+    for j in range(n):
+        if j == 0:
+            if arr_transpose[i][j] == '|' and arr_transpose[i][j+1] == '-':
+                cnt += 1
+        if 1 <= j <= n-2:
+            if arr_transpose[i][j-1] == '-' and arr_transpose[i][j] == '|' and arr_transpose[i][j+1] == '-':
+                cnt += 1
+        if j == n-1:
+            if arr_transpose[i][j-1] == '-' and arr[i][j] == '-':
+                cnt += 1
+                
 print(cnt)               
 
         
