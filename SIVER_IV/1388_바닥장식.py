@@ -61,7 +61,7 @@ arr_transpose = list(map(list, zip(*arr)))
     #print(row)
     
 cnt = 0
-
+"""
 if n == 1 and m == 1:
     cnt += 1
     
@@ -97,10 +97,10 @@ elif m == 1 and n >= 2:
                 cnt += 1
                 
     for j in range(1, n):
-        if arr[0][j-1] == arr[0][j] == '-':
-            if j < m-1 and arr[0][j+1] == '|':
+        if arr_transpose[0][j-1] == arr_transpose[0][j] == '|':
+            if j < n-1 and arr[0][j+1] == '-':
                 cnt += 1
-            if j == m-1:
+            if j == n-1:
                 cnt += 1
 
 elif n >= 2 and m >= 2:
@@ -148,5 +148,5 @@ elif n >= 2 and m >= 2:
 
                 
 print(cnt)               
-
+"""
         
