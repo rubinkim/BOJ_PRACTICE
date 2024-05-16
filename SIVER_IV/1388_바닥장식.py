@@ -62,46 +62,62 @@ arr_transpose = list(map(list, zip(*arr)))
     
 cnt = 0
 
-for i in range(n):
+if n == 1 and m == 1:
+    cnt += 1
+    
+elif n == 1 and m >= 2:
     for j in range(m):
         if j == 0:
-            if arr[i][j] == '-' and arr[i][j+1] == '|':
+            if arr[j] == '-' and arr[j+1] == '|':
                 cnt += 1
         if 1 <= j <= m-2:
-            if arr[i][j-1] == '|' and arr[i][j] == '-' and arr[i][j+1] == '|':
+            if arr[j-1] == '|' and arr[j] == '-' and arr[j+1] == '|':
                 cnt += 1
-        if j == m-1:
-            if arr[i][j-1] == '|' and arr[i][j] == '-':
-                cnt += 1
+        
 
-for i in range(n):
-    for j in range(1, m):            
-        if arr[i][j-1] == arr[i][j] == '-':
-            if j < m-1 and arr[i][j+1] == '|':
-                cnt += 1
+elif n >= 2 and m >= 2:
+    for i in range(n):
+        for j in range(m):
+            if j == 0:
+                if arr[i][j] == '-' and arr[i][j+1] == '|':
+                    cnt += 1
+            if 1 <= j <= m-2:
+                if arr[i][j-1] == '|' and arr[i][j] == '-' and arr[i][j+1] == '|':
+                    cnt += 1
             if j == m-1:
-                cnt += 1
+                if arr[i][j-1] == '|' and arr[i][j] == '-':
+                    cnt += 1
 
-                
-for i in range(m):
-    for j in range(n):
-        if j == 0:
-            if arr_transpose[i][j] == '|' and arr_transpose[i][j+1] == '-':
-                cnt += 1
-        if 1 <= j <= n-2:
-            if arr_transpose[i][j-1] == '-' and arr_transpose[i][j] == '|' and arr_transpose[i][j+1] == '-':
-                cnt += 1
-        if j == n-1:
-            if arr_transpose[i][j-1] == '-' and arr_transpose[i][j] == '|':
-                cnt += 1
-                
-for i in range(m):
-    for j in range(1, n):
-        if arr_transpose[i][j-1] == arr_transpose[i][j] == '|':
-            if j < n-1 and arr_transpose[i][j+1] == '-':
-                cnt += 1
+    for i in range(n):
+        for j in range(1, m):            
+            if arr[i][j-1] == arr[i][j] == '-':
+                if j < m-1 and arr[i][j+1] == '|':
+                    cnt += 1
+                if j == m-1:
+                    cnt += 1
+
+                    
+    for i in range(m):
+        for j in range(n):
+            if j == 0:
+                if arr_transpose[i][j] == '|' and arr_transpose[i][j+1] == '-':
+                    cnt += 1
+            if 1 <= j <= n-2:
+                if arr_transpose[i][j-1] == '-' and arr_transpose[i][j] == '|' and arr_transpose[i][j+1] == '-':
+                    cnt += 1
             if j == n-1:
-                cnt += 1
+                if arr_transpose[i][j-1] == '-' and arr_transpose[i][j] == '|':
+                    cnt += 1
+                    
+    for i in range(m):
+        for j in range(1, n):
+            if arr_transpose[i][j-1] == arr_transpose[i][j] == '|':
+                if j < n-1 and arr_transpose[i][j+1] == '-':
+                    cnt += 1
+                if j == n-1:
+                    cnt += 1
+
+
                 
 print(cnt)               
 
