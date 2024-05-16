@@ -68,18 +68,39 @@ if n == 1 and m == 1:
 elif n == 1 and m >= 2:
     for j in range(m):
         if j == 0:
-            if arr[j] == '-' and arr[j+1] == '|':
+            if arr[0][j] == '-' and arr[0][j+1] == '|':
                 cnt += 1
         if 1 <= j <= m-2:
-            if arr[j-1] == '|' and arr[j] == '-' and arr[j+1] == '|':
+            if arr[0][j-1] == '|' and arr[0][j] == '-' and arr[0][j+1] == '|':
                 cnt += 1
         if j == m-1:
-            if arr[j-1] == '|' and arr[j] == '-':
+            if arr[0][j-1] == '|' and arr[0][j] == '-':
                 cnt += 1
                 
     for j in range(1, m):
-        if arr[j-1] == arr[j] == '-':
-            if j < m-1 and arr[j+1] == '|':
+        if arr[0][j-1] == arr[0][j] == '-':
+            if j < m-1 and arr[0][j+1] == '|':
+                cnt += 1
+            if j == m-1:
+                cnt += 1
+                
+elif m == 1 and n >= 2:
+    for j in range(n):
+        if j == 0:
+            if arr_transpose[0][j] == '|' and arr_transpose[0][j+1] == '-':
+                cnt += 1
+        if 1 <= j <= n-2:
+            if arr_transpose[0][j-1] == '-' and arr_transpose[0][j] == '|' and arr_transpose[0][j+1] == '-':
+                cnt += 1
+        if j == m-1:
+            if arr[0][j-1] == '|' and arr[0][j] == '-':
+                cnt += 1
+                
+    for j in range(1, m):
+        if arr[0][j-1] == arr[0][j] == '-':
+            if j < m-1 and arr[0][j+1] == '|':
+                cnt += 1
+            if j == m-1:
                 cnt += 1
 
 elif n >= 2 and m >= 2:
