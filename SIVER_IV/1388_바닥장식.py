@@ -61,6 +61,7 @@ for row in arr_transpose:
     print(row)
     
 cnt = 0
+
 for i in range(n):
     for j in range(1, m):
         if arr[i][j-1] == arr[i][j] == '-':
@@ -68,4 +69,6 @@ for i in range(n):
                 cnt += 1
             if j == m-1:
                 cnt += 1
+                
+
         
