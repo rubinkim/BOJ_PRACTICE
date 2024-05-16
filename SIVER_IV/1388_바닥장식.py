@@ -65,4 +65,5 @@ for i in range(n):
     for j in range(1, m):
         if arr[i][j-1] == arr[i][j] == '-':
             if j < m-1 and arr[i][j+1] == '|':
+                cnt += 1
         
