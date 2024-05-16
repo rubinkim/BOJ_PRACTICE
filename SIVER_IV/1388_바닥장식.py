@@ -76,6 +76,11 @@ elif n == 1 and m >= 2:
         if j == m-1:
             if arr[j-1] == '|' and arr[j] == '-':
                 cnt += 1
+                
+    for j in range(1, m):
+        if arr[j-1] == arr[j] == '-':
+            if j < m-1 and arr[j+1] == '|':
+                cnt += 1
 
 elif n >= 2 and m >= 2:
     for i in range(n):
