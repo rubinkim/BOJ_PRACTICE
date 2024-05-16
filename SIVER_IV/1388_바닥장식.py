@@ -55,3 +55,7 @@ for _ in range(n):
     
 for row in arr:
     print(row)
+    
+arr_transpose = list(map(list, zip(*arr)))
+for row in arr_transpose:
+    print(row)
