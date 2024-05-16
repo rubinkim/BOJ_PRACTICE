@@ -76,6 +76,8 @@ for i in range(m):
             if j < n-1 and arr_transpose[i][j+1] == '-':
                 cnt += 1
             if j == n-1:
-                cnt += 1               
+                cnt += 1
+                
+print(cnt)               
 
         
