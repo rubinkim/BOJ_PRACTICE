@@ -92,7 +92,7 @@ elif m == 1 and n >= 2:
         if 1 <= j <= n-2:
             if arr_transpose[0][j-1] == '-' and arr_transpose[0][j] == '|' and arr_transpose[0][j+1] == '-':
                 cnt += 1
-        if j == m-1:
+        if j == n-1:
             if arr[0][j-1] == '|' and arr[0][j] == '-':
                 cnt += 1
                 
