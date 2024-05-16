@@ -64,6 +64,15 @@ cnt = 0
 
 for i in range(n):
     for j in range(m):
+        if j == 0:
+            if arr[i][j] == '-' and arr[i][j+1] == '|':
+                cnt += 1
+        if 1 <= j <= m-2:
+            if arr[i][j-1] == '|' and arr[i][j] == '-' and arr[i][j+1] == '|':
+                cnt += 1
+        if j == m-1:
+            if arr[i][j-1] == '|' and arr[i][j] == '-':
+                cnt += 1
 
 for i in range(n):
     for j in range(1, m):            
