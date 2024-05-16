@@ -69,6 +69,9 @@ for i in range(n):
                 cnt += 1
             if j == m-1:
                 cnt += 1
-                
+
+for i in range(m):
+    for j in range(1, n):
+                       
 
         
