@@ -53,8 +53,8 @@ arr = []
 for _ in range(n):
     arr.append(input())
  
-for row in arr:
-    print(row)
+#for row in arr:
+    #print(row)
     
 arr_transpose = list(map(list, zip(*arr)))
 for row in arr_transpose:
