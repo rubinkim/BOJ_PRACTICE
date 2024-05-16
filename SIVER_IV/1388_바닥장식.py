@@ -82,14 +82,17 @@ elif n == 1 and m >= 2:
         if j == 0:            
             if arr[0][j] == '-' and arr[0][j+1] == '|':
                 cnt += 1
-        elif 1 <= j <= m-2:
-            print(f"arr[j-1] : {arr[j-1]}")
-            print(f"arr[j] : {arr[j]}")
-            print(f"arr[j+1] : {arr[j+1]}")
+            if arr[0][j] == '|' and arr[0][j+1] == '-':
+                cnt += 1
+        if 1 <= j <= m-2:
             if arr[0][j-1] == '|' and arr[0][j] == '-' and arr[0][j+1] == '|':
                 cnt += 1
-        elif j == m-1:
+            if arr[0][j-1] == '-' and arr[0][j] == '|' and arr[0][j+1] == '-':
+                cnt += 1
+        if j == m-1:
             if arr[0][j-1] == '|' and arr[0][j] == '-':
+                cnt += 1
+            if arr[0][j-1] == '-' and arr[0][j] == '|':
                 cnt += 1
                 
     for j in range(1, m):
@@ -97,6 +100,11 @@ elif n == 1 and m >= 2:
             if j < m-1 and arr[0][j+1] == '|':
                 cnt += 1
             if j == m-1:
+                cnt += 1
+        if arr[0][j-1] == arr[0][j] == '|':
+            if j < m-1 and arr[0][j+1] == '-':
+                cnt += 1
+            if j == m-1 :
                 cnt += 1
                 
 elif m == 1 and n >= 2:
