@@ -57,8 +57,8 @@ for _ in range(n):
     #print(row)
     
 arr_transpose = list(map(list, zip(*arr)))
-for row in arr_transpose:
-    print(row)
+#for row in arr_transpose:
+    #print(row)
     
 cnt = 0
 
