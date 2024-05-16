@@ -47,6 +47,13 @@
 ||||-|
 ||-||-
 (19)
+
+5 1
+-
+|
+|
+-
+-
 """
 n, m = map(int, input().split())
 arr = []
@@ -55,7 +62,7 @@ for _ in range(n):
 print()
 for row in arr:
     print(row)
-    
+print()    
 arr_transpose = list(map(list, zip(*arr)))
 for row in arr_transpose:
     print(row)
