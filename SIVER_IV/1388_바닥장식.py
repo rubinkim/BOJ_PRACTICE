@@ -87,3 +87,5 @@ def dfs(row, col):
 for i in range(n):
     for j in range(m):
         if arr[i][j] == '-' or arr[i][j] == '|':
+            dfs(i, j)
+            count += 1
