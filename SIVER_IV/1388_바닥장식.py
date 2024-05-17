@@ -69,3 +69,5 @@ arr = []
 for _ in range(n):
     arr.append(list(input()))
     
+for row in arr:
+    print(row)
