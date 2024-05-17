@@ -84,3 +84,6 @@ def dfs(row, col):
             if 0 < adj_row < n and arr[adj_row][col] == '|':
                 dfs(adj_row, col)
                 
+for i in range(n):
+    for j in range(m):
+        if arr[i][j] == '-' or arr[i][j] == '|':
