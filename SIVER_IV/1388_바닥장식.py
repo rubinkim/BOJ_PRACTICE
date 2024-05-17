@@ -71,3 +71,4 @@ for _ in range(n):
     
 for row in arr:
     print(row)
+    
