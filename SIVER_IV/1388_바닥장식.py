@@ -72,3 +72,10 @@ for _ in range(n):
 for row in arr:
     print(row)
     
+def dfs(row, col):
+    if arr[row][col] == '-':
+        for j in [-1, 1]:
+            adj_col = col + j
+            if 0 < adj_col < m and arr[row][adj_col] == '-':
+                dfs(row, adj_col)
+            
