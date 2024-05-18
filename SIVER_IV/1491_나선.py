@@ -38,4 +38,10 @@ for i in range(m):
 
             
 def dfs(y, x):
+    dy = [0, -1, 0, 1]
+    dx = [1, 0, -1, 0]
+    current = 0
+    
+    arr[y][x] = 1
+    ny, nx = y + dy[current], dx[current]
     
