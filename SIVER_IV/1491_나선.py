@@ -24,4 +24,5 @@ dx = [1, 0, -1, 0]
 for i in range(m):
     for j in range(n):
         y, x = m-1-i, j
+        arr[y][x] = 1
         
