@@ -26,11 +26,14 @@ x, y, w, s = map(int, input().split())
 print(f"x : {x},  y : {y},  w : {w},  s : {s}")
 
 dist = 0
-if w >= 2 * s:
-    dist = min(x, y) * s + abs(x-y) * s
-if 2*w >= s:
+if s <= w:
+    if abs(x-y) % 2 == 0:
+        dist = max(x, y) * s
+    else:
+        dist = min(x, y) * s + (abs(x-y) - 1) * s + w
+elif w < s <= 2*w:
     dist = min(x, y) * s + abs(x-y) * w
-elif 2*w < s:
+elif s > 2*w:
     dist = (x + y) * w
 
 print(dist)
