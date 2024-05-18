@@ -40,6 +40,11 @@
 
 n = int(input())
 price_lst, cost_lst, profit_lst = [], [], []
+for _ in range(n):
+    price, cost = map(int, input().split())
+    price_lst.append(price)
+    cost_lst.append(cost)
+    
 for price in range(max(price_lst)+1):
     profit = 0
     for i in range(len(price_lst)):
