@@ -24,3 +24,7 @@
 
 x, y, w, s = map(int, input().split())
 print(f"x : {x},  y : {y},  w : {w},  s : {s}")
+
+dist = 0
+if 2*w >= s:
+    
