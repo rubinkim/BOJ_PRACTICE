@@ -30,3 +30,5 @@ if 2*w >= s:
     dist = min(x, y) * s + abs(x-y) * w
 elif 2*w < s:
     dist = (x + y) * w
+
+print(dist)
