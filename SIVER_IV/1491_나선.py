@@ -30,10 +30,13 @@ def dfs(y, x):
     ny, nx = y + dy[current], x + dx[current]
     
     if (0 <= ny <= m-1) and (0 <= nx <= n-1) and arr[ny][nx] == 0:
-        dfs(ny, nx)
+        y, x = ny, nx
+        dfs(y, x)
     else:
         current = (current + 1) % 4
         ny, nx = y + dy[current], x + dx[current]
-        dfs(ny, nx)
+        if (0 <= ny <= m-1) and (0 <= nx <= n-1) and arr[ny][nx] == 0:
+            y, x = ny, nx
+            dfs(ny, nx)
         
 dfs(3, 0)
