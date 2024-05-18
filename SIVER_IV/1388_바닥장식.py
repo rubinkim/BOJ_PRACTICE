@@ -77,13 +77,13 @@ def dfs(row, col):
         arr[row][col] = 1
         for j in [-1, 1]:
             adj_col = col + j
-            if 0 < adj_col < m and arr[row][adj_col] == '-':
+            if 0 <= adj_col < m and arr[row][adj_col] == '-':
                 dfs(row, adj_col)
     if arr[row][col] == '|':
         arr[row][col] = 1
         for i in [-1, 1]:
             adj_row = row + i
-            if 0 < adj_row < n and arr[adj_row][col] == '|':
+            if 0 <= adj_row < n and arr[adj_row][col] == '|':
                 dfs(adj_row, col)
 count = 0               
 for i in range(n):
