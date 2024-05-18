@@ -19,20 +19,21 @@ import sys
 sys.setrecursionlimit(5000)
 
 n, m = map(int, input().split())    # n : number of columns,  m : number of rows
-arr = [[0] * n for _ in range(m)]
+arr = [[1] * n for _ in range(m)]
 current = 0
 
 dy, dx = [0, -1, 0, 1], [1, 0, -1, 0]
 y, x = m-1, 0
 
-print(sum([sum([arr[i][j] for j in range(n)]) for i in range(m)]))
-"""
+
 while True:
     if sum([sum([arr[i][j] for j in range(n)]) for i in range(m)]) == n * m:
         print(x, m-1-y)
         break
     
-    
+    arr[y][x] = 1
+    ny, nx = y + dy[current], x + dx[current]
+    if 0 <= ny <= m-1 and 0 <= nx <= n-1 and arr[ny][nx] == 0:
 
 def dfs(y, x):
     global current
@@ -57,4 +58,3 @@ def dfs(y, x):
             exit(0)            
         
 dfs(3, 0)
-"""
