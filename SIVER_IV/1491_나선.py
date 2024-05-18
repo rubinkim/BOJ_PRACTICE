@@ -37,6 +37,9 @@ def dfs(y, x):
         ny, nx = y + dy[current], x + dx[current]
         if (0 <= ny <= m-1) and (0 <= nx <= n-1) and arr[ny][nx] == 0:
             y, x = ny, nx
-            dfs(ny, nx)
+            dfs(y, x)
+        else:
+            print(x, y)
+            exit(0)            
         
 dfs(3, 0)
