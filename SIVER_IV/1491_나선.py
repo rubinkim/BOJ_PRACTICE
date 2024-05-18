@@ -18,11 +18,13 @@
 
 n, m = map(int, input().split())    # n : number of columns,  m : number of rows
 arr = [[0] * n for _ in range(m)]
+current = 0
 
 def dfs(y, x):
+    global current
+    
     dy = [0, -1, 0, 1]
-    dx = [1, 0, -1, 0]
-    current = 0
+    dx = [1, 0, -1, 0]    
     
     arr[y][x] = 1
     ny, nx = y + dy[current], x + dx[current]
