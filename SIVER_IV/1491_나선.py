@@ -41,7 +41,7 @@ def dfs(y, x):
             y, x = ny, nx
             dfs(y, x)
         else:
-            print(y, x)
+            print(x, m-1-y)
             exit(0)            
         
 dfs(3, 0)
