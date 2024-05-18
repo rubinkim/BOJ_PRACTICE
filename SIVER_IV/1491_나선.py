@@ -19,7 +19,7 @@ import sys
 sys.setrecursionlimit(5000)
 
 n, m = map(int, input().split())    # n : number of columns,  m : number of rows
-arr = [[1] * n for _ in range(m)]
+arr = [[0] * n for _ in range(m)]
 current = 0
 
 dy, dx = [0, -1, 0, 1], [1, 0, -1, 0]
