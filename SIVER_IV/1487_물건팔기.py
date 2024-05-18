@@ -40,3 +40,5 @@
 
 n = int(input())
 price_lst, cost_lst = [], []
+for price in range(max(price_lst)+1):
+    
