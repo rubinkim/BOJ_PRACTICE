@@ -32,5 +32,6 @@ for i in range(m):
             y, x = ny, nx
         else:
             current = (current+1) % 4
+            ny, nx = y+dy[current], x+dx[current]
             
         
