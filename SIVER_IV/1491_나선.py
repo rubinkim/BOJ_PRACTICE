@@ -30,5 +30,7 @@ for i in range(m):
         
         if (0 <= ny <= m-1) and (0 <= nx <= n-1) and arr[ny][nx] == 0:
             y, x = ny, nx
-        
+        else:
+            current = (current+1) % 4
+            
         
