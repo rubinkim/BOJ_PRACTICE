@@ -16,7 +16,7 @@
 2499 2500
 """
 import sys
-sys.setrecursionlimit(1000)
+sys.setrecursionlimit(5000)
 
 n, m = map(int, input().split())    # n : number of columns,  m : number of rows
 arr = [[0] * n for _ in range(m)]
@@ -41,7 +41,7 @@ def dfs(y, x):
             y, x = ny, nx
             dfs(y, x)
         else:
-            print(x, m-1-y)
+            print(y, x)
             exit(0)            
         
 dfs(3, 0)
