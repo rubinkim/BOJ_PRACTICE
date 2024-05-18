@@ -21,3 +21,6 @@ arr = [[0] * n for _ in range(m)]
 
 for row in arr:
     print(row)
+    
+print()
+print(arr)
