@@ -45,3 +45,4 @@ for price in range(max(price_lst)+1):
     for i in range(len(price_lst)):
         if price <= price_lst[i]:
             profit += (price - cost_lst[i])
+    profit_lst.append((profit, price))
