@@ -89,3 +89,5 @@ for i in range(n):
         if arr[i][j] == '-' or arr[i][j] == '|':
             dfs(i, j)
             count += 1
+
+print(count)
