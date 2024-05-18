@@ -15,3 +15,5 @@
 (5000 5000)
 2499 2500
 """
+
+n, m = map(int, input().split())    # n : number of columns,  m : number of rows
