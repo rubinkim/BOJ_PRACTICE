@@ -39,6 +39,6 @@
 """
 
 n = int(input())
-price_lst, cost_lst = [], []
+price_lst, cost_lst, profit_lst = [], [], []
 for price in range(max(price_lst)+1):
     
