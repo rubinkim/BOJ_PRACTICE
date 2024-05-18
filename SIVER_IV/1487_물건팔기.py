@@ -37,7 +37,6 @@
 16 19
 (17)
 """
-print()
 n = int(input())
 price_lst, cost_lst, profit_lst = [], [], []
 
@@ -52,7 +51,7 @@ for price in range(max(price_lst)+1):
         if price <= price_lst[i]:
             profit += (price - cost_lst[i])
     profit_lst.append((profit, price))
-    
+print()    
 profit_lst.sort(key=lambda x : (-x[0], x[1]))
 for profit, price in profit_lst:
     print(price, profit)
