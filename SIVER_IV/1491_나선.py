@@ -40,26 +40,3 @@ while True:
         current = (current+1) % 4
         
 
-def dfs(y, x):
-    global current
-    
-    dy = [0, -1, 0, 1]
-    dx = [1, 0, -1, 0]    
-    
-    arr[y][x] = 1
-    ny, nx = y + dy[current], x + dx[current]
-    
-    if (0 <= ny <= m-1) and (0 <= nx <= n-1) and arr[ny][nx] == 0:
-        y, x = ny, nx
-        dfs(y, x)
-    else:
-        current = (current + 1) % 4
-        ny, nx = y + dy[current], x + dx[current]
-        if (0 <= ny <= m-1) and (0 <= nx <= n-1) and arr[ny][nx] == 0:
-            y, x = ny, nx
-            dfs(y, x)
-        else:
-            print(x, m-1-y)
-            exit(0)            
-        
-dfs(3, 0)
