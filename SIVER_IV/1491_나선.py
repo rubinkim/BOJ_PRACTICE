@@ -36,3 +36,5 @@ def dfs(y, x):
         current = (current + 1) % 4
         ny, nx = y + dy[current], x + dx[current]
         dfs(ny, nx)
+        
+dfs(3, 0)
