@@ -43,7 +43,10 @@ def dfs(y, x):
     current = 0
     
     arr[y][x] = 1
-    ny, nx = y + dy[current], dx[current]
+    ny, nx = y + dy[current], x + dx[current]
     
     if (0 <= ny <= m-1) and (0 <= nx <= n-1) and arr[ny][nx] == 0:
-        
+        dfs(ny, nx)
+    else:
+        current = (current + 1) % 4
+        ny, nx = y + dy[current], x + dx[current]
