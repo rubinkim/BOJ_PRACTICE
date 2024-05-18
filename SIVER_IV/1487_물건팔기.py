@@ -52,7 +52,7 @@ for price in range(max(price_lst)+1):
             if price - cost_lst[i] >= 0:
                 profit += (price - cost_lst[i])
     profit_lst.append((profit, price))
-print()    
+ 
 profit_lst.sort(key=lambda x : x[0], reverse=True)
 
 if profit_lst[0][0] >= 0:
