@@ -22,6 +22,11 @@ n, m = map(int, input().split())    # n : number of columns,  m : number of rows
 arr = [[0] * n for _ in range(m)]
 current = 0
 
+dy, dx = [0, -1, 0, 1], [1, 0, -1, 0]
+y, x = m-1, 0
+
+
+
 def dfs(y, x):
     global current
     
