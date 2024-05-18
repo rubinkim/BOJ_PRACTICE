@@ -54,4 +54,5 @@ for price in range(max(price_lst)+1):
     profit_lst.append((profit, price))
     
 profit_lst.sort(key=lambda x : -x[0])
-print(profit_lst)
+for profit, price in profit_lst:
+    print(price, profit)
