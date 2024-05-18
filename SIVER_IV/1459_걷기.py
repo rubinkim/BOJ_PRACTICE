@@ -23,7 +23,7 @@
 """
 
 x, y, w, s = map(int, input().split())
-print(f"x : {x},  y : {y},  w : {w},  s : {s}")
+#print(f"x : {x},  y : {y},  w : {w},  s : {s}")
 
 dist = 0
 if s <= w:
