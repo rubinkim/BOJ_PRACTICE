@@ -33,5 +33,9 @@ for i in range(m):
         else:
             current = (current+1) % 4
             ny, nx = y+dy[current], x+dx[current]
+            if (0 <= ny <= m-1) and (0 <= nx <= n-1) and arr[ny][nx] == 0:
+                y, x = ny, nx
+
             
-        
+def dfs(y, x):
+    
