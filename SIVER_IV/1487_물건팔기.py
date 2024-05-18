@@ -39,3 +39,4 @@
 """
 
 n = int(input())
+price_lst, cost_lst = [], []
