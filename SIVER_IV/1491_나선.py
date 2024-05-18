@@ -25,13 +25,14 @@ current = 0
 dy, dx = [0, -1, 0, 1], [1, 0, -1, 0]
 y, x = m-1, 0
 
-
+cnt = 0
 while True:
-    if sum([sum([arr[i][j] for j in range(n)]) for i in range(m)]) == n * m:
+    if cnt == n * m:
         print(x, m-1-y)
         break
     
     arr[y][x] = 1
+    cnt += 1
     ny, nx = y + dy[current], x + dx[current]
     if 0 <= ny <= m-1 and 0 <= nx <= n-1 and arr[ny][nx] == 0:
         y, x = ny, nx
