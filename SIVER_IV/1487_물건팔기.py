@@ -43,3 +43,5 @@ price_lst, cost_lst, profit_lst = [], [], []
 for price in range(max(price_lst)+1):
     profit = 0
     for i in range(len(price_lst)):
+        if price <= price_lst[i]:
+            profit += (price - cost_lst[i])
