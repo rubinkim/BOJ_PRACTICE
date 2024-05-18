@@ -22,3 +22,4 @@
 (3929)
 """
 
+x, y, w, s = map(int, input().split())
