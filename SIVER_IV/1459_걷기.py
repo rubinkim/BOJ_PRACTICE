@@ -26,8 +26,8 @@ x, y, w, s = map(int, input().split())
 print(f"x : {x},  y : {y},  w : {w},  s : {s}")
 
 dist = 0
-if x == 0 or y == 0:
-    dist = max(x, y) * w
+if w >= 2 * s:
+    dist = min(x, y) * s + abs(x-y) * s
 if 2*w >= s:
     dist = min(x, y) * s + abs(x-y) * w
 elif 2*w < s:
