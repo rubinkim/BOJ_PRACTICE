@@ -45,3 +45,5 @@ def dfs(y, x):
     arr[y][x] = 1
     ny, nx = y + dy[current], dx[current]
     
+    if (0 <= ny <= m-1) and (0 <= nx <= n-1) and arr[ny][nx] == 0:
+        
