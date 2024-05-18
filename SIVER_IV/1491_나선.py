@@ -25,7 +25,11 @@ current = 0
 dy, dx = [0, -1, 0, 1], [1, 0, -1, 0]
 y, x = m-1, 0
 
-
+while True:
+    if sum([sum([arr[i][j] for j in range(n)]) for i in range(m)]) == n * m:
+        print(x, m-1-y)
+        break
+    
 
 def dfs(y, x):
     global current
