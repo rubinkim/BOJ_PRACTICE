@@ -41,5 +41,5 @@ for _ in range(n-1):
     else:
         word_dict[word] = [word]
 
-print(word_dict)
+#print(word_dict)
 print(len(list(word_dict.keys())))
