@@ -40,3 +40,5 @@ for _ in range(n-1):
             break
     else:
         word_dict[word] = [word]
+
+print(word_dict)
