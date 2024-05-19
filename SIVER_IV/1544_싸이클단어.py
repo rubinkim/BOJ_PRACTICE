@@ -38,4 +38,5 @@ for _ in range(n-1):
     for i in range(len(word)):
         if word[i:] + word[:i] in word_dict.keys():
             break
-        
+    else:
+        word_dict[word] = [word]
