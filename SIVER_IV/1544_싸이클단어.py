@@ -36,4 +36,6 @@ word_dict[word] = [word]
 for _ in range(n-1):
     word = input()
     for i in range(len(word)):
+        if word[i:] + word[:i] in word_dict.keys():
+            break
         
