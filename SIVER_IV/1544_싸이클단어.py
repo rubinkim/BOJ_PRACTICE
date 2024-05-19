@@ -42,3 +42,4 @@ for _ in range(n-1):
         word_dict[word] = [word]
 
 print(word_dict)
+print(len(list(word_dict.keys())))
