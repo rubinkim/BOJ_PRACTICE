@@ -26,3 +26,7 @@ aaaa
 aaaaa
 (4)
 """
+
+n = int(input())
+
+word_dict = {}
