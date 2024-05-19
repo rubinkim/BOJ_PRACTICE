@@ -30,3 +30,8 @@ aaaaa
 n = int(input())
 
 word_dict = {}
+word = input()
+word_dict[word] = [word]
+
+for _ in range(n-1):
+    
