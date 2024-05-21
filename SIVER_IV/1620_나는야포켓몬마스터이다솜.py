@@ -70,3 +70,4 @@ for i in range(n+m):
         if x in list(map(str, range(1, n+1))):
             print(lst[int(x)-1])
         else:
+            print(lst.index(x)+1)
