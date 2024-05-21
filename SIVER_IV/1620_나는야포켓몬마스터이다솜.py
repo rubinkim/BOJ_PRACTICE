@@ -56,7 +56,7 @@ for _ in range(m):
     if x in list(map(str, range(1, n+1))):
         while lo <= hi:
             if int(x) == lst[mid-1][0]:
-                print(lst[mid-1][1])
+                print(f"answer is {lst[mid-1][1]}")
                 break
             elif int(x) > lst[mid-1][0]:
                 lo = mid + 1
