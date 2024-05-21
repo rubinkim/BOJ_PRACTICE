@@ -58,4 +58,10 @@ for i in range(n):
 for _ in range(m):
     lo, hi = 0, len(new_lst)-1
     mid = (lo + hi) // 2
+    ans = 0
+    
+    x = input()
+    if x in list(map(str, range(1, n+1))):
+        
+    
     
