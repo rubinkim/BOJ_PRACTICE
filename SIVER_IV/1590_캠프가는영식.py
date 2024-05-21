@@ -33,3 +33,5 @@ n, t = map(int, input().split())
 
 start_time_lst = []
 interval_lst = []
+num_bus_lst = []
+
