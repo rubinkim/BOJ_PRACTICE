@@ -38,3 +38,4 @@ num_bus_lst = []
 for _ in range(n):
     s, i, c = map(int, input().split())
     start_time_lst.append(s)
+    interval_lst.append(i)
