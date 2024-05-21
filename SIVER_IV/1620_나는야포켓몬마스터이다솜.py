@@ -39,3 +39,4 @@ Venusaur
 16
 14)
 """
+n, m = map(int, input().split())
