@@ -38,6 +38,7 @@ Kakuna
 Venusaur
 16
 14)
+"""
 
 import sys
 input = sys.stdin.readline
