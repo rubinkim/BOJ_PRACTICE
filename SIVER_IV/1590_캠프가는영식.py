@@ -29,3 +29,4 @@
 (1776)
 """
 
+n, t = map(int, input().split())
