@@ -55,5 +55,9 @@ for idx in range(n):
         lst.append(s + j * i)
     bus_info[idx] = lst
     
-for k, v in bus_info.items():
-    print(f"k : {k},  {v}")
+total_lst = []
+for v in bus_info.values():
+    total_lst.extend(v)
+    
+total_lst.sort()
+print(total_lst)
