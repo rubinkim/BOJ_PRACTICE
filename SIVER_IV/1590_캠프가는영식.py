@@ -29,8 +29,6 @@
 (1776)
 """
 
-n, t = map(int, input().split())
-
 """
 start_time_lst = []
 interval_lst = []
@@ -47,6 +45,7 @@ print(f"start_time_lst : {start_time_lst}")
 print(f"interval_lst : {interval_lst}")
 print(f"num_bus_lst : {num_bus_lst}")
 """
+n, t = map(int, input().split())
 
 bus_info = {}
 for idx in range(n):
