@@ -46,7 +46,10 @@ for i in range(n):
     x = input()
     lst.append((i+1, x))
     
-
+for _ in range(m):
+    x = input()
+    if x in list(map(str, range(1, n+1))):
+        print(lst[])
                 
     
     
