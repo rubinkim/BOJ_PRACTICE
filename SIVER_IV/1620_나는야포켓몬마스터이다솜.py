@@ -65,4 +65,5 @@ lst = []
 for i in range(n+m):
     if 0 <= i <= n-1:
         lst.append(input().rstrip())
-    
+    else:
+        x = input().rstrip()
