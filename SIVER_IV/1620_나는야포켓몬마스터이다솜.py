@@ -51,3 +51,6 @@ for _ in range(m):
         if x == str(i+1):
             print(lst[i][1])
             break
+        elif x == lst[i][1]:
+            print(lst[i][0])
+            break
