@@ -60,7 +60,7 @@ for _ in range(m):
     mid = (lo + hi) // 2
     
     x = input()
-    if x in list(map(str, range(1, n+1))):
+    if int(x) in list(range(1, n+1)):
         while lo <= hi:
             if int(x) == new_lst[mid-1][0]:
                 print(new_lst[mid-1][1])
