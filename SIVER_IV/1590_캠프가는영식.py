@@ -31,10 +31,11 @@
 
 n, t = map(int, input().split())
 
+"""
 start_time_lst = []
 interval_lst = []
 num_bus_lst = []
-"""
+
 for _ in range(n):
     s, i, c = map(int, input().split())
     start_time_lst.append(s)
@@ -60,4 +61,4 @@ for v in bus_info.values():
     total_lst.extend(v)
     
 total_lst.sort()
-print(total_lst)
+print(len(total_lst))
