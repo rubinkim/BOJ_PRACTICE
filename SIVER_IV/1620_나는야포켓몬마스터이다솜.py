@@ -43,17 +43,15 @@ n, m = map(int, input().split())
 lst = []
 
 for i in range(n):
-    lst.append(input())
+    x = input()
+    x = x.lower()
+    lst.append(x)
     
 lst.sort()
 
 new_lst = []
-for i in range(len(lst)):
+for i in range(n):
     new_lst.append((i+1, lst[i]))
     
 print(new_lst)
-
-lo = 0
-hi = len(new_lst)
-mid = (lo + hi) // 2
-ans = 0
+    
