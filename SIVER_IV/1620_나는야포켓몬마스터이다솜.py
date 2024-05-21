@@ -40,21 +40,18 @@ Venusaur
 14)
 """
 n, m = map(int, input().split())
-lst_num_name = []
-lst_name = []
+lst = []
 
 
 for i in range(n):
-    x = input()
-    lst_num_name.append((i+1, x))
-    lst_name.append(x)
+    lst.append(input())
     
 for _ in range(m):
     x = input()
     if x in list(map(str, range(1, n+1))):
-        print(lst_num_name[int(x)-1][1])        
+        print(lst[int(x)-1])        
     else:
-        print(lst_name.index(x) + 1)
+        print(lst.index(x) + 1)
         
                 
     
