@@ -69,6 +69,7 @@ for _ in range(m):
                 lo = mid + 1
             elif int(x) < new_lst[mid][0]:
                 hi = mid - 1
+            mid = (lo + hi) // 2
                 
     else:
         while lo <= hi:
@@ -79,6 +80,8 @@ for _ in range(m):
                 lo = mid + 1
             elif x < new_lst[mid][1]:
                 hi = mid - 1
+            mid = (lo + hi) // 2
+    
                 
     
     
