@@ -47,4 +47,7 @@ for i in range(n):
 
 for _ in range(m):
     x = input()
-    
+    for i in range(n):
+        if x == str(i+1):
+            print(lst[i][1])
+            break
