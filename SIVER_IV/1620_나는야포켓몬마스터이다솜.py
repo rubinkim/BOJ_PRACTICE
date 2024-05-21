@@ -55,3 +55,4 @@ print(new_lst)
 
 lo = 0
 hi = len(new_lst)
+mid = (lo + hi) // 2
