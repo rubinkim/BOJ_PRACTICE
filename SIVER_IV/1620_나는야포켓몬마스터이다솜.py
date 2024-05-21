@@ -53,3 +53,5 @@ for i in range(len(lst)):
     
 print(new_lst)
 
+lo = 0
+hi = len(new_lst)
