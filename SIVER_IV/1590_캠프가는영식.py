@@ -40,3 +40,5 @@ for _ in range(n):
     start_time_lst.append(s)
     interval_lst.append(i)
     num_bus_lst.append(c)
+    
+print(f"n : {n},  t : {t}")
