@@ -30,3 +30,5 @@
 """
 
 n, t = map(int, input().split())
+
+start_time_lst = []
