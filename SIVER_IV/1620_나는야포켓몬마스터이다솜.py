@@ -60,3 +60,7 @@ import sys
 input = sys.stdin.readline    
     
 n, m = map(int, input().rstrip().split())
+lst = []
+
+for i in range(n+m+1):
+    
