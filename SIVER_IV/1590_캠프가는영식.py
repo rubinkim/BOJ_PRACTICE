@@ -60,4 +60,11 @@ for v in bus_info.values():
     total_lst.extend(v)
     
 total_lst.sort()
-print(len(total_lst))
+#print(len(total_lst))
+
+for x in total_lst:
+    if t <= x:
+        print(x-t)
+        break
+else:
+    print(-1)
