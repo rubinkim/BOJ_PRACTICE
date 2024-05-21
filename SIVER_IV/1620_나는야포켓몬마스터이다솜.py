@@ -38,7 +38,7 @@ Kakuna
 Venusaur
 16
 14)
-"""
+
 import sys
 input = sys.stdin.readline
 
@@ -54,7 +54,7 @@ for _ in range(m):
         print(lst[int(x)-1])                
     else:
         print(lst.index(x) + 1)
-        
+"""     
                 
     
     
