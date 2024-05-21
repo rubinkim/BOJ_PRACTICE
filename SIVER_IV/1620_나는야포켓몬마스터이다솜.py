@@ -42,18 +42,20 @@ Venusaur
 import sys
 input = sys.stdin.readline
 
-n, m = map(int, input().split())
+n, m = map(int, input().rstrip().split())
 lst = []
 
 for i in range(n):
-    lst.append(input())
+    lst.append(input().rstrip())
     
 for _ in range(m):
-    x = input()
+    x = input().rstrip()
     if x in list(map(str, range(1, n+1))):
-        print(lst[int(x)-1])        
+        print(lst[int(x)-1])
+                
     else:
         print(lst.index(x) + 1)
+        
                 
     
     
