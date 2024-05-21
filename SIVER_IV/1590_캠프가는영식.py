@@ -42,3 +42,4 @@ for _ in range(n):
     num_bus_lst.append(c)
     
 print(f"n : {n},  t : {t}")
+print(f"start_time_lst : {start_time_lst}")
