@@ -35,3 +35,6 @@ start_time_lst = []
 interval_lst = []
 num_bus_lst = []
 
+for _ in range(n):
+    s, i, c = map(int, input().split())
+    
