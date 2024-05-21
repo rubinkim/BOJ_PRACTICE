@@ -45,3 +45,7 @@ print(f"n : {n},  t : {t}")
 print(f"start_time_lst : {start_time_lst}")
 print(f"interval_lst : {interval_lst}")
 print(f"num_bus_lst : {num_bus_lst}")
+
+bus_info = {}
+for i in range(n):
+    
