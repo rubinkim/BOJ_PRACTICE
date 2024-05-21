@@ -67,7 +67,7 @@ for _ in range(m):
     else:
         while lo <= hi:
             if x == lst_by_name[mid-1][1]:
-                print(lst_by_name[mid-1][0])
+                print(f"answer is {lst_by_name[mid-1][0]}")
                 break
             elif x > lst_by_name[mid-1][1]:
                 lo = mid + 1
