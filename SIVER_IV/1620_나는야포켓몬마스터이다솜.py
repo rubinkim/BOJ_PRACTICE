@@ -56,5 +56,6 @@ for _ in range(m):
         print(lst.index(x) + 1)
 """     
                 
-    
+import sys
+input = sys.stdin.readline    
     
