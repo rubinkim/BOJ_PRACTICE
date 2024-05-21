@@ -51,7 +51,7 @@ bus_info = {}
 for idx in range(n):
     lst = []
     s, i, c = map(int, input().split())
-    for j in range(c-1):
+    for j in range(c):
         lst.append(s + j * i)
     bus_info[idx] = lst
     
