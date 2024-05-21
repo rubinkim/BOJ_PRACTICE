@@ -54,20 +54,3 @@ for _ in range(m):
         print(lst[int(x)-1])                
     else:
         print(lst.index(x) + 1)
-"""     
-                
-import sys
-input = sys.stdin.readline    
-    
-n, m = map(int, input().rstrip().split())
-lst = []
-
-for i in range(n+m):
-    if 0 <= i <= n-1:
-        lst.append(input().rstrip())
-    else:
-        x = input().rstrip()
-        if x.isdigit():
-            print(lst[int(x)-1])
-        else:
-            print(lst.index(x)+1)
