@@ -42,7 +42,6 @@ Venusaur
 n, m = map(int, input().split())
 lst = []
 
-
 for i in range(n):
     lst.append(input())
     
