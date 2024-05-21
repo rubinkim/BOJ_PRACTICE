@@ -62,5 +62,6 @@ input = sys.stdin.readline
 n, m = map(int, input().rstrip().split())
 lst = []
 
-for i in range(n+m+1):
-    
+for i in range(n+m):
+    if 0 <= i <= n-1:
+        
