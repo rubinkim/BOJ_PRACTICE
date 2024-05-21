@@ -45,7 +45,7 @@ lst = []
 for i in range(n):
     lst.append(input())
     
-lst.sort(key=lambda x : x[1])
+lst.sort()
 
 new_lst = []
 for i in range(len(lst)):
