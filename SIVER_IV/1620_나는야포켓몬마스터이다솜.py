@@ -53,5 +53,9 @@ new_lst = []
 for i in range(n):
     new_lst.append((i+1, lst[i]))
     
-print(new_lst)
+#print(new_lst)
+
+for _ in range(m):
+    lo, hi = 0, len(new_lst)-1
+    mid = (lo + hi) // 2
     
