@@ -43,14 +43,13 @@ n, m = map(int, input().split())
 lst = []
 
 for i in range(n):
-    lst.append((i+1, input()))
+    lst.append(input())
+    
+lst.sort(key=lambda x : x[1])
 
-for _ in range(m):
-    x = input()
-    for i in range(n):
-        if x == str(i+1):
-            print(lst[i][1])
-            break
-        elif x == lst[i][1]:
-            print(lst[i][0])
-            break
+new_lst = []
+for i in range(len(lst)):
+    new_lst.append((i+1, lst[i]))
+    
+print(new_lst)
+
