@@ -32,4 +32,10 @@ Raichu
 3
 Pidgey
 Kakuna
+
+(Pikachu
+26
+Venusaur
+16
+14)
 """
