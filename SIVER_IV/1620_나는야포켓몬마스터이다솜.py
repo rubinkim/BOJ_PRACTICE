@@ -44,16 +44,9 @@ lst = []
 
 for i in range(n):
     x = input()
-    x = x.lower()
-    lst.append(x)
+    lst.append((i+1, x))
     
-lst.sort()
-
-new_lst = []
-for i in range(n):
-    new_lst.append((i+1, lst[i]))
-    
-#print(new_lst)
+lst_by_name = sorted(lst, key=lambda x : x[1])
 
 for _ in range(m):
     lo, hi = 0, len(new_lst)
