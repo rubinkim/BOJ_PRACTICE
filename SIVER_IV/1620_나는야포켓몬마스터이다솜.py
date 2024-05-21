@@ -45,5 +45,3 @@ lst = []
 for i in range(n):
     lst.append((i+1, input()))
 
-for row in lst:
-    print(row)
