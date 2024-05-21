@@ -34,7 +34,7 @@ n, t = map(int, input().split())
 start_time_lst = []
 interval_lst = []
 num_bus_lst = []
-
+"""
 for _ in range(n):
     s, i, c = map(int, input().split())
     start_time_lst.append(s)
@@ -45,7 +45,15 @@ print(f"n : {n},  t : {t}")
 print(f"start_time_lst : {start_time_lst}")
 print(f"interval_lst : {interval_lst}")
 print(f"num_bus_lst : {num_bus_lst}")
+"""
 
 bus_info = {}
-for i in range(n):
+for idx in range(n):
+    lst = []
+    s, i, c = map(int, input().split())
+    for j in range(c-1):
+        lst.append(s + j * i)
+    bus_info[idx] = lst
     
+for k, v in bus_info.items():
+    print(f"k : {k},  {v}")
