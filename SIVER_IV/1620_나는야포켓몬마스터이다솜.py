@@ -75,7 +75,10 @@ for _ in range(m):
             if x == new_lst[mid][1]:
                 print(new_lst[mid][0])
                 break
-            elif x > 
+            elif x > new_lst[mid][1]:
+                lo = mid + 1
+            elif x < new_lst[mid][1]:
+                hi = mid - 1
                 
     
     
