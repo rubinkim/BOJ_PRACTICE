@@ -11,3 +11,11 @@ street
 nw
 et)
 """
+
+lst = []
+
+while True:
+    a = input()
+    if a == '':
+        break
+    lst.append(input())
