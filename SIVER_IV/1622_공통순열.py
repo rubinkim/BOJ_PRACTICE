@@ -12,18 +12,19 @@ nw
 et)
 """
 while True:
-    a = input()
-    b = input()
-    if a == '':
-        exit(0)
-    
-    a = list(a)
-    b = list(b)
+    try:
+        a = input()
+        b = input()
+        
+        a = list(a)
+        b = list(b)
 
-    a = set(a)
-    b = set(b)
-    
-    common = a.intersection(b)
-    common = sorted(list(common))
-    print("".join(common))
+        a = set(a)
+        b = set(b)
+        
+        common = a.intersection(b)
+        common = sorted(list(common))
+        print("".join(common))
+    except:
+        break
     
