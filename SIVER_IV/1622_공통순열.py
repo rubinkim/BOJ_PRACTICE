@@ -17,4 +17,6 @@ while True:
     a = input()
     if a == '':
         break
-    lst.append(input())
+    lst.append(a)
+    
+print(lst)
