@@ -11,13 +11,11 @@ street
 nw
 et)
 """
-
-lst = []
 while True:
     a = input()
     b = input()
     if a == '':
-        break
+        exit(0)
     
     a = list(a)
     b = list(b)
