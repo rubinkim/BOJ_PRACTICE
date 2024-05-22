@@ -13,7 +13,6 @@ et)
 """
 
 lst = []
-
 while True:
     a = input()
     if a == '':
