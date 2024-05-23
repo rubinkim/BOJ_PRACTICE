@@ -16,6 +16,8 @@
 (2)
 """
 s = list(input())
+s = list(map(int, s))
+
 half = len(s) // 2
 if len(s) % 2 == 0:
     if sum(s[0:half]) == sum(s[half:len(s)]):
