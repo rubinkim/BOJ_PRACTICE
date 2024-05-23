@@ -25,7 +25,7 @@ if len(s) % 2 == 0:
         decrement = 2
         flag = False
         while True:
-            if decrement >= len(s):
+            if len(s) - decrement <= 1:
                 ans = 0
                 print(ans)
                 break
@@ -52,14 +52,14 @@ else:
             decrement = 2
             flag = False
             while True:
-                if decrement >= len(s)-1:
+                if len(s) - 1 - decrement <= 1:
                     ans = 0
                     print(ans)
                     break
                 half = (len(s)-1-decrement) // 2
                 ans = 0
-                for i in range(0+j, decrement+1+j):
-                    if sum(s[i:i+half]) == sum(s[i+half:i+2*half]):
+                for i in range(0, decrement+1):
+                    if sum(s[i+j:i+j+half]) == sum(s[i+j+half:i+j+2*half]):
                         ans = 2 * half
                         print(ans)
                         flag = True
