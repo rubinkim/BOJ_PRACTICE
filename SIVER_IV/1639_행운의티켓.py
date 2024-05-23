@@ -49,25 +49,26 @@ else:
     elif sum(s[1:half+1]) == sum(s[half+1:len(s)]):
         print(len(s)-1)
     else:
-        decrement = 2
-        flag = False
-        while True:
-            if decrement >= len(s):
-                ans = 0
-                print(ans)
-                break
-            half = (len(s) - decrement) // 2
-            ans = 0
-            for i in range(0, decrement+1):
-                if sum(s[i:i+half]) == sum(s[i+half:i+2*half]):
-                    ans = 2 * half
+        for j in range(2):
+            decrement = 2
+            flag = False
+            while True:
+                if decrement >= len(s)-1:
+                    ans = 0
                     print(ans)
-                    flag = True
                     break
-            if flag == True:
-                break   
-            else:
-                decrement += 2
+                half = (len(s)-1-decrement) // 2
+                ans = 0
+                for i in range(0+j, decrement+1+j):
+                    if sum(s[i:i+half]) == sum(s[i+half:i+2*half]):
+                        ans = 2 * half
+                        print(ans)
+                        flag = True
+                        break
+                if flag == True:
+                    break   
+                else:
+                    decrement += 2
 
 
 
