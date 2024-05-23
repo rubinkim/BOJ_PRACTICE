@@ -20,6 +20,7 @@ s = list(input())
 while True:
     decrement = 0
     half = (len(s) - decrement) // 2
+    ans = 0
     
     if len(s) % 2 == 0:
       
