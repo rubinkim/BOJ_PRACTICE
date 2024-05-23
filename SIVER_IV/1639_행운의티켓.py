@@ -16,6 +16,9 @@
 (2)
 """
 s = list(input())
+half = len(s) // 2
+if len(s) % 2 == 0:
+    
 
 while True:
     decrement = 0
@@ -25,4 +28,6 @@ while True:
     if len(s) % 2 == 0:
         if sum(s[0:half]) == sum(s[half, 2*half]):
             ans = 2 * half
-        
+        else:
+            decrement += 2
+            
