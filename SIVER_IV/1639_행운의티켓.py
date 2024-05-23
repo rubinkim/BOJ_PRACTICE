@@ -18,16 +18,12 @@
 s = list(input())
 half = len(s) // 2
 if len(s) % 2 == 0:
-    
+    if sum(s[0:half]) == sum(s[half:len(s)]):
+        print(len(s))
+    else:
+        while True:
+            decrement = 2
+            half = (len(s) - decrement) // 2
+            ans = 0
 
-while True:
-    decrement = 0
-    half = (len(s) - decrement) // 2
-    ans = 0
-    
-    if len(s) % 2 == 0:
-        if sum(s[0:half]) == sum(s[half, 2*half]):
-            ans = 2 * half
-        else:
-            decrement += 2
             
