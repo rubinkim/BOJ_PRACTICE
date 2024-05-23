@@ -16,4 +16,9 @@
 (2)
 """
 s = list(input())
-  
+
+while True:
+decrement = 0
+half = (len(s) - decrement)
+if len(s) % 2 == 0:
+      
