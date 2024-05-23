@@ -19,10 +19,10 @@ while True:
         a_set = set(a)
         b_set = set(b)
 
-        x = a_set & b_set
+        common = a_set.intersection(b_set)
 
         answer = []
-        for w in x:
+        for w in common:
             a_count = a.count(w)
             b_count = b.count(w)
             answer.append(w*min(a_count, b_count))
