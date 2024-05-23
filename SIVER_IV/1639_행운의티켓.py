@@ -23,8 +23,12 @@ if len(s) % 2 == 0:
     if sum(s[0:half]) == sum(s[half:len(s)]):
         print(len(s))
     else:
+        decrement = 2
         while True:
-            decrement = 2
+            if decrement >= len(s):
+                ans = 0
+                print(ans)
+                break
             half = (len(s) - decrement) // 2
             ans = 0
             for i in range(0, decrement):
@@ -34,10 +38,7 @@ if len(s) % 2 == 0:
                     break
             else:
                 decrement += 2
-            if decrement >= len(s):
-                ans = 0
-                print(ans)
-                break
+
 
 
             
