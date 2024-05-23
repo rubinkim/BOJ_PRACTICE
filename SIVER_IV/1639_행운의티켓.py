@@ -23,4 +23,6 @@ while True:
     ans = 0
     
     if len(s) % 2 == 0:
-      
+        if sum(s[0:half]) == sum(s[half, 2*half]):
+            ans = 2 * half
+        
