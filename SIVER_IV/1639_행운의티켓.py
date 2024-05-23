@@ -15,8 +15,7 @@
 112
 (2)
 """
-s = list(input())
-s = list(map(int, s))
+s = list(map(int, input()))
 
 half = len(s) // 2
 if len(s) % 2 == 0:
@@ -44,8 +43,8 @@ if len(s) % 2 == 0:
                 decrement += 2
                 
 else:
-    if sum(s[0:half]) == sum(s[half:len(s)]):
-        print(len(s)-1)
+    if sum(s[0:half]) == sum(s[half:len(s)-1]):        
+        print(len(s)-1)        
     elif sum(s[1:half+1]) == sum(s[half+1:len(s)]):
         print(len(s)-1)
     else:
