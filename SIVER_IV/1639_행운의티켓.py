@@ -25,5 +25,15 @@ if len(s) % 2 == 0:
             decrement = 2
             half = (len(s) - decrement) // 2
             ans = 0
+            for i in range(0, decrement):
+                if sum(s[i:i+half]) == sum(s[i+half:i+2*half]):
+                    ans = 2 * half
+                    print(ans)
+                    break
+            else:
+                decrement += 2
+            if decrement >= len(s):
+                ans = 0
+                print(ans)
 
             
