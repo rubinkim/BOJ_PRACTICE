@@ -35,5 +35,7 @@ if len(s) % 2 == 0:
             if decrement >= len(s):
                 ans = 0
                 print(ans)
+                break
+
 
             
