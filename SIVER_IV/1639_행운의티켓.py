@@ -14,7 +14,7 @@
 
 112
 (2)
-"""
+
 s = list(map(int, input()))
 
 half = len(s) // 2
@@ -70,7 +70,18 @@ else:
                     decrement += 2
             if flag == True:
                 break
-            
+"""
+ans = 0
+arr = list(map(int,list(input())))
+
+for i in range(len(arr)):
+    for j in range(i+1, len(arr), 2):
+        sub = arr[i:j+1]
+        if sum(sub[:len(sub)//2]) == sum(sub[len(sub)//2:]):
+            if ans < len(sub):
+                ans = len(sub)
+
+print(ans)            
 
 
 
