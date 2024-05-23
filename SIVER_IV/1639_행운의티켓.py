@@ -19,7 +19,7 @@ s = list(input())
 
 while True:
     decrement = 0
-    half = (len(s) - decrement)
+    half = (len(s) - decrement) // 2
     
     if len(s) % 2 == 0:
       
