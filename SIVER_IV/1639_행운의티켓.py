@@ -66,9 +66,12 @@ else:
                         flag = True
                         break
                 if flag == True:
-                    break   
+                    break  
                 else:
                     decrement += 2
+            if flag == True:
+                break
+            
 
 
 
