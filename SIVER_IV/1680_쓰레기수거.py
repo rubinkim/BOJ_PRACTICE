@@ -18,3 +18,4 @@
 10)
 """
 
+w, n = map(int, input().split())
