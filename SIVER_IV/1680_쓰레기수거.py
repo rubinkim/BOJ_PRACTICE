@@ -31,4 +31,5 @@ if n == 1:
     print(total_dist)
 else:
     for i in range(n-1):
+        dist, weight = map(int, input().split())
             
