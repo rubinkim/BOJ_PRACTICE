@@ -40,4 +40,5 @@ else:
         elif total_weight + weight == w:
             weight_lst.append(weight)
             total_weight = weight
+            dist_lst.append(dist)
             
