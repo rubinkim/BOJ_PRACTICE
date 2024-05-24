@@ -30,16 +30,15 @@ for _ in range(t):
     weight_lst.append(weight)
     total_dist += dist
     total_weight += weight
-
+   
     if n == 1:
         print(2 * dist)
     else:
         for _ in range(n-1):
-            dist, weight = map(int, input().split())
+            dist, weight = map(int, input().split())  
             if total_weight == w:
                 total_weight = weight
-                total_dist += (2 * dist_lst[-1] + dist - dist_lst[-1])    
-            
+                total_dist += (2 * dist_lst[-1] + dist - dist_lst[-1])
             elif total_weight + weight < w:
                 total_weight += weight
                 total_dist += (dist - dist_lst[-1])
