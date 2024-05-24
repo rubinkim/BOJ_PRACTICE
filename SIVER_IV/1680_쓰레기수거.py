@@ -24,3 +24,6 @@ w, n = map(int, input().split())
 dist, weight = map(int, input().split())
 dist_lst.append(dist)
 weight_lst.append(weight)
+total_dist += dist
+total_weight += weight
+
