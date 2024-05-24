@@ -27,3 +27,7 @@ weight_lst.append(weight)
 total_dist += dist
 total_weight += weight
 
+if n == 1:
+    print(total_dist)
+else:
+        
