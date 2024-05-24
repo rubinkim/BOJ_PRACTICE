@@ -17,6 +17,8 @@
 6
 10)
 """
+t = int(input())
+
 dist_lst, weight_lst = [], []
 total_dist, total_weight = 0, 0
 
@@ -56,7 +58,7 @@ else:
                 dist_lst.append(dist)
             elif len(dist_lst) == n-1:
                 total_weight = 0
-                total_dist += dist - dist_lst[-1] + dist
+                total_dist += dist - dist_lst[-1] + 3 * dist
                 weight_lst.append(weight)
                 dist_lst.append(dist)
 
