@@ -32,19 +32,34 @@ if n == 1:
 else:
     for i in range(n-1):
         dist, weight = map(int, input().split())
-        weight_lst.append(weight)
-        dist_lst.append(dist)
         if total_weight + weight < w:
             total_weight += weight
             total_dist += (dist - dist_lst[-1])
+            weight_lst.append(weight)
+            dist_lst.append(dist)
         elif total_weight + weight == w:
-            total_weight = 0
-            total_dist += dist - dist_lst[-1] + 2 * dist
-        else:
-            total_weight = weight
-            total_dist += dist - dist_lst[-1] + 2 * dist
-        if len(dist_lst) == n:
-            total_dist += dist_lst[-1]
+            if len(dist_lst) < n-1:          
+                total_weight = 0
+                total_dist += dist - dist_lst[-1] + 2 * dist
+                weight_lst.append(weight)
+                dist_lst.append(dist)     
+            elif len(dist_lst) == n-1:
+                total_weight = 0
+                total_dist += dist - dist_lst[-1] + dist
+                weight_lst.append(weight)
+                dist_lst.append(dist)       
+        elif total_weight + weight > w:
+            if len(dist_lst) < n-1:                
+                total_weight = weight
+                total_dist += dist - dist_lst[-1] + 2 * dist
+                weight_lst.append(weight)
+                dist_lst.append(dist)
+            elif len(dist_lst) == n-1:
+                total_weight = 0
+                total_dist += dist - dist_lst[-1] + dist
+                weight_lst.append(weight)
+                dist_lst.append(dist)
+
             
 print(total_dist)
             
