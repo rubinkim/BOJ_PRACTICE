@@ -19,3 +19,4 @@
 """
 
 w, n = map(int, input().split())
+dist, weight = map(int, input().split())
