@@ -32,4 +32,5 @@ if n == 1:
 else:
     for i in range(n-1):
         dist, weight = map(int, input().split())
-            
+        if sum(weight_lst) + weight < w:
+                
