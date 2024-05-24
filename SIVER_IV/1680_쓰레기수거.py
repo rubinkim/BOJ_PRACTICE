@@ -17,6 +17,7 @@
 6
 10)
 """
-
+dist_lst, weight_lst = [], []
 w, n = map(int, input().split())
 dist, weight = map(int, input().split())
+dis
