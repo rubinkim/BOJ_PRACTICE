@@ -28,20 +28,21 @@ for _ in range(t):
         dist, weight = map(int, input().split())
         
         if weight == w:
-            dist_lst.append(dist)
-            weight_lst.append(weight)
-            total_weight = 0
+            total_weight = 0            
             if n == 1:
                 total_dist = 2 * dist
             elif n > 1:
                 total_dist = 3 * dist
+            dist_lst.append(dist)
+            weight_lst.append(weight)
                 
         elif weight < w: 
             if total_weight + weight < w:
                 if i < n-1:
-                    dist_lst.append(dist)
-                    weight_lst.append(weight)
                     total_weight += weight
                     total_dist += (dist - dist_lst[-1])
+                    dist_lst.append(dist)
+                    weight_lst.append(weight)
                 elif i == n-1:
+                    dist_lst.append(dist)
                                    
