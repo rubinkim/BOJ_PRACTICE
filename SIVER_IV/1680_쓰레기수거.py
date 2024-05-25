@@ -24,4 +24,5 @@ for _ in range(t):
     w, n = map(int, input().split())
     for _ in range(n):
         dist_lst, weight_lst = [], []
+        total_dist, total_weight = 0, 0
         
