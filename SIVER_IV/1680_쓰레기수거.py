@@ -66,5 +66,5 @@ for _ in range(t):
                     dist_lst.append(dist)
                     weight_lst.append(weight)
                 elif i == n-1:
-                    
+                    total_weight = 0
                                    
