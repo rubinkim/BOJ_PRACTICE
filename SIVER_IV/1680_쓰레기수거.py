@@ -38,4 +38,6 @@ for _ in range(t):
                 
         elif weight < w: 
             if total_weight + weight < w:
-                if i < n-1:               
+                if i < n-1:
+                    dist_lst.append(dist)
+                                   
