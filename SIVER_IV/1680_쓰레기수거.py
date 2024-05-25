@@ -62,4 +62,5 @@ for _ in range(t):
             elif total_weight + weight > w:
                 if i < n-1:
                     total_weight = weight
+                    total_dist += (dist - dist_lst[-1] + 2 * dist)
                                    
