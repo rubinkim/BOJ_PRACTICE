@@ -26,6 +26,7 @@ for _ in range(t):
         dist_lst, weight_lst = [], []
         total_dist, total_weight = 0, 0
         dist, weight = map(int, input().split())
+        dist_lst.append(dist)
         
         if weight == w:
             total_weight = 0            
