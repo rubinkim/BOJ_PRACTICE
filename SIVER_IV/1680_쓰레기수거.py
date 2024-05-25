@@ -22,12 +22,11 @@ t = int(input())
 
 for _ in range(t):
     w, n = map(int, input().split())
-    
+
+    dist_lst, weight_lst = [], []
+    total_dist, total_weight = 0, 0  
     for i in range(n):
-        dist_lst, weight_lst = [], []
-        total_dist, total_weight = 0, 0
-        dist, weight = map(int, input().split())
-        
+        dist, weight = map(int, input().split())        
         if n == 1:
             total_dist = 2 * dist
             
