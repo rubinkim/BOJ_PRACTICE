@@ -27,3 +27,5 @@ for _ in range(t):
         total_dist, total_weight = 0, 0
         dist, weight = map(int, input().split())
         
+        if weight == w:
+            
