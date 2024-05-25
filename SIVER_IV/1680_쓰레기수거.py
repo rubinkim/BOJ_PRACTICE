@@ -68,4 +68,6 @@ for _ in range(t):
                 elif i == n-1:
                     total_weight = 0
                     total_dist += (dist - dist_lst[-1] + 3 * dist)
+                    dist_lst.append(dist)
+                    
                                    
