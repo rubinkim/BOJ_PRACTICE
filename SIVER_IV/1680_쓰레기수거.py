@@ -43,7 +43,7 @@ for _ in range(t):
                     if i == 0:
                         total_weight += weight
                         total_dist += dist
-                        total_dist.append(dist)
+                        dist_lst.append(dist)
                         total_weight.append(weight)
                     elif i < n-1:
                         total_weight += weight
