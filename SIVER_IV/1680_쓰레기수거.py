@@ -76,5 +76,5 @@ for _ in range(t):
                         total_dist += (dist - dist_lst[-1] + 3 * dist)
                         dist_lst.append(dist)
                         weight_lst.append(weight)
-        print(total_dist)
+    print(total_dist)
                                    
