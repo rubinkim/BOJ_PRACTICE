@@ -61,9 +61,8 @@ for _ in range(t):
                         total_weight = 0
                         total_dist += 2 * dist
                         dist_lst.append(dist)
-                        weight_lst.append(weight)
-                                            
-                    if 0 < i < n-1:
+                        weight_lst.append(weight)                                            
+                    elif 0 < i < n-1:
                         total_weight = 0
                         total_dist += (dist - dist_lst[-1] + 2 * dist)
                         dist_lst.append(dist)
