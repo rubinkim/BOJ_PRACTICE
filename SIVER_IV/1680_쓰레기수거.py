@@ -22,4 +22,5 @@ t = int(input())
 
 for _ in range(t):
     w, n = map(int, input().split())
-    
+    for _ in range(n):
+        
