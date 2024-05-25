@@ -22,7 +22,7 @@ t = int(input())
 
 for _ in range(t):
     w, n = map(int, input().split())
-    for _ in range(n):
+    for i in range(n):
         dist_lst, weight_lst = [], []
         total_dist, total_weight = 0, 0
         dist, weight = map(int, input().split())
@@ -38,4 +38,4 @@ for _ in range(t):
                 
         elif weight < w: 
             if total_weight + weight < w:
-                               
+                if i < n-1:               
