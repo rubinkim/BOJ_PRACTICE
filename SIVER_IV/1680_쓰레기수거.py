@@ -45,7 +45,7 @@ for _ in range(t):
                         total_dist += dist
                         dist_lst.append(dist)
                         weight_lst.append(weight)
-                    elif i < n-1:
+                    elif 0 < i < n-1:
                         total_weight += weight
                         total_dist += (dist - dist_lst[-1])
                         dist_lst.append(dist)
@@ -56,8 +56,14 @@ for _ in range(t):
                         dist_lst.append(dist)
                         weight_lst.append(weight)
                         
-                elif total_weight + weight == w:                    
-                    if i < n-1:
+                elif total_weight + weight == w:
+                    if  i == 0:
+                        total_weight = 0
+                        total_dist += 2 * dist
+                        dist_lst.append(dist)
+                        weight_lst.append(weight)
+                                            
+                    if 0 < i < n-1:
                         total_weight = 0
                         total_dist += (dist - dist_lst[-1] + 2 * dist)
                         dist_lst.append(dist)
@@ -69,7 +75,7 @@ for _ in range(t):
                         weight_lst.append(weight)
                         
                 elif total_weight + weight > w:
-                    if i < n-1:
+                    if 0 < i < n-1:
                         total_weight = weight
                         total_dist += (dist - dist_lst[-1] + 2 * dist)
                         dist_lst.append(dist)
