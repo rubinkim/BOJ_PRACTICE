@@ -28,4 +28,6 @@ for _ in range(t):
         dist, weight = map(int, input().split())
         
         if weight == w:
+            dist_lst.append(dist)
+            weight_lst.append(weight)
             
