@@ -40,4 +40,5 @@ for _ in range(t):
             if total_weight + weight < w:
                 if i < n-1:
                     dist_lst.append(dist)
+                    weight_lst.append(weight)
                                    
