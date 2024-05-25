@@ -30,4 +30,7 @@ for _ in range(t):
         if weight == w:
             dist_lst.append(dist)
             weight_lst.append(weight)
-            
+            total_weight = 0
+            if n == 1:
+                total_dist = 2 * dist
+                
