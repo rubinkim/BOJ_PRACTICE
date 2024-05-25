@@ -33,4 +33,6 @@ for _ in range(t):
             total_weight = 0
             if n == 1:
                 total_dist = 2 * dist
+            elif n > 1:
+                total_dist = 3 * dist
                 
