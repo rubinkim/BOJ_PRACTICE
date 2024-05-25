@@ -36,3 +36,4 @@ for _ in range(t):
             elif n > 1:
                 total_dist = 3 * dist
                 
+        elif weight < w:                
