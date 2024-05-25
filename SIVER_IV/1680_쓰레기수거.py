@@ -31,7 +31,7 @@ for _ in range(t):
             total_dist = 2 * dist
             
         elif n > 1:        
-            if weight == w:
+            if i == 0 and weight == w:
                 total_weight = 0
                 total_dist = 3 * dist
                 dist_lst.append(dist)
