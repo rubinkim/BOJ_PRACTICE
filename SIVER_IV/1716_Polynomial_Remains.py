@@ -32,7 +32,7 @@ print(f"coeff_lst : {coeff_lst}")
 
 a_x = 0
 ans = 0
-x = 2
+x = 1
 share_lst, remains_lst = [], []
 
 for i in range(len(coeff_lst)):
