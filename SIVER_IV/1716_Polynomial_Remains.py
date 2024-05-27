@@ -30,23 +30,24 @@ coeff_lst = list(map(int, input().split()))
 coeff_lst = coeff_lst[::-1]
 print(f"coeff_lst : {coeff_lst}")
 
-
 a_x = 0
+ans = 0
 x = 2
 share_lst, remains_lst = [], []
 
 for i in range(len(coeff_lst)):
     a_x += coeff_lst[i] * x ** (len(coeff_lst)-1)
-    share = a_x // (x ** i + 1)
-    share 
-    remains = a_x % (x ** i + 1)
+    share = a_x // (x ** k + 1)
+    ans = share / x ** (len(coeff_lst)-1-k)
+    share_lst.append(ans)
+    remains = a_x % (x ** k + 1)
     a_x += remains
     
     share_lst.append(share)
-    remains_lst.append(remains)
+
     
 print(share_lst)
-print(remains_lst)
+
            
 
 
