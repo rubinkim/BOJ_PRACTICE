@@ -30,13 +30,16 @@ coeff_lst = list(map(int, input().split()))
 coeff_lst.sort(reverse=True)
 print(f"coeff_lst : {coeff_lst}")
 
-def func_x(n, k, x):
-    a_x = 0
-    for i in range(len(coeff_lst)):
-        a_x += coeff_lst[i] * x ** i    
+
+a_x = 0
+for i in range(len(coeff_lst)-1, -1, -1):
+    a_x += coeff_lst[i] * x ** i 
+    share = a_x // (x ** i + 1)
+    remains = a_x % (x ** i + 1)
+           
 
     remaining_lst = []
-    for c in range(len(coeff_lst)):
+    for i in range(len(coeff_lst)):
         remaining = a_x / (x**k + 1)
         remaining_lst.append(remaining)
     return remaining_lst
