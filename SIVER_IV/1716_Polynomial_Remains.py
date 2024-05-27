@@ -40,6 +40,7 @@ def func_x(n, k, x):
         remaining_lst.append(remaining)
     return remaining_lst
         
+print(func_x(n, k, 1))
 
 
 
