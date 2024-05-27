@@ -34,8 +34,11 @@ def func_x(n, k, x):
     for i in range(len(coeff_lst)):
         a_x += coeff_lst[i] * x ** i    
 
+    remaining_lst = []
     for c in range(len(coeff_lst)):
-        
+        remaining = a_x / (x**k + 1)
+        remaining_lst.append(remaining)
+    return remaining_lst
         
 
 
