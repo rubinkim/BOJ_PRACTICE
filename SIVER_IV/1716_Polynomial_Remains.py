@@ -36,7 +36,7 @@ x = 1
 share_lst, remains_lst = [], []
 
 for i in range(len(coeff_lst)):
-    a_x += coeff_lst[i] * x ** (len(coeff_lst)-1 - i)
+    a_x += coeff_lst[i] * x ** (len(coeff_lst)-1-i)
     share = a_x // (x ** k + 1)
     ans = share // x ** (len(coeff_lst)-1-k)
     print(f"i : {i},  ans : {ans}")
