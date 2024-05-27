@@ -39,15 +39,15 @@ for i in range(len(coeff_lst)):
     a_x += coeff_lst[i] * x ** (len(coeff_lst)-1)
     share = a_x // (x ** i + 1)
     remains = a_x % (x ** i + 1)
+    
+    share_lst.append(share)
+    remains_lst.append(remains)
+    
+print(share_lst)
+print(remains_lst)
            
 
-    remaining_lst = []
-    for i in range(len(coeff_lst)):
-        remaining = a_x / (x**k + 1)
-        remaining_lst.append(remaining)
-    return remaining_lst
-        
-print(func_x(n, k, 1))
+
 
 
 
