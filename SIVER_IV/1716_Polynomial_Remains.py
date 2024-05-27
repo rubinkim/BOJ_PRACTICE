@@ -23,3 +23,5 @@
 0
 1 2 3 4)
 """
+n, k = map(int, input().split())
+print(f"n : {n},  k : {k}")
