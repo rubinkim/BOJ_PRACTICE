@@ -27,7 +27,7 @@ n, k = map(int, input().split())
 print(f"n : {n},  k : {k}")
 
 coeff_lst = list(map(int, input().split()))
-coeff_lst.sort(reverse=True)
+coeff_lst = coeff_lst[::-1]
 print(f"coeff_lst : {coeff_lst}")
 
 
@@ -38,6 +38,7 @@ share_lst, remains_lst = [], []
 for i in range(len(coeff_lst)):
     a_x += coeff_lst[i] * x ** (len(coeff_lst)-1)
     share = a_x // (x ** i + 1)
+    share 
     remains = a_x % (x ** i + 1)
     a_x += remains
     
