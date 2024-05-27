@@ -33,9 +33,10 @@ print(f"coeff_lst : {coeff_lst}")
 
 a_x = 0
 x = 1
+share_lst, remains_lst = [], []
 
-for i in range(len(coeff_lst)-1, -1, -1):
-    a_x += coeff_lst[i] * x ** i 
+for i in range(len(coeff_lst)):
+    a_x += coeff_lst[i] * x ** (len(coeff_lst)-1)
     share = a_x // (x ** i + 1)
     remains = a_x % (x ** i + 1)
            
