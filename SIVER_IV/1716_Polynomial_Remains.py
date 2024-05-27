@@ -39,11 +39,10 @@ for i in range(len(coeff_lst)):
     a_x += coeff_lst[i] * x ** (len(coeff_lst)-1 - i)
     share = a_x // (x ** k + 1)
     ans = share // x ** (len(coeff_lst)-1-k)
+    print(f"i : {i},  ans : {ans}")
     share_lst.append(ans)
     remains = a_x % (x ** k + 1)
     a_x += remains
-    
-    share_lst.append(share)
     
 print(share_lst)
 
