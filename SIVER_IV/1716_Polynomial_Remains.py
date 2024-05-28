@@ -26,7 +26,7 @@
 n, k = map(int, input().split())
 print(f"n : {n},  k : {k}")
 
-
+coeff_lst = list(map(int, input().split()))
            
 
 
