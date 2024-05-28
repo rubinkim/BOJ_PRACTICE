@@ -37,6 +37,10 @@ divisor = [1, 0, 1]
 divisor = np.array(divisor)
 print(f"divisor : {divisor}")
 
+q, r = np.polydiv(dividend, divisor)
+print(f"quotient : {q}")
+print(f"remainder : {r}")
+
 
     
         
