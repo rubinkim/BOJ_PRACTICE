@@ -29,11 +29,21 @@ print(f"n : {n},  k : {k}")
 coeff_lst = list(map(int, input().split()))
 print(f"coeff_lst : {coeff_lst}")
 my_lst = []
+
 def func(n, k, x):
     
     for i in range(n):
         a_x += coeff_lst[i] * x ** i
-        c
+    
+    my_lst = [0] * n
+    b_x = a_x % (x ** k + 1)
+    
+    for i in range(n):
+        my_lst[i] = b_x / x ** i
+        
+    return my_lst
+
+print(func(n, k, 2))
         
            
 
