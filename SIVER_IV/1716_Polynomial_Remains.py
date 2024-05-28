@@ -27,11 +27,13 @@ n, k = map(int, input().split())
 print(f"n : {n},  k : {k}")
 
 coeff_lst = list(map(int, input().split()))
-coeff_lst = coeff_lst[::-1]
 print(f"coeff_lst : {coeff_lst}")
-
-def func(n, k):
+my_lst = []
+def func(n, k, x):
+    
     for i in range(n):
+        a_x += coeff_lst[i] * x ** i
+        c
         
            
 
