@@ -30,9 +30,11 @@ print(f"n : {n},  k : {k}")
 
 dividend = list(map(int, input().split()))
 dividend = dividend[::-1]
+dividend = np.array(dividend)
 print(f"dividend : {dividend}")
 
 divisor = [1, 0, 1]
+divisor = np.array(divisor)
 print(f"divisor : {divisor}")
 
 
