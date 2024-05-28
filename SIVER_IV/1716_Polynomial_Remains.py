@@ -36,15 +36,11 @@ def func(n, k, x):
     for i in range(n):
         a_x += coeff_lst[i] * x ** i
     
-    my_lst = [0] * n
     b_x = a_x % (x ** k + 1)
-    
-    for i in range(n):
-        my_lst[i] = b_x / x ** i
-        
-    return my_lst
 
-print(func(n, k, 2))
+# 이제 b_x를 b_x = b_0 * x ** 0 + b_1 * x ** 1 + b_2 * x ** 2 + ... + b_n-1 * x ** n-1 로 표현하기만 하면 된다.
+   
+
         
            
 
