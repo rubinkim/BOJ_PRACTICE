@@ -40,8 +40,10 @@ def func(n, k, x):
     b_x = a_x % (x ** k + 1)
 
 # 이제 b_x를 b_x = b_0 * x ** 0 + b_1 * x ** 1 + b_2 * x ** 2 + ... + b_n-1 * x ** n-1 로 표현하기만 하면 된다.
+my_lst = []
 def remains(n, k, x):   
-
+    b_x = a_x % (x ** k + 1)
+    
         
            
 
