@@ -27,8 +27,10 @@ n, k = map(int, input().split())
 print(f"n : {n},  k : {k}")
 
 dividend = list(map(int, input().split()))
-dividend = coeff_lst[::-1]
-print(f"coeff_lst : {coeff_lst}")
+dividend = dividend[::-1]
+print(f"dividend : {dividend}")
+
+
 
 
     
