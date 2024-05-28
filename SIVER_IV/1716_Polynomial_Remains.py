@@ -29,7 +29,8 @@ print(f"n : {n},  k : {k}")
 coeff_lst = list(map(int, input().split()))
 print(f"coeff_lst : {coeff_lst}")
 
-
+for i in range(len(coeff_lst)):
+    
            
 
 
