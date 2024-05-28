@@ -28,21 +28,8 @@ print(f"n : {n},  k : {k}")
 
 coeff_lst = list(map(int, input().split()))
 print(f"coeff_lst : {coeff_lst}")
-my_lst = []
-a_x = 0
 
-def func(n, k, x):    
-    global a_x
-    for i in range(n):
-        a_x += coeff_lst[i] * x ** i
-    return a_x
-    
-    b_x = a_x % (x ** k + 1)
 
-# 이제 b_x를 b_x = b_0 * x ** 0 + b_1 * x ** 1 + b_2 * x ** 2 + ... + b_n-1 * x ** n-1 로 표현하기만 하면 된다.
-my_lst = []
-def remains(n, k, x):   
-    b_x = a_x % (x ** k + 1)
     
         
            
