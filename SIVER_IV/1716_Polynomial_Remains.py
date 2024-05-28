@@ -26,28 +26,6 @@
 n, k = map(int, input().split())
 print(f"n : {n},  k : {k}")
 
-coeff_lst = list(map(int, input().split()))
-coeff_lst = coeff_lst[::-1]
-print(f"coeff_lst : {coeff_lst}")
-
-a_x = 0
-ans = 0
-x = 3
-share_lst, remains_lst = [], []
-
-for i in range(len(coeff_lst)):
-    a_x += coeff_lst[i] * x ** (len(coeff_lst)-1-i)
-    share = a_x // (x ** k + 1)
-    ans = share // x ** (len(coeff_lst)-1-i-k)
-    print(f"i : {i},  ans : {ans}")
-    share_lst.append(ans)
-    remains = a_x % (x ** k + 1)
-    ans2 = remains // x ** (len(coeff_lst)-1-i-k)
-    remains_lst.append(ans2)
-    a_x += remains
-    
-print(share_lst)
-print(remains_lst)
 
            
 
