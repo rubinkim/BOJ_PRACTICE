@@ -23,6 +23,8 @@
 0
 1 2 3 4)
 """
+import numpy as np
+
 n, k = map(int, input().split())
 print(f"n : {n},  k : {k}")
 
@@ -30,7 +32,8 @@ dividend = list(map(int, input().split()))
 dividend = dividend[::-1]
 print(f"dividend : {dividend}")
 
-
+divisor = [1, 0, 1]
+print(f"divisor : {divisor}")
 
 
     
