@@ -33,6 +33,8 @@ while n != -1 and k != -1:
     divisor[k] = 1
     
     i = 0
+    while True:
+        
 
 
 
