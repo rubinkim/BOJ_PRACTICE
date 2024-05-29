@@ -23,23 +23,14 @@
 0
 1 2 3 4)
 """
-import numpy as np
+n, k = 0, 0
+while n != -1 and k != -1:
+    n, k = map(int, input().split())
+    coeff_lst = list(map(int, input().split()))
+    remainder = sum(coefficients) % (k + 1)
+    print(remainder)
 
-n, k = map(int, input().split())
-print(f"n : {n},  k : {k}")
 
-dividend = list(map(int, input().split()))
-dividend = dividend[::-1]
-dividend = np.array(dividend)
-print(f"dividend : {dividend}")
-
-divisor = [1, 0, 1]
-divisor = np.array(divisor)
-print(f"divisor : {divisor}")
-
-q, r = np.polydiv(dividend, divisor)
-print(f"quotient : {q}")
-print(f"remainder : {r}")
 
 
     
