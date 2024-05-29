@@ -34,7 +34,8 @@ while n != -1 and k != -1:
     
     i = 0
     while True:
-        
+        if coeff_lst[i] != 0:
+            divisor = [coeff_lst[i] * x for x in divisor]
 
 
 
