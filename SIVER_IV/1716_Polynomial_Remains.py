@@ -28,8 +28,8 @@ while n != -1 and k != -1:
     n, k = map(int, input().split())
     coeff_lst = list(map(int, input().split()))
     coeff_lst = coeff_lst[::-1]
-    remainder = sum(coefficients) % (k + 1)
-    print(remainder)
+    divisor = [0] * (n+1)
+    
 
 
 
