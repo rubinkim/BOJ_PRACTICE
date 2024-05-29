@@ -47,7 +47,13 @@ while n != -1 and k != -1:
         else:
             i += 1
         if nonzero_idx + k == n:
-            ans = coeff_lst[::-1]
+            divisor = [coeff_lst[nonzero_idx] * x for x in divisor]
+            coeff_lst = [coeff_lst[j] - divisor[j] for j in range(n+1)]
+            coeff_lst = coeff_lst[::-1]
+            ans = []
+            for x in coeff_lst:
+                if x != 0:
+                    ans.append(x)
             print(*ans)
             break
 
