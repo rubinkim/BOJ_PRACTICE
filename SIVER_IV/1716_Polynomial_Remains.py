@@ -36,14 +36,21 @@ while n != -1 and k != -1:
     while True:
         if coeff_lst[i] != 0:
             divisor = [coeff_lst[i] * x for x in divisor]
-            coeff_lst = [coeff_lst[j] -divisor[j] for j in range(n+1)
-            for k in range(n+1):
-                if coeff_lst[k] != 0:
-                    nonzero_idx = k
+            coeff_lst = [coeff_lst[j] - divisor[j] for j in range(n+1)]
+            for m in range(n+1):
+                if coeff_lst[m] != 0:
+                    nonzero_idx = m
                     break
             divisor = [0] * (n+1)
             divisor[nonzero_idx] = 1
+            
             divisor[nonzero_idx + k] = 1
+        else:
+            i += 1
+        if nonzero_idx + k == n:
+            ans = coeff_lst[::-1]
+            print(*ans)
+            break
 
 
 
