@@ -29,7 +29,10 @@ while n != -1 and k != -1:
     coeff_lst = list(map(int, input().split()))
     coeff_lst = coeff_lst[::-1]
     divisor = [0] * (n+1)
+    divisor[0] = 1
+    divisor[k] = 1
     
+    i = 0
 
 
 
