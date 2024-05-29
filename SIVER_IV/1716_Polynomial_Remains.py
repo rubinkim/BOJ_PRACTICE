@@ -27,15 +27,16 @@ n, k = 0, 0
 while n != -1 and k != -1:
     n, k = map(int, input().split())
     coeff_lst = list(map(int, input().split()))
-    coeff_lst = coeff_lst[::-1]
-    divisor = [0] * (n+1)
-    divisor[0] = 1
-    divisor[k] = 1 
-    
     if k == 0:
         print(0)
-        
-    elif k != 0:   
+    if n < k:
+        print(*coeff_lst)
+    elif n >= k:
+        coeff_lst = coeff_lst[::-1]
+        divisor = [0] * (n+1)
+        divisor[0] = 1
+        divisor[k] = 1     
+
         i = 0
         while True:
             if coeff_lst[i] != 0:
